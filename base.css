@@ -1,4 +1,4 @@
-/* $Id: base.css,v 1.1 2008/10/19 14:55:25 jmburnz Exp $ */
+/* $Id: base.css,v 1.2 2008/10/19 19:17:15 jmburnz Exp $ */
 
 /**
 	* @file base.css
@@ -33,7 +33,7 @@ body {
 	* Uncomment the grid class on the body element in page.tpl.php
 	* to show the grid when adjusting the vertical flow.
 	*/
-body.grid {background: url(images/gridtile.gif) repeat left top;}
+.grid {background: url(images/gridtile.gif) repeat left top;}
 
 
 /***********************************************************
