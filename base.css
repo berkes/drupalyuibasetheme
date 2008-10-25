@@ -1,4 +1,4 @@
-/* $Id: base.css,v 1.3 2008/10/23 10:25:07 jmburnz Exp $ */
+/* $Id: base.css,v 1.4 2008/10/25 15:04:45 jmburnz Exp $ */
 
 /**
 	* @file base.css
@@ -349,7 +349,9 @@ div.node div.unpublished {
   background-position: 5px 5px;
   padding-left: 1.67em; 
 }
-	
+
+#forum tr td.forum .name {padding-left: 0.375em;}
+
 #forum div.indent  {margin-left: 0.5em;}
 
 
