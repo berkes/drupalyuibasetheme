@@ -1,4 +1,4 @@
-/* $Id: genesis_SUBTHEME.css,v 1.2 2008/10/23 10:25:07 jmburnz Exp $ */
+/* $Id: genesis_SUBTHEME.css,v 1.3 2008/10/25 10:45:57 jmburnz Exp $ */
 
 /**
 	* @file genesis_SUBTHEME.css
@@ -400,6 +400,9 @@ div#site-name  {}
 .block .content {
   padding: 0;
 }
+
+.block ul {}
+.block ul li {}
 
 .block ul.menu {
   margin-left: 0;
