@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.2 2008/10/23 10:25:07 jmburnz Exp $
+// $Id: page.tpl.php,v 1.3 2008/10/26 10:18:43 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -26,7 +26,7 @@
 <?php
 /**
  * Change the body id selector to your preferred layout.
- * E.g body id="genesis_5"
+ * E.g body id="genesis_1"
  *
  * @see layout.css
  */ 
