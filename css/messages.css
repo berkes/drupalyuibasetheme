@@ -1,4 +1,4 @@
-/* $Id: messages.css,v 1.1 2008/10/30 12:01:36 jmburnz Exp $ */
+/* $Id: messages.css,v 1.2 2008/10/30 13:01:26 jmburnz Exp $ */
 
 /**
 	* @file messages.css
@@ -27,7 +27,7 @@ div.messages ul {
 #saving {
   font-size: 1em;
   font-weight: bold;
-  background: url(images/loading.gif) no-repeat 12px 1px;
+  background: url(../images/loading.gif) no-repeat 12px 1px;
   display: none;
   padding-left: 36px; /* LTR */
 }
