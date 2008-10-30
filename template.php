@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.4 2008/10/30 16:53:29 jmburnz Exp $
+// $Id: template.php,v 1.5 2008/10/30 23:29:34 jmburnz Exp $
 
 /**
  * @file template.php
@@ -27,17 +27,22 @@ function genesis_preprocess_page(&$vars, $hook) {
     $vars['help'] = '';
   }
 		
-	 // Add conditional stylesheets.
-  if (!module_exists('conditional_styles')) {
-    $vars['styles'] .= $vars['conditional_styles'] = variable_get('conditional_styles_' . $GLOBALS['theme'], '');
+		// Set vars for the logo and site_name to clean up page.tpl.php
+		if ($vars['logo']) {
+		  $vars['site_logo'] = 
+				  '<a href="'. $vars['front_page'] .'" title="'. t('Home'). '" rel="home">
+						  <img src="'. $vars['logo'] .'" alt="'. t('Home') .'" />
+						</a>';
+		}
+		
+		if ($vars['site_name']) {
+		  $tag = $vars['is_front'] ? 'h1' : 'div';
+	   $vars['site_name'] = 	
+				  '<'. $tag .' id="site-name">
+				    <a href="'. $vars['front_page'] .'" title="'. t('Home') .'" rel="home">'. $vars['site_name'] .'</a>
+				  </'. $tag .'>';
   }
 		
-		// Set vars for the logo and site_name to clean up page.tpl.php
-		$vars['site_logo'] = '<a href="'. $vars['front_page'] .'" title="'. t('Home'). '" rel="home"><img src="'. $vars['logo'] .'" alt="'. t('Home') .'" /></a>';
-			
-		$tag = $vars['is_front'] ? 'h1' : 'div';
-	 $vars['site_name'] = 	'<'. $tag .' id="site-name"><a href="'. $vars['front_page'] .'" title="'. t('Home') .'" rel="home">'. $vars['site_name'] .'</a></'. $tag .'>';
-
   // Wrapper Classes. Allows advanced theming based on path, node type etc.
   $page_classes = array();
   if (!$vars['is_front']) {
