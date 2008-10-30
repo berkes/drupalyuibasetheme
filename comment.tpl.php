@@ -1,5 +1,5 @@
 <?php 
-// $Id: comment.tpl.php,v 1.1 2008/10/19 14:54:47 jmburnz Exp $
+// $Id: comment.tpl.php,v 1.2 2008/10/30 12:01:36 jmburnz Exp $
 
 /**
  * @file comment.tpl.php
@@ -17,7 +17,7 @@
   <div class="comment-inner inner">
 
 		<?php if ($title): ?>
-			<h3 class="title">
+			<h3 class="comment-title">
 				<?php print '#'. $id .' '. $title; ?>
 				<?php if ($comment->new): ?>
 					<span class="new"><?php print $new; ?></span>
@@ -42,7 +42,7 @@
 			</div>
 		<?php endif; ?>
 
-		<div class="content">
+		<div class="comment-content">
 			<?php print $content; ?>
 			<?php if ($signature): ?>
 				<div class="user-signature clear-block">

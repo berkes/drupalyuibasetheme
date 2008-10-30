@@ -1,5 +1,5 @@
 <?php 
-// $Id: block.tpl.php,v 1.1 2008/10/19 14:54:47 jmburnz Exp $
+// $Id: block.tpl.php,v 1.2 2008/10/30 12:01:36 jmburnz Exp $
 
 /**
  * @file block.tpl.php
@@ -14,10 +14,10 @@
   <div class="block-inner inner">
 
 		<?php if ($block->subject): ?>
-			<h2 class="title"><?php print $block->subject; ?></h2>
+			<h2 class="block-title"><?php print $block->subject; ?></h2>
 		<?php endif; ?>
 	
-		<div class="content">
+		<div class="block-content">
 			<?php print $block->content ?>
 		</div>
 	
