@@ -1,4 +1,4 @@
-// $Id: script.js,v 1.1 2008/10/19 14:55:43 jmburnz Exp $
+// $Id: script.js,v 1.2 2008/10/30 13:00:59 jmburnz Exp $
 
 /**
  * Animates submit buttons
@@ -20,7 +20,7 @@ Genesis.formCheck = function() {
     $(this).hide();
     $("#saving").show();
     var notice = function() {
-      $('<p id="saving-notice">Not saving? Wait a few seconds, reload this page, and try again. Every now and then the internet hiccups too :-)</p>').appendTo("#saving").fadeIn();
+      $('<p id="saving-notice">Not saving? Wait a few seconds, reload this page, and try again.</p>').appendTo("#saving").fadeIn();
     };
     // append notice if form saving isn't work, perhaps a timeout issue
     setTimeout(notice, 24000);
