@@ -1,4 +1,4 @@
-/* $Id: tables.css,v 1.3 2008/11/01 00:44:10 jmburnz Exp $ */
+/* $Id: tables.css,v 1.4 2008/11/01 00:52:13 jmburnz Exp $ */
 
 /**
  * @file tables.css
@@ -8,7 +8,6 @@
 /***********************************************************
  *                   Tables
  **********************************************************/
-
 /* Tables still need 'cellspacing="0"' in the markup. */
 table           {border-collapse: collapse; border-spacing: 0;}
 caption, th, td {text-align: left; font-weight: normal;}
