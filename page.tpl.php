@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.5 2008/10/30 16:53:29 jmburnz Exp $
+// $Id: page.tpl.php,v 1.6 2008/11/01 00:44:10 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -126,7 +126,7 @@
 	
 										<div id="main-content">
 												<?php if (!empty($title)): ?>
-												  <h1 class="page-title" id="page-title"><?php print $title; ?></h1>
+												  <h1 id="page-title"><?php print $title; ?></h1>
 												<?php endif; ?>
 												<?php if (!empty($tabs)): ?>
 												  <div class="tabs"><?php print $tabs; ?></div>
