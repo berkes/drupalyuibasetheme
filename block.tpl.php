@@ -1,5 +1,5 @@
 <?php 
-// $Id: block.tpl.php,v 1.2 2008/10/30 12:01:36 jmburnz Exp $
+// $Id: block.tpl.php,v 1.3 2008/11/03 23:50:18 jmburnz Exp $
 
 /**
  * @file block.tpl.php
@@ -21,6 +21,15 @@
 			<?php print $block->content ?>
 		</div>
 	
+  <?php
+		/**
+		 * To disable block edit links for your subtheme, 
+			* copy this file to your subtheme and either 
+			* remove or comment out the $edit_links variable.
+			* You should unset the block-edit.css in your
+			* genesis_subtheme.info file also.
+		 */
+		?>
 		<?php print $edit_links; ?>
 		
  </div>

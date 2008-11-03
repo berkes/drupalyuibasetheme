@@ -1,5 +1,5 @@
 <?php 
-// $Id: node.tpl.php,v 1.2 2008/10/30 12:01:36 jmburnz Exp $
+// $Id: node.tpl.php,v 1.3 2008/11/03 23:50:18 jmburnz Exp $
 
 /**
  * @file node.tpl.php
@@ -20,6 +20,15 @@
 			<div class="unpublished"><?php print t('Unpublished'); ?></div>
 		<?php endif; ?>
 
+  <?php
+		/**
+		 * To customize the long and short dates see "function genesis_preprocess_node" in
+			* template.php (genesis/template.php).
+			* Copy the code snippet for the long and short dates to your subthemes template.php 
+			* preprocess node function, i.e. "function genesis_SUBTHEME_preprocess_node". 
+			* You need to clear the theme registry for your changes to take effect.
+			*/
+		?>
 		<?php if ($submitted): ?>
 			<div class="submitted">
 				<abbr class="date" title="<?php print $long_date; ?>"> <?php print $short_date; ?></abbr>
