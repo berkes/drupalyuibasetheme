@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.8 2008/11/16 16:34:59 jmburnz Exp $
+// $Id: page.tpl.php,v 1.9 2008/11/18 14:52:21 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -202,9 +202,9 @@
 								<?php endif; ?>
 								
 								<?php if (!empty($footer_message)): ?>
-								<div id="footer-message">
-										<?php print $footer_message; ?>
-								</div> <!-- /footer-message -->
+								  <div id="footer-message">
+										  <?php print $footer_message; ?>
+								  </div> <!-- /footer-message -->
 								<?php endif; ?>
 		
 						</div> <!-- /foot-wrapper -->

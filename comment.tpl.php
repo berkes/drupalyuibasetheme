@@ -1,5 +1,5 @@
 <?php 
-// $Id: comment.tpl.php,v 1.3 2008/11/16 16:36:41 jmburnz Exp $
+// $Id: comment.tpl.php,v 1.4 2008/11/18 14:52:21 jmburnz Exp $
 
 /**
  * @file comment.tpl.php
@@ -16,41 +16,41 @@
 <div class="comment <?php print $comment_classes; ?>">
   <div class="comment-inner inner">
 
-		<?php if ($title): ?>
-		  <h3 class="comment-title">
-		    <?php print '#'. $id .' '. $title; ?> <?php if ($comment->new): ?><span class="new"><?php print $new; ?></span><?php endif; ?>
-		  </h3>
-		  <?php elseif ($comment->new): ?><div class="new"><?php print $new; ?></div>
-		<?php endif; ?>
+				<?php if ($title): ?>
+						<h3 class="comment-title">
+						  <?php print '#'. $id .' '. $title; ?> <?php if ($comment->new): ?><span class="new"><?php print $new; ?></span><?php endif; ?>
+						</h3>
+						<?php elseif ($comment->new): ?><div class="new"><?php print $new; ?></div>
+				<?php endif; ?>
 
-		<?php if ($unpublished): ?>
-			 <div class="unpublished"><?php print t('Unpublished'); ?></div>
-		<?php endif; ?>
+				<?php if ($unpublished): ?>
+						<div class="unpublished"><?php print t('Unpublished'); ?></div>
+				<?php endif; ?>
 
-		<?php if ($picture): ?>
-		  <div class="picture"><?php print $picture; ?></div>
-		<?php endif; ?>
+				<?php if ($picture): ?>
+						<div class="picture"><?php print $picture; ?></div>
+				<?php endif; ?>
 
-		<?php if ($submitted): ?>
-		  <div class="submitted">
-				  <?php print $submitted; ?>
-			 </div>
-		<?php endif; ?>
+				<?php if ($submitted): ?>
+						<div class="submitted">
+								<?php print $submitted; ?>
+						</div>
+				<?php endif; ?>
 
-		<div class="comment-content">
-			<?php print $content; ?>
-			<?php if ($signature): ?>
-			  <div class="user-signature clear-block">
-					  <?php print $signature; ?>
-				 </div>
-			<?php endif; ?>
-		</div>
+				<div class="comment-content">
+				  <?php print $content; ?>
+					 <?php if ($signature): ?>
+							 <div class="user-signature clear-block">
+									 <?php print $signature; ?>
+							 </div>
+					 <?php endif; ?>
+				</div>
 
-		<?php if ($links): ?>
-			 <div class="links">
-				  <?php print $links; ?>
-			 </div>
-		<?php endif; ?>
+				<?php if ($links): ?>
+						<div class="links">
+								<?php print $links; ?>
+						</div>
+				<?php endif; ?>
 
   </div>
 </div> <!-- /comment-inner, /comment -->
