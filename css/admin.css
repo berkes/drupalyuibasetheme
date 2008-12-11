@@ -1,4 +1,4 @@
-/* $Id: admin.css,v 1.1 2008/11/04 00:04:48 jmburnz Exp $ */
+/* $Id: admin.css,v 1.2 2008/12/11 00:30:26 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -20,3 +20,7 @@ div.admin .right {margin:0;}
 #node-admin-filter ul li {list-style: none;}
 
 .more-help-link {font-size: 0.9em; line-height: 1.667em;}
+
+.section-admin dt {font-weight: bold;}
+.section-admin dd {margin: 0 0 1em 1em;}
+.section-admin ul {margin: 0 0 1.5em 1.6em;}
