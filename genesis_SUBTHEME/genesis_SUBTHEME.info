@@ -1,4 +1,4 @@
-  ; $Id: genesis_SUBTHEME.info,v 1.4 2008/11/18 14:52:21 jmburnz Exp $
+  ; $Id: genesis_SUBTHEME.info,v 1.5 2008/12/18 01:55:27 jmburnz Exp $
 
 	 ; Change the name, description and stylesheet file name to 
 	 ; match your new subthemes name.
@@ -53,6 +53,8 @@ regions[footer]             = Footer
 ;stylesheets[all][] = css/lists.css
 ;stylesheets[all][] = css/tables.css
 ;stylesheets[all][] = css/tabs.css
+;stylesheets[all][] = css/block-edit.css
+;stylesheets[all][] = css/admin.css
 
 
   ; Features.
