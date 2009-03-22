@@ -1,5 +1,5 @@
 <?php 
-// $Id: node.tpl.php,v 1.5 2008/11/18 14:52:21 jmburnz Exp $
+// $Id: node.tpl.php,v 1.6 2009/03/22 22:21:14 jmburnz Exp $
 
 /**
  * @file node.tpl.php
@@ -9,7 +9,7 @@
  * @see template_preprocess_node()
  */
 ?>
-<div class="node <?php print $node_classes; ?>" id="node-<?php print $node->nid; ?>">
+<div id="node-<?php print $node->nid; ?>" class="<?php print $node_classes; ?>">
   <div class="node-inner inner">
 
 				<?php if ($page == 0): ?>
@@ -21,27 +21,23 @@
 				<?php endif; ?>
 
 				<?php if ($submitted): ?>
-					<div class="submitted">
+					<div class="node-submitted">
 							<?php print $submitted; ?>
 					</div>
 				<?php endif; ?>
 
-				<?php if (!empty($picture)): ?>
-						<div class="picture">
-								<?php print $picture; ?>
-						</div>
-				<?php endif; ?>
+				<?php print $picture; ?>
 
 				<div class="node-content">
 						<?php print $content; ?>
 				</div>
 
 				<?php if (count($taxonomy)): ?>
-						<div class="tags"><?php print $terms; ?></div>
+						<div class="node-terms"><?php print $terms; ?></div>
 				<?php endif; ?>
 
 				<?php if ($links): ?>
-						<div class="actions"><?php print $links; ?></div>
+						<div class="node-links"><?php print $links; ?></div>
 				<?php endif; ?>
 
 	 </div>
