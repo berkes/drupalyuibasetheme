@@ -1,5 +1,5 @@
 <?php 
-// $Id: comment.tpl.php,v 1.4 2008/11/18 14:52:21 jmburnz Exp $
+// $Id: comment.tpl.php,v 1.5 2009/03/22 22:22:15 jmburnz Exp $
 
 /**
  * @file comment.tpl.php
@@ -13,26 +13,23 @@
  * @see theme_comment()
  */
 ?>
-<div class="comment <?php print $comment_classes; ?>">
+<div class="<?php print $comment_classes; ?>">
   <div class="comment-inner inner">
 
 				<?php if ($title): ?>
 						<h3 class="comment-title">
-						  <?php print '#'. $id .' '. $title; ?> <?php if ($comment->new): ?><span class="new"><?php print $new; ?></span><?php endif; ?>
+						  <span class="comment-id"><?php print '#'. $id; ?></span> <?php print $title; ?> <?php if ($comment->new): ?><span class="new"><?php print $new; ?></span><?php endif; ?>
 						</h3>
-						<?php elseif ($comment->new): ?><div class="new"><?php print $new; ?></div>
 				<?php endif; ?>
 
 				<?php if ($unpublished): ?>
 						<div class="unpublished"><?php print t('Unpublished'); ?></div>
 				<?php endif; ?>
 
-				<?php if ($picture): ?>
-						<div class="picture"><?php print $picture; ?></div>
-				<?php endif; ?>
+				<?php print $picture; ?>
 
 				<?php if ($submitted): ?>
-						<div class="submitted">
+						<div class="comment-submitted">
 								<?php print $submitted; ?>
 						</div>
 				<?php endif; ?>
@@ -47,7 +44,7 @@
 				</div>
 
 				<?php if ($links): ?>
-						<div class="links">
+						<div class="comment-links">
 								<?php print $links; ?>
 						</div>
 				<?php endif; ?>
