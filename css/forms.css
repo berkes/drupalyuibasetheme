@@ -1,4 +1,4 @@
-/* $Id: forms.css,v 1.4 2008/11/03 23:50:18 jmburnz Exp $ */
+/* $Id: forms.css,v 1.5 2009/03/22 22:32:52 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -87,3 +87,6 @@ html.js fieldset.collapsed legend a {
   color: #0066B3;
   background: url(../images/arrow-right.gif) no-repeat 0% 50%; /* LTR */
 }
+
+/* Add support for Vertical Tabs module */
+#node-form .vertical-tabs ul.vertical-tabs-list {margin: 0;}
