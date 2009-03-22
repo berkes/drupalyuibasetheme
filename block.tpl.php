@@ -1,5 +1,5 @@
 <?php 
-// $Id: block.tpl.php,v 1.5 2008/11/18 14:52:21 jmburnz Exp $
+// $Id: block.tpl.php,v 1.6 2009/03/22 22:22:57 jmburnz Exp $
 
 /**
  * @file block.tpl.php
@@ -10,7 +10,7 @@
  * @see template_preprocess_block()
  */
 ?>
-<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="block <?php print $block_classes; ?>">
+<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="<?php print $block_classes; ?>">
   <div class="block-inner inner">
 
     <?php if ($block->subject): ?>
