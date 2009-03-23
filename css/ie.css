@@ -1,25 +1,12 @@
-/* $Id: ie.css,v 1.4 2008/11/18 14:52:21 jmburnz Exp $ */
+/* $Id: ie.css,v 1.1 2009/03/23 01:36:32 jmburnz Exp $ */
 
 /**
 	* @file ie.css
 	* Internet Explorer hacks and work-arounds.
 	*/
-
 /**
- * Add your IE hacks and work-arounds here.
-	*/
-
-/* IE work-around for sliding door tabs. */
-/*
-#primary ul.links li a {padding: 0 0 0 10px;}
-*/
-
-
-
-
-
-/**
- * DONT TOUCH BELOW
+	* Dont change, over-ride!
+	* Override these if necessary in your subthemes ie.css file.
 	*/
 /* Prevent unnessary scrollbars */
 #container {overflow-y: hidden;}
