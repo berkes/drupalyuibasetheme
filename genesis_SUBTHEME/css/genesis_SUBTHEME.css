@@ -1,4 +1,4 @@
-/* $Id: genesis_SUBTHEME.css,v 1.1 2009/03/23 01:36:32 jmburnz Exp $ */
+/* $Id: genesis_SUBTHEME.css,v 1.2 2009/03/23 02:06:22 jmburnz Exp $ */
 
 
 /**
@@ -704,7 +704,7 @@ tr .block {
  *                   Profile
  **********************************************************/
 /* Position the user picture on the right in user profiles. */
-.profile .picture {
+.profile .user-picture {
   float: right; 
 		margin: 2em 0 1em 0.5em; /* RTL */
 }
