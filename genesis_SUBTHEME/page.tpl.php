@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.12 2009/03/23 01:34:29 jmburnz Exp $
+// $Id: page.tpl.php,v 1.13 2009/03/24 18:17:04 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -167,7 +167,7 @@
 						</div>
 
 						<?php if (!empty($left)): ?>
-								<div id="sidebar-left" class="sidebar">
+								<div id="sidebar-left" class="sidebars">
 										<div class="sidebar-inner inner">
 												<?php print $left; ?>
 										</div>
@@ -175,7 +175,7 @@
 						<?php endif; ?>
 
 						<?php if (!empty($right)): ?>
-								<div id="sidebar-right" class="sidebar">
+								<div id="sidebar-right" class="sidebars">
 										<div class="sidebar-inner inner">
 												<?php print $right; ?>
 										</div>
