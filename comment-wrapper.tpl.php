@@ -1,5 +1,5 @@
 <?php
-// $Id: comment-wrapper.tpl.php,v 1.2 2008/10/30 12:01:36 jmburnz Exp $
+// $Id: comment-wrapper.tpl.php,v 1.3 2009/03/24 18:18:06 jmburnz Exp $
 
 /**
  * @file comment-wrapper.tpl.php
@@ -10,7 +10,7 @@
  */
 ?>
 <?php if ($content): ?>
-  <div id="comments">
+  <div id="comment-wrapper">
 
     <?php if ($node->type != 'forum'): ?>
       <h2 id="comment-wrapper-title"><?php print t('Comments'); ?></h2>
