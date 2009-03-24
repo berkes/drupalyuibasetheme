@@ -1,4 +1,4 @@
-/* $Id: tables.css,v 1.5 2008/11/03 23:50:18 jmburnz Exp $ */
+/* $Id: tables.css,v 1.6 2009/03/24 18:17:35 jmburnz Exp $ */
 
 /**
  * @file tables.css
@@ -9,7 +9,7 @@
  *                   Tables
  **********************************************************/
 table           {border-collapse: collapse; border-spacing: 0;}
-caption, th, td {text-align: left; font-weight: normal;}
+caption, th, td {text-align: left; font-weight: normal;} /* LTR */
 table, td, th   {vertical-align: middle;}
 tbody, tfoot, thead, tr {margin: 0; padding: 0;}
 table    {margin: 1em 0; padding: 0; width: 100%;}
