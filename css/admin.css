@@ -1,4 +1,4 @@
-/* $Id: admin.css,v 1.3 2009/03/22 22:33:29 jmburnz Exp $ */
+/* $Id: admin.css,v 1.4 2009/03/25 00:59:04 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -48,3 +48,7 @@ div.admin-panel .description {
 #node-admin-filter ul li {list-style: none;}
 
 .more-help-link {font-size: 0.9em; line-height: 1.667em;}
+
+/* Experimental column backgrounds on the permissions page */
+#user-admin-perm td[title~="anonymous"] {background: #E2E2E2!important;}
+#user-admin-perm td[title~="authenticated"] {background: #DDD!important;}
