@@ -1,4 +1,4 @@
-/* $Id: tables.css,v 1.6 2009/03/24 18:17:35 jmburnz Exp $ */
+/* $Id: tables.css,v 1.7 2009/04/02 23:44:59 jmburnz Exp $ */
 
 /**
  * @file tables.css
@@ -21,7 +21,7 @@ tr.even,
 tr.odd,
 tbody th {border: solid #CCC; border-width: 1px 0;}
 tr.odd, 
-tr.info {background-color: #F7F7F7;}
+tr.info {background-color: #F5F5F5;}
 tr.even {background-color: #FFF;}
 
 tr.drag {background-color: #FFFFF0;}
