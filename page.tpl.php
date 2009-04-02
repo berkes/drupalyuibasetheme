@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.12 2009/03/23 01:34:12 jmburnz Exp $
+// $Id: page.tpl.php,v 1.13 2009/04/02 10:51:46 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="<?php print $base_path . $directory; ?>/css/ie.css" type="text/css" />
   <![endif]-->
   <?php print $scripts; ?>
-  <script type="text/javascript"><?php /* Needed to avoid Flash of Unstyled Content in IE */ ?> </script>
 </head>
 <?php
 /**

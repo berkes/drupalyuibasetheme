@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.13 2009/03/24 18:17:04 jmburnz Exp $
+// $Id: page.tpl.php,v 1.14 2009/04/02 10:51:11 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="<?php print $base_path . $directory; ?>/css/ie.css" type="text/css" />
   <![endif]-->
   <?php print $scripts; ?>
-  <script type="text/javascript"><?php /* Needed to avoid Flash of Unstyled Content in IE */ ?> </script>
 </head>
 <?php
 /**
@@ -30,7 +29,7 @@
  * @see layout.css
  */ 
 ?>
-<body id="genesis_1" <?php print $page_classes; ?>>
+<body id="genesis_2" <?php print $page_classes; ?>>
   <div id="container" class="width <?php print $body_classes; ?><?php //print ' grid' ;?>">
 
     <?php if (!empty($leaderboard)): ?>
