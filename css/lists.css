@@ -1,4 +1,4 @@
-/* $Id: lists.css,v 1.5 2009/03/24 18:17:35 jmburnz Exp $ */
+/* $Id: lists.css,v 1.6 2009/04/03 17:16:28 jmburnz Exp $ */
 
 /**
  * @file lists.css
@@ -32,7 +32,10 @@ ol ol, ol ul,
   margin: 0 0 0 1.5em; /* LTR */
 }
 
-li {margin: 0; padding: 0;}
+li {
+  margin: 0; 
+		padding: 0;
+}
 
 .item-list ul li,
 ul.menu li,
