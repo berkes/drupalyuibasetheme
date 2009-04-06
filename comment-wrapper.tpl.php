@@ -1,5 +1,5 @@
 <?php
-// $Id: comment-wrapper.tpl.php,v 1.4 2009/04/06 06:08:56 jmburnz Exp $
+// $Id: comment-wrapper.tpl.php,v 1.3.2.1 2009/04/06 21:50:07 jmburnz Exp $
 
 /**
  * @file comment-wrapper.tpl.php
