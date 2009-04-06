@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.14 2009/04/02 10:51:11 jmburnz Exp $
+// $Id: page.tpl.php,v 1.15 2009/04/06 06:09:13 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -112,12 +112,14 @@
 				
 				<?php if (!empty($breadcrumb)): ?>
 						<div id="breadcrumb">
-								<?php print $breadcrumb; ?>
+						  <div class="breadcrumb-inner inner">
+								  <?php print $breadcrumb; ?>
+						  </div>
 						</div> <!-- /breadcrumb -->
 				<?php endif; ?>
 		
 				<?php if (!empty($secondary_content)): ?>
-						<div id="secondary-content" class="region clear">
+						<div id="secondary-content" class="region clear clear-block">
 								<div class="region-inner inner">
 										<?php print $secondary_content; ?>
 								</div>
@@ -184,7 +186,7 @@
 				</div> <!-- /col wrapper -->
 
 				<?php if (!empty($tertiary_content)): ?>
-						<div id="tertiary-content" class="region clear">
+						<div id="tertiary-content" class="region clear clear-block">
 								<div class="region-inner inner">
 										<?php print $tertiary_content; ?>
 								</div> 
