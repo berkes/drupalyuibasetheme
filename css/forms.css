@@ -1,4 +1,4 @@
-/* $Id: forms.css,v 1.8 2009/04/04 00:05:03 jmburnz Exp $ */
+/* $Id: forms.css,v 1.9 2009/04/06 06:10:16 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -134,6 +134,9 @@ html.js fieldset.collapsed legend a {
 	*/
 #node-form .vertical-tabs ul.vertical-tabs-list {
   margin: 0;
+}
+#node-form .vertical-tabs ul.vertical-tabs-list li {
+  list-style: none;
 }
 /**
  * OpenID icon fix for Drupal 6
