@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.8 2009/03/22 22:23:33 jmburnz Exp $
+// $Id: template.php,v 1.9 2009/04/06 06:06:43 jmburnz Exp $
 
 /**
  * @file template.php
@@ -193,6 +193,15 @@ function genesis_preprocess_comment(&$vars, $hook) {
 }
 
 /**
+ * Add a "Comments" heading above comments except on forum pages.
+ */
+function genesis_preprocess_comment_wrapper(&$vars) {
+  if ($vars['content'] && $vars['node']->type != 'forum') {
+    $vars['content'] = '<h2 class="comment-wrapper-title">'. t('Comments') .'</h2>'.  $vars['content'];
+  }
+}
+
+/**
  * Override or insert variables into block templates.
  *
  * @param $vars
@@ -246,15 +255,6 @@ function genesis_id_safe($string) {
     $string = 'id'. $string;
   }
   return $string;
-}
-
-/**
- * Return a themed breadcrumb trail.
- */
-function phptemplate_breadcrumb($breadcrumb) {
-  if (!empty($breadcrumb)) {
-    return '<div class="breadcrumb">'. implode(' &raquo; ', $breadcrumb) .'</div>';
-  }
 }
 
 /**
