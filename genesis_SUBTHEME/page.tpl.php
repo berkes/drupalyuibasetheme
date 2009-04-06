@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.15 2009/04/06 06:09:13 jmburnz Exp $
+// $Id: page.tpl.php,v 1.16 2009/04/06 06:19:51 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -29,7 +29,7 @@
  * @see layout.css
  */ 
 ?>
-<body id="genesis_2" <?php print $page_classes; ?>>
+<body id="genesis_1" <?php print $page_classes; ?>>
   <div id="container" class="width <?php print $body_classes; ?><?php //print ' grid' ;?>">
 
     <?php if (!empty($leaderboard)): ?>
