@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.8.2.2 2009/04/16 17:04:29 jmburnz Exp $
+// $Id: template.php,v 1.8.2.3 2009/04/16 17:49:56 jmburnz Exp $
 
 /**
  * @file template.php
@@ -27,21 +27,21 @@ function genesis_preprocess_page(&$vars, $hook) {
     $vars['help'] = '';
   }
 
-		// Set variables for the logo and site_name.
-		if ($vars['logo']) {
-		  $vars['site_logo'] = 
-				  '<a href="'. $vars['front_page'] .'" title="'. t('Home page'). '" rel="home">
-						  <img src="'. $vars['logo'] .'" alt="'. $vars['site_name'] .' '.t('logo') .'" />
-						</a>';
-		}
-
-		if ($vars['site_name']) {
-	   $vars['site_name'] = '<a href="'. $vars['front_page'] .'" title="'. t('Home page') .'" rel="home">'. $vars['site_name'] .'</a>';
+  // Set variables for the logo and site_name.
+  if ($vars['logo']) {
+    $vars['site_logo'] = 
+  		'<a href="'. $vars['front_page'] .'" title="'. t('Home page'). '" rel="home">
+			<img src="'. $vars['logo'] .'" alt="'. $vars['site_name'] .' '.t('logo') .'" />
+		</a>';
   }
 
-		// Set variables for the primary and secondary links.
-		$vars['primary_menu'] = theme('links', $vars['primary_links'], array('class' => 'links primary-links'));
-		$vars['secondary_menu'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-links'));
+  if ($vars['site_name']) {
+    $vars['site_name'] = '<a href="'. $vars['front_page'] .'" title="'. t('Home page') .'" rel="home">'. $vars['site_name'] .'</a>';
+  }
+
+  // Set variables for the primary and secondary links.
+  $vars['primary_menu'] = theme('links', $vars['primary_links'], array('class' => 'links primary-links'));
+  $vars['secondary_menu'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-links'));
 
   // Page classes (these are not $body_classes, they are seperate variables in Genesis).
   $page_classes = array();
@@ -50,40 +50,40 @@ function genesis_preprocess_page(&$vars, $hook) {
     $path = drupal_get_path_alias($_GET['q']);
     list($section, ) = explode('/', $path, 2);
     $page_classes[] = genesis_id_safe('section-'. $section);
-				$page_classes[] = genesis_id_safe('page-'. $path);
-				if (arg(0) == 'node') {
-						if (arg(1) == 'add') {
-								$page_classes[] = 'node-add'; // Add .node-add class.
-						}
-						elseif (is_numeric(arg(1)) && (arg(2) == 'edit' || arg(2) == 'delete')) {
-								$page_classes[] = 'node-'. arg(2); // Add .node-edit or .node-delete classes.
-						}
-				}
-		}
-		// Don't print on the front page.
-		if (!$vars['is_front']) {
-		  $vars['page_classes'] = 'class="'. implode(' ', $page_classes) .'"'; // Concatenate with spaces.
-		}
+    $page_classes[] = genesis_id_safe('page-'. $path);
+    if (arg(0) == 'node') {
+      if (arg(1) == 'add') {
+        $page_classes[] = 'node-add'; // Add .node-add class.
+      }
+      elseif (is_numeric(arg(1)) && (arg(2) == 'edit' || arg(2) == 'delete')) {
+        $page_classes[] = 'node-'. arg(2); // Add .node-edit or .node-delete classes.
+      }
+    }
+  }
+  // Don't print on the front page.
+  if (!$vars['is_front']) {
+    $vars['page_classes'] = 'class="'. implode(' ', $page_classes) .'"'; // Concatenate with spaces.
+  }
 
-		// Helper classes for header-nav elements.
-		$header_classes = array();
-		if ($vars['site_logo'] || $vars['site_name'] || $vars['site_slogan'] || $vars['search_box'] || $vars['header']) {
-				$header_classes[] = 'with-header';
-		}
-		else {
-				$header_classes[] = 'without-header';
-		}
-		if ($vars['primary_links'] || $vars['secondary_links']) {
-				$header_classes[] = 'with-nav';
-		}
-		else {
-				$header_classes[] = 'without-nav';
-		}
-		$vars['header_classes'] = implode(' ', $header_classes); // Concatenate with spaces.
+  // Helper classes for header-nav elements.
+  $header_classes = array();
+  if ($vars['site_logo'] || $vars['site_name'] || $vars['site_slogan'] || $vars['search_box'] || $vars['header']) {
+    $header_classes[] = 'with-header';
+  }
+  else {
+    $header_classes[] = 'without-header';
+  }
+  if ($vars['primary_links'] || $vars['secondary_links']) {
+    $header_classes[] = 'with-nav';
+  }
+  else {
+    $header_classes[] = 'without-nav';
+  }
+  $vars['header_classes'] = implode(' ', $header_classes); // Concatenate with spaces.
 		
   // Primary and Secondary links wrapper class.
-		$nav_classes = array();
-		$nav_classes[] = 'menu';
+  $nav_classes = array();
+  $nav_classes[] = 'menu';
   if (!empty($vars['primary_menu']) && !empty($vars['secondary_menu'])) {
     $nav_classes[] = 'primary-secondary';
   }
@@ -93,7 +93,7 @@ function genesis_preprocess_page(&$vars, $hook) {
   if (empty($vars['primary_menu']) && !empty($vars['secondary_menu'])) {
     $nav_classes[] = 'with-secondary';
   }
-		$vars['nav_classes'] = implode(' ', $nav_classes); // Concatenate with spaces.
+  $vars['nav_classes'] = implode(' ', $nav_classes); // Concatenate with spaces.
 }
 
 /**
@@ -109,7 +109,7 @@ function genesis_preprocess_node(&$vars, $hook) {
 
   // Special classes for nodes
   $node_classes = array();
-		$node_classes[] = 'node';
+  $node_classes[] = 'node';
   if ($vars['sticky']) {
     $node_classes[] = 'sticky';
   }
@@ -208,11 +208,11 @@ function genesis_preprocess_block(&$vars, $hook) {
 
   // Special classes for blocks
   $block_classes = array();
-		$block_classes[] = 'block';
+  $block_classes[] = 'block';
   $block_classes[] = 'block-'. $block->module;
   $block_classes[] = $vars['block_zebra'] .'-block';
-		//$block_classes[] = 'block-'. $block->region;
-		$block_classes[] = 'block-count-'. $vars['id'];
+  //$block_classes[] = 'block-'. $block->region;
+  $block_classes[] = 'block-count-'. $vars['id'];
   $vars['block_classes'] = implode(' ', $block_classes);
 
   if (user_access('administer blocks')) {
@@ -228,10 +228,9 @@ function genesis_preprocess_block(&$vars, $hook) {
     if (($block->module == 'menu' || ($block->module == 'user' && $block->delta == 1)) && user_access('administer menu')) {
       $edit_links[] = l(t('edit menu'), 'admin/build/menu', array('title' => t('edit the menu that defines this block'), 'class' => 'block-edit-menu'), drupal_get_destination(), NULL, FALSE, TRUE);
     }
-  $vars['edit_links_array'] = $edit_links;
-  $vars['edit_links'] = '<div class="edit">'. implode(' ', $edit_links) .'</div>';
+    $vars['edit_links_array'] = $edit_links;
+    $vars['edit_links'] = '<div class="edit">'. implode(' ', $edit_links) .'</div>';
   }
-
 }
 
 /**
