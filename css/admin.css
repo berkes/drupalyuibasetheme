@@ -1,4 +1,4 @@
-/* $Id: admin.css,v 1.5.2.1 2009/04/06 21:35:28 jmburnz Exp $ */
+/* $Id: admin.css,v 1.5.2.2 2009/04/16 17:05:54 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -13,10 +13,8 @@
  * When both sidebars are active, the left sidebar overlaps the theme list table,
 	* this forces the sidebars to be a set height with scroll bars. 
  */
-body.page-admin-build-themes #sidebar-left,
-body.page-admin-build-themes #sidebar-right,
-body.page-admin-build-themes-select #sidebar-left,
-body.page-admin-build-themes-select #sidebar-right {
+body.page-admin-build-themes .sidebar,
+body.page-admin-build-themes-select .sidebar {
   height: 193px; 
 		overflow-y: scroll;
 		background: #F7F7F7;
@@ -116,11 +114,11 @@ body.page-admin-build-themes .description {
 .local-tasks {margin-bottom: 0.75em;}
 ul.primary {
   margin: 1.5em 0 0 0; 
-		padding: 0 0 0.35em 1em;
+		padding: 0 0 0.2em 1em;
 		border-bottom-color: #CCC;
 }
 ul.primary li a {
-  padding: 0.3em 1em 0.4em;
+  padding: 0.1em 0.75em 0.2em;
 		background-color: #EEE;
   border-color: #CCC;
 }
