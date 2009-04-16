@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.8.2.1 2009/04/06 21:50:07 jmburnz Exp $
+// $Id: template.php,v 1.8.2.2 2009/04/16 17:04:29 jmburnz Exp $
 
 /**
  * @file template.php
@@ -21,56 +21,48 @@
  */
 function genesis_preprocess_page(&$vars, $hook) {
   global $theme;
-
+		
   // Don't display empty help from node_help().
   if ($vars['help'] == "<div class=\"help\"> \n</div>") {
     $vars['help'] = '';
   }
 
-		// Set vars for the logo and site_name.
+		// Set variables for the logo and site_name.
 		if ($vars['logo']) {
 		  $vars['site_logo'] = 
-				  '<a href="'. $vars['front_page'] .'" title="'. t('Home'). '" rel="home">
-						  <img src="'. $vars['logo'] .'" alt="'. t('Home') .'" />
+				  '<a href="'. $vars['front_page'] .'" title="'. t('Home page'). '" rel="home">
+						  <img src="'. $vars['logo'] .'" alt="'. $vars['site_name'] .' '.t('logo') .'" />
 						</a>';
 		}
 
 		if ($vars['site_name']) {
-		  $tag = $vars['is_front'] ? 'h1' : 'div';
-	   $vars['site_name'] = 	
-				  '<'. $tag .' id="site-name">
-				    <a href="'. $vars['front_page'] .'" title="'. t('Home') .'" rel="home">'. $vars['site_name'] .'</a>
-				  </'. $tag .'>';
+	   $vars['site_name'] = '<a href="'. $vars['front_page'] .'" title="'. t('Home page') .'" rel="home">'. $vars['site_name'] .'</a>';
   }
 
-		// Theme primary and secondary links.
+		// Set variables for the primary and secondary links.
 		$vars['primary_menu'] = theme('links', $vars['primary_links'], array('class' => 'links primary-links'));
 		$vars['secondary_menu'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-links'));
 
-  // Wrapper classes set on the body.
+  // Page classes (these are not $body_classes, they are seperate variables in Genesis).
   $page_classes = array();
   if (!$vars['is_front']) {
     // Add classes for each page and section.
     $path = drupal_get_path_alias($_GET['q']);
     list($section, ) = explode('/', $path, 2);
-    $page_classes[] = genesis_id_safe('page-'. $path);
     $page_classes[] = genesis_id_safe('section-'. $section);
+				$page_classes[] = genesis_id_safe('page-'. $path);
 				if (arg(0) == 'node') {
 						if (arg(1) == 'add') {
-								$page_classes[] = 'section-node-add'; // Add 'section-node-add'.
+								$page_classes[] = 'node-add'; // Add .node-add class.
 						}
 						elseif (is_numeric(arg(1)) && (arg(2) == 'edit' || arg(2) == 'delete')) {
-								$page_classes[] = 'section-node-'. arg(2); // Add 'section-node-edit' or 'section-node-delete'.
+								$page_classes[] = 'node-'. arg(2); // Add .node-edit or .node-delete classes.
 						}
-				}
-				// Add node-full-view class when viewing a node.
-				if (arg(0) == 'node' && is_numeric(arg(1))) {
-						$page_classes[] = 'node-full-view'; // Add 'node-full-view'
 				}
 		}
 		// Don't print on the front page.
 		if (!$vars['is_front']) {
-				$vars['page_classes'] = 'class="'. implode(' ', $page_classes) .'"'; // Concatenate with spaces.
+		  $vars['page_classes'] = 'class="'. implode(' ', $page_classes) .'"'; // Concatenate with spaces.
 		}
 
 		// Helper classes for header-nav elements.
@@ -136,10 +128,13 @@ function genesis_preprocess_node(&$vars, $hook) {
     // Node is displayed as teaser.
     $node_classes[] = 'node-teaser';
   }
+  if (!$vars['teaser']) {
+    // Node is displayed as teaser.
+    $node_classes[] = 'node-view';
+  }
   // Class for node type: "node-type-page", "node-type-story", "node-type-my-custom-type", etc.
   $node_classes[] = 'node-type-'. $vars['node']->type;
   $vars['node_classes'] = implode(' ', $node_classes); // Concatenate with spaces.
-
 }
 
 /**
@@ -189,7 +184,6 @@ function genesis_preprocess_comment(&$vars, $hook) {
   if (variable_get('comment_subject_field', 1) == 0) {
     $vars['title'] = '';
   }
-
 }
 
 /**
@@ -217,7 +211,8 @@ function genesis_preprocess_block(&$vars, $hook) {
 		$block_classes[] = 'block';
   $block_classes[] = 'block-'. $block->module;
   $block_classes[] = $vars['block_zebra'] .'-block';
-		$block_classes[] = $block->region;
+		//$block_classes[] = 'block-'. $block->region;
+		$block_classes[] = 'block-count-'. $vars['id'];
   $vars['block_classes'] = implode(' ', $block_classes);
 
   if (user_access('administer blocks')) {
