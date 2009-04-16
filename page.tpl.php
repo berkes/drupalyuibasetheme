@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.13.2.1 2009/04/06 21:50:07 jmburnz Exp $
+// $Id: page.tpl.php,v 1.13.2.2 2009/04/16 17:04:04 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -28,9 +28,13 @@
  *
  * @see layout.css
  */ 
-?>
+?>  
 <body id="genesis_1" <?php print $page_classes; ?>>
-  <div id="container" class="width <?php print $body_classes; ?><?php //print ' grid' ;?>">
+  <div id="container" class="width <?php print $body_classes; ?>">
+		
+		  <div id="skip-nav" class="clear-block">
+		    <a href="#main-content">Skip to main content</a>
+		  </div>
 
     <?php if (!empty($leaderboard)): ?>
 		    <div id="leaderboard" class="region">
@@ -48,15 +52,20 @@
 														<?php
 														/**
 															* See "function genesis_preprocess_page" if you need to modify 
-															* the HTML for the logo and site_name. To customise, use your 
-															* subthemes preprocess_page function.
+															* the the $site_logo or $site_name variables.
 															*/
 														?>
 														<?php if (!empty($site_logo)): ?>
 																<div id="logo"><?php print $site_logo; ?></div>
 														<?php endif; ?>
-				
-														<?php if (!empty($site_name)): print $site_name; endif; ?>
+														
+														<?php if (!empty($site_name)): ?>
+																<?php if (!empty($title)): ?>
+																		<div id="site-name"><strong><?php print $site_name; ?></strong></div>
+																<?php else: /* Use h1 when the page title is empty */ ?>
+																		<h1 id="site-name"><?php print $site_name; ?></h1>
+																<?php endif; ?>
+														<?php endif; ?>
 				
 														<?php if (!empty($site_slogan)): ?>
 																<div id="site-slogan"><?php print $site_slogan; ?></div>
@@ -127,8 +136,8 @@
 				<?php endif; ?>
 
 				<div id="columns" class="clear clear-block">
-						<div id="content">
-								<div id="content-inner">
+						<div id="columns-inner">
+						  <div id="content-column">
 	
 										<?php if (!empty($mission)): ?>
 										  <div id="mission"><?php print $mission; ?></div>
@@ -141,16 +150,23 @@
 										<?php endif; ?>
 	
 										<div id="main-content">
+										
 												<?php if (!empty($title)): ?>
 												  <h1 id="page-title"><?php print $title; ?></h1>
 												<?php endif; ?>
+												
 												<?php if (!empty($tabs)): ?>
 												  <div class="local-tasks"><?php print $tabs; ?></div>
 												<?php endif; ?>
+												
 												<?php if (!empty($messages)): print $messages; endif; ?>
 												<?php if (!empty($help)): print $help; endif; ?>
-												<?php print $content; ?>
-										</div>
+												
+												<div id="content">
+												  <?php print $content; ?>
+												</div>
+												
+										</div> <!-- /main-content -->
 	
 										<?php if (!empty($content_bottom)): ?>
 												<div id="content-bottom" class="region">
@@ -163,14 +179,13 @@
 														<?php print $feed_icons; ?>
 												</div>
 										<?php endif; ?>
-
-								</div>
-						</div>
+										
+						</div></div>
 
 						<?php if (!empty($left)): ?>
 								<div id="sidebar-left" class="sidebar">
 										<div class="sidebar-inner inner">
-										  <?php print $left; ?>
+												<?php print $left; ?>
 										</div>
 								</div> <!-- /sidebar-left -->
 						<?php endif; ?>
@@ -198,7 +213,9 @@
 				
 								<?php if (!empty($footer)): ?>
 										<div id="footer" class="region">
-												<?php print $footer; ?>
+										  <div class="region-inner inner">
+												  <?php print $footer; ?>
+												</div>
 										</div> <!-- /footer -->
 								<?php endif; ?>
 								
