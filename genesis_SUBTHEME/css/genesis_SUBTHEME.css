@@ -1,15 +1,13 @@
-/* $Id: genesis_SUBTHEME.css,v 1.4.2.1 2009/04/06 21:53:13 jmburnz Exp $ */
+/* $Id: genesis_SUBTHEME.css,v 1.4.2.2 2009/04/16 17:05:07 jmburnz Exp $ */
 
 /**
 	* @file genesis_SUBTHEME.css
 	* This stylesheet provides the main styles for this theme.
 	*/
 
-
 /**
 	* Remove unused styles for performace.
 	*/
-
 
 /**********************************************************
  *                          Body
@@ -24,7 +22,6 @@
 	*/
 body {}
 
-
 /**********************************************************
  *                     The wrapper divs
  **********************************************************/
@@ -32,10 +29,15 @@ body {}
 	* Be careful how you modify these, see layout.css first.
 	*/
 #container {}
-#columns   {}
-#content   {}
-#main-content {}
 
+/* Column wrappers */
+#columns   {}
+#columns-inner {}
+
+/* Content wrappers */
+#content-column {}
+#main-content {}
+#content   {}
 
 /**********************************************************
  *                     Width Setting
@@ -53,8 +55,18 @@ body {}
 	* .width {width: 960px;}
 	* .width {width: 80em;}
 	*/
-.width {width: 80em;}
+.width {width: 85%;}
 
+
+/**********************************************************
+ *                    Global padding
+ **********************************************************/
+/**
+	* You can set a global value using .inner and override it 
+	* using a more specific selector such as "#sidebar-left .inner".
+	*/
+/* Global default inner padding */
+.inner {}
 
 /**********************************************************
  *                       Regions
@@ -89,27 +101,12 @@ body {}
 #content-top {}
 #content-bottom {}
 
-
-/**********************************************************
- *                    Global padding
- **********************************************************/
-/**
-	* You can set a global value using .inner and override it 
-	* using a more specific selector such as "#sidebar-left .inner".
-	*/
-/* Global default inner padding */
-.inner {}
-
-/* #content-inner is the main content wrapper */
-#content-inner {}
-
-
 /**********************************************************
  *                      Sidebars
  **********************************************************/
 	/* Target both sidebars with this low specifity selector. */
-.sidebars {}
-.sidebars .inner {}
+.sidebar {}
+.sidebar .inner {}
 .sidebar-inner {}
 
 /* Target a specific sidebar or its sidebar-inner. */
@@ -120,7 +117,6 @@ body {}
 #sidebar-right {}
 #sidebar-right .inner {}
 #sidebar-right .sidebar-inner {}
-
 
 /**********************************************************
  *                 Global Link Styles
@@ -138,12 +134,11 @@ li a.active {}
 /* Remove borders on linked images. */
 a img {border: none;}
 
-
 /**********************************************************
- *                    HTML elements 
+ *                    XHTML elements 
  **********************************************************/
 /** 
-	* Add any html elements you require. 
+	* Common xhtml elements. 
 	* Use genesis/css/type.css as a guide.
 	*/
 h1 {}
@@ -154,10 +149,21 @@ h5 {}
 h6 {}
 p  {}
 blockquote {}
+cite   {}
+q      {}
+em     {}
+strong {}
+del    {}
+sup    {}
+sub    {}
+ul, ol {}
+li     {}
+dl     {}
+dt     {}
+dd     {}
 
 /* The main title on each page. */
 h1#page-title {}
-
 
 /**********************************************************
  *                       Header 
@@ -203,7 +209,6 @@ div#site-name  {
 /* Site slogan. */
 #site-slogan {}
 
-
 /**********************************************************
  *                        Search
  **********************************************************/
@@ -227,7 +232,6 @@ div#site-name  {
 /* Search Results Page - see .box */
 .section-search #search-form {}
 .section-search #search-form {}
-
 
 /**********************************************************
  *               Primary & Secondary Links
@@ -378,7 +382,6 @@ div#site-name  {
 #secondary .links li.first {}
 #secondary .links li.last {}
 
-
 /**********************************************************
  *                       Menus
  **********************************************************/
@@ -395,7 +398,6 @@ ul.menu li.active-trail {}
 
 ul.menu li.first {}
 ul.menu li.last  {}
-
 
 /**********************************************************
  *                      Breadcrumb
@@ -414,7 +416,6 @@ ul.menu li.last  {}
   padding: 0 0 0.75em 0;
 }
 
-
 /**********************************************************
  *                       Mission
  **********************************************************/
@@ -424,13 +425,20 @@ ul.menu li.last  {}
 		font-weight: bold;
 }
 
-
 /**********************************************************
  *                        Nodes
  **********************************************************/
 /** 
 	* Implimentation of node styles.
 	*/
+/* section type class when viewing a node */
+.page-node   {}
+
+/* section type classes for node workflow states */
+.node-add    {}
+.node-edit   {}
+.node-delete {}
+
 /* 1.5em margin bottom on nodes preserves the vertical grid. */
 .node {margin: 0 0 1.5em;}
 
@@ -498,7 +506,6 @@ ul.menu li.last  {}
 /* Theme the node teaser seperatly. */
 .node-teaser {}
 .node-teaser .node-inner {}
-
 
 /**********************************************************
  *                       Blocks
@@ -621,7 +628,6 @@ tr .block {
 .block-book {} 
 .block-aggregator {}
 
-
 /**********************************************************
  *                     Comments
  **********************************************************/
@@ -698,7 +704,6 @@ tr .block {
 /* Theme comment status. */
 .comment .unpublished {}
 
-
 /**********************************************************
  *                   Profile
  **********************************************************/
@@ -712,7 +717,6 @@ tr .block {
 .profile dt {
   margin: 1.4em 0 0 0;
 }
-
 
 /**********************************************************
  *                     Forum
@@ -736,7 +740,6 @@ tr .block {
 #forum div.indent  {
   margin-left: 0.5em;
 }
-
 
 /**********************************************************
  *                     Books
@@ -762,7 +765,6 @@ tr .block {
   margin: 0 0 1.5em 0;
 }
 
-
 /**********************************************************
  *                    Polls
  **********************************************************/
@@ -777,7 +779,6 @@ tr .block {
 .poll .percent {}
 .poll .total   {}
 .poll .vote-form {}
-
 
 /**********************************************************
  *                      Box
@@ -806,7 +807,6 @@ tr .block {
 .box .form-item {}
 .box fieldset   {}
 
-
 /**********************************************************
  *               Footer, Footer Message
  **********************************************************/
@@ -820,6 +820,9 @@ tr .block {
 }
 
 #footer {}
+#footer .inner {}
+#footer .region-inner {}
+
 #footer-message {}
 
 #footer a, 
@@ -833,7 +836,6 @@ tr .block {
 p.attribution {}
 #footer-message p.attribution a {}
 #footer-message p.attribution a:hover {}
-
 
 /**********************************************************
  *                     Pager 
@@ -857,7 +859,6 @@ p.attribution {}
 .item-list ul.pager li.pager-next     {}
 .item-list ul.pager li.pager-last     {}
 
-
 /**********************************************************
  *                 RSS Feed Icon
  **********************************************************/
@@ -865,13 +866,15 @@ p.attribution {}
 #feed-icon img {}
 #feed-icon a.feed-icon {}
 
-
 /**********************************************************
  *                    Tables
  **********************************************************/
 /** 
 	* The selector groupings are from Garland which offers a
 	* sensible starting point for styling Drupal tables.
+	* At first these may be confusing, use firebug to prototype
+	* your stlyes and you will see they offer a good default
+	* starting point for styling tables.
 	*/
 table {}
 table a {}
@@ -904,7 +907,6 @@ tr:first-child td.container {}
 
 table.system-status-report th {}
 
-
 /**********************************************************
  *                   Form elements
  **********************************************************/
@@ -913,18 +915,21 @@ table.system-status-report th {}
 	* Let forms.css & Drupal do the hard work and just set very 
 	* basic style over-rides.
 	*/
+form .form-item label {}
+
 fieldset {}
 fieldset legend {}
 
+html.js fieldset.collapsed   {}
+html.js fieldset.collapsible {}
+html.js fieldset.collapsible legend   {}
 html.js fieldset.collapsible legend a {}
 html.js fieldset.collapsed legend a   {}
 
-.tips {}
-
 input.form-text, textarea {}
-
 .resizable-textarea .grippie {}
 
+.tips {}
 
 /**********************************************************
  *                     Admin
@@ -948,17 +953,13 @@ span.admin-disabled {}
 .block-region {}
 
 /** 
- * Experimental workaround for the theme list page for very narrow themes.
- * When both sidebars are active, the left sidebar overlaps the theme list table,
-	* this forces the sidebars to be a set height with scroll bars. 
+ * Override the sidebar scroll boxes on the admin/build/themes page
  */
-body.page-admin-build-themes #sidebar-left,
-body.page-admin-build-themes #sidebar-right,
-body.page-admin-build-themes-select #sidebar-left,
-body.page-admin-build-themes-select #sidebar-right {}
+body.page-admin-build-themes .sidebar,
+body.page-admin-build-themes-select .sidebar {}
 
 /**
-	* Admin panels.
+	* Override Genesis default admin panel styles.
 	*/
 div.admin {}
 div.admin .left  {}
@@ -968,29 +969,24 @@ div.admin-panel h3 {}
 div.admin-panel .body {}
 div.admin-panel .description {}
 
-
 /**********************************************************
  *                   Local tasks (tabs)
  **********************************************************/
 .local-tasks ul.primary {}
 .local-tasks ul.primary li {}
-.local-tasks ul.primary li a {}
-.local-tasks ul.primary li a:hover  {}
+.local-tasks ul.primary li a:link  {}
+.local-tasks ul.primary li a:hover {}
 .local-tasks ul.primary li.active a {}
 
 .local-tasks ul.secondary {}
 .local-tasks ul.secondary li {}
-.local-tasks ul.secondary li a {}
-.local-tasks ul.primary li a:hover {}
+.local-tasks ul.secondary li a:link  {}
+.local-tasks ul.secondary li a:hover {}
 .local-tasks ul.secondary li.active a {}
 
-
 /**********************************************************
- *                      Buttons
+ *              Buttons - Restyle form buttons.
  **********************************************************/
-/**
-	* Restyle form buttons.
-	*/
 button, 
 .pushbutton, 
 .form-submit {}
@@ -998,3 +994,10 @@ button,
 button:hover, 
 .pushbutton:hover, 
 .form-submit:hover {}
+
+/**********************************************************
+ *                   Skip navigation
+ **********************************************************/
+#skip-nav {text-align: center;}
+#skip-nav a:link  {}
+#skip-nav a:hover {}
