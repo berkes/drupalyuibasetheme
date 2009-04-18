@@ -1,5 +1,5 @@
 <?php 
-// $Id: node.tpl.php,v 1.6 2009/03/22 22:21:14 jmburnz Exp $
+// $Id: node.tpl.php,v 1.6.2.1 2009/04/18 11:11:51 jmburnz Exp $
 
 /**
  * @file node.tpl.php
@@ -12,33 +12,29 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $node_classes; ?>">
   <div class="node-inner inner">
 
-				<?php if ($page == 0): ?>
-						<h2 class="node-title"><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h2>
-				<?php endif; ?>
+    <?php if (!$page): ?>
+      <h2 class="node-title"><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h2>
+    <?php endif; ?>
 
-				<?php if ($unpublished): ?>
-						<div class="unpublished"><?php print t('Unpublished'); ?></div>
-				<?php endif; ?>
+    <?php if ($unpublished): ?>
+      <div class="unpublished"><?php print t('Unpublished'); ?></div>
+    <?php endif; ?>
 
-				<?php if ($submitted): ?>
-					<div class="node-submitted">
-							<?php print $submitted; ?>
-					</div>
-				<?php endif; ?>
+    <?php if ($submitted): ?>
+      <div class="node-submitted"><?php print $submitted; ?></div>
+    <?php endif; ?>
 
-				<?php print $picture; ?>
+    <?php print $picture; ?>
 
-				<div class="node-content">
-						<?php print $content; ?>
-				</div>
+    <div class="node-content"><?php print $content; ?></div>
 
-				<?php if (count($taxonomy)): ?>
-						<div class="node-terms"><?php print $terms; ?></div>
-				<?php endif; ?>
+    <?php if ($terms): ?>
+      <div class="node-terms"><?php print $terms; ?></div>
+    <?php endif; ?>
 
-				<?php if ($links): ?>
-						<div class="node-links"><?php print $links; ?></div>
-				<?php endif; ?>
+    <?php if ($links): ?>
+      <div class="node-links"><?php print $links; ?></div>
+    <?php endif; ?>
 
-	 </div>
+  </div>
 </div> <!-- /node -->

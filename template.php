@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.8.2.3 2009/04/16 17:49:56 jmburnz Exp $
+// $Id: template.php,v 1.8.2.4 2009/04/18 11:11:51 jmburnz Exp $
 
 /**
  * @file template.php
@@ -29,10 +29,7 @@ function genesis_preprocess_page(&$vars, $hook) {
 
   // Set variables for the logo and site_name.
   if ($vars['logo']) {
-    $vars['site_logo'] = 
-  		'<a href="'. $vars['front_page'] .'" title="'. t('Home page'). '" rel="home">
-			<img src="'. $vars['logo'] .'" alt="'. $vars['site_name'] .' '.t('logo') .'" />
-		</a>';
+    $vars['site_logo'] = '<a href="'. $vars['front_page'] .'" title="'. t('Home page'). '" rel="home"><img src="'. $vars['logo'] .'" alt="'. $vars['site_name'] .' '.t('logo') .'" /></a>';
   }
 
   if ($vars['site_name']) {
@@ -50,7 +47,7 @@ function genesis_preprocess_page(&$vars, $hook) {
     $path = drupal_get_path_alias($_GET['q']);
     list($section, ) = explode('/', $path, 2);
     $page_classes[] = genesis_id_safe('section-'. $section);
-    $page_classes[] = genesis_id_safe('page-'. $path);
+    //$page_classes[] = genesis_id_safe('page-'. $path);
     if (arg(0) == 'node') {
       if (arg(1) == 'add') {
         $page_classes[] = 'node-add'; // Add .node-add class.
@@ -191,7 +188,7 @@ function genesis_preprocess_comment(&$vars, $hook) {
  */
 function genesis_preprocess_comment_wrapper(&$vars) {
   if ($vars['content'] && $vars['node']->type != 'forum') {
-    $vars['content'] = '<h2 class="comment-wrapper-title">'. t('Comments') .'</h2>'.  $vars['content'];
+    $vars['content'] = '<h2 id="comment-wrapper-title">'. t('Comments') .'</h2>'.  $vars['content'];
   }
 }
 
