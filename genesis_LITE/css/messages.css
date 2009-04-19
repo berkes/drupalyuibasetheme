@@ -18,16 +18,30 @@ div.messages ul {
   margin: 0 0 0 1.25em;
 }
 
-div.success {color: #55872E; background: #F1F8EB; border: 1px solid #7AC142;}
+div.success {
+  background: #F1F8EB; 
+  border: 1px solid #7AC142;
+  color: #55872E;
+}
 
-div.error, 
-tr.error {
+div.error {
   background: #FCE9EC url(../images/error.png) no-repeat 6px 6px;
   border: 1px solid #E41F0B;
   color: #E41F0B;
   padding-left: 2.4em;
 }
-div.notice  {color: #514721; background: #FFF6BF; border-color: #FFD324;}
+
+tr.error {
+  background: #FCE9EC;
+  color: #E41F0B;
+}
+
+div.notice  {
+  background: #FFF6BF; 
+  border-color: #FFD324;
+  color: #514721;
+}
+
 .error a    {color: #8a1f11; text-decoration: underline;}
 .notice a   {color: #514721; text-decoration: underline;}
 .success a  {color: #264409; text-decoration: underline;}
@@ -94,9 +108,11 @@ div.comment div.unpublished {
   display: none;
   padding-left: 36px;
 }
+
 #saving p {
   margin: 0;
 }
+
 #saving-notice {
   font-size: 0.9em;
   font-style: italic;
@@ -107,12 +123,13 @@ div.comment div.unpublished {
 div.warning {
   background: transparent url(../images/warning.png) no-repeat 6px 7px;
   border: 1px solid #FFB900;
-  padding: 0.5em 0.5em 0.5em 2.4em;
+  padding-left: 2.4em;
 }
+
 div.warning, 
-tr.warning {background-color: #FFE9AF;}
-tr.warning td {color: #8a1f11;}
-tr.warning.merge-up td {color: #514721;}
+table tr.warning {background-color: #FFE9AF}
+table tr.warning td {color: #8a1f11;}
+table tr.warning.merge-up td {color: #514721;}
 
 div.error, 
 tr.error, 
