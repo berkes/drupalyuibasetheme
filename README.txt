@@ -36,7 +36,7 @@ For online help see the Genesis documentation: http://drupal.org/node/323404
 ## LAYOUT - How to Change the Layout:
 
    Open these two files:
-   ~/genesis/layout.css
+   ~/genesis/genesis/css/layout.css
    ~/genesis_SUBTHEME/page.tpl.php
 		  
    In layout.css you will find 7 preconfigured layouts to choose from. Take a look
