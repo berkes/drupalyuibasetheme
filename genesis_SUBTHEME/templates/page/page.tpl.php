@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.1 2009/04/19 17:33:15 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.2 2009/04/19 23:41:45 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -118,7 +118,7 @@
       </div>
     <?php endif; ?>
 
-    <div id="columns" class="clear-block">
+    <div id="columns" class="clear">
       <div id="columns-inner">
         <div id="content-column">
 

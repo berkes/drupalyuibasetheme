@@ -96,7 +96,7 @@
       <div id="secondary-content" class="region clear-block"><?php print $secondary_content; ?></div>
     <?php endif; ?>
 
-   <div id="columns" class="clear-block">
+   <div id="columns" class="clear">
      <div id="columns-inner">
         <div id="content-column">
 
