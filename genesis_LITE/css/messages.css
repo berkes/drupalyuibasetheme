@@ -60,6 +60,7 @@ div.help {
   padding: 0.5em 0.5em 0.5em 2.4em;
 }
 
+/* CSS3 */
 div.help p:last-child,
 div.help ul:last-child {
   margin-bottom: 0;
