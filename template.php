@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.8.2.4 2009/04/18 11:11:51 jmburnz Exp $
+// $Id: template.php,v 1.8.2.5 2009/04/19 17:25:08 jmburnz Exp $
 
 /**
  * @file template.php
@@ -46,8 +46,8 @@ function genesis_preprocess_page(&$vars, $hook) {
     // Add classes for each page and section.
     $path = drupal_get_path_alias($_GET['q']);
     list($section, ) = explode('/', $path, 2);
-    $page_classes[] = genesis_id_safe('section-'. $section);
-    //$page_classes[] = genesis_id_safe('page-'. $path);
+    $page_classes[] = safe_string('section-'. $section);
+    //$page_classes[] = safe_string('page-'. $path);
     if (arg(0) == 'node') {
       if (arg(1) == 'add') {
         $page_classes[] = 'node-add'; // Add .node-add class.
@@ -61,36 +61,6 @@ function genesis_preprocess_page(&$vars, $hook) {
   if (!$vars['is_front']) {
     $vars['page_classes'] = 'class="'. implode(' ', $page_classes) .'"'; // Concatenate with spaces.
   }
-
-  // Helper classes for header-nav elements.
-  $header_classes = array();
-  if ($vars['site_logo'] || $vars['site_name'] || $vars['site_slogan'] || $vars['search_box'] || $vars['header']) {
-    $header_classes[] = 'with-header';
-  }
-  else {
-    $header_classes[] = 'without-header';
-  }
-  if ($vars['primary_links'] || $vars['secondary_links']) {
-    $header_classes[] = 'with-nav';
-  }
-  else {
-    $header_classes[] = 'without-nav';
-  }
-  $vars['header_classes'] = implode(' ', $header_classes); // Concatenate with spaces.
-		
-  // Primary and Secondary links wrapper class.
-  $nav_classes = array();
-  $nav_classes[] = 'menu';
-  if (!empty($vars['primary_menu']) && !empty($vars['secondary_menu'])) {
-    $nav_classes[] = 'primary-secondary';
-  }
-  if (!empty($vars['primary_menu']) && empty($vars['secondary_menu'])) {
-    $nav_classes[] = 'with-primary';
-  }
-  if (empty($vars['primary_menu']) && !empty($vars['secondary_menu'])) {
-    $nav_classes[] = 'with-secondary';
-  }
-  $vars['nav_classes'] = implode(' ', $nav_classes); // Concatenate with spaces.
 }
 
 /**
@@ -240,12 +210,26 @@ function genesis_preprocess_block(&$vars, $hook) {
  *
  * @see http://drupal.org/project/zen
  */
-function genesis_id_safe($string) {
+function safe_string($string) {
   $string = strtolower(preg_replace('/[^a-zA-Z0-9_-]+/', '-', $string));
   if (!ctype_lower($string{0})) {
     $string = 'id'. $string;
   }
   return $string;
+}
+
+/**
+ * Return a themed breadcrumb trail.
+ *
+ * @param $breadcrumb
+ *   An array containing the breadcrumb links.
+ * @return
+ *   A string containing the breadcrumb output.
+ */
+function genesis_breadcrumb($breadcrumb) {
+  if (!empty($breadcrumb)) {
+    return implode(' » ', $breadcrumb);
+  }
 }
 
 /**
