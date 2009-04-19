@@ -25,21 +25,26 @@ For online help see the Genesis documentation: http://drupal.org/node/323404
     2) the description
 
 
-## LAYOUT - How to Change the Layout:
+## LAYOUT - How to Change the Layout
 
    Open these two files:
    ~/genesis/genesis/css/layout.css
    ~/genesis_SUBTHEME/page.tpl.php
 		  
-   In layout.css you will find 7 preconfigured layouts to choose from. Take a look
-   at that file now - there are visual comments that describe each layout.
+   In layout.css you will find the 4 preconfigured layout methods to choose from.
 				
    To change the layout select the ID selector that matches your preferred layout and 
    change the <body id="...."> in page.tpl.php
 				
    By default this is <body id="genesis_1">. Save and upload the file and viola, the layout 
    will automagically change. 
-				
+
+
+## OVERRIDING THE LAYOUT
+
+   If you want to change the sidebar widths or otherwise modify the layout, simply copy
+   the relevant layout CSS to your page.css file in your subtheme and modify it there.
+
 				
 ## SUBTHEME PREPROCESS FUNCTIONS
 				
