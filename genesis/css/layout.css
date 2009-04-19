@@ -1,4 +1,4 @@
-/* $Id: layout.css,v 1.1.2.1 2009/04/19 20:59:38 jmburnz Exp $ */
+/* $Id: layout.css,v 1.1.2.2 2009/04/19 23:32:24 jmburnz Exp $ */
 
 /**
  * @file layout.css
@@ -89,7 +89,7 @@ html, body {margin: 0; padding: 0;}
 #container {margin: 0 auto;} 
 
 /* Trigger hasLayout */
-#columns {zoom: 1;}
+#columns {display: inline-block;}
 
 /* Float the columns */
 #columns-inner,
