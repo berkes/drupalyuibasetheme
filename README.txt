@@ -5,32 +5,24 @@ you to quickly build any theme using its preconfigured directory structure,
 tpl files and modular stylesheets.
 
 For online help see the Genesis documentation: http://drupal.org/node/323404
-		
+
+
 ## CREATE A NEW SUBTHEME
-   To create your sub-theme first make a copy of the ~/genesis_SUBTHEME/ directory 
-   and rename every instance of "SUBTHEME" to your theme name.
+   To create your subtheme first make a copy of the ~/genesis_SUBTHEME/ directory.
 
    The best place to save your new sub-theme is ~/sites/all/themes/
 
    The new subtheme does not have to be inside the /genesis/ diretory, as this
    is optional in Drupal 6.
 
-
-## The New Sub-theme Folder ~/genesis_SUBTHEME folder
+1. The New Sub-theme Folder ~/genesis_SUBTHEME folder
    Change "SUBTHEME" to your theme name e.g. /genesis_mytheme 
 
-
-## The .info File ~/genesis_SUBTHEME/genesis_SUBTHEME.info
+2. The .info File ~/genesis_SUBTHEME/genesis_SUBTHEME.info
    Change "SUBTHEME" to your theme name e.g genesis_mytheme.info
    Inside the .info file change:
     1) the theme name
     2) the description
-
-
-## The CSS file ~/genesis_SUBTHEME/genesis_SUBTHEME.css
-   Change "SUBTHEME" to your theme name e.g genesis_mytheme.css. This is the 
-   main CSS file for your theme and the one you will add the majority of your
-   modifictions to.
 
 
 ## LAYOUT - How to Change the Layout:
