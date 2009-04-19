@@ -1,9 +1,9 @@
-/* $Id: layout.css,v 1.3.2.2 2009/04/16 17:05:54 jmburnz Exp $ */
+/* $Id: layout.css,v 1.3.2.3 2009/04/19 17:29:38 jmburnz Exp $ */
 
 /**
-	* @file layout.css
-	* layout styles.
-	*/
+ * @file layout.css
+ * layout styles.
+ */
 
 /***********************************************************
  *                     The 7 Layouts
@@ -13,17 +13,17 @@
  * Replace the body id="..." (in page.tpl.php) with the your 
  * preferred layout.
  * 
-	* e.g. <body id="genesis_1">
+ * e.g. <body id="genesis_1">
  * 
-	* If your site uses a page-front.tpl.php or any other page-xxx.tpl.php
+ * If your site uses a page-front.tpl.php or any other page-xxx.tpl.php
  * your site can have multiple layouts.
  *
  * OVER RIDING THE WIDTHS AND MARGINS 
  * To over ride the defaults I suggest copying the specific layout to your 
  * subthemes CSS file and making the changes there. See the Genesis Zine 
-	* subtheme for an example (around line 32 of genesis_zine.css).
+ * subtheme for an example (around line 32 of genesis_zine.css).
  * 
-	* ABOUT THE LAYOUTS
+ * ABOUT THE LAYOUTS
  * genesis_1, 2 & 3 place the sidebars left & right of the content column.
  * genesis_4, 5, & 6 place both sidebars on the right.
  * genesis_7 only supports a 2 col layout - please read the notes
@@ -32,10 +32,10 @@
  
 /**
  * #genesis_1
-	* Left & Right are the same width.
+ * Left & Right are the same width.
  * | Left        |     Content       | Right       |
-	* | 20em        |                   | 20em        |
-	*/
+ * | 20em        |                   | 20em        |
+ */
 #genesis_1 .two-sidebars  #content-column {margin      : 0 20em; padding: 0 0.75em;}
 #genesis_1 .sidebar-left  #content-column {margin-left :   20em; padding: 0 0 0 0.75em;}
 #genesis_1 .sidebar-right #content-column {margin-right:   20em; padding: 0 0.75em 0 0;}
@@ -45,10 +45,10 @@
 
 /**
  * #genesis_2
-	* Variable left & right sidebar widths.
+ * Variable left & right sidebar widths.
  * | Left      |     Content      | Right          |
-	* | 14.1667em |                  | 25.8333em      |
-	*/
+ * | 14.1667em |                  | 25.8333em      |
+ */
 #genesis_2 .two-sidebars  #content-column {margin      : 0 25.8333em 0 14.1667em; padding: 0 0.75em;}
 #genesis_2 .sidebar-left  #content-column {margin-left :               14.1667em; padding: 0 0 0 0.75em;}
 #genesis_2 .sidebar-right #content-column {margin-right:   25.8333em            ; padding: 0 0.75em 0 0;}
@@ -58,9 +58,9 @@
 
 /**
  * #genesis_3
-	* Variable sidebar widths (opposite of genesis_2).
+ * Variable sidebar widths (opposite of genesis_2).
  * | Left           |     Content      | Right     |
-	* | 25.8333em      |                  | 14.1667em |
+ * | 25.8333em      |                  | 14.1667em |
  */
 #genesis_3 .two-sidebars  #content-column {margin     : 0 14.1667em 0 25.8333em; padding: 0 0.75em;}
 #genesis_3 .sidebar-left  #content-column {margin-left:               25.8333em; padding: 0 0 0 0.75em;}
@@ -71,10 +71,10 @@
 
 /**
  * #genesis_4
-	* Both sidebars on the right; left & right are the same width.
+ * Both sidebars on the right; left & right are the same width.
  * | Content             |  Left      |  Right     |
-	* |                     |  20em      |  20em      |
-	*/
+ * |                     |  20em      |  20em      |
+ */
 #genesis_4 .two-sidebars  #content-column {margin-right: 40em; padding: 0 0.75em 0 0;}
 #genesis_4 .sidebar-left  #content-column {margin-right: 20em; padding: 0 0.75em 0 0;}
 #genesis_4 .sidebar-right #content-column {margin-right: 20em; padding: 0 0.75em 0 0;}
@@ -84,11 +84,46 @@
 
 #genesis_4 .sidebar-left #sidebar-left {width:20em; margin-left: -20em;}
 
+/*
+div#wrapper {float:left;width:100%}
+div#content {margin-left: 50%}
+div#navigation { float:left;width:25%; margin-left:-75%} right
+div#extra { float:left;width:25%;margin-left:-100%} left
+
+
+div#wrapper{float:right;width: 100%;margin-left: -400px}
+div#content{margin-left: 400px}
+div#navigation{float:left;width:200px} left
+div#extra{float:right;width:200px} right
+
+
+*/
+#genesis_4a .two-sidebars  #content-column {margin-left: 40em; padding: 0 0.75em 0 0;}
+#genesis_4a .sidebar-left  #content-column {margin-left: 20em; padding: 0 0.75em 0 0;}
+#genesis_4a .sidebar-right #content-column {margin-left: 20em; padding: 0 0.75em 0 0;}
+
+#genesis_4a #sidebar-left  {width: 20em;margin-left: -100%;}
+#genesis_4a #sidebar-right {width: 20em;margin-left: -100%;}
+
+#genesis_4a .two-sidebars #sidebar-right {width:20em; margin-left: -75%;}
+
+
+
+#genesis_4b .two-sidebars  #content-column {margin-left: 50%; padding: 0 0.75em 0 0;}
+#genesis_4b .sidebar-left  #content-column {margin-left: 25%; padding: 0 0.75em 0 0;}
+#genesis_4b .sidebar-right #content-column {margin-left: 25%; padding: 0 0.75em 0 0;}
+
+#genesis_4b #sidebar-left  {width: 25%; margin-left: -100%;}
+#genesis_4b #sidebar-right {width: 25%; margin-left: -100%;}
+
+#genesis_4b .two-sidebars #sidebar-right {width:25%; margin-left: -75%;}
+
+
 /**
  * #genesis_5 
-	* Both sidebars on the right; variable width left & right.
+ * Both sidebars on the right; variable width left & right.
  * | Content            | Left      |  Right       |
-	* |                    | 14.1667em |  25.8333em   |
+ * |                    | 14.1667em |  25.8333em   |
  */
 #genesis_5 .two-sidebars  #content-column {margin-right: 40em     ; padding: 0 0.75em 0 0;}
 #genesis_5 .sidebar-left  #content-column {margin-right: 14.1667em; padding: 0 0.75em 0 0;}
@@ -101,9 +136,9 @@
 
 /**
  * #genesis_6 
-	* Both sidebars on the right; variable width left & right (opposite of genesis_5).
+ * Both sidebars on the right; variable width left & right (opposite of genesis_5).
  * | Content            |  Left        | Right     |
-	* |                    |  25.8333em   | 14.1667em |
+ * |                    |  25.8333em   | 14.1667em |
  */
 #genesis_6 .two-sidebars  #content-column {margin-right: 40em     ; padding: 0 0.75em 0 0;}
 #genesis_6 .sidebar-left  #content-column {margin-right: 25.8333em; padding: 0 0.75em 0 0;}
@@ -116,12 +151,12 @@
 
 /**
  * #genesis_7
-	* Golden Rule Layout 1:1.618, 2 columns, adaptive width.
-	*
-	* NOTE: With this layout you can only use either the Left or Right sidebars, 
-	* but never both on the same page.
+ * Golden Rule Layout 1:1.618, 2 columns, adaptive width.
+ *
+ * NOTE: With this layout you can only use either the Left or Right sidebars, 
+ * but never both on the same page.
  * | Content                  |  Left OR Right     |
-	* | 62%                      |  38%               |
+ * | 62%                      |  38%               |
  */
 #genesis_7 .two-sidebars  #content-column {margin-right: 38%; padding: 0 0.75em 0 0;}
 #genesis_7 .sidebar-left  #content-column {margin-right: 38%; padding: 0 0.75em 0 0;}
@@ -142,6 +177,9 @@ html, body {margin: 0; padding: 0;}
 /* Automatic centering for widths less than 100% */
 #container {margin: 0 auto;} 
 
+/* Trigger hasLayout */
+#columns {zoom: 1;}
+
 /* Float the columns */
 #columns-inner,
 #sidebar-left,
@@ -150,14 +188,8 @@ html, body {margin: 0; padding: 0;}
 /* Set width on main content column */
 #columns-inner {width: 100%;}
 
-/**
- * Width
- * Over ride this default in your subthemes CSS file.
- * 80 * 12 = 960px
- * See the long note in your genesis_SUBTHEME.css file
- * for more information.
- */
-.width {width: 80em;}
 
-/* Clear both */
-.clear {clear: both;}
+
+
+
+
