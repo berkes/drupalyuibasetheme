@@ -15,7 +15,7 @@ div.messages {
 }
 
 div.messages ul {
-  margin: 0 0 0 2em;
+  margin: 0 0 0 1.25em;
 }
 
 div.success {color: #55872E; background: #F1F8EB; border: 1px solid #7AC142;}
