@@ -1,4 +1,4 @@
-  ; $Id: genesis.info,v 1.7 2009/03/23 01:31:34 jmburnz Exp $
+  ; $Id: genesis.info,v 1.7.2.1 2009/04/19 17:26:01 jmburnz Exp $
   
 name         = Genesis
 description  = Rapid Development Theme Framework for Drupal.
@@ -6,10 +6,10 @@ core         = 6.x
 engine       = phptemplate
 screenshot   = images/screenshot.png
 
+
   ; The regions defined in the page.tpl.php files. The name in brackets is the 
-		; name of the variable. The text after the = sign is the short description 
-		; you see on the block configuration page.
-	
+  ; name of the variable. The text after the = sign is the short description 
+  ; you see on the block configuration page.
 regions[leaderboard]        = Leaderboard
 regions[header]             = Header Blocks
 regions[secondary_content]  = Secondary Content
@@ -21,36 +21,19 @@ regions[left]               = Sidebar Left
 regions[right]              = Sidebar Right
 regions[footer]             = Footer
 
-  ; This section adds CSS files to your theme. The media type is specified in
-  ; the brackets. Typical CSS media types include "all", "screen", "print", and
-  ; "handheld". See http://www.w3.org/TR/CSS21/media.html#media-types for a full
-  ; list of stylesheet media types in CSS 2.1.
-
-  ; The mini-stylesheets - comment these out if you are using all-in-one.css
-stylesheets[all][] = css/type.css
-stylesheets[all][] = css/forms.css
-stylesheets[all][] = css/messages.css
-stylesheets[all][] = css/lists.css
-stylesheets[all][] = css/tables.css
-stylesheets[all][] = css/block-edit.css
-stylesheets[all][] = css/admin.css
+  ; Genesis core styles for layout and block editing.
 stylesheets[all][] = css/layout.css
-
-  ; Use the reset to override Genesis default styles - uncomment to use.
-;stylesheets[all][] = reset.css
+stylesheets[all][] = css/block-edit.css
 
   ; Uncomment to show the grid, uncomment the grid class in page.tpl.php also.
 ;stylesheets[all][] = css/grid.css
 
-		; To work around IE7's 31 max stylesheets issue uncomment all-in-one.css and 
-		; comment out all the mini-stylesheets. Do this in your subthemes .info file
-		; if you only want to do this for one subtheme.
-;stylesheets[all][] = css/all-in-one.css
+  ; Redefine the default location of scripts.js
+scripts[] = js/script.js
 
   ; The "features" control which check boxes display on the admin/build/themes 
-		; configuration page. This is useful for suppressing check boxes for elements 
-		; not used by your theme.
-  
+  ; configuration page. This is useful for suppressing check boxes for elements 
+  ; not used by your theme.
 features[] = logo
 features[] = name
 features[] = slogan
