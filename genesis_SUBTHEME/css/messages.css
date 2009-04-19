@@ -1,0 +1,140 @@
+/* $Id: */
+
+/**
+ * @file messages.css
+ * Basic styles for messages.
+ */
+
+/*********************************************************
+*                   Messages
+**********************************************************/
+div.messages {
+  font-weight: normal; 
+  margin: 1em 0; 
+  padding: 0.5em;
+}
+
+div.messages ul {
+  margin: 0 0 0 2em;
+}
+
+div.success {color: #55872E; background: #F1F8EB; border: 1px solid #7AC142;}
+
+div.error, 
+tr.error {
+  background: #FCE9EC url(../images/error.png) no-repeat 6px 6px;
+  border: 1px solid #E41F0B;
+  color: #E41F0B;
+  padding-left: 2.4em;
+}
+div.notice  {color: #514721; background: #FFF6BF; border-color: #FFD324;}
+.error a    {color: #8a1f11; text-decoration: underline;}
+.notice a   {color: #514721; text-decoration: underline;}
+.success a  {color: #264409; text-decoration: underline;}
+
+div.status  {
+  background: #E6EFC2 url(../images/success.png) no-repeat 6px 7px;
+  border: 1px solid #4DA449;
+  color: #2A6827;
+  padding-left: 2.4em;
+}
+
+div.help {
+  background: #E6EFF8 url(../images/info.png) no-repeat 6px 7px;
+  border: 1px solid #66BEF4;
+  margin: 1em 0;
+  padding: 0.5em 0.5em 0.5em 2.4em;
+}
+
+div.help p:last-child,
+div.help ul:last-child {
+  margin-bottom: 0;
+}  
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: 2px solid #E41F0B;
+}
+
+.form-item strong.error em {
+  display: block; 
+  font-weight: bold; 
+  color: #E41F0B; 
+  font-size: 1.2em;
+}
+
+.block-region {
+  background-color: transparent;
+  border: 1px dashed red;
+  color: red;
+  font-weight: bold;
+}
+
+/* Highlight unpulished nodes and comments*/
+div.node-unpublished,
+div.comment-unpublished {
+  background-color: #FFF4F4;
+  padding: 0.375em;
+}
+
+div.node div.unpublished,
+div.comment div.unpublished {
+  font: bold 3em Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #FFE9E7;
+  padding: 0.375em;
+}
+
+/* Animated saving throbber */
+#saving {
+  font-size: 1em;
+  font-weight: bold;
+  background: url(../images/loading.gif) no-repeat 12px 1px;
+  display: none;
+  padding-left: 36px;
+}
+#saving p {
+  margin: 0;
+}
+#saving-notice {
+  font-size: 0.9em;
+  font-style: italic;
+  background: #FFC;
+}
+
+/* Warnings and OK messages */
+div.warning {
+  background: transparent url(../images/warning.png) no-repeat 6px 7px;
+  border: 1px solid #FFB900;
+  padding-left: 2.4em;
+}
+div.warning, 
+table tr.warning {background-color: #FFE9AF}
+table tr.warning td {color: #8a1f11;}
+table tr.warning.merge-up td {color: #514721;}
+
+div.error, 
+tr.error, 
+span.form-required, 
+span.marker {}
+
+.ok {}
+div.ok {}
+div.ok, tr.ok {}
+table tr.ok td {color: green;}
+
+.merge-down {}
+.merge-up {}
+
+/**
+ * Module page specific styles.
+ */
+.description {color: #888;}
+.admin-dependencies, 
+.admin-required {color: #514721;}
+.admin-enabled {color: green;}
+.admin-disabled {color: #8a1f11;}
+
+
+

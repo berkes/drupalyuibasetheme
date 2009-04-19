@@ -1,0 +1,81 @@
+/* $Id: */
+
+/**
+ * @file comments.css
+ * Basic styles for comments.
+ */
+
+/**********************************************************
+ *                     Comments
+ **********************************************************/
+/* Comment wrapper */
+#comment-wrapper {}
+h2#comment-wrapper-title {}
+	
+.comment {
+  margin: 0 0 0.375em 0;
+  padding: 0.375em; 
+}
+
+/* Over-ride default .inner styles. */
+.comment-inner {}
+
+.comment .indented {
+  margin-left: 2em; /* LTR */
+}
+
+/* The title of each comment. */
+.comment-title {
+  margin-bottom: 0;
+}
+.comment-id {color: #888;}
+.comment-title .new {color: #FF8000;}
+
+.comment-title a:link,
+.comment-title a:visited,
+.comment-title a:active {
+  text-decoration: none;
+}
+
+.comment-title a:hover {
+  text-decoration: underline;
+}
+
+.comment .user-picture {
+  float: right; /* RTL */
+  margin: 0.3em 0 0.1em 0.3em; /* LTR */
+}
+
+.comment .user-picture img {
+  padding: 0;
+}
+
+.comment-submitted {
+  color: #888;
+  margin: 0;
+}
+
+.comment-submitted a {}
+.comment-submitted a:hover {}
+
+/* Comment content wrapper. */
+.comment-content {}
+
+.comment .links {
+  text-align: right; /* LTR */
+  clear: both;
+}
+
+/* Zebra styles for comments. */
+.comment.odd  {}
+.comment.even {}
+
+/* Style comments depending on the comment author. */
+.comment-by-author {}
+.comment-by-anon   {}
+.comment-mine      {}
+
+/* Theme comment status. */
+.comment .unpublished {}
+
+
