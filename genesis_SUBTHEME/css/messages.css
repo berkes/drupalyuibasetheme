@@ -1,4 +1,4 @@
-/* $Id: messages.css,v 1.1.2.5 2009/04/20 00:37:11 jmburnz Exp $ */
+/* $Id: messages.css,v 1.1.2.6 2009/04/20 23:33:03 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -47,7 +47,7 @@ div.notice  {
 .success a  {color: #264409; text-decoration: underline;}
 
 div.status  {
-  background: #E6EFC2 url(../images/success.png) no-repeat 6px 7px;
+  background: #E6EFC2 url(../images/status.png) no-repeat 6px 7px;
   border: 1px solid #4DA449;
   color: #2A6827;
   padding-left: 2.4em;
