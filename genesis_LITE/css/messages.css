@@ -1,4 +1,4 @@
-/* $Id: messages.css,v 1.1.2.6 2009/04/20 23:32:46 jmburnz Exp $ */
+/* $Id: messages.css,v 1.1.2.7 2009/04/20 23:59:52 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -42,9 +42,13 @@ div.notice  {
   color: #514721;
 }
 
-.error a    {color: #8a1f11; text-decoration: underline;}
-.notice a   {color: #514721; text-decoration: underline;}
-.success a  {color: #264409; text-decoration: underline;}
+.error a, .notice a, .success a {
+  text-decoration: underline;
+}
+
+.error a   {color: #8a1f11;}
+.notice a  {color: #514721;}
+.success a {color: #264409;}
 
 div.status  {
   background: #E6EFC2 url(../images/status.png) no-repeat 6px 7px;
@@ -153,6 +157,5 @@ table tr.ok td {color: green;}
 .admin-required {color: #514721;}
 .admin-enabled {color: green;}
 .admin-disabled {color: #8a1f11;}
-
 
 
