@@ -1,4 +1,4 @@
-/* $Id: forms.css,v 1.1.2.2 2009/04/20 00:36:52 jmburnz Exp $ */
+/* $Id: forms.css,v 1.1.2.3 2009/04/20 12:18:52 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -144,7 +144,7 @@ html.js fieldset.collapsed {
 /* Override default legend arrows with a CSS sprite. */
 html.js fieldset.collapsible legend a,
 html.js fieldset.collapsed legend a {
-  background: transparent url(../images/sprite.gif) no-repeat; /* LTR */
+  background: transparent url(../images/sprite.png) no-repeat; /* LTR */
 }
 
 html.js fieldset.collapsible legend a {
