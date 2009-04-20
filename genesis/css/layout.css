@@ -1,4 +1,4 @@
-/* $Id: layout.css,v 1.1.2.2 2009/04/19 23:32:24 jmburnz Exp $ */
+/* $Id: layout.css,v 1.1.2.3 2009/04/20 12:20:29 jmburnz Exp $ */
 
 /**
  * @file layout.css
@@ -23,13 +23,19 @@
  * subthemes page.css file and make the necessary changes.
  */
  
+/* debug colors 
+#content-column {background: #EEE;}
+#sidebar-left   {background: #CCFFFF;}
+#sidebar-right  {background: #FFCCFF;}
+*/
+
 /**
  * #genesis_1
  * Standard 3 col; left/content/right
  */
-#genesis_1 .two-sidebars  #content-column {margin      : 0 20em; padding: 0 0.75em;}
-#genesis_1 .sidebar-left  #content-column {margin-left :   20em; padding: 0 0 0 0.75em;}
-#genesis_1 .sidebar-right #content-column {margin-right:   20em; padding: 0 0.75em 0 0;}
+#genesis_1 .two-sidebars  #content-column {margin      : 0 22em;}
+#genesis_1 .sidebar-left  #content-column {margin-left :   22em;}
+#genesis_1 .sidebar-right #content-column {margin-right:   22em;}
 
 #genesis_1 #sidebar-left  {width: 20em; margin-left: -100%;}
 #genesis_1 #sidebar-right {width: 20em; margin-left: -20em;}
@@ -38,11 +44,11 @@
  * #genesis_2
  * Both sidebars on the right; content/left/right
  */
-#genesis_2 .two-sidebars  #content-column {margin-right: 40em; padding: 0 0.75em 0 0;}
-#genesis_2 .sidebar-left  #content-column {margin-right: 20em; padding: 0 0.75em 0 0;}
-#genesis_2 .sidebar-right #content-column {margin-right: 20em; padding: 0 0.75em 0 0;}
+#genesis_2 .two-sidebars  #content-column {margin-right: 44em;}
+#genesis_2 .sidebar-left  #content-column {margin-right: 22em;}
+#genesis_2 .sidebar-right #content-column {margin-right: 22em;}
 
-#genesis_2 #sidebar-left  {width: 20em; margin-left: -40em;}
+#genesis_2 #sidebar-left  {width: 20em; margin-left: -42em;}
 #genesis_2 #sidebar-right {width: 20em; margin-left: -20em;}
 
 #genesis_2 .sidebar-left #sidebar-left {width:20em; margin-left: -20em;}
@@ -51,14 +57,14 @@
  * #genesis_3 - percentage based layout only!
  * Both sidebars on the left; left/right/content
  */
-#genesis_3 .two-sidebars  #content-column {margin-left: 50%; padding: 0 0.75em 0 0;}
-#genesis_3 .sidebar-left  #content-column {margin-left: 25%; padding: 0 0.75em 0 0;}
-#genesis_3 .sidebar-right #content-column {margin-left: 25%; padding: 0 0.75em 0 0;}
+#genesis_3 .two-sidebars  #content-column {margin-left: 52%;}
+#genesis_3 .sidebar-left  #content-column {margin-left: 26%;}
+#genesis_3 .sidebar-right #content-column {margin-left: 26%;}
 
 #genesis_3 #sidebar-left  {width: 25%; margin-left: -100%;}
 #genesis_3 #sidebar-right {width: 25%; margin-left: -100%;}
 
-#genesis_3 .two-sidebars #sidebar-right {width:25%; margin-left: -75%;}
+#genesis_3 .two-sidebars #sidebar-right {width:25%; margin-left: -74%;}
 
 
 /**
@@ -69,14 +75,14 @@
  * take full advantage of this layout.
  * |  Content 62%  |  Left/Right 38%  |
  */
-#genesis_4 .two-sidebars  #content-column {margin-right: 38%; padding: 0 0.75em 0 0;}
-#genesis_4 .sidebar-left  #content-column {margin-right: 38%; padding: 0 0.75em 0 0;}
-#genesis_4 .sidebar-right #content-column {margin-right: 38%; padding: 0 0.75em 0 0;}
+#genesis_4 .two-sidebars  #content-column {margin-right: 39%;}
+#genesis_4 .sidebar-left  #content-column {margin-right: 39%;}
+#genesis_4 .sidebar-right #content-column {margin-right: 39%;}
 
-#genesis_4 #sidebar-left  {width: 38%; margin-left: -38%;}
-#genesis_4 #sidebar-right {width: 38%; margin-left: -38%;}
+#genesis_4 #sidebar-left  {width: 37%; margin-left: -37%;}
+#genesis_4 #sidebar-right {width: 37%; margin-left: -37%;}
 
-#genesis_4 .sidebar-left #sidebar-left {width: 38%; margin-left: -38%;}
+#genesis_4 .sidebar-left #sidebar-left {width: 37%; margin-left: -37%;}
 
 
 /***********************************************************
@@ -90,6 +96,8 @@ html, body {margin: 0; padding: 0;}
 
 /* Trigger hasLayout */
 #columns {display: inline-block;}
+/* Reset for compliant browses */
+#container > #columns {display: block;}
 
 /* Float the columns */
 #columns-inner,
