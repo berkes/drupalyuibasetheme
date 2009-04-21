@@ -1,5 +1,5 @@
 <?php
-// $Id:
+// $Id: page.tpl.php,v 1.1.2.3 2009/04/21 11:02:01 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -93,12 +93,13 @@
     <?php endif; ?>
 
     <?php if ($secondary_content): ?>
-      <div id="secondary-content" class="region clear-block"><?php print $secondary_content; ?></div>
+      <div id="secondary-content" class="region clear clear-block"><?php print $secondary_content; ?></div>
     <?php endif; ?>
 
-   <div id="columns" class="clear">
-     <div id="columns-inner">
-        <div id="content-column">
+    <div id="columns" class="clear">
+     
+      <div id="content-column">
+        <div class="content-inner">
 
           <?php if ($mission): ?>
             <div id="mission"><?php print $mission; ?></div>
@@ -142,11 +143,11 @@
     </div>
 
     <?php if ($tertiary_content): ?>
-      <div id="tertiary-content" class="region clear-block"><?php print $tertiary_content; ?></div> 
+      <div id="tertiary-content" class="region clear clear-block"><?php print $tertiary_content; ?></div> 
     <?php endif; ?>
 	
     <?php if ($footer): ?>
-      <div id="footer" class="region clear-block"><?php print $footer; ?></div>
+      <div id="footer" class="region clear clear-block"><?php print $footer; ?></div>
     <?php endif; ?>
 
     <?php if ($footer_message or $feed_icons): ?>
