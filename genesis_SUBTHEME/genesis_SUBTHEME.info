@@ -1,4 +1,4 @@
-  ; $Id: genesis_SUBTHEME.info,v 1.7.2.1 2009/04/19 17:30:32 jmburnz Exp $
+  ; $Id: genesis_SUBTHEME.info,v 1.7.2.2 2009/04/21 14:26:30 jmburnz Exp $
 
 
   ; Change the name to match your new subthemes name. Modify the optional description.
@@ -26,16 +26,16 @@ stylesheets[all][] = css/comments.css
 stylesheets[all][] = css/page.css
   
   
-  ; To work around IE7's 31 max stylesheets issue:
+  ; To work around IE7's 30 max stylesheets issue:
   ; 1. Unset by the mini-stylesheets (add semicolons).
   ; 2. Uncomment the following:
-;stylesheets[all][] = css/all-in-one.css
+;stylesheets[all][] = css/_all-subtheme.css
 
 
   ; Do not change core, engine, screenshot or base theme - these are required defaults.
 core         = 6.x
 engine       = phptemplate
-screenshot   = images/screenshot.png
+screenshot   = images/screenshot_subtheme.png
 base theme   = genesis
 
 
