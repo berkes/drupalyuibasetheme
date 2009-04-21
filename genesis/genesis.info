@@ -1,10 +1,10 @@
-  ; $Id: genesis.info,v 1.1.2.2 2009/04/21 14:02:09 jmburnz Exp $
+  ; $Id: genesis.info,v 1.1.2.3 2009/04/21 14:25:56 jmburnz Exp $
   
 name         = Genesis
 description  = An elegant, flexible and powerful starter theme by <a href="http://adaptivethemes.com">Adaptivethemes</a>.
 core         = 6.x
 engine       = phptemplate
-screenshot   = images/screenshot.png
+screenshot   = images/screenshot_base.png
 
   ; The regions defined in the page.tpl.php files. The name in brackets is the 
   ; name of the variable. The text after the = sign is the short description 
