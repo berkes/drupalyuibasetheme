@@ -1,4 +1,4 @@
-/* $Id: admin.css,v 1.1.2.3 2009/04/21 10:56:49 jmburnz Exp $ */
+/* $Id: admin.css,v 1.1.2.4 2009/04/21 14:28:24 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -41,13 +41,15 @@
   padding: 1em 0 0;
 }
 
-.admin-panel ul {
+.admin-panel ul,
+.admin-panel ul.menu {
   margin: 0; 
-  padding: 1em 0;
+  padding: 0 0 1em 0;
 }
 
 .admin-panel ul li {
-  list-style: none; 
+  list-style: none;
+		list-style-image: none;
   padding: 0 0 0.6em;
 }
 
@@ -97,8 +99,13 @@
   font-size: 0.94em; 
 }
 
+.page-admin-by-module .admin-panel .item-list ul {
+  padding: 1em 0;
+}
+
 .page-admin-by-module .admin-panel .item-list ul li {
   margin: 0;
+		padding: 0.25em 0;
 }
 
 /* Misc */
@@ -115,7 +122,6 @@
 #permissions td.permission {
   padding-left:0.5em;
 }
-
 #permissions td.module {
   background: #EEE; 
   color: #222; 
@@ -172,7 +178,7 @@ ul.secondary a.active {
  *                 Admin menu
  **********************************************************/
 /* Bump the font size by 2 pixels, I can't read 9px text! */
-#admin-menu {font-size: 11px;}
+#admin-menu {font-size: 10px;}
 
 
 

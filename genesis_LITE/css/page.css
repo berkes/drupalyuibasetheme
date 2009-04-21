@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.1 2009/04/19 17:51:55 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.2 2009/04/21 14:28:24 jmburnz Exp $ */
 
 /**
  * @file genesis_SUBTHEME.css
@@ -282,7 +282,7 @@ div#site-name  {
  **********************************************************/
 /* The first 2 classes provide the base pager styles. */
 .item-list ul.pager    {}
-.item-list ul.pager li {}
+.item-list ul.pager li {margin: 0;}
 
 /* Theme the various states of pager links. */
 .item-list ul.pager li a:link    {}

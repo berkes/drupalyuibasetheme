@@ -1,4 +1,4 @@
-/* $Id: forms.css,v 1.1.2.3 2009/04/20 12:18:52 jmburnz Exp $ */
+/* $Id: forms.css,v 1.1.2.4 2009/04/21 14:28:24 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -129,6 +129,7 @@ fieldset {
 fieldset legend {
   display: block;
   font-weight: bold;
+		padding: 0 1em 0 0;
 }
 
 *:first-child+html fieldset legend, *:first-child+html fieldset.collapsed legend {
