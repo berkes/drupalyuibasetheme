@@ -1,4 +1,4 @@
-/* $Id: admin.css,v 1.1.2.2 2009/04/20 00:36:52 jmburnz Exp $ */
+/* $Id: admin.css,v 1.1.2.3 2009/04/21 10:56:49 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -12,22 +12,6 @@
  * <body> class to target most admin pages.
  */
 .section-admin {}
-
-/** 
- * Experimental workaround for the theme list page for very narrow themes.
- * When both sidebars are active, the left sidebar overlaps the theme list table,
- * this forces the sidebars to be a set height with scroll bars. 
- */
-body.page-admin-build-themes .sidebar,
-body.page-admin-build-themes-select .sidebar {
-  background: #F7F7F7;
-  height: 193px; 
-  overflow-y: scroll;
-}
-
-body.page-admin-build-themes .description {
-  color: #888;
-}
 
 /**
  * Admin panels.
@@ -113,6 +97,10 @@ body.page-admin-build-themes .description {
   font-size: 0.94em; 
 }
 
+.page-admin-by-module .admin-panel .item-list ul li {
+  margin: 0;
+}
+
 /* Misc */
 #user-admin-filter ul li,
 #node-admin-filter ul li {
@@ -127,6 +115,7 @@ body.page-admin-build-themes .description {
 #permissions td.permission {
   padding-left:0.5em;
 }
+
 #permissions td.module {
   background: #EEE; 
   color: #222; 
