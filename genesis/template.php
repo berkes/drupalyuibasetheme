@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.1 2009/04/19 20:59:16 jmburnz Exp $
+// $Id: template.php,v 1.1.2.2 2009/04/21 14:01:51 jmburnz Exp $
 
 /**
  * @file template.php
@@ -47,7 +47,7 @@ function genesis_preprocess_page(&$vars, $hook) {
     $path = drupal_get_path_alias($_GET['q']);
     list($section, ) = explode('/', $path, 2);
     $page_classes[] = safe_string('section-'. $section);
-    //$page_classes[] = safe_string('page-'. $path);
+    $page_classes[] = safe_string('page-'. $path);
     if (arg(0) == 'node') {
       if (arg(1) == 'add') {
         $page_classes[] = 'node-add'; // Add .node-add class.
