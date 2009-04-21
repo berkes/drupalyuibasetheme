@@ -1,34 +1,31 @@
-/* $Id: layout.css,v 1.1.2.4 2009/04/21 10:57:15 jmburnz Exp $ */
+/* $Id: layout.css,v 1.1.2.5 2009/04/21 23:48:14 jmburnz Exp $ */
 
 /**
- * @file layout.css
- * layout methods.
- */
-
-/***********************************************************
- *                     The Layout Methods
- **********************************************************/
-/**
- * USAGE						
- * Replace the body id="..." (in page.tpl.php) with the your 
- * preferred layout.
+ * Genesis layout methods
  * 
- * e.g. <body id="genesis_1">
+ * This file includes all layout declarations. Should you
+	* need to override a layout, copy it to your subthemes
+	* page.css file and modify it there.
  * 
- * If your site uses a page-front.tpl.php or any other page-xxx.tpl.php
- * your site can have multiple layouts.
+	* @file      layout.css
+ * @project   http://drupal.org/projects/genesis
+ * @author    Jeff Burnz
  *
- * OVER RIDING THE WIDTHS AND MARGINS 
- * To over ride a layout copy the specific layout to your 
- * subthemes page.css file and make the necessary changes.
+	*
+ * Usage
+	*				
+ * Replace the body id="genesis_1" (in page.tpl.php) with 
+ * your  preferred layout.
+ * 
+ * e.g. <body id="genesis_2">
+ * 
+ * Tip: If your site uses a page-front.tpl.php or any other
+ * template suggestion your site can have multiple layouts.
  */
- 
-/* debug colors 
-.content-inner {background: #EEE;}
-#sidebar-left   {background: #CCFFFF;}
-#sidebar-right  {background: #FFCCFF;}
-*/
 
+/*********************************************************
+*                     Layouts
+**********************************************************/
 /**
  * #genesis_1
  * Standard 3 col; left/content/right  content-inner
@@ -85,9 +82,9 @@
 #genesis_4 .sidebar-left #sidebar-left {width: 37%; margin-left: -37%;}
 
 
-/***********************************************************
- *                    Containers
- **********************************************************/
+/*********************************************************
+*                     Containers
+**********************************************************/
 /* Main containers*/
 html, body {margin: 0; padding: 0;}
 
