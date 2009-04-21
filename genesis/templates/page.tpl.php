@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.2 2009/04/19 23:41:44 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.3 2009/04/21 10:58:18 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -119,8 +119,9 @@
     <?php endif; ?>
 
     <div id="columns" class="clear">
-      <div id="columns-inner">
-        <div id="content-column">
+     
+      <div id="content-column">
+        <div class="content-inner">
 
           <?php if ($mission): ?>
             <div id="mission"><?php print $mission; ?></div>
