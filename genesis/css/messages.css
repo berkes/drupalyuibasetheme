@@ -1,4 +1,4 @@
-/* $Id: messages.css,v 1.1.2.1 2009/04/22 02:41:05 jmburnz Exp $ */
+/* $Id: messages.css,v 1.1.2.2 2009/04/22 20:09:53 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -21,13 +21,13 @@ div.messages ul {
 }
 
 div.success {
-  background: #F1F8EB url(../images/success.png) no-repeat 6px 7px;
+  background: #F1F8EB url(../images/success.png) no-repeat 0.5em 0.5em;
   border: 1px solid #7AC142;
   color: #55872E;
 }
 
 div.error {
-  background: #FCE9EC url(../images/error.png) no-repeat 6px 6px;
+  background: #FCE9EC url(../images/error.png) no-repeat 0.5em 0.5em;
   border: 1px solid #E41F0B;
   color: #E41F0B;
   padding-left: 2.4em;
@@ -53,14 +53,14 @@ div.notice  {
 .success a {color: #264409;}
 
 div.status  {
-  background: #E6EFC2 url(../images/status.png) no-repeat 6px 7px;
+  background: #E6EFC2 url(../images/status.png) no-repeat 0.5em 0.5em;
   border: 1px solid #4DA449;
   color: #2A6827;
   padding-left: 2.4em;
 }
 
 div.help {
-  background: #E6EFF8 url(../images/info.png) no-repeat 6px 7px;
+  background: #E6EFF8 url(../images/info.png) no-repeat 0.5em 0.5em;
   border: 1px solid #66BEF4;
   margin: 1em 0;
   padding: 0.5em 0.5em 0.5em 2.4em;
@@ -68,7 +68,7 @@ div.help {
 
 /* Warnings and OK messages */
 div.warning {
-  background: #FFE9AF url(../images/warning.png) no-repeat 6px 7px;
+  background: #FFE9AF url(../images/warning.png) no-repeat 0.5em 0.5em;
   border: 1px solid #FFB900;
   padding: 0.5em 0.5em 0.5em 2.4em;
 }
@@ -134,9 +134,9 @@ div.comment div.unpublished {
 #saving {
   font-size: 1em;
   font-weight: bold;
-  background: url(../images/loading.gif) no-repeat 12px 1px;
+  background: url(../images/loading.gif) no-repeat 1em 0.08em;
   display: none;
-  padding-left: 36px;
+  padding-left: 3em;
 }
 
 #saving p {
