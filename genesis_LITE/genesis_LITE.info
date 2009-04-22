@@ -1,4 +1,4 @@
-  ; $Id: genesis_LITE.info,v 1.1.2.2 2009/04/21 14:26:18 jmburnz Exp $
+  ; $Id: genesis_LITE.info,v 1.1.2.3 2009/04/22 02:41:36 jmburnz Exp $
 
 
   ; Change the name to match your new subthemes name. Modify the optional description.
@@ -14,10 +14,6 @@ stylesheets[all][] = css/type.css
 stylesheets[all][] = css/lists.css
 stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/tables.css
-  
-  ; Admin and message.
-stylesheets[all][] = css/admin.css
-stylesheets[all][] = css/messages.css
 
   ; Node, block, comment and page elements.
 stylesheets[all][] = css/nodes.css
@@ -30,7 +26,8 @@ stylesheets[all][] = css/page.css
   ; 1. Unset by the mini-stylesheets (add semicolons).
   ; 2. Uncomment the following:
 ;stylesheets[all][] = css/_all-lite.css
-
+  ; Optionally use the compressed and tidy version.
+;stylesheets[all][] = css/_all-lite-tidy.css
 
   ; Do not change core, engine, screenshot or base theme - these are required defaults.
 core         = 6.x

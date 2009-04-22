@@ -1,4 +1,4 @@
-  ; $Id: genesis.info,v 1.1.2.3 2009/04/21 14:25:56 jmburnz Exp $
+  ; $Id: genesis.info,v 1.1.2.4 2009/04/22 02:44:46 jmburnz Exp $
   
 name         = Genesis
 description  = An elegant, flexible and powerful starter theme by <a href="http://adaptivethemes.com">Adaptivethemes</a>.
@@ -22,6 +22,8 @@ regions[footer]             = Footer
 
   ; Genesis core styles for layout and block editing.
 stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/admin.css
+stylesheets[all][] = css/messages.css
 stylesheets[all][] = css/block-edit.css
 
   ; Uncomment to show the grid, uncomment the grid class in page.tpl.php also.
