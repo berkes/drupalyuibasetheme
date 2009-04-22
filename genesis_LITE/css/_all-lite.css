@@ -1,20 +1,19 @@
-/* $Id: _all-lite.css,v 1.1.2.1 2009/04/21 14:28:24 jmburnz Exp $ */
+/* $Id: _all-lite.css,v 1.1.2.2 2009/04/22 02:44:31 jmburnz Exp $ */
 
 /**
   * @file _all-lite.css
-  * Genesis LITE modulear CSS aggregated into one file.
+  * Genesis LITE modular stylesheets aggregated into one file.
 		*
 		* Includes an exact copy of the following stylesheets:
 
-		* admin.css
-		* blocks.css
-		* comments.css
-		* forms.css
-	 * lists.css
-		* messages.css
-		* nodes.css
-		* tables.css
   * type.css
+  * lists.css
+  * forms.css
+  * tables.css
+  * nodes.css
+  * blocks.css
+  * comments.css
+  * page.css
 
 		*
 		* USAGE
@@ -25,398 +24,212 @@
 		* when you cannot turn on CSS aggregation in Performance settings.
   */
 
-/**********************************************************
- *                     Admin
- **********************************************************/
+/*********************************************************
+*                        Type
+**********************************************************/
 /**
- * <body> class to target most admin pages.
+ * Global Font Size
+ *
+ * All modern browsers set a base font of 16px, therefore
+ * the default value of 1em = 16px. We reduce this to 12px.
+ *
+ * 75% of 16px. (0.75 * 16px = 12px).
+ * 1em now is equal to 12 pixels. E.g.
+ * 2em   = 24px
+ * 1.5em = 18px
+ * 1em   = 12px
+ * 0.5em = 6px
+ *
+ * You may find this "px to em" calculator helpful;
+ * http://riddle.pl/emcalc/
  */
-.section-admin {}
 
-/**
- * Admin panels.
- */
-.admin-panel {
-  background: #EEE;
-  border: 1px solid #CCC;
-  margin: 0 0 0.5em;
+html {
+  font-size: 75%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5; /* unitless line height */
+}
+
+h1, h2 {
+  line-height: 1; 
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0 0 0.5em 0;
   padding: 0;
 }
 
-.admin-panel h3 {
-  color: #222;
-  float: left;
-  padding: 1em 0 0 1em;
-  width: 13.3333em;
+h2 {
+  font-size: 1.5em; 
 }
 
-.admin-panel .body {
-  background: #FFF;
-  margin: 0 0 0 13.3333em;
-  padding: 0 1em;
+h3, h4, h5, h6 {
+  font-size: 1em;
 }
 
-.admin-panel p  {
+/* The main title on each page. */
+h1#page-title {}
+
+/* Micro reset */
+h2, h3, h4, h5, h6,
+h1 img, h2 img, h3 img, 
+h4 img, h5 img, h6 img,
+em, dfn, del, ins {
   margin: 0; 
-  padding: 1em 0 0;
+  padding: 0;
 }
 
-.admin-panel ul,
-.admin-panel ul.menu {
-  margin: 0; 
-  padding: 0 0 1em 0;
+p {
+  margin: 0 0 1.5em; 
+  padding: 0;
 }
 
-.admin-panel ul li {
-  list-style: none;
-		list-style-image: none;
-  padding: 0 0 0.6em;
-}
-
-.admin-panel dl {
-  margin: 0; 
-  padding: 1em 0;
-}
-
-.admin-panel dt {
-  float: left; 
-  font-weight: normal;
-}
-
-.admin-panel dd {
-  color: #888; 
-  font-size: 0.94em;
-  margin: 0 0 0 14em;
-  padding: 0 0 0.75em;	
-}
-
-.admin .compact-link {
-  margin: 0 0 1em;
-}
-
-.page-admin-by-module .admin h3 {
-  float: none;
-  padding: 1em;
-}
-
-.page-admin-by-module .admin .left {
-  float: left;
-  width: 49%;
-}
-
-.page-admin-by-module .admin .right {
-  float: right;
-  margin: 0;
-  width: 49%;
-}
-
-.page-admin-by-module .admin-panel .body {
+blockquote p {
   margin: 0;
 }
 
-.page-admin-by-module .admin-panel .body p {  
-  color: #888; 
-  font-size: 0.94em; 
-}
-
-.page-admin-by-module .admin-panel .item-list ul {
-  padding: 1em 0;
-}
-
-.page-admin-by-module .admin-panel .item-list ul li {
-  margin: 0;
-		padding: 0.25em 0;
-}
-
-/* Misc */
-#user-admin-filter ul li,
-#node-admin-filter ul li {
-  list-style: none;
-}
-
-.more-help-link {
-  font-size: 0.94em;	
-  line-height: 1.667em;
-}
-
-#permissions td.permission {
-  padding-left:0.5em;
-}
-#permissions td.module {
-  background: #EEE; 
-  color: #222; 
+strong {
   font-weight: bold;
 }
 
-/**********************************************************
- *                 Local tasks tabs
- **********************************************************/
-.local-tasks {
-  margin-bottom: 0.75em;
+em, dfn {
+  font-style: italic; 
 }
 
-ul.primary {
-  border-bottom-color: #CCC;
-  margin: 1.5em 0 0 0; 
-  padding: 0 0 0.2em 1em;
+dfn {
+  font-weight: bold;
 }
 
-ul.primary li a {
-  background-color: #EEE;
-  border-color: #CCC;
-  padding: 0.1em 0.75em 0.2em;
+sup, sub {
+  line-height: 0;
 }
 
-.local-tasks ul.primary li a:hover  {
-  background-color: #F5F5F5;
-  border-color: #DDD;
+del {
+  color: #666; 
 }
 
-.local-tasks ul.primary li.active a {
-  background-color: #FFF;		
-  border-bottom-color: #FFF;
-}
-
-ul.secondary {
-  border-bottom: 1px solid #BBB;
-  margin: 0 0 1em;
-  padding: 1em 0;
-}
-
-ul.secondary li {
-  border-right: none;
-  padding:0 0.75em;
-}
-
-ul.secondary a:hover,
-ul.secondary a.active {
+ins {
   border-bottom: none;
-  text-decoration: underline;
-}
-
-/**********************************************************
- *                 Admin menu
- **********************************************************/
-/* Bump the font size by 2 pixels, I can't read 9px text! */
-#admin-menu {font-size: 10px;}
-
-/**********************************************************
- *                       Blocks
- **********************************************************/
-/**
- * Styles set here will be inherited by all blocks.
- */
-.block {
-  clear: both;
-  margin: 0 0 1.5em;
-  padding: 0;
-}
-
-/* Default node title. */
-.block .title {}
-
-tr .block {
-  border: none; /* Blocks page table. */
-}
-
-/**
- * Sidebar and Region Specific Block Styles
- *
- * You can target blocks in one or more regions and 
- * style them differently. 
- */
-/* Low specifity selector to style blocks in both sidebars. */
-.sidebar .block {}
-
-/* High specifity selectors to style blocks in one sidebar. */
-#sidebar-left .block {}
-#sidebar-left .block .title {}
-
-#sidebar-right .block {}
-#sidebar-right .block .title {}
-
-/* Low specifity selector to style blocks in all regions. */
-.region .block {}
-
-/* High specifity selectors to style blocks in one region. */
-#leaderboard .block       {}
-#header-blocks .block     {}
-#secondary-content .block {}
-#tertiary-content .block  {}
-#content-top .block       {}
-#content-bottom .block    {}
-#footer .block            {}
-
-/**
- * Block Odd & Even Styles (Zebra)
- * Each region can have alternating styles for Odd and Even 
- * count blocks, such as;
- */
-.sidebar .odd-block  {}
-.sidebar .even-block {}
-
-#sidebar-left .odd-block  {}
-#sidebar-left .even-block {}
-
-#sidebar-right .odd-block  {}
-#sidebar-right .even-block {}
-
-/**
- * Alternative Approach to Region Block Styling
- *
- * Blocks are aware of what region they are in, so its
- * possible to use chained selectors such as;
- *
- * .block.odd.right {}
- */
-
-/**
- * Drupal Core Blocks 
- * This is most of the core blocks as far as I can remember, 
- * please post an issue if I have missed any :)
- */
-#block-system-0  {} /* Powered by Drupal block */
-#block-user-0    {} /* Login block             */
-#block-user-1    {} /* Navigation Menu block   */
-#block-user-2    {} /* Who's New block         */
-#block-user-3    {} /* Who's Online block      */
-#block-comment-0 {} /* Recent Comments block   */
-#block-search-0  {} /* Search form block       */
-#block-forum-0   {} /* Active Forum topics     */
-#block-forum-1   {} /* New Forum topics        */
-#block-blog-0    {} /* Recent Blog posts       */
-#block-node-0    {} /* Syndicate block         */
-#block-locale-0  {} /* Language Switcher block */
-
-/* The class selector applies to all blocks of these types. */
-.block-user {} 
-.block-book {} 
-.block-aggregator {}
-
-
-/**********************************************************
- *                   Menu blocks
- **********************************************************/
-/**
- * Prefix these with the block id to style one menu only.
- */
-ul.menu {
-  margin: 0;
-  padding: 0;
-}
-
-ul.menu li,
-li.expanded,
-li.collapsed,
-li.leaf {
-  margin: 0;
-}
-
-/* Override Drupal default bullet gifs with a CSS Sprite */
-ul.menu li {
-  background: none;
-  display: block;
-  list-style: none;
-  list-style-image: none;
-  padding: 0.35em 0 0 1em; /* LTR */
-}
-
-ul.menu li.collapsed,
-ul.menu li.expanded,
-ul.menu li.leaf {
-  background: transparent url(../images/sprite.png) no-repeat;
-}
-
-ul.menu li.collapsed {
-  background-position: -19px -8px; /* LTR */
-}
-
-ul.menu li.expanded {
-  background-position: -40px -26px; /* LTR */
-}
-
-ul.menu li.leaf {
-  background-position: -19px 10px; /* LTR */
-}
-
-ul.menu li a:link    {}
-ul.menu li a:hover   {}
-ul.menu li a:visited {}
-ul.menu li.active a  {}
-ul.menu li.active-trail {}
-
-ul.menu li.first {}
-ul.menu li.last  {}
-
-
-/**********************************************************
- *                   Block lists
- **********************************************************/
-.block .item-list ul {margin: 0;}
-.block .item-list ul li {}
-
-
-/**********************************************************
- *                     Comments
- **********************************************************/
-/* Comment wrapper */
-#comment-wrapper {}
-h2#comment-wrapper-title {}
-	
-.comment {
-  margin: 0 0 0.375em 0;
-  padding: 0.375em; 
-}
-
-.comment .indented {
-  margin-left: 2em; /* LTR */
-}
-
-/* The title of each comment. */
-.comment .title {
-  margin-bottom: 0;
-}
-.comment-id {color: #888;}
-.comment h3.title .new {color: #FF8000;}
-
-.comment .title a:link,
-.comment .title a:visited,
-.comment .title a:active {
   text-decoration: none;
 }
 
-.comment-title a:hover {
-  text-decoration: underline;
+pre, code {
+  margin: 1.5em 0; 
+  padding: 0; 
+  white-space: pre;
 }
 
-.comment .user-picture {
-  float: right; /* RTL */
-  margin: 0.3em 0 0.1em 0.3em; /* LTR */
+pre, code, tt {
+  font: 1em 'andale mono', 'lucida console', monospace;
 }
 
-.comment .user-picture img {
+p code {
+  font: 1em "Courier New", Courier, monospace;
+}
+
+/* Preserve line-height and selector appearance */
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+/* Mitigate relative shrinkage */
+li li, li p, td p, blockquote p {
+  font-size: 1em;
+}
+
+blockquote, q {
+  font-style: italic;  /* LTR */
+  margin: 0 0 1.5em;
+  padding: 0 0 0 3em;  /* LTR */
+}
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, 
+blockquote:after, 
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+/**********************************************************
+ *                 Global Link Styles
+ **********************************************************/
+ a {
+  margin: 0; 
   padding: 0;
 }
 
-.comment .submitted {
-  color: #888;
+a:link    {}
+a:visited {}
+a:hover   {}
+a:active  {}
+a.active  {}
+a.active-trail {}
+
+/* Drupal sets this to black. */
+li a.active {}
+
+/* Remove borders on linked images. */
+a img {border: none;}
+
+
+/*********************************************************
+*                     Lists
+**********************************************************/
+ul, ol {
+  margin: 0 0 1.5em 1.75em; /* LTR */
+  padding: 0;
+}
+
+li {
+  margin: 0; 
+  padding: 0;
+}
+
+/* Set nested list indentation */
+ul ul, ul ol,
+ol ol, ol ul,
+.block ul ul,
+.block ul ol,
+.block ol ol,
+.block ol ul,
+.item-list ul ul,
+.item-list ul ol,
+.item-list ol ol,
+.item-list ol ul {
   margin: 0;
 }
 
-.comment .submitted a {}
-.comment .submitted a:hover {}
+/* Set nested list list-style-types */
+ul          {list-style-type: disc;}
+ul ul       {list-style-type: circle;}
+ul ul ul    {list-style-type: square;}
+ul ul ul ul {list-style-type: circle;}
+ol          {list-style-type: decimal;}
+ol ol       {list-style-type: lower-alpha;}
+ol ol ol    {list-style-type: decimal;}
 
-/* Zebra styles for comments. */
-.comment.odd  {}
-.comment.even {}
+dt {font-weight: bold;}
+dd {margin: 0 0 1.5em 1.75em;} /* LTR */
 
-/* Style comments depending on the comment author. */
-.comment-by-author {}
-.comment-by-anon   {}
-.comment-mine      {}
+.item-list ul, 
+.item-list ol {
+  margin: 0 0 0 1.75em; /* LTR */
+  padding: 0;  
+}
 
-/* Theme comment status. */
-.comment .unpublished {}
+.item-list ul li {}
 
 
 /*********************************************************
@@ -633,211 +446,126 @@ button:hover,
 .form-submit:hover {}
 
 
-/*********************************************************
-*                     Lists
-**********************************************************/
-ul, ol {
-  margin: 0 0 1.5em 1.75em; /* LTR */
-  padding: 0;
+/**********************************************************
+ *                   Tables
+ **********************************************************/
+ 
+ /** 
+ * The selector groupings are from Garland which offers a
+ * sensible starting point for styling Drupal tables.
+ */
+ 
+table {
+  border-spacing: 0;
+  margin: 1em 0; 
+  padding: 0; 
+  width: 100%;
 }
 
-li {
+caption, th, td {
+  font-weight: normal;
+  text-align: left; /* LTR */
+}
+
+table, td, th {
+  vertical-align: middle;
+}
+
+tbody, tfoot, thead, tr {
   margin: 0; 
   padding: 0;
 }
 
-/* Set nested list indentation */
-ul ul, ul ol,
-ol ol, ol ul,
-.block ul ul,
-.block ul ol,
-.block ol ol,
-.block ol ul,
-.item-list ul ul,
-.item-list ul ol,
-.item-list ol ol,
-.item-list ol ul {
-  margin: 0;
-}
-
-/* Set nested list list-style-types */
-ul          {list-style-type: disc;}
-ul ul       {list-style-type: circle;}
-ul ul ul    {list-style-type: square;}
-ul ul ul ul {list-style-type: circle;}
-ol          {list-style-type: decimal;}
-ol ol       {list-style-type: lower-alpha;}
-ol ol ol    {list-style-type: decimal;}
-
-dt {font-weight: bold;}
-dd {margin: 0 0 1.5em 1.75em;} /* LTR */
-
-.item-list ul, 
-.item-list ol {
-  margin: 0 0 0 1.75em; /* LTR */
-  padding: 0;  
-}
-
-.item-list ul li {}
-
-
-/*********************************************************
-*                   Messages
-**********************************************************/
-.description {color: #888;}
-
-div.messages {
-  font-weight: normal; 
-  margin: 1em 0; 
-  padding: 0.5em;
-}
-
-div.messages ul {
-  margin: 0 0 0 1.25em;
-}
-
-div.success {
-  background: #F1F8EB url(../images/success.png) no-repeat 6px 7px;
-  border: 1px solid #7AC142;
-  color: #55872E;
-}
-
-div.error {
-  background: #FCE9EC url(../images/error.png) no-repeat 6px 6px;
-  border: 1px solid #E41F0B;
-  color: #E41F0B;
-  padding-left: 2.4em;
-}
-
-tr.error {
-  background: #FCE9EC;
-  color: #E41F0B;
-}
-
-div.notice  {
-  background: #FFF6BF; 
-  border-color: #FFD324;
-  color: #514721;
-}
-
-.error a, .notice a, .success a {
-  text-decoration: underline;
-}
-
-.error a   {color: #8a1f11;}
-.notice a  {color: #514721;}
-.success a {color: #264409;}
-
-div.status  {
-  background: #E6EFC2 url(../images/status.png) no-repeat 6px 7px;
-  border: 1px solid #4DA449;
-  color: #2A6827;
-  padding-left: 2.4em;
-}
-
-div.help {
-  background: #E6EFF8 url(../images/info.png) no-repeat 6px 7px;
-  border: 1px solid #66BEF4;
-  margin: 1em 0;
-  padding: 0.5em 0.5em 0.5em 2.4em;
-}
-
-/* Warnings and OK messages */
-div.warning {
-  background: #FFE9AF url(../images/warning.png) no-repeat 6px 7px;
-  border: 1px solid #FFB900;
-  padding: 0.5em 0.5em 0.5em 2.4em;
-}
- 
-table tr.warning {background-color: #FFE9AF}
-table tr.warning td {color: #8a1f11;}
-table tr.warning.merge-up td {color: #514721;}
-
-div.error, 
-tr.error, 
-span.form-required, 
-span.marker {}
-
-.ok {}
-div.ok {}
-div.ok, tr.ok {}
-table tr.ok td {color: green;}
-
-.merge-down {}
-.merge-up {}
-/* CSS3 */
-div.help p:last-child,
-div.help ul:last-child {
-  margin-bottom: 0;
-}  
-
-.form-item input.error,
-.form-item textarea.error,
-.form-item select.error {
-  border: 2px solid #E41F0B;
-}
-
-.form-item strong.error em {
-  display: block; 
+thead th {
+  border-bottom: 0.1875em solid #C0C0C0; 
+  color: #494949;
   font-weight: bold; 
-  color: #E41F0B; 
-  font-size: 1.2em;
 }
 
-.block-region {
-		border: 1px dotted #000;
-		color: #000;
-		font: 1em 'andale mono', 'lucida console', monospace;
-		padding: 3px 6px 1px
-}
-
-/* Highlight unpulished nodes and comments*/
-div.node-unpublished,
-div.comment-unpublished {
-  background-color: #FFF4F4;
-  padding: 0.375em;
-}
-
-div.node div.unpublished,
-div.comment div.unpublished {
-  font: bold 3em Arial, Helvetica, sans-serif;
-  text-align: center;
-  color: #FFE9E7;
-  padding: 0.375em;
-}
-
-/* Animated saving throbber */
-#saving {
-  font-size: 1em;
-  font-weight: bold;
-  background: url(../images/loading.gif) no-repeat 12px 1px;
-  display: none;
-  padding-left: 36px;
-}
-
-#saving p {
+td, th {
+  border-bottom: 1px solid #CCC;
   margin: 0;
+  padding: 0.375em 0.5em; 
 }
 
-#saving-notice {
-  font-size: 0.9em;
-  font-style: italic;
-  background: #FFC;
+tr.even,
+tr.odd,
+tbody th {
+  /* border-bottom: 1px solid #CCC; System default */
 }
 
-/**
- * Module page specific styles.
- */
-.admin-dependencies, 
-.admin-required,
-.admin-enabled,
-.admin-disabled,
-.admin-missing {font-weight: bold;}
-.admin-dependencies, 
-.admin-required {color: #514721;}
-.admin-enabled  {color: #006600;}
-.admin-disabled {color: #8a1f11;}
-.admin-missing  {color: #FF0000;}
+tr.odd, 
+tr.info {
+  background-color: #F5F5F5;
+}
+
+tr.even {
+  background-color: #FFF;
+}
+
+tr.drag {
+  background-color: #FFFFF0;
+}
+
+tr.drag-previous  {
+  background-color: #FFD;
+}
+
+tr.odd td.active  {
+  background-color: #EEE;
+}
+
+tr.even td.active {
+  background-color: #F7F7F7;
+}
+
+td.region, 
+td.module, 
+td.container td.category {
+  background-color: #EEE;
+  border-bottom: 1px solid #CCC;
+  border-top: 1.5em solid #FFF;
+  color: #222;
+  font-weight: bold;
+}
+
+tr:first-child td.region,
+tr:first-child td.module, 
+tr:first-child td.container {
+  border-top-width: 0;
+}
+
+
+/**********************************************************
+ *                   Table links
+ **********************************************************/
+table a:link, 
+table a:visited {}
+table a:visited, 
+table a.active  {}
+
+
+/**********************************************************
+ *                     Forum tables
+ **********************************************************/
+#forum table {
+  width: 100%;
+}
+
+/* Position forum icons. */
+#forum tr td.forum { 
+  background-position: 5px 5px!important;
+  padding-left: 1.67em; 
+}
+
+/* Add padding left to the forum name. */
+#forum tr td.forum .name {
+  padding-left: 0.375em;
+}
+
+#forum div.indent  {
+  margin-left: 0.5em;
+}
 
 
 /**********************************************************
@@ -955,6 +683,224 @@ div.comment div.unpublished {
  */
 /* Underscores in field name are replaced with dashes. */
 .field-field-FIELDNAME {}
+
+
+/**********************************************************
+ *                       Blocks
+ **********************************************************/
+/**
+ * Styles set here will be inherited by all blocks.
+ */
+.block {
+  clear: both;
+  margin: 0 0 1.5em;
+  padding: 0;
+}
+
+/* Default node title. */
+.block .title {}
+
+tr .block {
+  border: none; /* Blocks page table. */
+}
+
+/**
+ * Sidebar and Region Specific Block Styles
+ *
+ * You can target blocks in one or more regions and 
+ * style them differently. 
+ */
+/* Low specifity selector to style blocks in both sidebars. */
+.sidebar .block {}
+
+/* High specifity selectors to style blocks in one sidebar. */
+#sidebar-left .block {}
+#sidebar-left .block .title {}
+
+#sidebar-right .block {}
+#sidebar-right .block .title {}
+
+/* Low specifity selector to style blocks in all regions. */
+.region .block {}
+
+/* High specifity selectors to style blocks in one region. */
+#leaderboard .block       {}
+#header-blocks .block     {}
+#secondary-content .block {}
+#tertiary-content .block  {}
+#content-top .block       {}
+#content-bottom .block    {}
+#footer .block            {}
+
+/**
+ * Block Odd & Even Styles (Zebra)
+ * Each region can have alternating styles for Odd and Even 
+ * count blocks, such as;
+ */
+.sidebar .odd-block  {}
+.sidebar .even-block {}
+
+#sidebar-left .odd-block  {}
+#sidebar-left .even-block {}
+
+#sidebar-right .odd-block  {}
+#sidebar-right .even-block {}
+
+/**
+ * Alternative Approach to Region Block Styling
+ *
+ * Blocks are aware of what region they are in, so its
+ * possible to use chained selectors such as;
+ *
+ * .block.odd.right {}
+ */
+
+/**
+ * Drupal Core Blocks 
+ * This is most of the core blocks as far as I can remember, 
+ * please post an issue if I have missed any :)
+ */
+#block-system-0  {} /* Powered by Drupal block */
+#block-user-0    {} /* Login block             */
+#block-user-1    {} /* Navigation Menu block   */
+#block-user-2    {} /* Who's New block         */
+#block-user-3    {} /* Who's Online block      */
+#block-comment-0 {} /* Recent Comments block   */
+#block-search-0  {} /* Search form block       */
+#block-forum-0   {} /* Active Forum topics     */
+#block-forum-1   {} /* New Forum topics        */
+#block-blog-0    {} /* Recent Blog posts       */
+#block-node-0    {} /* Syndicate block         */
+#block-locale-0  {} /* Language Switcher block */
+
+/* The class selector applies to all blocks of these types. */
+.block-user {} 
+.block-book {} 
+.block-aggregator {}
+
+
+/**********************************************************
+ *                   Menu blocks
+ **********************************************************/
+/**
+ * Prefix these with the block id to style one menu only.
+ */
+ul.menu {
+  margin: 0;
+  padding: 0;
+}
+
+ul.menu li,
+li.expanded,
+li.collapsed,
+li.leaf {
+  margin: 0;
+}
+
+/* Override Drupal default bullet gifs with a CSS Sprite */
+ul.menu li {
+  background: none;
+  display: block;
+  list-style: none;
+  list-style-image: none;
+  padding: 0.35em 0 0 1em; /* LTR */
+}
+
+ul.menu li.collapsed,
+ul.menu li.expanded,
+ul.menu li.leaf {
+  background: transparent url(../images/sprite.png) no-repeat;
+}
+
+ul.menu li.collapsed {
+  background-position: -19px -8px; /* LTR */
+}
+
+ul.menu li.expanded {
+  background-position: -40px -26px; /* LTR */
+}
+
+ul.menu li.leaf {
+  background-position: -19px 10px; /* LTR */
+}
+
+ul.menu li a:link    {}
+ul.menu li a:hover   {}
+ul.menu li a:visited {}
+ul.menu li.active a  {}
+ul.menu li.active-trail {}
+
+ul.menu li.first {}
+ul.menu li.last  {}
+
+/**********************************************************
+ *                   Block lists
+ **********************************************************/
+.block .item-list ul {margin: 0;}
+.block .item-list ul li {}
+
+
+/**********************************************************
+ *                     Comments
+ **********************************************************/
+/* Comment wrapper */
+#comment-wrapper {}
+h2#comment-wrapper-title {}
+	
+.comment {
+  margin: 0 0 0.375em 0;
+  padding: 0.375em; 
+}
+
+.comment .indented {
+  margin-left: 2em; /* LTR */
+}
+
+/* The title of each comment. */
+.comment .title {
+  margin-bottom: 0;
+}
+.comment-id {color: #888;}
+.comment h3.title .new {color: #FF8000;}
+
+.comment .title a:link,
+.comment .title a:visited,
+.comment .title a:active {
+  text-decoration: none;
+}
+
+.comment-title a:hover {
+  text-decoration: underline;
+}
+
+.comment .user-picture {
+  float: right; /* RTL */
+  margin: 0.3em 0 0.1em 0.3em; /* LTR */
+}
+
+.comment .user-picture img {
+  padding: 0;
+}
+
+.comment .submitted {
+  color: #888;
+  margin: 0;
+}
+
+.comment .submitted a {}
+.comment .submitted a:hover {}
+
+/* Zebra styles for comments. */
+.comment.odd  {}
+.comment.even {}
+
+/* Style comments depending on the comment author. */
+.comment-by-author {}
+.comment-by-anon   {}
+.comment-mine      {}
+
+/* Theme comment status. */
+.comment .unpublished {}
 
 
 /**********************************************************
@@ -1345,286 +1291,3 @@ div#site-name  {
 .box form       {}
 .box .form-item {}
 .box fieldset   {}
-
-
-/**********************************************************
- *                   Tables
- **********************************************************/
- 
- /** 
- * The selector groupings are from Garland which offers a
- * sensible starting point for styling Drupal tables.
- */
- 
-table {
-  border-spacing: 0;
-  margin: 1em 0; 
-  padding: 0; 
-  width: 100%;
-}
-
-caption, th, td {
-  font-weight: normal;
-  text-align: left; /* LTR */
-}
-
-table, td, th {
-  vertical-align: middle;
-}
-
-tbody, tfoot, thead, tr {
-  margin: 0; 
-  padding: 0;
-}
-
-thead th {
-  border-bottom: 0.1875em solid #C0C0C0; 
-  color: #494949;
-  font-weight: bold; 
-}
-
-td, th {
-  border-bottom: 1px solid #CCC;
-  margin: 0;
-  padding: 0.375em 0.5em; 
-}
-
-tr.even,
-tr.odd,
-tbody th {
-  /* border-bottom: 1px solid #CCC; System default */
-}
-
-tr.odd, 
-tr.info {
-  background-color: #F5F5F5;
-}
-
-tr.even {
-  background-color: #FFF;
-}
-
-tr.drag {
-  background-color: #FFFFF0;
-}
-
-tr.drag-previous  {
-  background-color: #FFD;
-}
-
-tr.odd td.active  {
-  background-color: #EEE;
-}
-
-tr.even td.active {
-  background-color: #F7F7F7;
-}
-
-td.region, 
-td.module, 
-td.container td.category {
-  background-color: #EEE;
-  border-bottom: 1px solid #CCC;
-  border-top: 1.5em solid #FFF;
-  color: #222;
-  font-weight: bold;
-}
-
-tr:first-child td.region,
-tr:first-child td.module, 
-tr:first-child td.container {
-  border-top-width: 0;
-}
-
-
-/**********************************************************
- *                   Table links
- **********************************************************/
-table a:link, 
-table a:visited {}
-table a:visited, 
-table a.active  {}
-
-
-/**********************************************************
- *                     Forum tables
- **********************************************************/
-#forum table {
-  width: 100%;
-}
-
-/* Position forum icons. */
-#forum tr td.forum { 
-  background-position: 5px 5px!important;
-  padding-left: 1.67em; 
-}
-
-/* Add padding left to the forum name. */
-#forum tr td.forum .name {
-  padding-left: 0.375em;
-}
-
-#forum div.indent  {
-  margin-left: 0.5em;
-}
-
-
-/**********************************************************
- *                 Global Link Styles
- **********************************************************/
- a {
-  margin: 0; 
-  padding: 0;
-}
-
-a:link    {}
-a:visited {}
-a:hover   {}
-a:active  {}
-a.active  {}
-a.active-trail {}
-
-/* Drupal sets this to black. */
-li a.active {}
-
-/* Remove borders on linked images. */
-a img {border: none;}
-
-
-/*********************************************************
-*                        Type
-**********************************************************/
-/**
- * Global Font Size
- *
- * All modern browsers set a base font of 16px, therefore
- * the default value of 1em = 16px. We reduce this to 12px.
- *
- * 75% of 16px. (0.75 * 16px = 12px).
- * 1em now is equal to 12 pixels. E.g.
- * 2em   = 24px
- * 1.5em = 18px
- * 1em   = 12px
- * 0.5em = 6px
- *
- * You may find this "px to em" calculator helpful;
- * http://riddle.pl/emcalc/
- */
-
-html {
-  font-size: 75%;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5; /* unitless line height */
-}
-
-h1, h2 {
-  line-height: 1; 
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0 0 0.5em 0;
-  padding: 0;
-}
-
-h2 {
-  font-size: 1.5em; 
-}
-
-h3, h4, h5, h6 {
-  font-size: 1em;
-}
-
-/* The main title on each page. */
-h1#page-title {}
-
-/* Micro reset */
-h2, h3, h4, h5, h6,
-h1 img, h2 img, h3 img, 
-h4 img, h5 img, h6 img,
-em, dfn, del, ins {
-  margin: 0; 
-  padding: 0;
-}
-
-p {
-  margin: 0 0 1.5em; 
-  padding: 0;
-}
-
-blockquote p {
-  margin: 0;
-}
-
-strong {
-  font-weight: bold;
-}
-
-em, dfn {
-  font-style: italic; 
-}
-
-dfn {
-  font-weight: bold;
-}
-
-sup, sub {
-  line-height: 0;
-}
-
-del {
-  color: #666; 
-}
-
-ins {
-  border-bottom: none;
-  text-decoration: none;
-}
-
-pre, code {
-  margin: 1.5em 0; 
-  padding: 0; 
-  white-space: pre;
-}
-
-pre, code, tt {
-  font: 1em 'andale mono', 'lucida console', monospace;
-}
-
-p code {
-  font: 1em "Courier New", Courier, monospace;
-}
-
-/* Preserve line-height and selector appearance */
-sup {
-  vertical-align: text-top;
-}
-
-sub {
-  vertical-align: text-bottom;
-}
-
-/* Mitigate relative shrinkage */
-li li, li p, td p, blockquote p {
-  font-size: 1em;
-}
-
-blockquote, q {
-  font-style: italic;  /* LTR */
-  margin: 0 0 1.5em;
-  padding: 0 0 0 3em;  /* LTR */
-}
-
-/* Remove possible quote marks (") from <q>, <blockquote>. */
-blockquote:before, 
-blockquote:after, 
-q:before, q:after {
-  content: "";
-}
-
-blockquote, q {
-  quotes: "" "";
-}
