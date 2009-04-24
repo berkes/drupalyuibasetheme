@@ -1,4 +1,4 @@
-/* $Id: admin.css,v 1.1.2.1 2009/04/22 02:41:05 jmburnz Exp $ */
+/* $Id: admin.css,v 1.1.2.2 2009/04/24 03:43:29 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -122,10 +122,15 @@
 #permissions td.permission {
   padding-left:0.5em;
 }
+
 #permissions td.module {
   background: #EEE; 
   color: #222; 
   font-weight: bold;
+}
+
+tr .block {
+  border: 0; /* Blocks page table. */
 }
 
 /**********************************************************
@@ -138,12 +143,13 @@
 ul.primary {
   border-bottom-color: #CCC;
   margin: 1.5em 0 0 0; 
-  padding: 0 0 0.2em 1em;
+  padding: 0 0 0.2em 0.3em;
 }
 
 ul.primary li a {
   background-color: #EEE;
   border-color: #CCC;
+		margin-right: 0.08em;
   padding: 0.1em 0.75em 0.2em;
 }
 
