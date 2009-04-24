@@ -1,4 +1,4 @@
-/* $Id: admin.css,v 1.1.2.2 2009/04/24 03:43:29 jmburnz Exp $ */
+/* $Id: admin.css,v 1.1.2.3 2009/04/24 14:49:56 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -185,6 +185,3 @@ ul.secondary a.active {
  **********************************************************/
 /* Bump the font size by 2 pixels, I can't read 9px text! */
 #admin-menu {font-size: 10px;}
-
-
-
