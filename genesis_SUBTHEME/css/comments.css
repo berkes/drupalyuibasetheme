@@ -1,4 +1,4 @@
-/* $Id: comments.css,v 1.1.2.2 2009/04/20 00:37:11 jmburnz Exp $ */
+/* $Id: comments.css,v 1.1.2.3 2009/04/24 03:42:28 jmburnz Exp $ */
 
 /**
  * @file comments.css
@@ -13,8 +13,7 @@
 h2#comment-wrapper-title {}
 	
 .comment {
-  margin: 0 0 0.375em 0;
-  padding: 0.375em; 
+  margin: 0 0 1em;
 }
 
 /* Over-ride default .inner styles. */
@@ -25,10 +24,9 @@ h2#comment-wrapper-title {}
 }
 
 /* The title of each comment. */
-.comment-title {
-  margin-bottom: 0;
-}
-.comment-id {color: #888;}
+.comment-title {}
+
+.comment-id {}
 .comment-title .new {color: #FF8000;}
 
 .comment-title a:link,
@@ -43,17 +41,12 @@ h2#comment-wrapper-title {}
 
 .comment .user-picture {
   float: right; /* RTL */
-  margin: 0.3em 0 0.1em 0.3em; /* LTR */
+  margin: 0.3em 0 0.1em 0.5em; /* LTR */
 }
 
-.comment .user-picture img {
-  padding: 0;
-}
+.comment .user-picture img {}
 
-.comment-submitted {
-  color: #888;
-  margin: 0;
-}
+.comment-submitted {}
 
 .comment-submitted a {}
 .comment-submitted a:hover {}

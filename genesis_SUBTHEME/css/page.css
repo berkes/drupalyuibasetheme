@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.2 2009/04/21 14:27:37 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.3 2009/04/24 03:42:28 jmburnz Exp $ */
 
 /**
  * @file genesis_SUBTHEME.css
@@ -157,12 +157,12 @@ body {}
 
 /* h1 is for the front page only, all others use the div. */
 h1#site-name,
+div#site-name {
+  font-weight: bold; /* Bold or else the line heights vary. */
+}
 div#site-name  {
-  font-size: 2em ;
-  font-weight: bold;
+  font-size: 2em;
   line-height: 1.5;
-  margin: 0;
-  padding: 0;
 }
 
 #site-name a:link,
@@ -346,7 +346,6 @@ div#site-name  {
 #mission {
   font-weight: bold;
   margin: 0 0 1.5em;
-  padding: 0;
 }
 
 /**********************************************************
@@ -377,7 +376,6 @@ div#site-name  {
  **********************************************************/
 #foot-wrapper {
   margin: 0.375em 0;
-  padding: 0;
 }
 
 #footer {}
@@ -387,9 +385,7 @@ div#site-name  {
 #footer-message {}
 
 #footer a, 
-#footer-message a {
-  padding: 0.375em;
-}
+#footer-message a {}
 
 
 /**********************************************************
@@ -406,12 +402,12 @@ div#site-name  {
 /* Position the user picture on the right in user profiles. */
 .profile .user-picture {
   float: right; 
-  margin: 2em 0 1em 0.5em; /* RTL */
+  margin: 2em 0 1em 0.5em; /* LTR */
 }
 
 /* Fix alignment on user profile page. */
 .profile dt {
-  margin: 1.4em 0 0 0;
+  margin: 1.5em 0 0 0;
 }
 
 
