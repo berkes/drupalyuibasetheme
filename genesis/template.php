@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.2 2009/04/21 14:01:51 jmburnz Exp $
+// $Id: template.php,v 1.1.2.3 2009/04/24 00:50:02 jmburnz Exp $
 
 /**
  * @file template.php
@@ -21,7 +21,7 @@
  */
 function genesis_preprocess_page(&$vars, $hook) {
   global $theme;
-		
+
   // Don't display empty help from node_help().
   if ($vars['help'] == "<div class=\"help\"> \n</div>") {
     $vars['help'] = '';
@@ -29,7 +29,7 @@ function genesis_preprocess_page(&$vars, $hook) {
 
   // Set variables for the logo and site_name.
   if ($vars['logo']) {
-    $vars['site_logo'] = '<a href="'. $vars['front_page'] .'" title="'. t('Home page'). '" rel="home"><img src="'. $vars['logo'] .'" alt="'. $vars['site_name'] .' '.t('logo') .'" /></a>';
+    $vars['site_logo'] = '<a href="'. $vars['front_page'] .'" title="'. t('Home page') .'" rel="home"><img src="'. $vars['logo'] .'" alt="'. $vars['site_name'] .' '. t('logo') .'" /></a>';
   }
 
   if ($vars['site_name']) {

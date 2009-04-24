@@ -1,11 +1,9 @@
 <?php
-// $Id: template.php,v 1.2 2008/11/18 14:52:21 jmburnz Exp $
+// $Id: template.php,v 1.2.2.1 2009/04/24 00:49:43 jmburnz Exp $
 
 /**
  * @file template.php
- */
-	
-/** 
+ * 
  * USAGE
 	* 1. Rename each function to match your subthemes name, 
 	*    i.e replace genesis_SUBTHEME with your subthemes name.
