@@ -1,4 +1,4 @@
-/* $Id: messages.css,v 1.1.2.2 2009/04/22 20:09:53 jmburnz Exp $ */
+/* $Id: messages.css,v 1.1.2.3 2009/04/24 14:50:39 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -157,8 +157,3 @@ div.comment div.unpublished {
 .admin-enabled,
 .admin-disabled,
 .admin-missing {font-weight: bold;}
-.admin-dependencies, 
-.admin-required {color: #514721;}
-.admin-enabled  {color: #006600;}
-.admin-disabled {color: #8a1f11;}
-.admin-missing  {color: #FF0000;}
