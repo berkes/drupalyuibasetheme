@@ -1,4 +1,4 @@
-/* $Id: type.css,v 1.1.2.3 2009/04/24 03:42:28 jmburnz Exp $ */
+/* $Id: type.css,v 1.1.2.4 2009/04/24 03:53:59 jmburnz Exp $ */
 
 /**
   * @file type.css
@@ -172,6 +172,3 @@ q:before, q:after {
 blockquote, q {
   quotes: "" "";
 }
-
-
-

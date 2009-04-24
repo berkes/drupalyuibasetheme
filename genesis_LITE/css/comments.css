@@ -1,4 +1,4 @@
-/* $Id: comments.css,v 1.1.2.2 2009/04/20 00:36:52 jmburnz Exp $ */
+/* $Id: comments.css,v 1.1.2.3 2009/04/24 03:53:43 jmburnz Exp $ */
 
 /**
  * @file comments.css
@@ -13,8 +13,7 @@
 h2#comment-wrapper-title {}
 	
 .comment {
-  margin: 0 0 0.375em 0;
-  padding: 0.375em; 
+  margin: 0 0 1em; 
 }
 
 .comment .indented {
@@ -25,7 +24,7 @@ h2#comment-wrapper-title {}
 .comment .title {
   margin-bottom: 0;
 }
-.comment-id {color: #888;}
+.comment-id {}
 .comment h3.title .new {color: #FF8000;}
 
 .comment .title a:link,
@@ -39,18 +38,13 @@ h2#comment-wrapper-title {}
 }
 
 .comment .user-picture {
-  float: right; /* RTL */
-  margin: 0.3em 0 0.1em 0.3em; /* LTR */
+  float: right; /* LTR */
+  margin: 0.3em 0 0.1em 0.5em; /* LTR */
 }
 
-.comment .user-picture img {
-  padding: 0;
-}
+.comment .user-picture img {}
 
-.comment .submitted {
-  color: #888;
-  margin: 0;
-}
+.comment .submitted {}
 
 .comment .submitted a {}
 .comment .submitted a:hover {}

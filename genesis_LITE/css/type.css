@@ -1,4 +1,4 @@
-/* $Id: type.css,v 1.1.2.2 2009/04/20 00:36:52 jmburnz Exp $ */
+/* $Id: type.css,v 1.1.2.3 2009/04/24 03:53:43 jmburnz Exp $ */
 
 /**
   * @file type.css
@@ -57,7 +57,7 @@ body {
 }
 
 h1, h2 {
-  line-height: 1; 
+  /*line-height: 1; */
 }
 
 h1 {
@@ -70,7 +70,15 @@ h2 {
   font-size: 1.5em; 
 }
 
-h3, h4, h5, h6 {
+h3 {
+  font-size: 1.33em;
+}
+
+h4 {
+  font-size: 1.17em;
+}
+
+h5, h6 {
   font-size: 1em;
 }
 
@@ -78,7 +86,7 @@ h3, h4, h5, h6 {
 h1#page-title {}
 
 /* Micro reset */
-h2, h3, h4, h5, h6,
+h1, h2, h3, h4, h5, h6,
 h1 img, h2 img, h3 img, 
 h4 img, h5 img, h6 img,
 em, dfn, del, ins {
@@ -164,6 +172,3 @@ q:before, q:after {
 blockquote, q {
   quotes: "" "";
 }
-
-
-

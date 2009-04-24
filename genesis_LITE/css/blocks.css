@@ -1,4 +1,4 @@
-/* $Id: blocks.css,v 1.1.2.3 2009/04/20 12:18:52 jmburnz Exp $ */
+/* $Id: blocks.css,v 1.1.2.4 2009/04/24 03:53:43 jmburnz Exp $ */
 
 /**
  * @file blocks.css
@@ -14,15 +14,10 @@
 .block {
   clear: both;
   margin: 0 0 1.5em;
-  padding: 0;
 }
 
 /* Default node title. */
 .block .title {}
-
-tr .block {
-  border: none; /* Blocks page table. */
-}
 
 /**
  * Sidebar and Region Specific Block Styles
