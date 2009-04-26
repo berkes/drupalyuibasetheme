@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.2.2.1 2009/04/24 00:49:43 jmburnz Exp $
+// $Id: template.php,v 1.2.2.2 2009/04/26 22:50:11 jmburnz Exp $
 
 /**
  * @file template.php
