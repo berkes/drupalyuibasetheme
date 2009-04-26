@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.3 2009/04/24 03:42:28 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.4 2009/04/26 22:20:05 jmburnz Exp $ */
 
 /**
  * @file genesis_SUBTHEME.css
@@ -187,6 +187,7 @@ div#site-name  {
 .search-box-inner {padding: 1.5em 0;}
 
 #search-theme-form {}
+#search-theme-form > div {}
 #search-theme-form label {}
 #search-theme-form input {}
 #search-theme-form .form-item {}
@@ -235,7 +236,7 @@ div#site-name  {
  * Example styles to get you started.
  */
 #primary {
-  background: #EEE; /* Default gray for dev only. */
+  background: #DDD; /* Default gray for dev only. */
   font-weight: bold;
   padding: 0;
 }
@@ -250,7 +251,7 @@ div#site-name  {
 /* Modify the margin to set tab spacings. */
 #primary .links li {
   display: inline;
-  line-height: 3;
+  line-height: 2;
   list-style: none;
   margin: 0 1em;
   padding: 0;
@@ -287,7 +288,7 @@ div#site-name  {
  * Secondary Links Style
  */
 #secondary {
-  background: #F8F8F8; /* Default gray for dev only. */
+  background: #EEE; /* Default silver for dev only. */
   font-weight: bold;
   padding: 0;
 }
@@ -302,7 +303,7 @@ div#site-name  {
 /* Modify the margin to set tab spacings. */
 #secondary .links li {
   display: inline;
-  line-height: 3;
+  line-height: 2;
   list-style: none;
   margin: 0 1em;
   padding: 0;
