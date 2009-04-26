@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.3 2009/04/24 03:53:43 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.4 2009/04/26 22:18:52 jmburnz Exp $ */
 
 /**
  * @file genesis_SUBTHEME.css
@@ -150,6 +150,7 @@ div#site-name  {
  *                        Search
  **********************************************************/
 #search-theme-form {float:right;}
+#search-theme-form > div {}
 #search-theme-form label {}
 #search-theme-form input {}
 #search-theme-form .form-item {}
