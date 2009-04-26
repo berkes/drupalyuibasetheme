@@ -1,5 +1,5 @@
 <?php
-// $Id: comment.tpl.php,v 1.1.2.1 2009/04/19 17:33:14 jmburnz Exp $
+// $Id: comment.tpl.php,v 1.1.2.2 2009/04/26 22:13:11 jmburnz Exp $
 
 /**
  * @file comment.tpl.php
@@ -23,11 +23,8 @@
         <?php if ($comment->new): ?>
           <span class="new"><?php print $new; ?></span>
         <?php endif; ?>
+								<?php print $unpublished; ?>
       </h3>
-    <?php endif; ?>
-
-    <?php if ($unpublished): ?>
-      <div class="unpublished"><?php print t('Unpublished'); ?></div>
     <?php endif; ?>
 
     <?php print $picture; ?>

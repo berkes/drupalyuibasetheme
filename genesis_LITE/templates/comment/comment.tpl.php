@@ -1,5 +1,5 @@
 <?php
-// $Id: comment.tpl.php,v 1.1.2.1 2009/04/19 17:50:54 jmburnz Exp $
+// $Id: comment.tpl.php,v 1.1.2.2 2009/04/26 22:16:32 jmburnz Exp $
 
 /**
  * @file comment.tpl.php
@@ -16,17 +16,14 @@
 <div class="<?php print $comment_classes; ?>">
 
   <?php if ($title): ?>
-    <h3 class="title">
+    <h3 class="comment-title">
       <span class="comment-id"><?php print '#'. $id; ?></span> 
-      <?php print $title; ?> 
+      <?php print $title; ?>
       <?php if ($comment->new): ?>
         <span class="new"><?php print $new; ?></span>
       <?php endif; ?>
+						<?php print $unpublished; ?>
     </h3>
-  <?php endif; ?>
-
-  <?php if ($unpublished): ?>
-    <div class="unpublished"><?php print t('Unpublished'); ?></div>
   <?php endif; ?>
 
   <?php print $picture; ?>

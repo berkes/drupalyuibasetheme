@@ -1,4 +1,4 @@
-/* $Id: messages.css,v 1.1.2.3 2009/04/24 14:50:39 jmburnz Exp $ */
+/* $Id: messages.css,v 1.1.2.4 2009/04/26 22:11:48 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -115,19 +115,24 @@ div.help ul:last-child {
 		padding: 3px 6px 1px
 }
 
-/* Highlight unpulished nodes and comments*/
-div.node-unpublished,
-div.comment-unpublished {
-  background-color: #FFF4F4;
-  padding: 0.375em;
+/* Highlight unpublished nodes and comments*/
+.node-unpublished,
+.comment-unpublished {
+  background-color: #FFF6DF;
 }
 
-div.node div.unpublished,
-div.comment div.unpublished {
-  font: bold 3em Arial, Helvetica, sans-serif;
-  text-align: center;
-  color: #FFE9E7;
-  padding: 0.375em;
+.unpublished {
+  visibility: hidden;
+}
+
+.node-unpublished .unpublished,
+.comment-unpublished .unpublished {
+  background: transparent url(../images/warning.png) no-repeat 0 0;
+		color: #FFB900;
+		font-size: 0.94em;
+		margin-left: 0.5em; /* LTR */
+		padding-left: 18px; /* LTR */
+		visibility: visible;
 }
 
 /* Animated saving throbber */

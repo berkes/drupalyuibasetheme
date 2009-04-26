@@ -1,5 +1,5 @@
 <?php 
-// $Id: node.tpl.php,v 1.1.2.1 2009/04/19 17:50:53 jmburnz Exp $
+// $Id: node.tpl.php,v 1.1.2.2 2009/04/26 22:16:32 jmburnz Exp $
 
 /**
  * @file node.tpl.php
@@ -12,11 +12,10 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $node_classes; ?>">
 
   <?php if (!$page): ?>
-    <h2 class="title"><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h2>
-  <?php endif; ?>
-
-  <?php if ($unpublished): ?>
-    <div class="unpublished"><?php print t('Unpublished'); ?></div>
+    <h2 class="title">
+						<a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a>
+						<?php print $unpublished; ?>
+		  </h2>
   <?php endif; ?>
 
   <?php if ($submitted): ?>

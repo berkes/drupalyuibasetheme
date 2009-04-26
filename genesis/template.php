@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.3 2009/04/24 00:50:02 jmburnz Exp $
+// $Id: template.php,v 1.1.2.4 2009/04/26 22:12:38 jmburnz Exp $
 
 /**
  * @file template.php
@@ -102,6 +102,16 @@ function genesis_preprocess_node(&$vars, $hook) {
   // Class for node type: "node-type-page", "node-type-story", "node-type-my-custom-type", etc.
   $node_classes[] = 'node-type-'. $vars['node']->type;
   $vars['node_classes'] = implode(' ', $node_classes); // Concatenate with spaces.
+		
+		// Set messages if node is unpublished.
+  if (!$vars['node']->status) {
+		  if ($vars['page']) {
+				  drupal_set_message(t('This node is currently unpublished.'), $type = 'warning');
+				}
+				else {
+			   $vars['unpublished'] = '<span class="unpublished">'. t('Unpublished') .'</span>';
+				}
+  }
 }
 
 /**
@@ -150,6 +160,13 @@ function genesis_preprocess_comment(&$vars, $hook) {
   // If comment subjects are disabled, don't display them.
   if (variable_get('comment_subject_field', 1) == 0) {
     $vars['title'] = '';
+  }
+		
+		// Set messages if comment is unpublished.
+		$message = t('Comment'). ' #'. $vars['id'] . t(' is currently unpublished.');
+  if ($vars['comment']->status == COMMENT_NOT_PUBLISHED) {
+				drupal_set_message($message, $type = 'warning');
+				$vars['unpublished'] = '<span class="unpublished">'. t('Unpublished') .'</span>';
   }
 }
 
