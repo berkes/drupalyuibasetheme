@@ -1,4 +1,4 @@
-/* $Id: blocks.css,v 1.1.2.4 2009/04/24 03:53:43 jmburnz Exp $ */
+/* $Id: blocks.css,v 1.1.2.5 2009/04/26 22:20:21 jmburnz Exp $ */
 
 /**
  * @file blocks.css
@@ -128,11 +128,11 @@ ul.menu li.leaf {
 }
 
 ul.menu li.collapsed {
-  background-position: -19px -8px; /* LTR */
+  background-position: -19px -7px; /* LTR */
 }
 
 ul.menu li.expanded {
-  background-position: -40px -26px; /* LTR */
+  background-position: -40px -27px; /* LTR */
 }
 
 ul.menu li.leaf {
