@@ -1,5 +1,5 @@
 <?php
-// $Id: comment.tpl.php,v 1.2 2009/04/26 23:39:04 jmburnz Exp $
+// $Id: comment.tpl.php,v 1.3 2009/04/27 07:31:27 jmburnz Exp $
 
 /**
  * @file comment.tpl.php
@@ -36,7 +36,7 @@
     <div class="comment-content">
       <?php print $content; ?>
       <?php if ($signature): ?>
-        <div class="user-signature clear-block"><?php print $signature; ?></div>
+        <div class="user-signature clearfix"><?php print $signature; ?></div>
       <?php endif; ?>
     </div>
 
