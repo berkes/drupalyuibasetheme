@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.4 2009/04/26 22:12:38 jmburnz Exp $
+// $Id: template.php,v 1.1.2.5 2009/04/27 10:59:42 jmburnz Exp $
 
 /**
  * @file template.php
@@ -96,7 +96,7 @@ function genesis_preprocess_node(&$vars, $hook) {
     $node_classes[] = 'node-teaser';
   }
   if (!$vars['teaser']) {
-    // Node is displayed as teaser.
+    // Node is not displayed as teaser.
     $node_classes[] = 'node-view';
   }
   // Class for node type: "node-type-page", "node-type-story", "node-type-my-custom-type", etc.
