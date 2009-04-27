@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.2 2009/04/26 23:39:06 jmburnz Exp $
+// $Id: page.tpl.php,v 1.3 2009/04/27 02:20:52 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -25,7 +25,7 @@
  * @see layout.css
  */
 ?>
-<body id="genesis_1" <?php print $page_classes; ?>>
+<body id="genesis_1" <?php if(!empty($page_classes)) {print $page_classes;} ?>>
   <div id="container" class="width <?php print $body_classes; ?>">
 
     <div id="skip-nav" class="clear-block">
