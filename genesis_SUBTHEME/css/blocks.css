@@ -1,4 +1,4 @@
-/* $Id: blocks.css,v 1.3 2009/04/27 07:33:07 jmburnz Exp $ */
+/* $Id: blocks.css,v 1.4 2009/04/27 08:40:59 jmburnz Exp $ */
 
 /**
  * @file blocks.css
@@ -95,17 +95,22 @@ block-title {}
 #block-search-form        {} /* Search form block       */
 #block-statistics-popular {} /* Popular content         */
 #block-system-powered-by  {} /* Powered by Drupal       */
+#block-system-management  {} /* Admin Navigation menu   */
+#block-system-main-menu   {}
+#block-system-navigation  {}
+#block-system-user-menu   {} /* System Navigation block */
 #block-user-login         {} /* Login block             */
-#block-user-navigation    {} /* Navigation Menu block   */
+/*#block-user-navigation    {}  User Navigation block   */
 #block-user-new           {} /* Who's New block         */
 #block-user-online        {} /* Who's Online block      */
 #block-locale-language-switcher   {} /* Language Switcher block */
 #block-profile-author-information {} /* Author information      */
 
 /* The class selector applies to all blocks of these types. */
-.block-user {} 
-.block-book {} 
 .block-aggregator {}
+.block-book   {} 
+.block-system {}
+.block-user   {}
 
 
 /**********************************************************
