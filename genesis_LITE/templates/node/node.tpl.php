@@ -1,5 +1,5 @@
 <?php 
-// $Id: node.tpl.php,v 1.1.2.2 2009/04/26 22:16:32 jmburnz Exp $
+// $Id: node.tpl.php,v 1.1.2.3 2009/04/28 00:04:19 jmburnz Exp $
 
 /**
  * @file node.tpl.php
@@ -9,7 +9,7 @@
  * @see template_preprocess_node()
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $node_classes; ?>">
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>">
 
   <?php if (!$page): ?>
     <h2 class="title">

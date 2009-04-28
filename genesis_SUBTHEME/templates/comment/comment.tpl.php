@@ -1,5 +1,5 @@
 <?php
-// $Id: comment.tpl.php,v 1.1.2.2 2009/04/26 22:13:11 jmburnz Exp $
+// $Id: comment.tpl.php,v 1.1.2.3 2009/04/28 00:05:34 jmburnz Exp $
 
 /**
  * @file comment.tpl.php
@@ -13,7 +13,7 @@
  * @see theme_comment()
  */
 ?>
-<div class="<?php print $comment_classes; ?>">
+<div class="<?php print $classes; ?>">
   <div class="comment-inner inner">
 
     <?php if ($title): ?>

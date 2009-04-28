@@ -1,5 +1,5 @@
 <?php
-// $Id: comment-wrapper.tpl.php,v 1.1.2.1 2009/04/19 17:50:54 jmburnz Exp $
+// $Id: comment-wrapper.tpl.php,v 1.1.2.2 2009/04/28 00:04:19 jmburnz Exp $
 
 /**
  * @file comment-wrapper.tpl.php
@@ -10,7 +10,7 @@
  */
 ?>
 <?php if ($content): ?>
-  <div id="comment-wrapper">
+  <div id="comments">
     <?php print $content; ?>
   </div>
 <?php endif; ?> <!-- /silence coder -->

@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.5 2009/04/27 10:59:42 jmburnz Exp $
+// $Id: template.php,v 1.1.2.6 2009/04/28 00:02:03 jmburnz Exp $
 
 /**
  * @file template.php
@@ -40,27 +40,29 @@ function genesis_preprocess_page(&$vars, $hook) {
   $vars['primary_menu'] = theme('links', $vars['primary_links'], array('class' => 'links primary-links'));
   $vars['secondary_menu'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-links'));
 
-  // Page classes (these are not $body_classes, they are seperate variables in Genesis).
-  $page_classes = array();
+  // Section classes.
+		$path = drupal_get_path_alias($_GET['q']);
   if (!$vars['is_front']) {
-    // Add classes for each page and section.
-    $path = drupal_get_path_alias($_GET['q']);
     list($section, ) = explode('/', $path, 2);
-    $page_classes[] = safe_string('section-'. $section);
-    $page_classes[] = safe_string('page-'. $path);
+				$vars['section_class'] = safe_string('section-'. $section);
+  }
+		// body_classes.
+  $classes = explode(' ', $vars['body_classes']);
+  if ($class = array_search(preg_replace('/[^a-z0-9_-]+/', '', 'page-'. drupal_strtolower(arg(0))), $classes)) {
+    unset($classes[$class]);
+  }
+  if (!$vars['is_front']) {
+    $classes[] = safe_string('page-'. $path);
     if (arg(0) == 'node') {
       if (arg(1) == 'add') {
-        $page_classes[] = 'node-add'; // Add .node-add class.
+        $classes[] = 'page-node-add'; // Add .node-add class.
       }
       elseif (is_numeric(arg(1)) && (arg(2) == 'edit' || arg(2) == 'delete')) {
-        $page_classes[] = 'node-'. arg(2); // Add .node-edit or .node-delete classes.
+        $classes[] = 'page-node-'. arg(2); // Add .node-edit or .node-delete classes.
       }
     }
   }
-  // Don't print on the front page.
-  if (!$vars['is_front']) {
-    $vars['page_classes'] = 'class="'. implode(' ', $page_classes) .'"'; // Concatenate with spaces.
-  }
+  $vars['classes'] = implode(' ', $classes); // Concatenate with spaces.
 }
 
 /**
@@ -75,33 +77,27 @@ function genesis_preprocess_node(&$vars, $hook) {
   global $user;
 
   // Special classes for nodes
-  $node_classes = array();
-  $node_classes[] = 'node';
+  $classes = array();
+  $classes[] = 'node';
+		if ($vars['promote']) {
+    $classes[] = 'node-promoted';
+  }
   if ($vars['sticky']) {
-    $node_classes[] = 'sticky';
+    $classes[] = 'node-sticky';
   }
-  if (!$vars['node']->status) {
-    $node_classes[] = 'node-unpublished';
-    $vars['unpublished'] = TRUE;
-  }
-  else {
-    $vars['unpublished'] = FALSE;
-  }
-  if ($vars['node']->uid && $vars['node']->uid == $user->uid) {
-    // Node is authored by current user.
-    $node_classes[] = 'node-mine';
+  if (!$vars['status']) {
+    $classes[] = 'node-unpublished';
   }
   if ($vars['teaser']) {
     // Node is displayed as teaser.
-    $node_classes[] = 'node-teaser';
+    $classes[] = 'node-teaser';
   }
-  if (!$vars['teaser']) {
-    // Node is not displayed as teaser.
-    $node_classes[] = 'node-view';
+  if (isset($vars['preview'])) {
+    $classes[] = 'node-preview';
   }
   // Class for node type: "node-type-page", "node-type-story", "node-type-my-custom-type", etc.
-  $node_classes[] = 'node-type-'. $vars['node']->type;
-  $vars['node_classes'] = implode(' ', $node_classes); // Concatenate with spaces.
+  $classes[] = 'node-'. $vars['node']->type;
+  $vars['classes'] = implode(' ', $classes); // Concatenate with spaces.
 		
 		// Set messages if node is unpublished.
   if (!$vars['node']->status) {
@@ -127,35 +123,29 @@ function genesis_preprocess_comment(&$vars, $hook) {
 
   // Load the node object that the current comment is attached to.
   $node = node_load($vars['comment']->nid);
-  // If the author is equal to the author of the node, set a variable.
-  $vars['author_comment'] = $vars['comment']->uid == $node->uid ? TRUE : FALSE;
-
-  $comment_classes = array();
-  $comment_classes[] = 'comment';
-  // Odd/even handling
-  static $comment_odd = TRUE;
-  $comment_classes[] = $comment_odd ? 'odd' : 'even';
-  $comment_odd = !$comment_odd;
-  if ($vars['comment']->status == COMMENT_NOT_PUBLISHED) {
-    $comment_classes[] = 'comment-unpublished';
-    $vars['unpublished'] = TRUE;
+  $classes = array();
+		$classes[]  = 'comment';
+  if ($vars['status'] != 'comment-published') {
+    $classes[] = $vars['status'];
   }
   else {
-    $vars['unpublished'] = FALSE;
+    if ($vars['comment']->uid == 0) {
+      $classes[] = 'comment-by-anonymous';
+    }
+    if ($comment->uid === $vars['node']->uid) {
+      $classes[] = 'comment-by-node-author';
+    }
+    if ($comment->uid === $vars['user']->uid) {
+      $classes[] = 'comment-by-viewer';
+    }
+    if ($comment->new) {
+     $classes[] = 'comment-new';
+    }
+				// Optionally use odd and even zebra classes.
+				//$classes[] = $vars['zebra'];
   }
-  if ($vars['author_comment']) {
-    // Comment is by the node author.
-    $comment_classes[] = 'comment-by-author';
-  }
-  if ($vars['comment']->uid == 0) {
-    // Comment is by an anonymous user.
-    $comment_classes[] = 'comment-by-anon';
-  }
-  if ($user->uid && $vars['comment']->uid == $user->uid) {
-    // Comment was posted by current user.
-    $comment_classes[] = 'comment-mine';
-  }
-  $vars['comment_classes'] = implode(' ', $comment_classes);
+  $vars['classes'] = implode(' ', $classes);
+
 
   // If comment subjects are disabled, don't display them.
   if (variable_get('comment_subject_field', 1) == 0) {
@@ -175,7 +165,7 @@ function genesis_preprocess_comment(&$vars, $hook) {
  */
 function genesis_preprocess_comment_wrapper(&$vars) {
   if ($vars['content'] && $vars['node']->type != 'forum') {
-    $vars['content'] = '<h2 id="comment-wrapper-title">'. t('Comments') .'</h2>'.  $vars['content'];
+    $vars['content'] = '<h2 id="comments-title">'. t('Comments') .'</h2>'.  $vars['content'];
   }
 }
 
@@ -191,13 +181,14 @@ function genesis_preprocess_block(&$vars, $hook) {
   $block = $vars['block'];
 
   // Special classes for blocks
-  $block_classes = array();
-  $block_classes[] = 'block';
-  $block_classes[] = 'block-'. $block->module;
-  $block_classes[] = $vars['block_zebra'] .'-block';
-  //$block_classes[] = 'block-'. $block->region;
-  $block_classes[] = 'block-count-'. $vars['id'];
-  $vars['block_classes'] = implode(' ', $block_classes);
+  $classes = array();
+  $classes[] = 'block';
+  $classes[] = 'block-'. $block->module;
+  // Optionally use additional block classes
+		//$classes[] = $vars['block_zebra'];
+  //$classes[] = 'block-'. $block->region;
+  //$classes[] = 'block-count-'. $vars['id'];
+  $vars['classes'] = implode(' ', $classes);
 
   if (user_access('administer blocks')) {
     // Display 'edit block' for custom blocks.
@@ -228,7 +219,7 @@ function genesis_preprocess_block(&$vars, $hook) {
  * @see http://drupal.org/project/zen
  */
 function safe_string($string) {
-  $string = strtolower(preg_replace('/[^a-zA-Z0-9_-]+/', '-', $string));
+  $string = drupal_strtolower(preg_replace('/[^a-zA-Z0-9_-]+/', '-', $string));
   if (!ctype_lower($string{0})) {
     $string = 'id'. $string;
   }

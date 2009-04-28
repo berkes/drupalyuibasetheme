@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.3 2009/04/21 10:58:18 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.4 2009/04/28 00:02:16 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -25,8 +25,8 @@
  * @see layout.css
  */
 ?>
-<body id="genesis_1" <?php print $page_classes; ?>>
-  <div id="container" class="width <?php print $body_classes; ?>">
+<body id="genesis_1" <?php if (!$is_front): print 'class="'. $section_class .'"'; endif; ?>>
+  <div id="container" class="width <?php print $classes; ?>">
 
     <div id="skip-nav" class="clear-block">
       <a href="#main-content"><?php print t('Skip to main content'); ?></a>

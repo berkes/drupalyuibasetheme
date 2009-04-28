@@ -1,5 +1,5 @@
 <?php 
-// $Id: block.tpl.php,v 1.1.2.1 2009/04/19 21:01:17 jmburnz Exp $
+// $Id: block.tpl.php,v 1.1.2.2 2009/04/28 00:02:16 jmburnz Exp $
 
 /**
  * @file block.tpl.php
@@ -16,7 +16,7 @@
  * then unset the block-edit.css in your subhtemes .info file.
  */
 ?>
-<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="<?php print $block_classes; ?>">
+<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="<?php print $classes; ?>">
   <div class="block-inner inner">
 
     <?php if ($block->subject): ?>
