@@ -1,4 +1,4 @@
-/* $Id: layout.css,v 1.1.2.5 2009/04/21 23:48:14 jmburnz Exp $ */
+/* $Id: layout.css,v 1.1.2.6 2009/04/28 09:39:47 jmburnz Exp $ */
 
 /**
  * Genesis layout methods
@@ -22,6 +22,12 @@
  * Tip: If your site uses a page-front.tpl.php or any other
  * template suggestion your site can have multiple layouts.
  */
+
+/* dev background colors
+#sidebar-left  {background: #ccc;}
+#sidebar-right {background: #ddd;}
+#main-content  {background: #eee;}
+*/
 
 /*********************************************************
 *                     Layouts
