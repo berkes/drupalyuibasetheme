@@ -1,4 +1,4 @@
-/* $Id: comments.css,v 1.1.2.3 2009/04/24 03:42:28 jmburnz Exp $ */
+/* $Id: comments.css,v 1.1.2.4 2009/04/28 00:05:15 jmburnz Exp $ */
 
 /**
  * @file comments.css
@@ -9,8 +9,8 @@
  *                     Comments
  **********************************************************/
 /* Comment wrapper */
-#comment-wrapper {}
-h2#comment-wrapper-title {}
+#comments {}
+#comments-title {}
 	
 .comment {
   margin: 0 0 1em;
@@ -44,10 +44,7 @@ h2#comment-wrapper-title {}
   margin: 0.3em 0 0.1em 0.5em; /* LTR */
 }
 
-.comment .user-picture img {}
-
 .comment-submitted {}
-
 .comment-submitted a {}
 .comment-submitted a:hover {}
 
@@ -59,16 +56,19 @@ h2#comment-wrapper-title {}
   clear: both;
 }
 
-/* Zebra styles for comments. */
+/* Comment author. */
+.comment-by-anonymous   {}
+.comment-by-node-author {}
+.comment-by-viewer      {}
+
+/* Comment is new. */
+.comment-new {}
+
+/* Comment status. */
+.comment-unpublished {}
+
+/* Zebra styles for comments. See genesis_preprocess_comment.
 .comment.odd  {}
 .comment.even {}
-
-/* Style comments depending on the comment author. */
-.comment-by-author {}
-.comment-by-anon   {}
-.comment-mine      {}
-
-/* Theme comment status. */
-.comment .unpublished {}
-
+*/
 

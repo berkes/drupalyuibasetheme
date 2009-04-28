@@ -1,4 +1,4 @@
-/* $Id: nodes.css,v 1.1.2.4 2009/04/24 03:53:59 jmburnz Exp $ */
+/* $Id: nodes.css,v 1.1.2.5 2009/04/28 00:05:15 jmburnz Exp $ */
 
 /**
  * @file nodes.css
@@ -8,14 +8,6 @@
 /**********************************************************
  *                      Nodes
  **********************************************************/
-/* section type class when viewing a node */
-.page-node   {}
-
-/* section type classes for node workflow states */
-.node-add    {}
-.node-edit   {}
-.node-delete {}
-
 .node {
   margin: 0 0 1.5em;
 }
@@ -41,46 +33,46 @@
   margin: 0.3em 1em 0.1em 0;
 }
 
-.node .user-picture img {}
-
 .node-submitted {}
-
 .node-submitted a {}
 .node-submitted a:hover {}
 
 /* Node content wrapper. */
 .node-content {}
 
+/* Node taxonomy terms. */
 .node-terms {}
 
+/* Node links. */
 .node-links {
   display: block; 
   text-align: right;
 }
 
-/* Theme sticky nodes. */
-.node .sticky {}
+/* Node classes for node workflow states. */
+.node-add    {}
+.node-edit   {}
+.node-delete {}
+.node-preview  {}
+.node-sticky   {}
+.node-promoted {}
 
-/* Theme node status. */
-.node .unpublished {}
- 
-/* Theme nodes that belong to the author. */
-.node-mine {}
+/* Node status. */
+.node-unpublished {}
 
 /* Theme the node teaser seperatly. */
 .node-teaser {}
-.node-teaser .node-inner {}
 
 
 /**********************************************************
  *                   Core node types
  **********************************************************/
-.node-type-blog  {}
-.node-type-page  {}
-.node-type-story {}
-.node-type-forum {}
-.node-type-book  {}
-.node-type-poll  {}
+.node-blog  {}
+.node-page  {}
+.node-story {}
+.node-forum {}
+.node-book  {}
+.node-poll  {}
 
 /* Clear the user picture on Polls. */
 .node-type-poll .node-content {clear: both;}
@@ -119,7 +111,7 @@
 
 /* Number fields. */
 .field-type-number-decimal {}
-.field-type-number-float {}
+.field-type-number-float   {}
 .field-type-number-integer {}
 
 /* Text field. */
@@ -130,5 +122,8 @@
  */
 /* Underscores in field name are replaced with dashes. */
 .field-field-FIELDNAME {}
+
+
+
 
 

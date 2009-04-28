@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.4 2009/04/26 22:20:05 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.5 2009/04/28 00:05:15 jmburnz Exp $ */
 
 /**
  * @file genesis_SUBTHEME.css
@@ -9,15 +9,68 @@
  * Remove unused styles for performace.
  */
 
+
 /**********************************************************
- *                          html, Body
+ *                      html, Body
  **********************************************************/
 html {}
 body {}
 
 
 /**********************************************************
- *                     The wrapper divs
+ *              Section, Page and Body Classes
+ **********************************************************/
+/**
+ * Normally you will use these in combination with other
+	* selectors. I include them here for completedness.
+	*/
+	
+/** 
+ * Section Class
+ * The section class takes the 2nd part of the URL and
+	* builds a section-[path-part] class from it. If you emulate
+	* site sections using the Pathauto module this can be a 
+	* powerful way to style site sections.
+ */
+/* .section-[path-part] {}  replace [path-part] */
+
+/* Front or not front. */
+.front {}
+.not-front {}
+
+/* Is the user logged in. */
+.logged-in {}
+.not-logged-in {}
+
+/* Node type body classes */
+.node-type-book  {}
+.node-type-blog  {}
+.node-type-forum {}
+.node-type-page  {}
+.node-type-poll  {}
+.node-type-story {}
+
+/* Warning! The sidebar body classes are integral to how genesis
+   applies the layout - do not add margin, padding, borders,
+			or positioning styles to these classes! See layout.css */
+.one-sidebar   {}
+.sidebar-right {}
+.sidebar-left  {}
+.two-sidebars  {}
+
+/** 
+ * Page Path Class
+ * The page path class takes the entire URL and
+	* builds a page-[path] class from it. See example
+	* below. You need to use Firebug or view source to
+	* find out what the actual class will be, and be aware
+	* that this will change if your URL alias changes!
+ */
+/* .page-[example-node-path] {}  replace [example-node-path] */
+
+	
+/**********************************************************
+ *                  The wrapper divs
  **********************************************************/
 /**
  * Be careful how you modify these, see layout.css first.
@@ -401,10 +454,7 @@ div#site-name  {
  *                   Profile
  **********************************************************/
 /* Position the user picture on the right in user profiles. */
-.profile .user-picture {
-  float: right; 
-  margin: 2em 0 1em 0.5em; /* LTR */
-}
+.profile .user-picture {}
 
 /* Fix alignment on user profile page. */
 .profile dt {
@@ -479,7 +529,3 @@ div#site-name  {
 .box form       {}
 .box .form-item {}
 .box fieldset   {}
-
-
-
-

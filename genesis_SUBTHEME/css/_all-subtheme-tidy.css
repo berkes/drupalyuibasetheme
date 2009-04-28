@@ -1,4 +1,4 @@
-/* $Id: _all-subtheme-tidy.css,v 1.1.2.1 2009/04/22 02:43:23 jmburnz Exp $ */
+/* $Id: _all-subtheme-tidy.css,v 1.1.2.2 2009/04/28 00:05:15 jmburnz Exp $ */
 
 /**
   * @file _all-subtheme-tidy.css
@@ -28,14 +28,18 @@ font-family:Arial, Helvetica, sans-serif;
 line-height:1.5;
 }
 
-h1,h2 {
-line-height:1;
-}
-
 h1 {
 font-size:2em;
 margin:0 0 .5em;
 padding:0;
+}
+
+h3 {
+font-size:1.33em;
+}
+
+h4 {
+font-size:1.17em;
 }
 
 em,dfn {
@@ -88,6 +92,10 @@ blockquote:before,blockquote:after,q:before,q:after {
 content:"";
 }
 
+a img {
+border:none;
+}
+
 ul,ol {
 margin:0 0 1.5em 1.75em;
 padding:0;
@@ -125,6 +133,10 @@ margin:.375em 0;
 
 input.text:focus,input.title:focus,textarea:focus,select:focus {
 border:1px solid #666;
+}
+
+input.text,input.title {
+padding:.375em;
 }
 
 input.form-text,textarea {
@@ -204,6 +216,19 @@ html.js fieldset.collapsed {
 background:transparent;
 padding-bottom:.75em;
 padding-top:0;
+}
+
+html.js fieldset.collapsible legend a,html.js fieldset.collapsed legend a,ul.menu li.collapsed,ul.menu li.expanded,ul.menu li.leaf {
+background:transparent url(../images/sprite.png) no-repeat;
+}
+
+html.js fieldset.collapsible legend a {
+background-position:0 -43px;
+padding-left:1em;
+}
+
+html.js fieldset.collapsed legend a {
+background-position:0 -63px;
 }
 
 #user-login ul {
@@ -348,7 +373,7 @@ margin:0 0 1.5em;
 
 .node .user-picture {
 float:left;
-margin:.3em .5em .1em 0;
+margin:.3em 1em .1em 0;
 }
 
 .node-links {
@@ -363,24 +388,34 @@ clear:both;
 .block {
 clear:both;
 margin:0 0 1.5em;
-padding:0;
+}
+
+ul.menu li {
+background:none;
+display:block;
+list-style:none;
+list-style-image:none;
+padding:.35em 0 0 1em;
+}
+
+ul.menu li.collapsed {
+background-position:-19px -7px;
+}
+
+ul.menu li.expanded {
+background-position:-40px -27px;
+}
+
+ul.menu li.leaf {
+background-position:-19px 10px;
 }
 
 .comment {
-margin:0 0 .375em;
-padding:.375em;
+margin:0 0 1em;
 }
 
 .comment .indented {
 margin-left:2em;
-}
-
-.comment-title {
-margin-bottom:0;
-}
-
-.comment-id {
-color:#888;
 }
 
 .comment-title .new {
@@ -389,7 +424,7 @@ color:#FF8000;
 
 .comment .user-picture {
 float:right;
-margin:.3em 0 .1em .3em;
+margin:.3em 0 .1em .5em;
 }
 
 .comment .links {
@@ -405,12 +440,9 @@ width:85%;
 float:left;
 }
 
-h1#site-name,div#site-name {
+div#site-name {
 font-size:2em;
-font-weight:700;
 line-height:1.5;
-margin:0;
-padding:0;
 }
 
 #search-box-top {
@@ -427,13 +459,13 @@ margin:.75em 0;
 }
 
 #primary {
-background:#EEE;
+background:#DDD;
 font-weight:700;
 padding:0;
 }
 
 #secondary {
-background:#F8F8F8;
+background:#EEE;
 font-weight:700;
 padding:0;
 }
@@ -445,21 +477,14 @@ padding:0 0 .75em;
 #mission {
 font-weight:700;
 margin:0 0 1.5em;
-padding:0;
 }
 
 #foot-wrapper {
 margin:.375em 0;
-padding:0;
-}
-
-.profile .user-picture {
-float:right;
-margin:2em 0 1em .5em;
 }
 
 .profile dt {
-margin:1.4em 0 0;
+margin:1.5em 0 0;
 }
 
 .book-navigation .page-links {
@@ -477,7 +502,7 @@ h2,input.title {
 font-size:1.5em;
 }
 
-h3,h4,h5,h6,li li,li p,td p,blockquote p {
+h5,h6,li li,li p,td p,blockquote p {
 font-size:1em;
 }
 
@@ -491,16 +516,12 @@ margin:0 0 1.5em;
 padding:0;
 }
 
-blockquote p,ul ul,ul ol,ol ol,ol ul,.block ul ul,.block ul ol,.block ol ol,.block ol ul,.item-list ul ul,.item-list ul ol,.item-list ol ol,.item-list ol ul,div.form-item div.description img,#node-form .vertical-tabs ul.vertical-tabs-list,#user-login ul li,ul.menu li,li.expanded,li.collapsed,li.leaf,.block .item-list ul,#search-box-top form,#search-box-top div.form-item,#primary .links,#secondary .links,.item-list ul.pager li {
+blockquote p,ul ul,ul ol,ol ol,ol ul,.block ul ul,.block ul ol,.block ol ol,.block ol ul,.item-list ul ul,.item-list ul ol,.item-list ol ol,.item-list ol ul,div.form-item div.description img,#user-login ul li,ul.menu li,li.expanded,li.collapsed,li.leaf,.block .item-list ul,#search-box-top form,#search-box-top div.form-item,#primary .links,#secondary .links,.item-list ul.pager li {
 margin:0;
 }
 
-strong,dfn,dt {
+strong,dfn,dt,h1#site-name,div#site-name {
 font-weight:700;
-}
-
-a img,tr .block {
-border:none;
 }
 
 ul ul,ul ul ul ul {
@@ -511,45 +532,8 @@ ol,ol ol ol {
 list-style-type:decimal;
 }
 
-input.text,input.title,#footer a,#footer-message a {
-padding:.375em;
-}
-
 div.resizable-textarea textarea,#user-login-form ul {
 margin-top:0;
-}
-
-html.js fieldset.collapsible legend a,html.js fieldset.collapsed legend a,ul.menu li.collapsed,ul.menu li.expanded,ul.menu li.leaf {
-background:transparent url(../images/sprite.png) no-repeat;
-}
-
-html.js fieldset.collapsible legend a {
-background-position:0 -43px;
-padding-left:1em;
-}
-
-html.js fieldset.collapsed legend a {
-background-position:0 -63px;
-}
-
-ul.menu li {
-background:none;
-display:block;
-list-style:none;
-list-style-image:none;
-padding:.35em 0 0 1em;
-}
-
-ul.menu li.collapsed {
-background-position:-19px -8px;
-}
-
-ul.menu li.expanded {
-background-position:-40px -26px;
-}
-
-ul.menu li.leaf {
-background-position:-19px 10px;
 }
 
 #node-form .vertical-tabs ul.vertical-tabs-list li,html.js #user-login-form li.openid-link,html.js #user-login li.openid-link {
@@ -568,18 +552,9 @@ text-decoration:none;
 text-decoration:underline;
 }
 
-.node-submitted,.comment-submitted {
-color:#888;
-margin:0;
-}
-
-.block-content,.comment .user-picture img {
-padding:0;
-}
-
 #primary .links li,#secondary .links li {
 display:inline;
-line-height:3;
+line-height:2;
 list-style:none;
 margin:0 1em;
 padding:0;

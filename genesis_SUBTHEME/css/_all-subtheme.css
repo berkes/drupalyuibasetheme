@@ -1,4 +1,4 @@
-/* $Id: _all-subtheme.css,v 1.1.2.2 2009/04/22 02:43:23 jmburnz Exp $ */
+/* $Id: _all-subtheme.css,v 1.1.2.3 2009/04/28 00:05:15 jmburnz Exp $ */
 
 /**
   * @file _all-subtheme.css
@@ -53,10 +53,6 @@ body {
   line-height: 1.5; /* unitless line height */
 }
 
-h1, h2 {
-  line-height: 1; 
-}
-
 h1 {
   font-size: 2em;
   margin: 0 0 0.5em 0;
@@ -67,7 +63,15 @@ h2 {
   font-size: 1.5em; 
 }
 
-h3, h4, h5, h6 {
+h3 {
+  font-size: 1.33em;
+}
+
+h4 {
+  font-size: 1.17em;
+}
+
+h5, h6 {
   font-size: 1em;
 }
 
@@ -166,7 +170,7 @@ blockquote, q {
 /**********************************************************
  *                 Global Link Styles
  **********************************************************/
- a {
+a {
   margin: 0; 
   padding: 0;
 }
@@ -390,9 +394,7 @@ html.js fieldset.collapsed legend a {
 /*********************************************************
 *                     Vertical Tabs
 **********************************************************/
-#node-form .vertical-tabs ul.vertical-tabs-list {
-  margin: 0;
-}
+#node-form .vertical-tabs ul.vertical-tabs-list {}
 
 #node-form .vertical-tabs ul.vertical-tabs-list li {
   list-style: none;
@@ -620,14 +622,6 @@ ul.secondary a.active {
 /**********************************************************
  *                      Nodes
  **********************************************************/
-/* section type class when viewing a node */
-.page-node   {}
-
-/* section type classes for node workflow states */
-.node-add    {}
-.node-edit   {}
-.node-delete {}
-
 .node {
   margin: 0 0 1.5em;
 }
@@ -650,52 +644,49 @@ ul.secondary a.active {
 
 .node .user-picture {
   float: left;
-  margin: 0.3em 0.5em 0.1em 0;
+  margin: 0.3em 1em 0.1em 0;
 }
 
-.node .user-picture img {}
-
-.node-submitted {
-  color: #888;
-  margin: 0;	
-}
-
+.node-submitted {}
 .node-submitted a {}
 .node-submitted a:hover {}
 
 /* Node content wrapper. */
 .node-content {}
 
+/* Node taxonomy terms. */
 .node-terms {}
 
+/* Node links. */
 .node-links {
   display: block; 
   text-align: right;
 }
 
-/* Theme sticky nodes. */
-.node .sticky {}
+/* Node classes for node workflow states. */
+.node-add    {}
+.node-edit   {}
+.node-delete {}
+.node-preview  {}
+.node-sticky   {}
+.node-promoted {}
 
-/* Theme node status. */
-.node .unpublished {}
- 
-/* Theme nodes that belong to the author. */
-.node-mine {}
+/* Node status. */
+.node-unpublished {}
 
 /* Theme the node teaser seperatly. */
 .node-teaser {}
-.node-teaser .node-inner {}
 
 
 /**********************************************************
  *                   Core node types
  **********************************************************/
-.node-type-blog  {}
-.node-type-page  {}
-.node-type-story {}
-.node-type-forum {}
-.node-type-book  {}
-.node-type-poll  {}
+.node-blog  {}
+.node-page  {}
+.node-story {}
+.node-forum {}
+.node-book  {}
+.node-poll  {}
 
 /* Clear the user picture on Polls. */
 .node-type-poll .node-content {clear: both;}
@@ -734,7 +725,7 @@ ul.secondary a.active {
 
 /* Number fields. */
 .field-type-number-decimal {}
-.field-type-number-float {}
+.field-type-number-float   {}
 .field-type-number-integer {}
 
 /* Text field. */
@@ -751,28 +742,17 @@ ul.secondary a.active {
  *                       Blocks
  **********************************************************/
 /**
- * Styles set here will be inherited by all blocks.
+ * Styles set for .block, .block-inner, block-title and 
+	* .block-contentwill be inherited by all blocks.
  */
 .block {
   clear: both;
   margin: 0 0 1.5em;
-  padding: 0;
 }
 
-/* Over-ride default .inner styles. */
-.block-inner {}
-
-/* Default node title. */
-block-title {}
-
-/* Block content wrapper. */
-.block-content {
-  padding: 0;
-}
-
-tr .block {
-  border: none; /* Blocks page table. */
-}
+.block-inner   {} /* Block inner div */
+.block-title   {} /* h2 block title */
+.block-content {} /* Block content wrapper */
 
 /**
  * Sidebar and Region Specific Block Styles
@@ -782,6 +762,9 @@ tr .block {
  */
 /* Low specifity selector to style blocks in both sidebars. */
 .sidebar .block {}
+
+/* Low specifity selector to style blocks in all regions. */
+.region .block {}
 
 /* High specifity selectors to style blocks in one sidebar. */
 #sidebar-left .block {}
@@ -794,64 +777,73 @@ tr .block {
 #sidebar-right .block-inner {}
 #sidebar-right .block .block-content {}
 
-/* Low specifity selector to style blocks in all regions. */
-.region .block {}
-
 /* High specifity selectors to style blocks in one region. */
-#leaderboard .block       {}
-#header-blocks .block     {}
+#leaderboard       .block {}
+#header-blocks     .block {}
 #secondary-content .block {}
-#tertiary-content .block  {}
-#content-top .block       {}
-#content-bottom .block    {}
-#footer .block            {}
+#tertiary-content  .block {}
+#content-top       .block {}
+#content           .block {}
+#content-bottom    .block {}
+#footer            .block {}
 
 /**
- * Block Odd & Even Styles (Zebra)
- * Each region can have alternating styles for Odd and Even 
- * count blocks, such as;
+ * Module Block ID's 
+ * For contributed module blocks the pattern is the same,
+	* i.e. #block-[module]-[delta]
  */
-.sidebar .odd-block  {}
-.sidebar .even-block {}
+#block-book-0       {} /* Book navigation block   */
+#block-blog-0       {} /* Recent Blog posts       */
+#block-comment-0    {} /* Recent Comments block   */
+#block-forum-0      {} /* Active Forum topics     */
+#block-forum-1      {} /* New Forum topics        */
+#block-locale-0     {} /* Language Switcher block */
+#block-node-0       {} /* Syndicate block         */
+#block-poll-0       {} /* Most recent poll        */
+#block-profile-0    {} /* Author information      */
+#block-search-0     {} /* Search form block       */
+#block-statistics-0 {} /* Popular content         */
+#block-system-0     {} /* Powered by Drupal       */
+#block-user-0       {} /* Login block             */
+#block-user-1       {} /* Navigation Menu block   */
+#block-user-2       {} /* Who's New block         */
+#block-user-3       {} /* Who's Online block      */
 
-#sidebar-left .odd-block  {}
-#sidebar-left .even-block {}
-
-#sidebar-right .odd-block  {}
-#sidebar-right .even-block {}
-
-/**
- * Alternative Approach to Region Block Styling
- *
- * Blocks are aware of what region they are in, so its
- * possible to use chained selectors such as;
- *
- * .block.odd.right {}
- */
-
-/**
- * Drupal Core Blocks 
- * This is most of the core blocks as far as I can remember, 
- * please post an issue if I have missed any :)
- */
-#block-system-0  {} /* Powered by Drupal block */
-#block-user-0    {} /* Login block             */
-#block-user-1    {} /* Navigation Menu block   */
-#block-user-2    {} /* Who's New block         */
-#block-user-3    {} /* Who's Online block      */
-#block-comment-0 {} /* Recent Comments block   */
-#block-search-0  {} /* Search form block       */
-#block-forum-0   {} /* Active Forum topics     */
-#block-forum-1   {} /* New Forum topics        */
-#block-blog-0    {} /* Recent Blog posts       */
-#block-node-0    {} /* Syndicate block         */
-#block-locale-0  {} /* Language Switcher block */
+/* Primary and Secondary links blocks */
+#block-menu-primary-links   {}
+#block-menu-secondary-links {}
 
 /* The class selector applies to all blocks of these types. */
 .block-user {} 
 .block-book {} 
 .block-aggregator {}
 
+
+/**
+ * Block Odd & Even Styles (Zebra)
+ * Blocks can have alternating styles for odd and even.
+	*
+	* See genesis_preprocess_block to use these classes.
+ */
+/*
+.sidebar .block.odd  {}
+.sidebar .block.even {}
+#sidebar-left .block.odd  {}
+#sidebar-left .block.even {}
+#sidebar-right .block.odd  {}
+#sidebar-right .block.even {}
+*/
+
+/**
+ * Alternative Approach to Region Block Styling
+ *
+ * Blocks can be aware of what region they are in, so its
+ * possible to use chained selectors such as;
+ *
+ * .block.odd.right {}
+	*
+	* See genesis_preprocess_block to use these classes.
+ */
 
 /**********************************************************
  *                   Menu blocks
@@ -887,11 +879,11 @@ ul.menu li.leaf {
 }
 
 ul.menu li.collapsed {
-  background-position: -19px -8px; /* LTR */
+  background-position: -19px -7px; /* LTR */
 }
 
 ul.menu li.expanded {
-  background-position: -40px -26px; /* LTR */
+  background-position: -40px -27px; /* LTR */
 }
 
 ul.menu li.leaf {
@@ -919,12 +911,11 @@ ul.menu li.last  {}
  *                     Comments
  **********************************************************/
 /* Comment wrapper */
-#comment-wrapper {}
-h2#comment-wrapper-title {}
+#comments {}
+#comments-title {}
 	
 .comment {
-  margin: 0 0 0.375em 0;
-  padding: 0.375em; 
+  margin: 0 0 1em;
 }
 
 /* Over-ride default .inner styles. */
@@ -935,10 +926,9 @@ h2#comment-wrapper-title {}
 }
 
 /* The title of each comment. */
-.comment-title {
-  margin-bottom: 0;
-}
-.comment-id {color: #888;}
+.comment-title {}
+
+.comment-id {}
 .comment-title .new {color: #FF8000;}
 
 .comment-title a:link,
@@ -953,18 +943,10 @@ h2#comment-wrapper-title {}
 
 .comment .user-picture {
   float: right; /* RTL */
-  margin: 0.3em 0 0.1em 0.3em; /* LTR */
+  margin: 0.3em 0 0.1em 0.5em; /* LTR */
 }
 
-.comment .user-picture img {
-  padding: 0;
-}
-
-.comment-submitted {
-  color: #888;
-  margin: 0;
-}
-
+.comment-submitted {}
 .comment-submitted a {}
 .comment-submitted a:hover {}
 
@@ -976,28 +958,83 @@ h2#comment-wrapper-title {}
   clear: both;
 }
 
-/* Zebra styles for comments. */
+/* Comment author. */
+.comment-by-anonymous   {}
+.comment-by-node-author {}
+.comment-by-viewer      {}
+
+/* Comment is new. */
+.comment-new {}
+
+/* Comment status. */
+.comment-unpublished {}
+
+/* Zebra styles for comments. See genesis_preprocess_comment.
 .comment.odd  {}
 .comment.even {}
-
-/* Style comments depending on the comment author. */
-.comment-by-author {}
-.comment-by-anon   {}
-.comment-mine      {}
-
-/* Theme comment status. */
-.comment .unpublished {}
-
+*/
 
 /**********************************************************
- *                          html, Body
+ *                      html, Body
  **********************************************************/
 html {}
 body {}
 
 
 /**********************************************************
- *                     The wrapper divs
+ *              Section, Page and Body Classes
+ **********************************************************/
+/**
+ * Normally you will use these in combination with other
+	* selectors. I include them here for completedness.
+	*/
+	
+/** 
+ * Section Class
+ * The section class takes the 2nd part of the URL and
+	* builds a section-[path-part] class from it. If you emulate
+	* site sections using the Pathauto module this can be a 
+	* powerful way to style site sections.
+ */
+/* .section-[path-part] {}  replace [path-part] */
+
+/* Front or not front. */
+.front {}
+.not-front {}
+
+/* Is the user logged in. */
+.logged-in {}
+.not-logged-in {}
+
+/* Node type body classes */
+.node-type-book  {}
+.node-type-blog  {}
+.node-type-forum {}
+.node-type-page  {}
+.node-type-poll  {}
+.node-type-story {}
+
+/* Warning! The sidebar body classes are integral to how genesis
+   applies the layout - do not add margin, padding, borders,
+			or positioning styles to these classes! See layout.css */
+.one-sidebar   {}
+.sidebar-right {}
+.sidebar-left  {}
+.two-sidebars  {}
+
+/** 
+ * Page Path Class
+ * The page path class takes the entire URL and
+	* builds a page-[path] class from it. See example
+	* below. You need to use Firebug or view source to
+	* find out what the actual class will be, and be aware
+	* that this will change if your URL alias changes!
+ */
+/* .page-[example-node-path] {}  replace [example-node-path] */
+
+	
+/**********************************************************
+ *                  The wrapper divs
  **********************************************************/
 /**
  * Be careful how you modify these, see layout.css first.
@@ -1137,12 +1174,12 @@ body {}
 
 /* h1 is for the front page only, all others use the div. */
 h1#site-name,
+div#site-name {
+  font-weight: bold; /* Bold or else the line heights vary. */
+}
 div#site-name  {
-  font-size: 2em ;
-  font-weight: bold;
+  font-size: 2em;
   line-height: 1.5;
-  margin: 0;
-  padding: 0;
 }
 
 #site-name a:link,
@@ -1167,6 +1204,7 @@ div#site-name  {
 .search-box-inner {padding: 1.5em 0;}
 
 #search-theme-form {}
+#search-theme-form > div {}
 #search-theme-form label {}
 #search-theme-form input {}
 #search-theme-form .form-item {}
@@ -1215,7 +1253,7 @@ div#site-name  {
  * Example styles to get you started.
  */
 #primary {
-  background: #EEE; /* Default gray for dev only. */
+  background: #DDD; /* Default gray for dev only. */
   font-weight: bold;
   padding: 0;
 }
@@ -1230,7 +1268,7 @@ div#site-name  {
 /* Modify the margin to set tab spacings. */
 #primary .links li {
   display: inline;
-  line-height: 3;
+  line-height: 2;
   list-style: none;
   margin: 0 1em;
   padding: 0;
@@ -1267,7 +1305,7 @@ div#site-name  {
  * Secondary Links Style
  */
 #secondary {
-  background: #F8F8F8; /* Default gray for dev only. */
+  background: #EEE; /* Default silver for dev only. */
   font-weight: bold;
   padding: 0;
 }
@@ -1282,7 +1320,7 @@ div#site-name  {
 /* Modify the margin to set tab spacings. */
 #secondary .links li {
   display: inline;
-  line-height: 3;
+  line-height: 2;
   list-style: none;
   margin: 0 1em;
   padding: 0;
@@ -1326,7 +1364,6 @@ div#site-name  {
 #mission {
   font-weight: bold;
   margin: 0 0 1.5em;
-  padding: 0;
 }
 
 /**********************************************************
@@ -1357,7 +1394,6 @@ div#site-name  {
  **********************************************************/
 #foot-wrapper {
   margin: 0.375em 0;
-  padding: 0;
 }
 
 #footer {}
@@ -1367,9 +1403,7 @@ div#site-name  {
 #footer-message {}
 
 #footer a, 
-#footer-message a {
-  padding: 0.375em;
-}
+#footer-message a {}
 
 
 /**********************************************************
@@ -1384,14 +1418,11 @@ div#site-name  {
  *                   Profile
  **********************************************************/
 /* Position the user picture on the right in user profiles. */
-.profile .user-picture {
-  float: right; 
-  margin: 2em 0 1em 0.5em; /* RTL */
-}
+.profile .user-picture {}
 
 /* Fix alignment on user profile page. */
 .profile dt {
-  margin: 1.4em 0 0 0;
+  margin: 1.5em 0 0 0;
 }
 
 
@@ -1462,3 +1493,7 @@ div#site-name  {
 .box form       {}
 .box .form-item {}
 .box fieldset   {}
+
+
+
+

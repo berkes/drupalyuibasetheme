@@ -1,4 +1,4 @@
-/* $Id: comments.css,v 1.1.2.3 2009/04/24 03:53:43 jmburnz Exp $ */
+/* $Id: comments.css,v 1.1.2.4 2009/04/28 00:02:51 jmburnz Exp $ */
 
 /**
  * @file comments.css
@@ -9,8 +9,8 @@
  *                     Comments
  **********************************************************/
 /* Comment wrapper */
-#comment-wrapper {}
-h2#comment-wrapper-title {}
+#comments {}
+#comments-title {}
 	
 .comment {
   margin: 0 0 1em; 
