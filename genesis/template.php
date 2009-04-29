@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.6 2009/04/28 00:02:03 jmburnz Exp $
+// $Id: template.php,v 1.1.2.7 2009/04/29 03:43:59 jmburnz Exp $
 
 /**
  * @file template.php
@@ -191,19 +191,40 @@ function genesis_preprocess_block(&$vars, $hook) {
   $vars['classes'] = implode(' ', $classes);
 
   if (user_access('administer blocks')) {
-    // Display 'edit block' for custom blocks.
+    // Display a 'Edit Block' link for blocks.
     if ($block->module == 'block') {
-      $edit_links[] = l( t('edit block'), 'admin/build/block/configure/'. $block->module .'/'. $block->delta, array('title' => t('edit the content of this block'), 'class' => 'block-edit'), drupal_get_destination(), NULL, FALSE, TRUE);
+      $edit_links[] = l(t('Edit Block'), 'admin/build/block/configure/'. $block->module .'/'. $block->delta, 
+      array(
+        'attributes' => array(
+          'class' => 'block-edit',
+        ),
+        'query' => drupal_get_destination(),
+        'html' => TRUE,
+      ));
     }
-    // Display 'configure' for other blocks.
-    else {
-      $edit_links[] = l(t('configure'), 'admin/build/block/configure/'. $block->module .'/'. $block->delta, array('title' => t('configure this block'), 'class' => 'block-config'), drupal_get_destination(), NULL, FALSE, TRUE);
+				  // Display 'configure' for other blocks.
+				else {
+						$edit_links[] = l(t('Configure'), 'admin/build/block/configure/' . $block->module . '/' . $block->delta,
+      array(
+								'attributes' => array(
+          'class' => 'block-edit',
+        ),
+        'query' => drupal_get_destination(),
+        'html' => TRUE,
+      ));
     }
-    // Display 'edit menu' for menu blocks.
+    // Display 'Edit Menu' for menu blocks.
     if (($block->module == 'menu' || ($block->module == 'user' && $block->delta == 1)) && user_access('administer menu')) {
-      $edit_links[] = l(t('edit menu'), 'admin/build/menu', array('title' => t('edit the menu that defines this block'), 'class' => 'block-edit-menu'), drupal_get_destination(), NULL, FALSE, TRUE);
+				  $menu_name = ($block->module == 'user') ? 'navigation' : $block->delta;
+      $edit_links[] = l( t('Edit Menu'), 'admin/build/menu-customize/' . $menu_name, 
+      array(
+        'attributes' => array(
+          'class' => 'block-edit',
+        ),
+        'query' => drupal_get_destination(),
+        'html' => TRUE,
+      ));
     }
-    $vars['edit_links_array'] = $edit_links;
     $vars['edit_links'] = '<div class="edit">'. implode(' ', $edit_links) .'</div>';
   }
 }
