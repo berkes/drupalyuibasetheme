@@ -1,4 +1,4 @@
-; $Id: genesis.info,v 1.1.2.6 2009/04/28 09:42:27 jmburnz Exp $
+; $Id: genesis.info,v 1.1.2.7 2009/04/29 03:43:26 jmburnz Exp $
   
   name         = Genesis
   description  = An elegant, flexible and powerful starter theme by <a href="http://adaptivethemes.com">Adaptivethemes</a>.
@@ -43,7 +43,7 @@
 
 ; Equal height columns. This will set first child divs in the #columns division
 ; to the same height (#sidebar-left, #sidebar-right, #content-column).
-; To use just uncomment and clear cache data in Performance settings.
+; To use uncomment and clear cache data in Performance settings.
   
 		;scripts[] = js/jquery.equalizeheights.minified.js
 
