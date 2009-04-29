@@ -1,4 +1,4 @@
-; $Id: genesis.info,v 1.1.2.7 2009/04/29 03:43:26 jmburnz Exp $
+; $Id: genesis.info,v 1.1.2.8 2009/04/29 20:32:55 jmburnz Exp $
   
   name         = Genesis
   description  = An elegant, flexible and powerful starter theme by <a href="http://adaptivethemes.com">Adaptivethemes</a>.
@@ -28,7 +28,7 @@
   stylesheets[all][] = css/layout.css
   stylesheets[all][] = css/admin-styles.css
   stylesheets[all][] = css/messages.css
-  stylesheets[all][] = css/block-edit.css
+  stylesheets[all][] = css/edit-links.css
 
 
 ; Uncomment to show the grid, uncomment the grid class in page.tpl.php also.
