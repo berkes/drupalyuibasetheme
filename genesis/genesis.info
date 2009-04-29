@@ -1,4 +1,4 @@
-; $Id: genesis.info,v 1.1.2.8 2009/04/29 20:32:55 jmburnz Exp $
+; $Id: genesis.info,v 1.1.2.9 2009/04/29 20:51:40 jmburnz Exp $
   
   name         = Genesis
   description  = An elegant, flexible and powerful starter theme by <a href="http://adaptivethemes.com">Adaptivethemes</a>.
@@ -30,22 +30,21 @@
   stylesheets[all][] = css/messages.css
   stylesheets[all][] = css/edit-links.css
 
-
-; Uncomment to show the grid, uncomment the grid class in page.tpl.php also.
-
+; Uncomment to show the grid, add the grid class in page.tpl.php also.
 		;stylesheets[all][] = css/grid.css
 
 
 ; Redefine the default location of scripts.js
-  
 		scripts[] = js/script.js
 
+; Insert WAI-ARIA Landmark Roles. Uncomment to use.
+		;scripts[] = js/aria-roles.js
 
 ; Equal height columns. This will set first child divs in the #columns division
 ; to the same height (#sidebar-left, #sidebar-right, #content-column).
 ; To use uncomment and clear cache data in Performance settings.
-  
 		;scripts[] = js/jquery.equalizeheights.minified.js
+
 
 ; The "features" control which check boxes display on the admin/build/themes 
 ; configuration page. This is useful for suppressing check boxes for elements 
@@ -61,4 +60,5 @@
   features[] = favicon
   features[] = primary_links
   features[] = secondary_links
+
 
