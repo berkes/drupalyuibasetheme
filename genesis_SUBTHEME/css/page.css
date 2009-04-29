@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.5 2009/04/28 00:05:15 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.6 2009/04/29 20:53:00 jmburnz Exp $ */
 
 /**
  * @file genesis_SUBTHEME.css
@@ -181,6 +181,10 @@ body {}
 /**********************************************************
  *                   Skip navigation
  **********************************************************/
+/* To hide the skip-nav you can use:
+ *   height: 0; overflow: hidden;
+	* Do not use display: none as this hides it from screen readers.
+ */
 #skip-nav {text-align: center;}
 #skip-nav a:link    {}
 #skip-nav a:hover   {}
