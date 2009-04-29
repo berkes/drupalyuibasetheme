@@ -1,7 +1,7 @@
-// $Id: script.js,v 1.1.2.1 2009/04/19 21:00:59 jmburnz Exp $
+// $Id: script.js,v 1.1.2.2 2009/04/29 20:51:12 jmburnz Exp $
 
 /**
- * Animates submit buttons
+ * Animates submit buttons, prevents clicking twice.
  */
 var Genesis = {};
 // jump to the value in a select drop down
@@ -30,3 +30,5 @@ Genesis.formCheck = function() {
 if (Drupal.jsEnabled) {
   $(document).ready(Genesis.formCheck);
 }
+
+
