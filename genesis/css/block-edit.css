@@ -1,4 +1,4 @@
-/* $Id: block-edit.css,v 1.1.2.1 2009/04/19 20:59:38 jmburnz Exp $ */
+/* $Id: block-edit.css,v 1.1.2.2 2009/04/29 03:44:16 jmburnz Exp $ */
 
 /**
  * @file block-edit.css
@@ -15,24 +15,17 @@ div.block {
   position: relative;
 }
 div.block div.edit {
-  display: none;
-  position: absolute;
-  right: 0; /* LTR */
+  font-size: 0.9em;
+  padding: 2px;
+		position: absolute;
+		right: 0; /* LTR */
   top: 0;
-  z-index: 40;
-  border: 1px solid #EEE;
-  padding: 0 2px;
-  font-size: 11px;
-  background-color: #FFF;
+  visibility: hidden;
+		z-index: 40;
 }
 div.block:hover div.edit {
   display: block;
+		visibility: visible;
 }
-.block .node,
-.block .comment {
-  margin-bottom: 0;
-}
-/* blocks page table */
-tr .block {
-  border: none;
-}
+div.block div.edit a {background-color: #EEE; padding: 3px 4px; text-decoration: none;}
+div.block div.edit a:hover {background-color: #DDD;}
