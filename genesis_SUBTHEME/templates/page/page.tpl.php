@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.4 2009/04/28 00:05:34 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.5 2009/04/30 01:15:45 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -13,8 +13,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
 
 <head>
-  <title><?php print $head_title; ?></title>
   <?php print $head; ?>
+		<title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
