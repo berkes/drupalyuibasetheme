@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.5 2009/04/30 01:15:45 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.6 2009/05/01 18:03:23 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -20,8 +20,7 @@
 </head>
 <?php
 /**
- * Change the body id selector to your preferred layout.
- * E.g body id="genesis_1"
+ * Change the body id selector to your preferred layout, e.g body id="genesis_1".
  * @see layout.css
  */
 ?>        
@@ -34,87 +33,67 @@
 
     <?php if ($leaderboard): ?>
       <div id="leaderboard" class="region clear-block">
-        <div class="leaderboard-inner inner"><?php print $leaderboard; ?></div>
+        <div class="leaderboard-inner"><?php print $leaderboard; ?></div>
       </div>
     <?php endif; ?>
 
-    <div id="header-nav">
-      <div id="header" class="clear-block">
-        <div class="header-inner inner">
+				<div id="header" class="clear-block">
 
-          <?php if ($site_logo or $site_name or $site_slogan): ?>
-            <div id="branding">
-              <?php
-              /**
-               * See "function genesis_preprocess_page" if you need to modify
-               * the the $site_logo or $site_name variables.
-               */
-              ?>
-              <?php if ($site_logo): ?>
-                <div id="logo"><?php print $site_logo; ?></div>
-              <?php endif; ?>
+						<?php if ($site_logo or $site_name or $site_slogan): ?>
+								<div id="branding">
 
-              <?php if ($site_name): ?>
-                <?php if ($title): ?>
-                  <div id="site-name"><strong><?php print $site_name; ?></strong></div>
-                <?php else: /* Use h1 when the page title is empty */ ?>
-                  <h1 id="site-name"><?php print $site_name; ?></h1>
-                <?php endif; ?>
-              <?php endif; ?>
+										<?php if ($site_logo): ?>
+												<div id="logo"><?php print $site_logo; ?></div>
+										<?php endif; ?>
 
-              <?php if ($site_slogan): ?>
-                <div id="site-slogan"><?php print $site_slogan; ?></div>
-              <?php endif; ?>
+										<?php if ($site_name): ?>
+												<?php if ($title): ?>
+														<div id="site-name"><strong><?php print $site_name; ?></strong></div>
+												<?php else: /* Use h1 when the page title is empty */ ?>
+														<h1 id="site-name"><?php print $site_name; ?></h1>
+												<?php endif; ?>
+										<?php endif; ?>
 
-            </div>
-          <?php endif; ?>
+										<?php if ($site_slogan): ?>
+												<div id="site-slogan"><?php print $site_slogan; ?></div>
+										<?php endif; ?>
 
-          <?php if ($search_box): ?>
-            <div id="search-box-top">
-              <div class="search-box-inner inner"><?php print $search_box; ?></div>
-            </div>
-          <?php endif; ?>
+								</div>
+						<?php endif; ?>
 
-          <?php if ($header): ?>
-            <div id="header-blocks" class="region">
-              <div class="region-inner inner"><?php print $header; ?></div>
-            </div>
-          <?php endif; ?>
+						<?php if ($search_box): ?>
+								<div id="search-box"><?php print $search_box; ?></div>
+						<?php endif; ?>
 
-        </div>
-      </div>
+						<?php if ($header): ?>
+								<div id="header-blocks" class="region">
+										<div class="region-inner"><?php print $header; ?></div>
+								</div>
+						<?php endif; ?>
 
-      <?php if ($primary_menu or $secondary_menu): ?>
-        <div id="nav">
-          <div class="nav-inner">
+				</div>
 
-            <?php if ($primary_menu): ?>
-              <div id="primary" class="clear-block">
-                <div class="primary-inner"><?php print $primary_menu; ?></div>
-              </div>
-            <?php endif; ?>
+				<?php if ($primary_menu or $secondary_menu): ?>
+						<div id="nav" class="clear-block">
 
-            <?php if ($secondary_menu): ?>
-              <div id="secondary" class="clear-block">
-                <div class="secondary-inner"><?php print $secondary_menu; ?></div>
-              </div>
-            <?php endif; ?>
+								<?php if ($primary_menu): ?>
+										<div id="primary" class="clear-block"><?php print $primary_menu; ?></div>
+								<?php endif; ?>
 
-          </div>
-        </div>
-      <?php endif; ?>
+								<?php if ($secondary_menu): ?>
+										<div id="secondary" class="clear-block"><?php print $secondary_menu; ?></div>
+								<?php endif; ?>
 
-    </div>
+						</div>
+				<?php endif; ?>
 
     <?php if ($breadcrumb): ?>
-      <div id="breadcrumb">
-        <div class="breadcrumb-inner inner"><?php print $breadcrumb; ?></div>
-      </div>
+      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
     <?php endif; ?>
 
     <?php if ($secondary_content): ?>
-      <div id="secondary-content" class="region clear clear-block">
-        <div class="region-inner inner"><?php print $secondary_content; ?></div>
+      <div id="secondary-content" class="region">
+        <div class="region-inner"><?php print $secondary_content; ?></div>
       </div>
     <?php endif; ?>
 
@@ -157,13 +136,13 @@
 
       <?php if ($left): ?>
         <div id="sidebar-left" class="sidebar">
-          <div class="sidebar-inner inner"><?php print $left; ?></div>
+          <div class="sidebar-inner"><?php print $left; ?></div>
         </div>
       <?php endif; ?>
 
       <?php if ($right): ?>
         <div id="sidebar-right" class="sidebar">
-          <div class="sidebar-inner inner"><?php print $right; ?></div>
+          <div class="sidebar-inner"><?php print $right; ?></div>
         </div>
       <?php endif; ?>
 
@@ -171,16 +150,16 @@
 
     <?php if ($tertiary_content): ?>
       <div id="tertiary-content" class="region clear clear-block">
-        <div class="region-inner inner"><?php print $tertiary_content; ?></div> 
+        <div class="region-inner"><?php print $tertiary_content; ?></div> 
       </div>
     <?php endif; ?>
 
     <?php if ($footer or $footer_message): ?>
-      <div id="foot-wrapper" class="clear clear-block">
+      <div id="foot-wrapper" class="clear-block">
 				
         <?php if ($footer): ?>
           <div id="footer" class="region clear-block">
-            <div class="region-inner inner"><?php print $footer; ?></div>
+            <div class="region-inner"><?php print $footer; ?></div>
           </div>
         <?php endif; ?>
 
