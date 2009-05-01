@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.8 2009/04/29 20:33:22 jmburnz Exp $
+// $Id: template.php,v 1.1.2.9 2009/05/01 18:06:59 jmburnz Exp $
 
 /**
  * @file template.php
@@ -28,18 +28,21 @@ function genesis_preprocess_page(&$vars, $hook) {
   }
 
   // Set variables for the logo and site_name.
-  if ($vars['logo']) {
+  if (!empty($vars['logo'])) {
     $vars['site_logo'] = '<a href="'. $vars['front_page'] .'" title="'. t('Home page') .'" rel="home"><img src="'. $vars['logo'] .'" alt="'. $vars['site_name'] .' '. t('logo') .'" /></a>';
   }
-
-  if ($vars['site_name']) {
+  if (!empty($vars['site_name'])) {
     $vars['site_name'] = '<a href="'. $vars['front_page'] .'" title="'. t('Home page') .'" rel="home">'. $vars['site_name'] .'</a>';
   }
-
-  // Set variables for the primary and secondary links.
-  $vars['primary_menu'] = theme('links', $vars['primary_links'], array('class' => 'links primary-links'));
-  $vars['secondary_menu'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-links'));
-
+		
+		// Set variables for the primary and secondary links.
+  if (!empty($vars['primary_links'])) {
+    $vars['primary_menu'] = theme('links', $vars['primary_links'], array('class' => 'links primary-links'));
+		}
+		if (!empty($vars['secondary_links'])) {
+    $vars['secondary_menu'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-links'));
+  }
+		
   // Section classes.
 		$path = drupal_get_path_alias($_GET['q']);
   if (!$vars['is_front']) {
@@ -120,44 +123,44 @@ function genesis_preprocess_node(&$vars, $hook) {
  */
 function genesis_preprocess_comment(&$vars, $hook) {
   global $user;
-
-  // Load the node object that the current comment is attached to.
-  $node = node_load($vars['comment']->nid);
-  $classes = array();
+ 
+		// Load the node object that the current comment is attached to.
+		$node = node_load($vars['comment']->nid);
+		$classes = array();
 		$classes[]  = 'comment';
-  if ($vars['status'] != 'comment-published') {
-    $classes[] = $vars['status'];
-  }
-  else {
-    if ($vars['comment']->uid == 0) {
-      $classes[] = 'comment-by-anonymous';
-    }
-    if ($comment->uid === $vars['node']->uid) {
-      $classes[] = 'comment-by-node-author';
-    }
-    if ($comment->uid === $vars['user']->uid) {
-      $classes[] = 'comment-by-viewer';
-    }
-    if ($comment->new) {
-     $classes[] = 'comment-new';
-    }
+		if ($vars['status'] != 'comment-published') {
+				$classes[] = $vars['status'];
+		}
+		else {
+				if ($vars['comment']->uid == 0) {
+						$classes[] = 'comment-by-anonymous';
+				}
+				if ($vars['comment']->uid === $vars['node']->uid) {
+						$classes[] = 'comment-by-node-author';
+				}
+				if ($vars['comment']->uid === $vars['user']->uid) {
+						$classes[] = 'comment-by-viewer';
+				}
+				if ($vars['comment']->new) {
+					$classes[] = 'comment-new';
+				}
 				// Optionally use odd and even zebra classes.
 				//$classes[] = $vars['zebra'];
-  }
-  $vars['classes'] = implode(' ', $classes);
+		}
+		$vars['classes'] = implode(' ', $classes);
 
 
-  // If comment subjects are disabled, don't display them.
-  if (variable_get('comment_subject_field', 1) == 0) {
-    $vars['title'] = '';
-  }
+		// If comment subjects are disabled, don't display them.
+		if (variable_get('comment_subject_field', 1) == 0) {
+				$vars['title'] = '';
+		}
 		
 		// Set messages if comment is unpublished.
 		$message = t('Comment'). ' #'. $vars['id'] . t(' is currently unpublished.');
-  if ($vars['comment']->status == COMMENT_NOT_PUBLISHED) {
+		if ($vars['comment']->status == COMMENT_NOT_PUBLISHED) {
 				drupal_set_message($message, $type = 'warning');
 				$vars['unpublished'] = '<span class="unpublished">'. t('Unpublished') .'</span>';
-  }
+		}
 }
 
 /**
