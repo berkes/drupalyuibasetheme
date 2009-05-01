@@ -1,5 +1,5 @@
 <?php 
-// $Id: block.tpl.php,v 1.1.2.2 2009/04/28 00:05:33 jmburnz Exp $
+// $Id: block.tpl.php,v 1.1.2.3 2009/05/01 18:02:17 jmburnz Exp $
 
 /**
  * @file block.tpl.php
@@ -17,7 +17,7 @@
  */
 ?>
 <div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="<?php print $classes; ?>">
-  <div class="block-inner inner">
+  <div class="block-inner">
 
     <?php if ($block->subject): ?>
       <h2 class="block-title"><?php print $block->subject; ?></h2>

@@ -1,5 +1,5 @@
 <?php 
-// $Id: node.tpl.php,v 1.1.2.3 2009/04/28 00:05:34 jmburnz Exp $
+// $Id: node.tpl.php,v 1.1.2.4 2009/05/01 18:02:17 jmburnz Exp $
 
 /**
  * @file node.tpl.php
@@ -10,7 +10,7 @@
  */
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>">
-  <div class="node-inner inner">
+  <div class="node-inner">
 
     <?php if (!$page): ?>
       <h2 class="node-title">
