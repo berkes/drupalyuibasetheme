@@ -1,4 +1,4 @@
-/* $Id: tables.css,v 1.1.2.2 2009/04/20 00:37:11 jmburnz Exp $ */
+/* $Id: tables.css,v 1.1.2.3 2009/05/01 17:18:52 jmburnz Exp $ */
 
 /**
  * @file tables.css
@@ -17,8 +17,7 @@
 table {
   border-spacing: 0;
   margin: 1em 0; 
-  padding: 0; 
-  width: 100%;
+  padding: 0;
 }
 
 caption, th, td {
