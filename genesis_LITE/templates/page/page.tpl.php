@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.7 2009/05/02 00:51:39 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.8 2009/05/02 11:42:44 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -133,7 +133,7 @@
     <?php endif; ?>
 
     <?php if ($footer): ?>
-      <div id="footer" class="region clear-block"><?php print $footer; ?></div>
+      <div id="footer" class="region clear clear-block"><?php print $footer; ?></div>
     <?php endif; ?>
 
     <?php if ($footer_message or $feed_icons): ?>

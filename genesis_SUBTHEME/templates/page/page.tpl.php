@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.7 2009/05/02 00:51:40 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.8 2009/05/02 11:42:44 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -158,7 +158,7 @@
       <div id="foot-wrapper" class="clear-block">
 				
         <?php if ($footer): ?>
-          <div id="footer" class="region clear-block">
+          <div id="footer" class="region clear clear-block">
             <div class="region-inner"><?php print $footer; ?></div>
           </div>
         <?php endif; ?>
