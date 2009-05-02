@@ -1,4 +1,4 @@
-/* $Id: blocks.css,v 1.1.2.7 2009/04/28 00:05:15 jmburnz Exp $ */
+/* $Id: blocks.css,v 1.1.2.8 2009/05/02 00:51:40 jmburnz Exp $ */
 
 /**
  * @file blocks.css
@@ -118,7 +118,10 @@
 /**
  * Prefix these with the block id to style one menu only.
  */
-ul.menu {
+ul.menu, 
+ul.menu ul, 
+ul.menu ul ul, 
+ul.menu ul ul ul {
   margin: 0;
   padding: 0;
 }

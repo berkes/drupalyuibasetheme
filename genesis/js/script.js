@@ -1,4 +1,4 @@
-// $Id: script.js,v 1.1.2.3 2009/05/01 18:04:45 jmburnz Exp $
+// $Id: script.js,v 1.1.2.4 2009/05/02 00:51:39 jmburnz Exp $
 
 /**
  * Animates submit buttons, prevents clicking twice.

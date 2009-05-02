@@ -1,4 +1,4 @@
-/* $Id: _all-subtheme.css,v 1.1.2.4 2009/05/01 18:00:41 jmburnz Exp $ */
+/* $Id: _all-subtheme.css,v 1.1.2.5 2009/05/02 00:51:39 jmburnz Exp $ */
 
 /**
   * @file _all-subtheme.css
@@ -641,10 +641,8 @@ ul.secondary a.active {
   text-decoration: underline;
 }
 
-.node .user-picture {
-  float: left;
-  margin: 0.3em 1em 0.1em 0;
-}
+.node .user-picture {}
+.node .user-picture img {}
 
 .node-submitted {}
 .node-submitted a {}
@@ -850,7 +848,10 @@ ul.secondary a.active {
 /**
  * Prefix these with the block id to style one menu only.
  */
-ul.menu {
+ul.menu, 
+ul.menu ul, 
+ul.menu ul ul, 
+ul.menu ul ul ul {
   margin: 0;
   padding: 0;
 }
@@ -940,10 +941,8 @@ ul.menu li.last  {}
   text-decoration: underline;
 }
 
-.comment .user-picture {
-  float: right; /* RTL */
-  margin: 0.3em 0 0.1em 0.5em; /* LTR */
-}
+.comment .user-picture {}
+.comment .user-picture img {}
 
 .comment-submitted {}
 .comment-submitted a {}
@@ -1386,8 +1385,12 @@ div#site-name  {
 
 
 /**********************************************************
- *                   Profile
+ *                   Users and Profiles
  **********************************************************/
+/* Global setting for all user pictures. */
+.user-picture {
+  padding: 0.5em;
+}
 /* Position the user picture on the right in user profiles. */
 .profile .user-picture {}
 

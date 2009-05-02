@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.6 2009/04/29 20:52:59 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.7 2009/05/02 00:51:39 jmburnz Exp $ */
 
 /**
  * @file genesis_SUBTHEME.css
@@ -374,8 +374,12 @@ div#site-name  {
 
 
 /**********************************************************
- *                   Profile
+ *                   Users and Profiles
  **********************************************************/
+/* Global setting for all user pictures. */
+.user-picture {
+  padding: 0.5em;
+}
 /* Position the user picture on the right in user profiles. */
 .profile .user-picture {}
 
@@ -447,7 +451,5 @@ div#site-name  {
 .box form       {}
 .box .form-item {}
 .box fieldset   {}
-
-
 
 

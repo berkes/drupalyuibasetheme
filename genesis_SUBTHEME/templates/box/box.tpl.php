@@ -1,5 +1,5 @@
 <?php
-// $Id: box.tpl.php,v 1.1.2.2 2009/05/01 18:02:17 jmburnz Exp $
+// $Id: box.tpl.php,v 1.1.2.3 2009/05/02 00:51:40 jmburnz Exp $
 
 /**
  * @file box.tpl.php

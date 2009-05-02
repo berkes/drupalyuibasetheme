@@ -1,4 +1,4 @@
-/* $Id: nodes.css,v 1.1.2.5 2009/04/28 00:05:15 jmburnz Exp $ */
+/* $Id: nodes.css,v 1.1.2.6 2009/05/02 00:51:40 jmburnz Exp $ */
 
 /**
  * @file nodes.css
@@ -28,10 +28,8 @@
   text-decoration: underline;
 }
 
-.node .user-picture {
-  float: left;
-  margin: 0.3em 1em 0.1em 0;
-}
+.node .user-picture {}
+.node .user-picture img {}
 
 .node-submitted {}
 .node-submitted a {}

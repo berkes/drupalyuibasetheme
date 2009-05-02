@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.6 2009/05/01 18:03:23 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.7 2009/05/02 00:51:40 jmburnz Exp $
 
 /**
  * @file page.tpl.php

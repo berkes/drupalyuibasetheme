@@ -1,4 +1,4 @@
-/* $Id: _all-lite-tidy.css,v 1.1.2.3 2009/05/01 18:01:00 jmburnz Exp $ */
+/* $Id: _all-lite-tidy.css,v 1.1.2.4 2009/05/02 00:51:39 jmburnz Exp $ */
 
 /**
   * @file _all-lite-tidy.css
@@ -339,9 +339,8 @@ margin-left:.5em;
 margin:0 0 1.5em;
 }
 
-.node .user-picture {
-float:left;
-margin:.3em 1em .1em 0;
+.user-picture {
+padding: 0.5em;
 }
 
 .node-type-poll .node-content {
@@ -387,11 +386,6 @@ margin-bottom:0;
 
 .comment h3.title .new {
 color:#FF8000;
-}
-
-.comment .user-picture {
-float:right;
-margin:.3em 0 .1em .5em;
 }
 
 .width {
@@ -511,4 +505,12 @@ padding:0;
 .primary-links li a,.secondary-links li a {
 text-decoration:none;
 white-space:nowrap;
+}
+
+ul.menu,
+ul.menu ul, 
+ul.menu ul ul, 
+ul.menu ul ul ul {
+  margin: 0;
+  padding: 0;
 }
