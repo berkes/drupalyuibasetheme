@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.8 2009/05/02 11:42:44 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.9 2009/05/02 13:59:51 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -32,9 +32,9 @@
     </div>
 
     <?php if ($leaderboard): ?>
-      <div id="leaderboard" class="region clear-block">
-        <div class="leaderboard-inner"><?php print $leaderboard; ?></div>
-      </div>
+      <div id="leaderboard" class="region clear-block"><div class="region-inner">
+						  <?php print $leaderboard; ?>
+						</div></div>
     <?php endif; ?>
 
 				<div id="header" class="clear-block">
@@ -66,9 +66,9 @@
 						<?php endif; ?>
 
 						<?php if ($header): ?>
-								<div id="header-blocks" class="region">
-										<div class="region-inner"><?php print $header; ?></div>
-								</div>
+								<div id="header-blocks" class="region"><div class="region-inner">
+								  <?php print $header; ?>
+								</div></div>
 						<?php endif; ?>
 
 				</div>
@@ -92,9 +92,9 @@
     <?php endif; ?>
 
     <?php if ($secondary_content): ?>
-      <div id="secondary-content" class="region">
-        <div class="region-inner"><?php print $secondary_content; ?></div>
-      </div>
+      <div id="secondary-content" class="region"><div class="region-inner">
+						  <?php print $secondary_content; ?>
+						</div></div>
     <?php endif; ?>
 
     <div id="columns" class="clear">
@@ -111,17 +111,10 @@
           <?php endif; ?>
 
           <div id="main-content">								
-            <?php if ($title): ?>
-              <h1 id="page-title"><?php print $title; ?></h1>
-            <?php endif; ?>
-
-            <?php if ($tabs): ?>
-              <div class="local-tasks"><?php print $tabs; ?></div>
-            <?php endif; ?>
-
+            <?php if ($title): ?><h1 id="page-title"><?php print $title; ?></h1><?php endif; ?>
+            <?php if ($tabs): ?><div class="local-tasks"><?php print $tabs; ?></div><?php endif; ?>
             <?php if ($messages): print $messages; endif; ?>
             <?php if ($help): print $help; endif; ?>
-
             <div id="content">
               <?php print $content; ?>
             </div>								
@@ -135,32 +128,32 @@
       </div>
 
       <?php if ($left): ?>
-        <div id="sidebar-left" class="sidebar">
-          <div class="sidebar-inner"><?php print $left; ?></div>
-        </div>
+        <div id="sidebar-left" class="sidebar"><div class="sidebar-inner">
+								  <?php print $left; ?>
+								</div></div>
       <?php endif; ?>
 
       <?php if ($right): ?>
-        <div id="sidebar-right" class="sidebar">
-          <div class="sidebar-inner"><?php print $right; ?></div>
-        </div>
+        <div id="sidebar-right" class="sidebar"><div class="sidebar-inner">
+								  <?php print $right; ?>
+								</div></div>
       <?php endif; ?>
 
     </div>
 
     <?php if ($tertiary_content): ?>
-      <div id="tertiary-content" class="region clear clear-block">
-        <div class="region-inner"><?php print $tertiary_content; ?></div> 
-      </div>
+      <div id="tertiary-content" class="region clear clear-block"><div class="region-inner">
+						  <?php print $tertiary_content; ?>
+						</div></div>
     <?php endif; ?>
 
     <?php if ($footer or $footer_message): ?>
       <div id="foot-wrapper" class="clear-block">
 				
         <?php if ($footer): ?>
-          <div id="footer" class="region clear clear-block">
-            <div class="region-inner"><?php print $footer; ?></div>
-          </div>
+          <div id="footer" class="region clear clear-block"><div class="region-inner">
+										  <?php print $footer; ?>
+										</div></div>
         <?php endif; ?>
 
         <?php if ($footer_message or $feed_icons): ?>
@@ -173,6 +166,5 @@
   </div>
 
   <?php print $closure ?>
-
 </body>
 </html>
