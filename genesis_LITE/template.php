@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.2 2009/04/24 00:49:27 jmburnz Exp $
+// $Id: template.php,v 1.1.2.3 2009/05/03 12:03:37 jmburnz Exp $
 
 /**
  * @file template.php
@@ -9,18 +9,6 @@
 	*    i.e replace genesis_LITE with your subthemes name.
 	* 2. Uncomment the required fucntion to use.
  */
-
-/**
- * Implementation of HOOK_theme().
- */
-function genesis_LITE_theme(&$existing, $type, $theme, $path) {
-  $hooks = genesis_theme($existing, $type, $theme, $path);
-  // Add your theme hooks like this:
-  /*
-  $hooks['hook_name_here'] = array( // Details go here );
-  */
-  return $hooks;
-}
 
 /**
  * Override or insert variables into all templates.
