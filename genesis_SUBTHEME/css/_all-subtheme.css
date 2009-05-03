@@ -1,4 +1,4 @@
-/* $Id: _all-subtheme.css,v 1.1.2.5 2009/05/02 00:51:39 jmburnz Exp $ */
+/* $Id: _all-subtheme.css,v 1.1.2.6 2009/05/03 09:54:21 jmburnz Exp $ */
 
 /**
   * @file _all-subtheme.css
@@ -685,9 +685,6 @@ ul.secondary a.active {
 .node-book  {}
 .node-poll  {}
 
-/* Clear the user picture on Polls. */
-.node-type-poll .node-content {clear: both;}
-
 
 /**********************************************************
  *                 Custom node types
@@ -848,12 +845,15 @@ ul.secondary a.active {
 /**
  * Prefix these with the block id to style one menu only.
  */
-ul.menu, 
+ul.menu {
+  margin: 0 0 0 0.5em;
+  padding: 0;
+}
+
 ul.menu ul, 
 ul.menu ul ul, 
 ul.menu ul ul ul {
   margin: 0;
-  padding: 0;
 }
 
 ul.menu li,
