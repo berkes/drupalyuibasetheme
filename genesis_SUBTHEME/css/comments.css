@@ -1,4 +1,4 @@
-/* $Id: comments.css,v 1.1.2.5 2009/05/02 00:51:40 jmburnz Exp $ */
+/* $Id: comments.css,v 1.1.2.6 2009/05/03 01:36:49 jmburnz Exp $ */
 
 /**
  * @file comments.css
@@ -16,7 +16,7 @@
   margin: 0 0 1em;
 }
 
-/* Over-ride default .inner styles. */
+/* Inner wrapper div for comments. */
 .comment-inner {}
 
 .comment .indented {
@@ -27,7 +27,9 @@
 .comment-title {}
 
 .comment-id {}
-.comment-title .new {color: #FF8000;}
+.comment-title .new {
+  color: #FF8000;
+}
 
 .comment-title a:link,
 .comment-title a:visited,

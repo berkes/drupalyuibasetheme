@@ -1,4 +1,4 @@
-/* $Id: nodes.css,v 1.1.2.6 2009/05/02 00:51:40 jmburnz Exp $ */
+/* $Id: nodes.css,v 1.1.2.7 2009/05/03 01:36:49 jmburnz Exp $ */
 
 /**
  * @file nodes.css
@@ -12,7 +12,7 @@
   margin: 0 0 1.5em;
 }
 
-/* Over-ride default .inner styles. */
+/* Inner wrapper div for nodes. */
 .node-inner {}
 
 /* Node title on teasers and other lists. */
@@ -72,9 +72,6 @@
 .node-book  {}
 .node-poll  {}
 
-/* Clear the user picture on Polls. */
-.node-type-poll .node-content {clear: both;}
-
 
 /**********************************************************
  *                 Custom node types
@@ -120,8 +117,6 @@
  */
 /* Underscores in field name are replaced with dashes. */
 .field-field-FIELDNAME {}
-
-
 
 
 

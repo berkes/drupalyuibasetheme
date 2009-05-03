@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.8 2009/05/02 00:51:40 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.9 2009/05/03 01:36:49 jmburnz Exp $ */
 
 /**
  * @file genesis_SUBTHEME.css
@@ -165,9 +165,10 @@ body {}
 /**********************************************************
  *                   Skip navigation
  **********************************************************/
-/* To hide the skip-nav you can use:
- *   height: 0; overflow: hidden;
-	* Do not use display: none as this hides it from screen readers.
+/**
+ * To hide the skip-nav you can use:
+ * height: 0; overflow: hidden;
+ * Do not use display: none as this hides it from screen readers.
  */
 #skip-nav {text-align: center;}
 #skip-nav a:link    {}
@@ -429,6 +430,7 @@ div#site-name  {
 .user-picture {
   padding: 0.5em;
 }
+
 /* Position the user picture on the right in user profiles. */
 .profile .user-picture {}
 
@@ -453,6 +455,7 @@ div#site-name  {
   margin-bottom: 1.5em;
   padding: 0.75em;
 }
+
 .book-navigation .page-links a {}
 .book-navigation .page-links a.page-up {}
 .book-navigation .page-links a.page-next {}
@@ -505,5 +508,4 @@ div#site-name  {
 .box form       {}
 .box .form-item {}
 .box fieldset   {}
-
 

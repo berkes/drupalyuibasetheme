@@ -1,4 +1,4 @@
-/* $Id: type.css,v 1.1.2.5 2009/04/28 00:05:15 jmburnz Exp $ */
+/* $Id: type.css,v 1.1.2.6 2009/05/03 01:36:49 jmburnz Exp $ */
 
 /**
   * @file type.css
@@ -8,7 +8,7 @@
 /**********************************************************
  *                 Global Link Styles
  **********************************************************/
- a {
+a {
   margin: 0; 
   padding: 0;
 }
@@ -24,7 +24,9 @@ a.active-trail {}
 li a.active {}
 
 /* Remove borders on linked images. */
-a img {border: none;}
+a img {
+  border: none;
+}
 
 
 /*********************************************************
@@ -153,7 +155,7 @@ li li, li p, td p, blockquote p {
 }
 
 blockquote, q {
-  font-style: italic;  /* LTR */
+  font-style: italic;
   margin: 0 0 1.5em;
   padding: 0 0 0 3em;  /* LTR */
 }
@@ -168,3 +170,4 @@ q:before, q:after {
 blockquote, q {
   quotes: "" "";
 }
+

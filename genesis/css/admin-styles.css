@@ -1,4 +1,4 @@
-/* $Id: admin-styles.css,v 1.1.2.2 2009/04/26 22:10:29 jmburnz Exp $ */
+/* $Id: admin-styles.css,v 1.1.2.3 2009/05/03 01:36:49 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -17,8 +17,7 @@
  * Admin panels.
  */
 div.admin-panel {
-  background: #EEE;
-  border: 1px solid #CCC;
+  border: 1px solid #DDD;
   margin: 0 0 0.75em;
   padding: 0;
 }
@@ -31,12 +30,12 @@ div.admin .right {
 }
 
 .admin-panel h3 {
+  background: #EEE;
   color: #222;
-  padding: 0.5em 0 0 0.5em;
+  padding: 0 0 0 0.5em;
 }
 
 .admin-panel .body {
-  background: #FFF;
   padding: 0 1em;
 }
 
