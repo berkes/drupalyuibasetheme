@@ -1,5 +1,5 @@
 <?php 
-// $Id: node.tpl.php,v 1.1.2.3 2009/04/28 00:02:16 jmburnz Exp $
+// $Id: node.tpl.php,v 1.1.2.1 2009/05/03 22:17:38 jmburnz Exp $
 
 /**
  * @file node.tpl.php

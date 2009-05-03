@@ -1,5 +1,5 @@
 <?php
-// $Id: user-picture.tpl.php,v 1.1.2.1 2009/04/19 21:01:17 jmburnz Exp $
+// $Id: user-picture.tpl.php,v 1.1.2.1 2009/05/03 22:17:38 jmburnz Exp $
 
 /**
  * @file user-picture.tpl.php
