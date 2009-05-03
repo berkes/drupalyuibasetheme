@@ -1,5 +1,5 @@
 <?php 
-// $Id: node.tpl.php,v 1.1.2.3 2009/04/28 00:04:19 jmburnz Exp $
+// $Id: node.tpl.php,v 1.1.2.4 2009/05/03 12:06:45 jmburnz Exp $
 
 /**
  * @file node.tpl.php
@@ -25,6 +25,7 @@
   <?php print $picture; ?>
 
   <?php print $content; ?>
+		<h1><?php print $sample_variable; ?></h1>
 
   <?php if ($terms): ?>
     <?php print $terms; ?>

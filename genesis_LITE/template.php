@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.3 2009/05/03 12:03:37 jmburnz Exp $
+// $Id: template.php,v 1.1.2.4 2009/05/03 12:06:45 jmburnz Exp $
 
 /**
  * @file template.php
@@ -46,11 +46,11 @@ function genesis_LITE_preprocess_page(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered.
  */
-/*
+/**/
 function genesis_LITE_preprocess_node(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
-*/
+
 
 /**
  * Override or insert variables into the comment templates.
