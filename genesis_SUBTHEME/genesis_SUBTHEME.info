@@ -1,79 +1,83 @@
-; $Id: genesis_SUBTHEME.info,v 1.7.2.4 2009/04/28 00:06:02 jmburnz Exp $
-
-; Change the name to match your new subthemes name. Modify the optional description.
-
-    name        = Genesis SUBTHEME
-    description = My Kickn' Sub-theme
+; $Id: genesis_SUBTHEME.info,v 1.7.2.5 2009/05/03 22:25:36 jmburnz Exp $
 
 
-; Genesis subtheme mini-stylesheets, unset what you don't need or want.
-; XHTML element css.
+;----------// Theme Information
 
-    stylesheets[all][] = css/type.css
-    stylesheets[all][] = css/lists.css
-    stylesheets[all][] = css/forms.css
-    stylesheets[all][] = css/tables.css
+ ; Change the name to match your new subthemes name. Modify the optional description.
+	
+  name        = Genesis SUBTHEME
+  description = My Kickn' Sub-theme
 
-; Node, block, comment and page css.
 
-    stylesheets[all][] = css/nodes.css
-    stylesheets[all][] = css/blocks.css
-    stylesheets[all][] = css/comments.css
-    stylesheets[all][] = css/page.css
+
+;----------// Required Theme Information
+
+  ; Do not change core, engine or base theme - these are required.
+				
+  core         = 6.x
+  engine       = phptemplate
+  screenshot   = images/screenshot_subtheme.png
+  base theme   = genesis
+
+
+
+;----------// Modular Stylesheets
+
+  ; block, comment, node, page and style CSS.
+
+  stylesheets[all][] = css/blocks.css
+  stylesheets[all][] = css/comments.css
+  stylesheets[all][] = css/nodes.css
+  stylesheets[all][] = css/page.css
+  stylesheets[all][] = css/style.css
+
 
 		
-; IE Max 30 Stylesheet Workaround
-;   1. Unset by the modular stylesheets above (add semicolons).
-;   2. Uncomment the following:
-  
-		  ;stylesheets[all][] = css/_all-subtheme.css
+;----------// IE Max 30 Stylesheet Workaround
 
-; Optionally use the CSSTidy compressed version.
-  
-		  ;stylesheets[all][] = css/_all-subtheme-tidy.css
+  ; To work-around IE's max 30 linked stylesheets issue comment out
+		; the Modular Stylesheets (above) and uncomment the following.
+		
+  ;stylesheets[all][] = css/_all-subtheme.css
 
+  ; Optionally use the CSSTidy compressed version.
 
-
-; Do not change core, engine or base theme - these are required.
-
-    core         = 6.x
-    engine       = phptemplate
-    screenshot   = images/screenshot_subtheme.png
-    base theme   = genesis
+  ;stylesheets[all][] = css/_all-subtheme-tidy.css
 
 
 
-; Regions.
-; You can define new regions here.
+;----------// Regions
 
-    regions[leaderboard]        = Leaderboard
-    regions[header]             = Header Blocks
-    regions[secondary_content]  = Secondary Content
-    regions[content_top]        = Content top
-    regions[content]            = Main Content
-    regions[content_bottom]     = Content bottom
-    regions[tertiary_content]   = Tertiary Content
-    regions[left]               = Sidebar Left
-    regions[right]              = Sidebar Right
-    regions[footer]             = Footer
+  ; You can define new regions here.
+
+  regions[leaderboard]        = Leaderboard
+  regions[header]             = Header Blocks
+  regions[secondary_content]  = Secondary Content
+  regions[content_top]        = Content top
+  regions[content]            = Main Content
+  regions[content_bottom]     = Content bottom
+  regions[tertiary_content]   = Tertiary Content
+  regions[left]               = Sidebar Left
+  regions[right]              = Sidebar Right
+  regions[footer]             = Footer
 
 
 
-; Features.
-; The "features" control which of these check boxes display on the
-; admin/build/themes configuration page. This is useful for 
-; suppressing check boxes for elements not used by your theme.
+;----------// Features
 
-    features[] = logo
-    features[] = name
-    features[] = slogan
-    features[] = mission
-    features[] = node_user_picture
-    features[] = comment_user_picture
-    features[] = search
-    features[] = favicon
-    features[] = primary_links
-    features[] = secondary_links
+  ; The "features" control which of these check boxes display on the
+  ; admin/build/themes configuration page. This is useful for 
+  ; suppressing check boxes for elements not used by your theme.
 
+  features[] = logo
+  features[] = name
+  features[] = slogan
+  features[] = mission
+  features[] = node_user_picture
+  features[] = comment_user_picture
+  features[] = search
+  features[] = favicon
+  features[] = primary_links
+  features[] = secondary_links
 
 
