@@ -1,4 +1,4 @@
-/* $Id: lists.css,v 1.1.2.5 2009/05/02 00:51:40 jmburnz Exp $ */
+/* $Id: lists.css,v 1.1.2.1 2009/05/03 22:15:34 jmburnz Exp $ */
 
 /**
  * @file lists.css
@@ -29,7 +29,7 @@ ol ol, ol ul,
 .item-list ul ol,
 .item-list ol ol,
 .item-list ol ul {
-  margin: 0 0 0 1.75em;
+  margin: 0 0 0 1.75em; /* LTR */
 }
 
 /* Set nested list list-style-types */
@@ -41,15 +41,15 @@ ol          {list-style-type: decimal;}
 ol ol       {list-style-type: lower-alpha;}
 ol ol ol    {list-style-type: lower-roman;}
 
-dt {font-weight: bold;}
-dd {margin: 0 0 1.5em 1.75em;} /* LTR */
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0 0 1.5em 1.75em; /* LTR */
+}
 
 .item-list ul, 
 .item-list ol {
   margin: 0 0 0 1.75em; /* LTR */
   padding: 0;  
 }
-
-.item-list ul li {}
-
-

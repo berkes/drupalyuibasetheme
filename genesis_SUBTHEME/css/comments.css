@@ -1,4 +1,4 @@
-/* $Id: comments.css,v 1.1.2.6 2009/05/03 01:36:49 jmburnz Exp $ */
+/* $Id: comments.css,v 1.1.2.7 2009/05/03 22:24:39 jmburnz Exp $ */
 
 /**
  * @file comments.css
@@ -71,3 +71,13 @@
 .comment.odd  {}
 .comment.even {}
 */
+
+/* Comment form on a seperate page. */
+.section-comment .box {}
+.section-comment .box-inner {}
+.section-comment .box-title {}
+
+/* Comment form below content. */
+#comments .box {}
+#comments .box-inner {}
+#comments .box-title {}

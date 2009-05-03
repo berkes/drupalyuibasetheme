@@ -1,18 +1,13 @@
-/* $Id: admin-styles.css,v 1.1.2.3 2009/05/03 01:36:49 jmburnz Exp $ */
+/* $Id: admin-styles.css,v 1.1.2.1 2009/05/03 22:15:34 jmburnz Exp $ */
 
 /**
  * @file admin.css
  * Basic styles for admin sections.
  */
 
-/**********************************************************
- *                     Admin
- **********************************************************/
-/**
- * <body> class to target most admin pages.
- */
-.section-admin {}
-
+/*********************************************************
+*                        Admin
+**********************************************************/
 /**
  * Admin panels.
  */

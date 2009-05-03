@@ -1,4 +1,4 @@
-/* $Id: tables.css,v 1.1.2.4 2009/05/02 00:51:40 jmburnz Exp $ */
+/* $Id: tables.css,v 1.1.2.1 2009/05/03 22:15:34 jmburnz Exp $ */
 
 /**
  * @file tables.css
@@ -9,7 +9,7 @@
  *                   Tables
  **********************************************************/
  
- /** 
+/** 
  * The selector groupings are from Garland which offers a
  * sensible starting point for styling Drupal tables.
  */
@@ -92,15 +92,6 @@ tr:first-child td.module,
 tr:first-child td.container {
   border-top-width: 0;
 }
-
-
-/**********************************************************
- *                   Table links
- **********************************************************/
-table a:link, 
-table a:visited {}
-table a:visited, 
-table a.active  {}
 
 
 /**********************************************************

@@ -1,4 +1,4 @@
-/* $Id: comments.css,v 1.1.2.5 2009/05/02 00:51:39 jmburnz Exp $ */
+/* $Id: comments.css,v 1.1.2.6 2009/05/03 22:21:11 jmburnz Exp $ */
 
 /**
  * @file comments.css
@@ -25,7 +25,9 @@
   margin-bottom: 0;
 }
 .comment-id {}
-.comment h3.title .new {color: #FF8000;}
+.comment h3.title .new {
+  color: #FF8000;
+}
 
 .comment .title a:link,
 .comment .title a:visited,
@@ -56,4 +58,10 @@
 /* Theme comment status. */
 .comment .unpublished {}
 
+/* Comment form on a seperate page. */
+.section-comment .box {}
+.section-comment .box .title {}
 
+/* Comment form below content. */
+#comments .box {}
+#comments .box .title {}

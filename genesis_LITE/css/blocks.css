@@ -1,4 +1,4 @@
-/* $Id: blocks.css,v 1.1.2.8 2009/05/03 09:54:21 jmburnz Exp $ */
+/* $Id: blocks.css,v 1.1.2.9 2009/05/03 22:21:11 jmburnz Exp $ */
 
 /**
  * @file blocks.css
@@ -146,19 +146,19 @@ ul.menu li {
 ul.menu li.collapsed,
 ul.menu li.expanded,
 ul.menu li.leaf {
-  background: transparent url(../images/sprite.png) no-repeat;
+  background: transparent url(../images/menu-sprite.png) no-repeat;
 }
 
 ul.menu li.collapsed {
-  background-position: -19px -7px; /* LTR */
+  background-position: -1px -7px; /* LTR */
 }
 
 ul.menu li.expanded {
-  background-position: -40px -27px; /* LTR */
+  background-position: -22px -27px; /* LTR */
 }
 
 ul.menu li.leaf {
-  background-position: -19px 10px; /* LTR */
+  background-position: -1px 10px; /* LTR */
 }
 
 ul.menu li a:link    {}

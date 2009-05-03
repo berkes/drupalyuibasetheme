@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.7 2009/05/02 00:51:39 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.8 2009/05/03 22:21:11 jmburnz Exp $ */
 
 /**
  * @file genesis_SUBTHEME.css
@@ -11,9 +11,8 @@
 
 
 /**********************************************************
- *                          html, Body
+ *                       Body
  **********************************************************/
-html {}
 body {}
 
 
@@ -50,7 +49,9 @@ body {}
 .node-type-poll  {}
 .node-type-story {}
 
-/* Dont confuse the sidebar body classes with the actual sidebar ID's! */
+/* Warning! The sidebar body classes are integral to how genesis
+   applies the layout - do not add margin, padding, borders,
+			or positioning styles to these classes! See layout.css */
 .one-sidebar   {}
 .sidebar-right {}
 .sidebar-left  {}
@@ -148,19 +149,21 @@ body {}
 .sidebar {}
 
 /* Target a specific sidebar, inner or sidebar-inner. */
-#sidebar-left {}
-
+#sidebar-left  {}
 #sidebar-right {}
 
 
 /**********************************************************
  *                   Skip navigation
  **********************************************************/
-/* To hide the skip-nav you can use:
- *   height: 0; overflow: hidden;
+/**
+ * To hide the skip-nav you can use:
+ * height: 0; overflow: hidden;
 	* Do not use display: none as this hides it from screen readers.
  */
-#skip-nav {text-align: center;}
+#skip-nav {
+  text-align: center;
+}
 #skip-nav a:link    {}
 #skip-nav a:hover   {}
 #skip-nav a:visited {}
@@ -178,7 +181,9 @@ body {}
 #header {}
 
 /* #branding wraps #logo, #site-name and #site-slogan. */
-#branding {float: left;}
+#branding {
+  float: left;
+}
 
 /* Logo. */
 #logo {}
@@ -204,7 +209,9 @@ div#site-name  {
 /**********************************************************
  *                        Search
  **********************************************************/
-#search-theme-form {float:right;}
+#search-theme-form {
+  float:right;
+}
 #search-theme-form > div {}
 #search-theme-form label {}
 #search-theme-form input {}
@@ -218,6 +225,10 @@ div#site-name  {
 /* Search Results Page - see .box */
 .section-search #search-form {}
 .section-search #search-form {}
+
+/* Search form on the results page, includes advanced search. */
+.section-search .box {}
+.section-search .box .title {}
 
 
 /**********************************************************
@@ -332,12 +343,22 @@ div#site-name  {
   margin: 0 0 1.5em;
 }
 
+
+/**********************************************************
+ *                    H1 Page Title
+ **********************************************************/
+/* The main title on each page. */
+h1#page-title {}
+
+
 /**********************************************************
  *                     Pager 
  **********************************************************/
 /* The first 2 classes provide the base pager styles. */
 .item-list ul.pager    {}
-.item-list ul.pager li {margin: 0;}
+.item-list ul.pager li {
+  margin: 0;
+}
 
 /* Theme the various states of pager links. */
 .item-list ul.pager li a:link    {}
@@ -372,84 +393,5 @@ div#site-name  {
 .feed-icon img {}
 #footer-message a.feed-icon {}
 
-
-/**********************************************************
- *                   Users and Profiles
- **********************************************************/
-/* Global setting for all user pictures. */
-.user-picture {
-  padding: 0.5em;
-}
-/* Position the user picture on the right in user profiles. */
-.profile .user-picture {}
-
-/* Fix alignment on user profile page. */
-.profile dt {
-  margin: 1.5em 0 0 0;
-}
-
-
-/**********************************************************
- *               Book navigation
- **********************************************************/
-/** 
- * Book navigation styles to get you started.
- */
-.book-navigation {}
-.book-navigation ul {}
-.book-navigation ul li {}
-.book-navigation ul li a {}
-.book-navigation .page-links {
-  border: none;
-  margin-bottom: 1.5em;
-  padding: 0.75em;
-}
-.book-navigation .page-links a {}
-.book-navigation .page-links a.page-up {}
-.book-navigation .page-links a.page-next {}
-.book-navigation .page-links a.page-previous {}
-.book-navigation .menu {
-  margin: 0 0 1.5em;
-  padding: 1.5em 0 0 3em;
-}
-
-
-/**********************************************************
- *                    Polls
- **********************************************************/
-/* Poll bar background. */
-.poll .bar  {}  
-
-/* Poll bar forground, the colored bar indicating poll votes. */
-.poll .bar .foreground {}
-
-.poll .text    {}
-.poll .links   {}
-.poll .percent {}
-.poll .total   {}
-.poll .vote-form {}
-
-
-/**********************************************************
- *                      Box
- **********************************************************/
-/* Search form on the results page, includes advanced search. */
-.section-search .box {}
-.section-search .box .title {}
-
-/* Comment form on a seperate page. */
-.section-comment .box {}
-.section-comment .box .title {}
-
-/* Comment form below content. */
-#comments .box {}
-#comments .box .title {}
-
-/* Generic box selectors. */
-.box {}
-.box .title {}
-.box form       {}
-.box .form-item {}
-.box fieldset   {}
 
 

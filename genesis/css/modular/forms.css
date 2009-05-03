@@ -1,4 +1,4 @@
-/* $Id: forms.css,v 1.1.2.4 2009/04/21 14:28:24 jmburnz Exp $ */
+/* $Id: forms.css,v 1.1.2.1 2009/05/03 22:15:34 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -145,7 +145,7 @@ html.js fieldset.collapsed {
 /* Override default legend arrows with a CSS sprite. */
 html.js fieldset.collapsible legend a,
 html.js fieldset.collapsed legend a {
-  background: transparent url(../images/sprite.png) no-repeat; /* LTR */
+  background: transparent url(../images/legend-sprite.png) no-repeat; /* LTR */
 }
 
 html.js fieldset.collapsible legend a {
@@ -207,14 +207,5 @@ html.js #user-login li.openid-link {
 }
 
 
-/**********************************************************
- *              Style form buttons
- **********************************************************/
-button, 
-.pushbutton, 
-.form-submit {}
 
-button:hover, 
-.pushbutton:hover, 
-.form-submit:hover {}
 

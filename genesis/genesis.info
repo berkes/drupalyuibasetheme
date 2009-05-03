@@ -1,5 +1,8 @@
-; $Id: genesis.info,v 1.1.2.9 2009/04/29 20:51:40 jmburnz Exp $
+; $Id: genesis.info,v 1.1.2.10 2009/05/03 22:16:22 jmburnz Exp $
   
+		
+;----------// Theme Information
+
   name         = Genesis
   description  = An elegant, flexible and powerful starter theme by <a href="http://adaptivethemes.com">Adaptivethemes</a>.
   core         = 6.x
@@ -7,9 +10,11 @@
   screenshot   = images/screenshot_base.png
 
 
-; The regions defined in the page.tpl.php files. The name in brackets is the 
-; name of the variable. The text after the = sign is the short description 
-; you see on the block configuration page.
+;----------// Regions
+
+  ; The regions defined in the page.tpl.php files. The name in brackets is the 
+  ; name of the variable. The text after the = sign is the short description 
+  ; you see on the block configuration page.
 
   regions[leaderboard]        = Leaderboard
   regions[header]             = Header Blocks
@@ -23,28 +28,40 @@
   regions[footer]             = Footer
 
 
-; Genesis core styles for layout and block editing.
 
-  stylesheets[all][] = css/layout.css
-  stylesheets[all][] = css/admin-styles.css
-  stylesheets[all][] = css/messages.css
+;----------// Genesis core styles
+
+  stylesheets[all][] = css/base.css
+		stylesheets[all][] = css/layout.css
+		
+		
+		
+;----------// Optional stylesheets
+		
+		; Add styles for the hover edit block and views links. On by default.
   stylesheets[all][] = css/edit-links.css
-
-; Uncomment to show the grid, add the grid class in page.tpl.php also.
+								  
+  ; Uncomment to show the grid, add the grid class in page.tpl.php also.
 		;stylesheets[all][] = css/grid.css
 
 
-; Redefine the default location of scripts.js
+
+;----------// jQuery Plugins and JavaScripts
+
+  ; Redefine the default location of scripts.js
 		scripts[] = js/script.js
 
-; Insert WAI-ARIA Landmark Roles. Uncomment to use.
-		;scripts[] = js/aria-roles.js
+  ; Insert WAI-ARIA Landmark Roles. Uncomment to use.
+		scripts[] = js/aria-roles.js
 
-; Equal height columns. This will set first child divs in the #columns division
-; to the same height (#sidebar-left, #sidebar-right, #content-column).
-; To use uncomment and clear cache data in Performance settings.
+  ; Equal height columns. This will set first child divs in the #columns division
+  ; to the same height (#sidebar-left, #sidebar-right, #content-column).
+  ; To use uncomment and clear cache data in Performance settings.
 		;scripts[] = js/jquery.equalizeheights.minified.js
 
+
+
+;---------- Theme Congiruation features ----------;
 
 ; The "features" control which check boxes display on the admin/build/themes 
 ; configuration page. This is useful for suppressing check boxes for elements 
