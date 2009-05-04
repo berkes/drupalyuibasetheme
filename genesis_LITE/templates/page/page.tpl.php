@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.10 2009/05/03 22:25:17 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.11 2009/05/04 14:57:18 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -79,6 +79,8 @@
  * - $closure: Final closing markup from any modules that have altered the page.
  *     This variable should always be output last, after all other dynamic content.
  *
+ * @see template_preprocess()
+ * @see template_preprocess_page()
  * @see genesis_preprocess_page()
  */
 ?>

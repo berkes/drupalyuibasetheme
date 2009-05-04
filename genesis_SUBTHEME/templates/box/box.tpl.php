@@ -1,9 +1,13 @@
 <?php
-// $Id: box.tpl.php,v 1.1.2.3 2009/05/02 00:51:40 jmburnz Exp $
+// $Id: box.tpl.php,v 1.1.2.4 2009/05/04 14:57:18 jmburnz Exp $
 
 /**
  * @file box.tpl.php
  * Theme implementation to display a box.
+ *
+ * Available variables:
+ * - $title: Box title.
+ * - $content: Box content.
  *
  * @see template_preprocess()
  */

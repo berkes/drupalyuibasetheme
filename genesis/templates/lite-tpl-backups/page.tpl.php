@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.1 2009/05/03 22:17:38 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.2 2009/05/04 14:57:17 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -81,6 +81,7 @@
  *
  * @see template_preprocess()
  * @see template_preprocess_page()
+ * @see genesis_preprocess_page()
  */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
