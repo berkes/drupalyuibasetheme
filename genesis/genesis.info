@@ -1,4 +1,4 @@
-; $Id: genesis.info,v 1.1.2.10 2009/05/03 22:16:22 jmburnz Exp $
+; $Id: genesis.info,v 1.1.2.11 2009/05/04 10:00:58 jmburnz Exp $
   
 		
 ;----------// Theme Information
@@ -47,9 +47,6 @@
 
 
 ;----------// jQuery Plugins and JavaScripts
-
-  ; Redefine the default location of scripts.js
-		scripts[] = js/script.js
 
   ; Insert WAI-ARIA Landmark Roles. Uncomment to use.
 		scripts[] = js/aria-roles.js

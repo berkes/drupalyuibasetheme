@@ -1,170 +1,91 @@
-/* $Id: _all-subtheme.css,v 1.1.2.7 2009/05/03 22:24:39 jmburnz Exp $ */
+/* $Id: _all-subtheme.css,v 1.1.2.8 2009/05/04 10:00:59 jmburnz Exp $ */
 
 /**
   * @file _all-subtheme.css
   * Genesis modular stylesheets aggregated into one file.
 		*
 		* Includes an exact copy of the following stylesheets:
-		
-  * type.css
-  * lists.css
-  * forms.css
-  * tables.css
-  * nodes.css
+
   * blocks.css
   * comments.css
+  * nodes.css
   * page.css
+		* style.css
 
 		*
 		* USAGE
-		* 1) Unset the mini stylesheets in genesis.info by commenting them out.
-		* 2) Enable _all-subtheme.css by uncommenting it in genesis.info
+		* 1) Unset the mini stylesheets in genesis_SUBTHEME.info by commenting them out.
+		* 2) Enable _all-subtheme.css by uncommenting it in genesis_SUBTHEME.info
 		*
 		* The file is useful for working around IE7's 30 max stylesheets issue
 		* when you cannot turn on CSS aggregation in Performance settings.
   */
 
-/*********************************************************
-*                        Type
-**********************************************************/
 /**
- * Global Font Size
- *
- * All modern browsers set a base font of 16px, therefore
- * the default value of 1em = 16px. We reduce this to 12px.
- *
- * 75% of 16px. (0.75 * 16px = 12px).
- * 1em now is equal to 12 pixels. E.g.
- * 2em   = 24px
- * 1.5em = 18px
- * 1em   = 12px
- * 0.5em = 6px
- *
- * You may find this "px to em" calculator helpful;
- * http://riddle.pl/emcalc/
+ * @see style.css
+	*
+	* Use this file to override the Genesis core modular styles 
+	* (such as the HTML elements in typography.css), module CSS 
+	* and other Drupal styles. Anything that doesn't fit logically
+	* into page.css, nodes.css, blocks.css or comments.css can go here.
  */
 
-html {
-  font-size: 75%;
-}
-
+/**********************************************************
+ *                    Body
+ **********************************************************/
 body {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5; /* unitless line height */
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0 0 0.5em 0;
-  padding: 0;
-}
 
-h2 {
-  font-size: 1.5em; 
-}
+/**********************************************************
+ *                 HTML Elements
+ **********************************************************/
 
-h3 {
-  font-size: 1.33em;
-}
-
-h4 {
-  font-size: 1.17em;
-}
-
-h5, h6 {
-  font-size: 1em;
-}
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
 
 /* The main title on each page. */
 h1#page-title {}
 
-/* Micro reset */
-h2, h3, h4, h5, h6,
-h1 img, h2 img, h3 img, 
-h4 img, h5 img, h6 img,
-em, dfn, del, ins {
-  margin: 0; 
-  padding: 0;
-}
+p {}
 
-p {
-  margin: 0 0 1.5em; 
-  padding: 0;
-}
+strong {}
+em, dfn {}
+dfn {}
 
-blockquote p {
-  margin: 0;
-}
+sup, sub {}
 
-strong {
-  font-weight: bold;
-}
+del {}
+ins {}
 
-em, dfn {
-  font-style: italic; 
-}
+blockquote {}
+cite {}
+q {}
 
-dfn {
-  font-weight: bold;
-}
+address {}
 
-sup, sub {
-  line-height: 0;
-}
+ul {}
+ol {}
+li {}
 
-del {
-  color: #666; 
-}
+dl {}
+dd {}
+dt {}
 
-ins {
-  border-bottom: none;
-  text-decoration: none;
-}
 
-pre, code {
-  margin: 1.5em 0; 
-  padding: 0; 
-  white-space: pre;
-}
+abbr {}
+acronym {}
 
-pre, code, tt {
-  font: 1em 'andale mono', 'lucida console', monospace;
-}
-
-p code {
-  font: 1em "Courier New", Courier, monospace;
-}
-
-/* Preserve line-height and selector appearance */
-sup {
-  vertical-align: text-top;
-}
-
-sub {
-  vertical-align: text-bottom;
-}
-
-/* Mitigate relative shrinkage */
-li li, li p, td p, blockquote p {
-  font-size: 1em;
-}
-
-blockquote, q {
-  font-style: italic;  /* LTR */
-  margin: 0 0 1.5em;
-  padding: 0 0 0 3em;  /* LTR */
-}
-
-/* Remove possible quote marks (") from <q>, <blockquote>. */
-blockquote:before, 
-blockquote:after, 
-q:before, q:after {
-  content: "";
-}
-
-blockquote, q {
-  quotes: "" "";
-}
+pre, code, tt {}
+p code {}
+samp {}
+kbd {}
+var {}
 
 
 /**********************************************************
@@ -186,796 +107,39 @@ a.active-trail {}
 li a.active {}
 
 /* Remove borders on linked images. */
-a img {border: none;}
-
-
-/*********************************************************
-*                     Lists
-**********************************************************/
-ul, ol {
-  margin: 0 0 1.5em 1.75em; /* LTR */
-  padding: 0;
-}
-
-li {
-  margin: 0; 
-  padding: 0;
-}
-
-/* Set nested list indentation */
-ul ul, ul ol,
-ol ol, ol ul,
-.block ul ul,
-.block ul ol,
-.block ol ol,
-.block ol ul,
-.item-list ul ul,
-.item-list ul ol,
-.item-list ol ol,
-.item-list ol ul {
-  margin: 0 0 0 1.75em;
-}
-
-/* Set nested list list-style-types */
-ul          {list-style-type: disc;}
-ul ul       {list-style-type: circle;}
-ul ul ul    {list-style-type: square;}
-ul ul ul ul {list-style-type: circle;}
-ol          {list-style-type: decimal;}
-ol ol       {list-style-type: lower-alpha;}
-ol ol ol    {list-style-type: lower-latin;}
-
-dt {font-weight: bold;}
-dd {margin: 0 0 1.5em 1.75em;} /* LTR */
-
-.item-list ul, 
-.item-list ol {
-  margin: 0 0 0 1.75em; /* LTR */
-  padding: 0;  
-}
-
-.item-list ul li {}
-
-
-/*********************************************************
-*                     Forms
-**********************************************************/
-form {
-  margin: 0 0 1.5em 0; 
-  padding: 0;
-}
-
-input {
-  margin: 0.375em 0.1875em 0 0.1875em;
-}
-
-input.text, 
-input.title,
-textarea, 
-select {
-  margin:0.375em 0; 
-  border: 1px solid #C0C0C0;
-}
-
-input.text:focus, 
-input.title:focus,
-textarea:focus, 
-select:focus {
-  border: 1px solid #666;
-}
-
-input.text, 
-input.title {
-  padding: 0.375em;
-}
-
-input.title {
-  font-size: 1.5em;
-}
-
-input.form-text, 
-textarea {
-  border: 1px solid #CCC;
-  height: auto; 
-  padding: 0.1875em;
-}
-
-textarea, 
-input {
-  font: 1em normal Arial, Helvetica, sans-serif;
-}
-
-div.form-item {
-  margin-bottom: 1em; 
-  margin-top: 1em;
-}
-
-.form-item strong.error {
-  display: block;
-}
-
-.form-item textarea.error {
-  padding: 0.1875em;
-}
-
-.form-item .description {
-  font-size: 0.9em; 
-  line-height: 1.667em;
-}
-
-span.form-required, 
-span.marker {
-  color: #8A1F11;
-}
-
-div.form-item div.description img {
-  margin: 0;
-}
-
-#node-admin-filter ul {
-  padding: 0.375em 0;
-}
-
-#edit-operation-wrapper select {
-  margin: 0.375em;
-}
-
-div.resizable-textarea textarea {
-  margin-top: 0;
-}
-
-.tips {
-  font-size: 1em;
-  margin-left: 3em; /* LTR */
-  padding: 0.1875em 0.375em 0.1875em 1.5em; /* LTR */
-}
-
-label, legend {
-  margin: 0; 
-  padding: 0;
-}
-
-
-/*********************************************************
-*                     Fieldsets
-**********************************************************/
-fieldset {
-  background: transparent;
-  border: 1px solid #dadada;
-  margin: 1.5em 0;
-  padding: 0.75em;
-
-}
-
-/* Targets IE 7. Fixes background image in field sets (if one is set). */
-*:first-child+html fieldset {
-  background-color: transparent;
-  background-position: 0 .75em;
-  padding: 0 1em 0.75em;
-}
-
-*:first-child+html fieldset > .description, *:first-child+html fieldset .fieldset-wrapper .description {
-  padding-top: 1.5em;
-}
-
-/* Fix legend in Firefox */
-fieldset legend {
-  display: block;
-  font-weight: bold;
-		padding: 0 1em 0 0;
-}
-
-*:first-child+html fieldset legend, *:first-child+html fieldset.collapsed legend {
-  display: inline;
-}
-
-html.js fieldset.collapsed {
-  background: transparent;
-  padding-bottom: .75em;
-  padding-top: 0;
-}
-
-/* Override default legend arrows with a CSS sprite. */
-html.js fieldset.collapsible legend a,
-html.js fieldset.collapsed legend a {
-  background: transparent url(../images/sprite.png) no-repeat; /* LTR */
-}
-
-html.js fieldset.collapsible legend a {
-  background-position: 0 -43px; /* LTR */
-  padding-left: 1em; /* LTR */
-}
-
-html.js fieldset.collapsed legend a {
-  background-position: 0 -63px; /* LTR */
-}
-
-
-/*********************************************************
-*                     Vertical Tabs
-**********************************************************/
-#node-form .vertical-tabs ul.vertical-tabs-list {}
-
-#node-form .vertical-tabs ul.vertical-tabs-list li {
-  list-style: none;
-}
-
-
-/*********************************************************
-*              OpenID icon fix for Drupal 6
-**********************************************************/
-#user-login-form li.openid-link,
-#user-login-form li.user-link {
-  text-align: center;
-}
-
-html.js #user-login-form li.openid-link,
-html.js #user-login li.openid-link {
-  list-style: none;
-}
-
-#user-login-form ul {
-  margin-top: 0;
-}
-
-#user-login ul {
-  margin: 0 0 5px;
-}
-
-#user-login ul li {
-  margin: 0;
-}
-
-#user-login-form li.openid-link,
-#user-login li.openid-link {
-  background: none;
-}
-
-#user-login-form li.openid-link a,
-#user-login li.openid-link a {
-  background: transparent url("../images/openid.png") no-repeat 0 0;
-  padding: 0 20px;
+a img {
+  border: none;
 }
 
 
 /**********************************************************
- *              Style form buttons
- **********************************************************/
-button, 
-.pushbutton, 
-.form-submit {}
-
-button:hover, 
-.pushbutton:hover, 
-.form-submit:hover {}
-
-
-/**********************************************************
- *                   Tables
- **********************************************************/
- 
- /** 
- * The selector groupings are from Garland which offers a
- * sensible starting point for styling Drupal tables.
- */
- 
-table {
-  border-spacing: 0;
-  margin: 1em 0; 
-  padding: 0;
-}
-
-caption, th, td {
-  font-weight: normal;
-  text-align: left; /* LTR */
-}
-
-table, td, th {
-  vertical-align: middle;
-}
-
-tbody, tfoot, thead, tr {
-  margin: 0; 
-  padding: 0;
-}
-
-thead th {
-  border-bottom: 0.1875em solid #C0C0C0; 
-  color: #494949;
-  font-weight: bold; 
-}
-
-td, th {
-  border-bottom: 1px solid #CCC;
-  margin: 0;
-  padding: 0.375em 0.5em; 
-}
-
-tr.even,
-tr.odd,
-tbody th {
-  /* border-bottom: 1px solid #CCC; System default */
-}
-
-tr.odd, 
-tr.info {
-  background-color: #F5F5F5;
-}
-
-tr.even {
-  background-color: #FFF;
-}
-
-tr.drag {
-  background-color: #FFFFF0;
-}
-
-tr.drag-previous  {
-  background-color: #FFD;
-}
-
-tr.odd td.active  {
-  background-color: #EEE;
-}
-
-tr.even td.active {
-  background-color: #F7F7F7;
-}
-
-td.region, 
-td.module, 
-td.container td.category {
-  background-color: #EEE;
-  border-bottom: 1px solid #CCC;
-  border-top: 1.5em solid #FFF;
-  color: #222;
-  font-weight: bold;
-}
-
-tr:first-child td.region,
-tr:first-child td.module, 
-tr:first-child td.container {
-  border-top-width: 0;
-}
-
-
-/**********************************************************
- *                   Table links
- **********************************************************/
-table a:link, 
-table a:visited {}
-table a:visited, 
-table a.active  {}
-
-
-/**********************************************************
- *                     Forum tables
- **********************************************************/
-#forum table {
-  width: 100%;
-}
-
-/* Position forum icons. */
-#forum tr td.forum { 
-  background-position: 5px 5px!important;
-  padding-left: 1.67em; 
-}
-
-/* Add padding left to the forum name. */
-#forum tr td.forum .name {
-  padding-left: 0.375em;
-}
-
-#forum div.indent  {
-  margin-left: 0.5em;
-}
-
-
-/**********************************************************
- *                 Local tasks tabs
- **********************************************************/
-.local-tasks {
-  margin-bottom: 0.75em;
-}
-
-ul.primary {
-  border-bottom-color: #CCC;
-  margin: 1.5em 0 0 0; 
-  padding: 0 0 0.2em 1em;
-}
-
-ul.primary li a {
-  background-color: #EEE;
-  border-color: #CCC;
-  padding: 0.1em 0.75em 0.2em;
-}
-
-.local-tasks ul.primary li a:hover  {
-  background-color: #F5F5F5;
-  border-color: #DDD;
-}
-
-.local-tasks ul.primary li.active a {
-  background-color: #FFF;		
-  border-bottom-color: #FFF;
-}
-
-ul.secondary {
-  border-bottom: 1px solid #BBB;
-  margin: 0 0 1em;
-  padding: 1em 0;
-}
-
-ul.secondary li {
-  border-right: none;
-  padding:0 0.75em;
-}
-
-ul.secondary a:hover,
-ul.secondary a.active {
-  border-bottom: none;
-  text-decoration: underline;
-}
-
-
-/**********************************************************
- *                      Nodes
- **********************************************************/
-.node {
-  margin: 0 0 1.5em;
-}
-
-/* Over-ride default .inner styles. */
-.node-inner {}
-
-/* Node title on teasers and other lists. */
-.node-title {}
-
-.node-title a:link,
-.node-title a:visited,
-.node-title a:active {
-  text-decoration: none;
-}
-
-.node-title a:hover {
-  text-decoration: underline;
-}
-
-.node .user-picture {}
-.node .user-picture img {}
-
-.node-submitted {}
-.node-submitted a {}
-.node-submitted a:hover {}
-
-/* Node content wrapper. */
-.node-content {}
-
-/* Node taxonomy terms. */
-.node-terms {}
-
-/* Node links. */
-.node-links {
-  display: block; 
-  text-align: right;
-}
-
-/* Node classes for node workflow states. */
-.node-add    {}
-.node-edit   {}
-.node-delete {}
-.node-preview  {}
-.node-sticky   {}
-.node-promoted {}
-
-/* Node status. */
-.node-unpublished {}
-
-/* Theme the node teaser seperatly. */
-.node-teaser {}
-
-
-/**********************************************************
- *                   Core node types
- **********************************************************/
-.node-blog  {}
-.node-page  {}
-.node-story {}
-.node-forum {}
-.node-book  {}
-.node-poll  {}
-
-
-/**********************************************************
- *                 Custom node types
- **********************************************************/
-/** 
- * Replace CONTENT_TYPE with the content type 
- * machine-readable name. 
- */
-.node-type-CONTENT_TYPE {}
-
-
-/**********************************************************
- *                    CCK Fields
- **********************************************************/
-/* Wrapper for any CCK field. */
-.field {}
-
-/* Use "datetime" when creating new CCK date fields. */
-.field-type-datetime {}
-
-/* Filefield field. */
-.field-type-filefield {}
-
-/* Imagefield field. */
-.field-type-image {}
-
-/* Node reference field. */
-.field-type-nodereference {}
-
-/* User reference field. */
-.field-type-userreference {}
-
-/* Number fields. */
-.field-type-number-decimal {}
-.field-type-number-float   {}
-.field-type-number-integer {}
-
-/* Text field. */
-.field-type-text {}
-
-/**
- * Specific field names.
- */
-/* Underscores in field name are replaced with dashes. */
-.field-field-FIELDNAME {}
-
-
-/**********************************************************
- *                       Blocks
+ *                 Custom Styles
  **********************************************************/
 /**
- * Styles set for .block, .block-inner, block-title and 
-	* .block-contentwill be inherited by all blocks.
+ * Here you can add custom stles for your theme that do not fit
+	* into one if the modular stylesheets (such as the nodes, blocks,
+	* page and comments stylesheets).
  */
-.block {
-  clear: both;
-  margin: 0 0 1.5em;
-}
-
-.block-inner   {} /* Block inner div */
-.block-title   {} /* h2 block title */
-.block-content {} /* Block content wrapper */
-
-/**
- * Sidebar and Region Specific Block Styles
- *
- * You can target blocks in one or more regions and 
- * style them differently. 
- */
-/* Low specifity selector to style blocks in both sidebars. */
-.sidebar .block {}
-
-/* Low specifity selector to style blocks in all regions. */
-.region .block {}
-
-/* High specifity selectors to style blocks in one sidebar. */
-#sidebar-left .block {}
-#sidebar-left .block h2 {}
-#sidebar-left .block-inner {}
-#sidebar-left .block .block-content {}
-
-#sidebar-right .block {}
-#sidebar-right .block h2 {}
-#sidebar-right .block-inner {}
-#sidebar-right .block .block-content {}
-
-/* High specifity selectors to style blocks in one region. */
-#leaderboard       .block {}
-#header-blocks     .block {}
-#secondary-content .block {}
-#tertiary-content  .block {}
-#content-top       .block {}
-#content           .block {}
-#content-bottom    .block {}
-#footer            .block {}
-
-/**
- * Module Block ID's 
- * For contributed module blocks the pattern is the same,
-	* i.e. #block-[module]-[delta]
- */
-#block-book-0       {} /* Book navigation block   */
-#block-blog-0       {} /* Recent Blog posts       */
-#block-comment-0    {} /* Recent Comments block   */
-#block-forum-0      {} /* Active Forum topics     */
-#block-forum-1      {} /* New Forum topics        */
-#block-locale-0     {} /* Language Switcher block */
-#block-node-0       {} /* Syndicate block         */
-#block-poll-0       {} /* Most recent poll        */
-#block-profile-0    {} /* Author information      */
-#block-search-0     {} /* Search form block       */
-#block-statistics-0 {} /* Popular content         */
-#block-system-0     {} /* Powered by Drupal       */
-#block-user-0       {} /* Login block             */
-#block-user-1       {} /* Navigation Menu block   */
-#block-user-2       {} /* Who's New block         */
-#block-user-3       {} /* Who's Online block      */
-
-/* Primary and Secondary links blocks */
-#block-menu-primary-links   {}
-#block-menu-secondary-links {}
-
-/* The class selector applies to all blocks of these types. */
-.block-user {} 
-.block-book {} 
-.block-aggregator {}
-
-
-/**
- * Block Odd & Even Styles (Zebra)
- * Blocks can have alternating styles for odd and even.
-	*
-	* See genesis_preprocess_block to use these classes.
- */
-/*
-.sidebar .block.odd  {}
-.sidebar .block.even {}
-#sidebar-left .block.odd  {}
-#sidebar-left .block.even {}
-#sidebar-right .block.odd  {}
-#sidebar-right .block.even {}
-*/
-
-/**
- * Alternative Approach to Region Block Styling
- *
- * Blocks can be aware of what region they are in, so its
- * possible to use chained selectors such as;
- *
- * .block.odd.right {}
-	*
-	* See genesis_preprocess_block to use these classes.
- */
-
-/**********************************************************
- *                   Menu blocks
- **********************************************************/
-/**
- * Prefix these with the block id to style one menu only.
- */
-ul.menu {
-  margin: 0 0 0 0.5em;
-  padding: 0;
-}
-
-ul.menu ul, 
-ul.menu ul ul, 
-ul.menu ul ul ul {
-  margin: 0;
-}
-
-ul.menu li,
-li.expanded,
-li.collapsed,
-li.leaf {
-  margin: 0;
-}
-
-/* Override Drupal default bullet gifs with a CSS Sprite */
-ul.menu li {
-  background: none;
-  display: block;
-  list-style: none;
-  list-style-image: none;
-  padding: 0.35em 0 0 1em; /* LTR */
-}
-
-ul.menu li.collapsed,
-ul.menu li.expanded,
-ul.menu li.leaf {
-  background: transparent url(../images/sprite.png) no-repeat;
-}
-
-ul.menu li.collapsed {
-  background-position: -19px -7px; /* LTR */
-}
-
-ul.menu li.expanded {
-  background-position: -40px -27px; /* LTR */
-}
-
-ul.menu li.leaf {
-  background-position: -19px 10px; /* LTR */
-}
-
-ul.menu li a:link    {}
-ul.menu li a:hover   {}
-ul.menu li a:visited {}
-ul.menu li.active a  {}
-ul.menu li.active-trail {}
-
-ul.menu li.first {}
-ul.menu li.last  {}
-
-
-/**********************************************************
- *                   Block lists
- **********************************************************/
-.block .item-list ul {margin: 0;}
-.block .item-list ul li {}
-
-
-/**********************************************************
- *                     Comments
- **********************************************************/
-/* Comment wrapper */
-#comments {}
-#comments-title {}
 	
-.comment {
-  margin: 0 0 1em;
-}
+	
+	
+	
+	
+	
+	
+	/**
+ * @see page.css
+ * This stylesheet provides the page main styles for this theme.
+ */
 
-/* Over-ride default .inner styles. */
-.comment-inner {}
+/**
+ * Remove unused styles for performace.
+ */
 
-.comment .indented {
-  margin-left: 2em; /* LTR */
-}
-
-/* The title of each comment. */
-.comment-title {}
-
-.comment-id {}
-.comment-title .new {color: #FF8000;}
-
-.comment-title a:link,
-.comment-title a:visited,
-.comment-title a:active {
-  text-decoration: none;
-}
-
-.comment-title a:hover {
-  text-decoration: underline;
-}
-
-.comment .user-picture {}
-.comment .user-picture img {}
-
-.comment-submitted {}
-.comment-submitted a {}
-.comment-submitted a:hover {}
-
-/* Comment content wrapper. */
-.comment-content {}
-
-.comment .links {
-  text-align: right; /* LTR */
-  clear: both;
-}
-
-/* Comment author. */
-.comment-by-anonymous   {}
-.comment-by-node-author {}
-.comment-by-viewer      {}
-
-/* Comment is new. */
-.comment-new {}
-
-/* Comment status. */
-.comment-unpublished {}
-
-/* Zebra styles for comments. See genesis_preprocess_comment.
-.comment.odd  {}
-.comment.even {}
-*/
 
 /**********************************************************
  *                      html, Body
  **********************************************************/
-html {}
 body {}
 
 
@@ -1127,11 +291,14 @@ body {}
 /**********************************************************
  *                   Skip navigation
  **********************************************************/
-/* To hide the skip-nav you can use:
- *   height: 0; overflow: hidden;
-	* Do not use display: none as this hides it from screen readers.
+/**
+ * To hide the skip-nav you can use:
+ * height: 0; overflow: hidden;
+ * Do not use display: none as this hides it from screen readers.
  */
-#skip-nav {text-align: center;}
+#skip-nav {
+  text-align: center;
+}
 #skip-nav a:link    {}
 #skip-nav a:hover   {}
 #skip-nav a:visited {}
@@ -1148,7 +315,9 @@ body {}
 #header .header-inner {}
 
 /* #branding wraps #logo, #site-name and #site-slogan. */
-#branding {float: left;}
+#branding {
+  float: left;
+}
 
 /* Logo. */
 #logo {}
@@ -1182,7 +351,9 @@ div#site-name  {
 
 /* Reset form element margins to allow more precise positioning. */
 #search-box form,
-#search-box div.form-item {margin: 0;}
+#search-box div.form-item {
+  margin: 0;
+}
 
 #search-theme-form {}
 #search-theme-form > div {}
@@ -1198,6 +369,11 @@ div#site-name  {
 /* Search Results Page - see .box */
 .section-search #search-form {}
 .section-search #search-form {}
+
+/* Search form on the results page, includes advanced search. */
+.section-search .box {}
+.section-search .box-inner {}
+.section-search .box-title {}
 
 
 /**********************************************************
@@ -1238,7 +414,7 @@ div#site-name  {
 
 /* Modify the margin to positing the menu. */
 #primary .links {
-  margin: 0; /* RTL */
+  margin: 0;
 }
 
 /* Modify the margin to set tab spacings. */
@@ -1288,7 +464,7 @@ div#site-name  {
 
 /* Modify the margin to positing the menu. */
 #secondary .links {
-  margin: 0; /* RTL */
+  margin: 0;
 }
 
 /* Modify the margin to set tab spacings. */
@@ -1326,7 +502,9 @@ div#site-name  {
  * You can eaisly drag the breadcrumb html to the main 
  * content column if you need to.
  */
-#breadcrumb {padding: 0 0 0.75em;}
+#breadcrumb {
+  padding: 0 0 0.75em;
+}
 
 
 /**********************************************************
@@ -1337,12 +515,22 @@ div#site-name  {
   margin: 0 0 1.5em;
 }
 
+
+/**********************************************************
+ *                    H1 Page Title
+ **********************************************************/
+/* The main title on each page. */
+h1#page-title {}
+
+
 /**********************************************************
  *                     Pager 
  **********************************************************/
 /* The first 2 classes provide the base pager styles. */
 .item-list ul.pager    {}
-.item-list ul.pager li {margin: 0;}
+.item-list ul.pager li {
+  margin: 0;
+}
 
 /* Theme the various states of pager links. */
 .item-list ul.pager li a:link    {}
@@ -1384,70 +572,197 @@ div#site-name  {
 #footer-message a.feed-icon {}
 
 
+/**
+ * @see nodes.css
+ * Basic styles for nodes.
+ */
+
 /**********************************************************
- *                   Users and Profiles
+ *                      Nodes
  **********************************************************/
-/* Global setting for all user pictures. */
-.user-picture {
-  padding: 0.5em;
+.node {
+  margin: 0 0 1.5em;
 }
-/* Position the user picture on the right in user profiles. */
-.profile .user-picture {}
 
-/* Fix alignment on user profile page. */
-.profile dt {
-  margin: 1.5em 0 0 0;
+/* Inner wrapper div for nodes. */
+.node-inner {}
+
+/* Node title on teasers and other lists. */
+.node-title {}
+
+.node-title a:link,
+.node-title a:visited,
+.node-title a:active {
+  text-decoration: none;
 }
+
+.node-title a:hover {
+  text-decoration: underline;
+}
+
+.node .user-picture {}
+.node .user-picture img {}
+
+.node-submitted {}
+.node-submitted a {}
+.node-submitted a:hover {}
+
+/* Node content wrapper. */
+.node-content {}
+
+/* Node taxonomy terms. */
+.node-terms {}
+
+/* Node links. */
+.node-links {
+  display: block; 
+  text-align: right;
+}
+
+/* Node classes for node workflow states. */
+.node-add    {}
+.node-edit   {}
+.node-delete {}
+.node-preview  {}
+.node-sticky   {}
+.node-promoted {}
+
+/* Node status. */
+.node-unpublished {}
+
+/* Theme the node teaser seperatly. */
+.node-teaser {}
 
 
 /**********************************************************
- *               Book navigation
+ *                   Core node types
+ **********************************************************/
+.node-blog  {}
+.node-page  {}
+.node-story {}
+.node-forum {}
+.node-book  {}
+.node-poll  {}
+
+
+/**********************************************************
+ *                 Custom node types
  **********************************************************/
 /** 
- * Book navigation styles to get you started.
+ * Replace CONTENT_TYPE with the content type 
+ * machine-readable name. 
  */
-.book-navigation {}
-.book-navigation ul {}
-.book-navigation ul li {}
-.book-navigation ul li a {}
-.book-navigation .page-links {
-  border: none;
-  margin-bottom: 1.5em;
-  padding: 0.75em;
-}
-.book-navigation .page-links a {}
-.book-navigation .page-links a.page-up {}
-.book-navigation .page-links a.page-next {}
-.book-navigation .page-links a.page-previous {}
-.book-navigation .menu {
-  margin: 0 0 1.5em;
-  padding: 1.5em 0 0 3em;
-}
+.node-type-CONTENT_TYPE {}
 
 
 /**********************************************************
- *                    Polls
+ *                    CCK Fields
  **********************************************************/
-/* Poll bar background. */
-.poll .bar  {}  
+/* Wrapper for any CCK field. */
+.field {}
 
-/* Poll bar forground, the colored bar indicating poll votes. */
-.poll .bar .foreground {}
+/* Use "datetime" when creating new CCK date fields. */
+.field-type-datetime {}
 
-.poll .text    {}
-.poll .links   {}
-.poll .percent {}
-.poll .total   {}
-.poll .vote-form {}
+/* Filefield field. */
+.field-type-filefield {}
 
+/* Imagefield field. */
+.field-type-image {}
+
+/* Node reference field. */
+.field-type-nodereference {}
+
+/* User reference field. */
+.field-type-userreference {}
+
+/* Number fields. */
+.field-type-number-decimal {}
+.field-type-number-float   {}
+.field-type-number-integer {}
+
+/* Text field. */
+.field-type-text {}
+
+/**
+ * Specific field names.
+ */
+/* Underscores in field name are replaced with dashes. */
+.field-field-FIELDNAME {}
+
+
+
+/**
+ * @see comments.css
+ * Basic styles for comments.
+ */
 
 /**********************************************************
- *                      Box
+ *                     Comments
  **********************************************************/
-/* Search form on the results page, includes advanced search. */
-.section-search .box {}
-.section-search .box-inner {}
-.section-search .box-title {}
+/* Comment wrapper */
+#comments {}
+#comments-title {}
+	
+.comment {
+  margin: 0 0 1em;
+}
+
+/* Inner wrapper div for comments. */
+.comment-inner {}
+
+.comment .indented {
+  margin-left: 2em; /* LTR */
+}
+
+/* The title of each comment. */
+.comment-title {}
+
+.comment-id {}
+.comment-title .new {
+  color: #FF8000;
+}
+
+.comment-title a:link,
+.comment-title a:visited,
+.comment-title a:active {
+  text-decoration: none;
+}
+
+.comment-title a:hover {
+  text-decoration: underline;
+}
+
+.comment .user-picture {}
+.comment .user-picture img {}
+
+.comment-submitted {}
+.comment-submitted a {}
+.comment-submitted a:hover {}
+
+/* Comment content wrapper. */
+.comment-content {}
+
+.comment .links {
+  text-align: right; /* LTR */
+  clear: both;
+}
+
+/* Comment author. */
+.comment-by-anonymous   {}
+.comment-by-node-author {}
+.comment-by-viewer      {}
+
+/* Comment is new. */
+.comment-new {}
+
+/* Comment status. */
+.comment-unpublished {}
+
+/* Zebra styles for comments. See genesis_preprocess_comment.
+.comment.odd  {}
+.comment.even {}
+*/
 
 /* Comment form on a seperate page. */
 .section-comment .box {}
@@ -1459,12 +774,186 @@ div#site-name  {
 #comments .box-inner {}
 #comments .box-title {}
 
-/* Generic box selectors. */
-.box {}
-.box-inner {}
-.box-title {}
-.box-content {}
-.box form       {}
-.box .form-item {}
-.box fieldset   {}
+
+/**
+ * @see blocks.css
+ * Basic styles for blocks.
+ */
+
+/**********************************************************
+ *                       Blocks
+ **********************************************************/
+/**
+ * Styles set for .block, .block-inner, block-title and 
+	* .block-contentwill be inherited by all blocks.
+ */
+.block {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+.block-inner   {} /* Block inner div */
+.block-title   {} /* h2 block title */
+.block-content {} /* Block content wrapper */
+
+/**
+ * Sidebar and Region Specific Block Styles
+ *
+ * You can target blocks in one or more regions and 
+ * style them differently. 
+ */
+/* Low specifity selector to style blocks in both sidebars. */
+.sidebar .block {}
+
+/* Low specifity selector to style blocks in all regions. */
+.region .block {}
+
+/* High specifity selectors to style blocks in one sidebar. */
+#sidebar-left .block {}
+#sidebar-left .block h2 {}
+#sidebar-left .block-inner {}
+#sidebar-left .block .block-content {}
+
+#sidebar-right .block {}
+#sidebar-right .block h2 {}
+#sidebar-right .block-inner {}
+#sidebar-right .block .block-content {}
+
+/* High specifity selectors to style blocks in one region. */
+#leaderboard       .block {}
+#header-blocks     .block {}
+#secondary-content .block {}
+#tertiary-content  .block {}
+#content-top       .block {}
+#content           .block {}
+#content-bottom    .block {}
+#footer            .block {}
+
+/**
+ * Module Block ID's 
+ * For contributed module blocks the pattern is the same,
+	* i.e. #block-[module]-[delta]
+ */
+#block-book-0       {} /* Book navigation block   */
+#block-blog-0       {} /* Recent Blog posts       */
+#block-comment-0    {} /* Recent Comments block   */
+#block-forum-0      {} /* Active Forum topics     */
+#block-forum-1      {} /* New Forum topics        */
+#block-locale-0     {} /* Language Switcher block */
+#block-node-0       {} /* Syndicate block         */
+#block-poll-0       {} /* Most recent poll        */
+#block-profile-0    {} /* Author information      */
+#block-search-0     {} /* Search form block       */
+#block-statistics-0 {} /* Popular content         */
+#block-system-0     {} /* Powered by Drupal       */
+#block-user-0       {} /* Login block             */
+#block-user-1       {} /* Navigation Menu block   */
+#block-user-2       {} /* Who's New block         */
+#block-user-3       {} /* Who's Online block      */
+
+/* Primary and Secondary links blocks */
+#block-menu-primary-links   {}
+#block-menu-secondary-links {}
+
+/* The class selector applies to all blocks of these types. */
+.block-user {} 
+.block-book {} 
+.block-aggregator {}
+
+
+/**
+ * Block Odd & Even Styles (Zebra)
+ * Blocks can have alternating styles for odd and even.
+	*
+	* See genesis_preprocess_block to use these classes.
+ */
+/*
+.sidebar .block.odd  {}
+.sidebar .block.even {}
+#sidebar-left .block.odd  {}
+#sidebar-left .block.even {}
+#sidebar-right .block.odd  {}
+#sidebar-right .block.even {}
+*/
+
+/**
+ * Alternative Approach to Region Block Styling
+ *
+ * Blocks can be aware of what region they are in, so its
+ * possible to use chained selectors such as;
+ *
+ * .block.odd.right {}
+	*
+	* See genesis_preprocess_block to use these classes.
+ */
+
+/**********************************************************
+ *                   Menu blocks
+ **********************************************************/
+/**
+ * Prefix these with the block id to style one menu only.
+ */
+ul.menu {
+  margin: 0 0 0 0.5em;
+  padding: 0;
+}
+
+ul.menu ul, 
+ul.menu ul ul, 
+ul.menu ul ul ul {
+  margin: 0;
+}
+
+ul.menu li,
+li.expanded,
+li.collapsed,
+li.leaf {
+  margin: 0;
+}
+
+/* Override Drupal default bullet gifs with a CSS Sprite */
+ul.menu li {
+  background: none;
+  display: block;
+  list-style: none;
+  list-style-image: none;
+  padding: 0.35em 0 0 1em; /* LTR */
+}
+
+ul.menu li.collapsed,
+ul.menu li.expanded,
+ul.menu li.leaf {
+  background: transparent url(../images/menu-sprite.png) no-repeat;
+}
+
+ul.menu li.collapsed {
+  background-position: -1px -7px; /* LTR */
+}
+
+ul.menu li.expanded {
+  background-position: -22px -27px; /* LTR */
+}
+
+ul.menu li.leaf {
+  background-position: -1px 10px; /* LTR */
+}
+
+ul.menu li a:link    {}
+ul.menu li a:hover   {}
+ul.menu li a:visited {}
+ul.menu li.active a  {}
+ul.menu li.active-trail {}
+
+ul.menu li.first {}
+ul.menu li.last  {}
+
+
+/**********************************************************
+ *                   Block lists
+ **********************************************************/
+.block .item-list ul {
+  margin: 0;
+}
+.block .item-list ul li {}
+
 

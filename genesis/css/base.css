@@ -1,17 +1,18 @@
-/* $Id: base.css,v 1.1.2.1 2009/05/03 22:15:34 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.2 2009/05/04 10:00:58 jmburnz Exp $ */
 
 /**
  * @file base.css
  * Base is the master reset for browsers and Drupal.
 	* Base contains an exact copy of the modular stylsheets
 	* in css/modular:
-	*   typography.css
-	*   tables.css
-	*   messages.css
-	*   lists.css
-	*   forms.css
-	*   admin-styles.css
-	*
+	
+	* typography.css
+	* tables.css
+	* messages.css
+	* lists.css
+	* forms.css
+	* admin-styles.css
+
 	* By default Genesis uses base.css, mainly because Drupal can 
 	* load a ridiculus number of stylesheets depending on what modules
 	* you have enabled; base.css is an effort to reduce http requests and 
@@ -19,6 +20,11 @@
 	
 	* To gain more control over the stylesheets you can unset this and load
 	* a subset of the modular stylesheets.
+ */
+
+/**
+ * @see typography.css
+ * Reset styles for typographical elements.
  */
 
 /*********************************************************
@@ -163,6 +169,11 @@ blockquote, q {
 }
 
 
+/**
+ * @see tables.css
+ * Set styles for tables.
+ */
+
 /**********************************************************
  *                   Tables
  **********************************************************/
@@ -274,6 +285,11 @@ tr:first-child td.container {
 }
 
 
+/**
+ * @see messages.css
+ * Basic styles for messages.
+ */
+	
 /*********************************************************
 *                   Messages
 **********************************************************/
@@ -452,6 +468,11 @@ div.help ul:last-child {
 }
 
 
+/**
+ * @see lists.css
+ * Global list reset.
+ */
+	
 /*********************************************************
 *                     Lists
 **********************************************************/
@@ -502,6 +523,11 @@ dd {
 }
 
 
+/**
+ * @see forms.css
+ * Basic styles for forms.
+ */
+	
 /*********************************************************
 *                     Forms
 **********************************************************/
@@ -704,7 +730,11 @@ html.js #user-login li.openid-link {
   padding: 0 20px;
 }
 
-
+/**
+ * @see admin.css
+ * Basic styles for admin sections.
+ */
+	
 /*********************************************************
 *                        Admin
 **********************************************************/
@@ -857,7 +887,7 @@ ul.secondary a.active {
  **********************************************************/
 /* Bump the font size, I can't read 9px lucida grande */
 #admin-menu {
-  font: 0.8125em Arial, Helvetica, sans-serif;
+  font-size: 11px;
 }
 
 

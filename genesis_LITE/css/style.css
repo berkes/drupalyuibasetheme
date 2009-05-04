@@ -1,4 +1,4 @@
-/* $Id: style.css,v 1.1.2.1 2009/05/03 22:21:11 jmburnz Exp $ */
+/* $Id: style.css,v 1.1.2.2 2009/05/04 10:00:59 jmburnz Exp $ */
 
 /**
  * @file style.css
@@ -95,8 +95,13 @@ a img {
  *                 Custom Styles
  **********************************************************/
 /**
- * Here you can add custom stles for yout theme.
+ * Here you can add custom stles for your theme that do not fit
+	* into one if the modular stylesheets (such as the nodes, blocks,
+	* page and comments stylesheets).
  */
+
+
+
 
 
 
