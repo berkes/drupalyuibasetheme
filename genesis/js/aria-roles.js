@@ -1,4 +1,4 @@
-// $Id: aria-roles.js,v 1.1.2.3 2009/05/02 00:51:39 jmburnz Exp $
+// $Id: aria-roles.js,v 1.1.2.4 2009/05/07 18:09:52 jmburnz Exp $
 
 /**
  * Insert WAI-ARIA Landmark Roles (Roles for Accessible Rich Internet Applications)
@@ -9,17 +9,33 @@
 	* we use JavaScript to insert the roles. This is a work in process and will 
 	* be deprecated at some stage.
 	*
-	* To use uncomment the script in genesis.info
+	* To unset comment out aria-roles.js in genesis.info
  */
 if (Drupal.jsEnabled) {
   $(document).ready(function() {
-    $("#branding").attr("role","banner");
-    $("#main-content").attr("role","main");
+
+				// Set role=banner on #branding wrapper div.
+				$("#branding").attr("role","banner");
+
+				// Set role=complementary on #main-content blocks, sidebars and regions.
 		  $(".block, .sidebar, .region").attr("role","complementary");
+				
+				// Remove role=complementary from system blocks.
+				$(".block-system").removeAttr("role","complementary");
+				
+				// Set role=main on #main-content div.
+				$("#main-content").attr("role","main");
+				
+				// Set role=search on search block and box.
     $("#search, #block-search-0").attr("role","search");
-    $("#nav, #breadcrumb, .block-menu, #block-user-1, .block-book, .block-forum, .block-blog, .block-statistics-0, .block-aggregator, .node ul.links, ul.pager").attr("role","navigation");
+				
+				// Set role=contentinfo on the footer message.
 		  $("#footer-message").attr("role","contentinfo");
+				
+				// Set role=article on nodes.
     $(".node").attr("role","article");
-		  $(".block-system").removeAttr("role","complementary");
+				
+				// Set role=nav on navigation-like blocks.
+				$("#nav, #breadcrumb, .block-menu, #block-user-1, .block-book, .block-forum, .block-blog, .block-comment, .block-statistics-0, .block-aggregator, .node ul.links, ul.pager").attr("role","navigation");
   }); 
 }
