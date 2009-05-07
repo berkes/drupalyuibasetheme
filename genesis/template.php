@@ -1,15 +1,17 @@
 <?php
-// $Id: template.php,v 1.1.2.12 2009/05/03 22:16:07 jmburnz Exp $
+// $Id: template.php,v 1.1.2.13 2009/05/07 18:26:31 jmburnz Exp $
 
 /**
  * @file template.php
  */
+
 
 /**
  * Automatically rebuild the theme registry.
 	* Uncomment to use during development.
 	*/
 //drupal_rebuild_theme_registry();
+
 
 /**
  * Override or insert variables into page templates.
@@ -42,31 +44,66 @@ function genesis_preprocess_page(&$vars, $hook) {
 		if (!empty($vars['secondary_links'])) {
     $vars['secondary_menu'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-links'));
   }
-		
-  // Section classes.
-		$path = drupal_get_path_alias($_GET['q']);
+
+  // Section class. The section class is printed on the body element and allows you theme site sections.
+		// We use the alias here because otherwise all nodes will be in "section-node".
+		$path_alias = drupal_get_path_alias($_GET['q']);
   if (!$vars['is_front']) {
-    list($section, ) = explode('/', $path, 2);
+    list($section, ) = explode('/', $path_alias, 2);
 				$vars['section_class'] = safe_string('section-'. $section);
   }
-		// body_classes.
+		
+		// Body Classes. In Genesis these are printed on the #container wrapper div, not on the body.
   $classes = explode(' ', $vars['body_classes']);
-  if ($class = array_search(preg_replace('/[^a-z0-9_-]+/', '', 'page-'. drupal_strtolower(arg(0))), $classes)) {
+		
+		// Remove the useless page-arg(0) class. In Drupal 7 this become more useful but for now section-class is better.
+  if ($class = array_search(preg_replace('![^abcdefghijklmnopqrstuvwxyz0-9-]+!s', '', 'page-'. drupal_strtolower(arg(0))), $classes)) {
     unset($classes[$class]);
   }
-  if (!$vars['is_front']) {
-    $classes[] = safe_string('page-'. $path);
-    if (arg(0) == 'node') {
-      if (arg(1) == 'add') {
-        $classes[] = 'page-node-add'; // Add .node-add class.
-      }
-      elseif (is_numeric(arg(1)) && (arg(2) == 'edit' || arg(2) == 'delete')) {
-        $classes[] = 'page-node-'. arg(2); // Add .node-edit or .node-delete classes.
-      }
-    }
+		
+  /** 
+		 * Optional Region body classes
+			* Uncomment the following if you need to set
+			* body classes for each active region.
+		 */
+  /*		
+  if (!empty($vars['leaderboard'])) {
+    $classes[] = 'leaderboard';
   }
+  if (!empty($vars['header'])) {
+    $classes[] = 'header-blocks';
+  }
+		if (!empty($vars['secondary_content'])) {
+    $classes[] = 'secondary-content';
+  }
+		if (!empty($vars['tertiary_content'])) {
+    $classes[] = 'tertiary-content';
+  }
+		if (!empty($vars['footer'])) {
+    $classes[] = 'footer';
+  }
+		*/
+		
+		/**
+		 * Additional body classes to help out themers.
+			*/
+		if (!$vars['is_front']) {
+				$normal_path = drupal_get_normal_path($_GET['q']);
+				// Set a class based on Drupals internal path, e.g. page-node-1. 
+				// Using the alias is weak because path alias's can change. 
+				$classes[] = safe_string('page-'. $normal_path);
+				if (arg(0) == 'node') {
+						if (arg(1) == 'add') {
+								$classes[] = 'page-node-add'; // Add .node-add class.
+						}
+						elseif (is_numeric(arg(1)) && (arg(2) == 'edit' || arg(2) == 'delete')) {
+								$classes[] = 'page-node-'. arg(2); // Add .node-edit or .node-delete classes.
+						}
+				}
+		}
   $vars['classes'] = implode(' ', $classes); // Concatenate with spaces.
 }
+
 
 /**
  * Override or insert variables into the node templates.
@@ -105,13 +142,14 @@ function genesis_preprocess_node(&$vars, $hook) {
 		// Set messages if node is unpublished.
   if (!$vars['node']->status) {
 		  if ($vars['page']) {
-				  drupal_set_message(t('This node is currently unpublished.'), $type = 'warning');
+				  drupal_set_message(t('%title is currently unpublished', array('%title' => $vars['node']->title)), 'warning'); 
 				}
 				else {
 			   $vars['unpublished'] = '<span class="unpublished">'. t('Unpublished') .'</span>';
 				}
   }
 }
+
 
 /**
  * Override or insert variables in comment templates.
@@ -156,12 +194,12 @@ function genesis_preprocess_comment(&$vars, $hook) {
 		}
 		
 		// Set messages if comment is unpublished.
-		$message = t('Comment'). ' #'. $vars['id'] . t(' is currently unpublished.');
 		if ($vars['comment']->status == COMMENT_NOT_PUBLISHED) {
-				drupal_set_message($message, $type = 'warning');
+				drupal_set_message(t('Comment #!id is currently unpublished', array('!id' => $vars['id'])), 'warning');
 				$vars['unpublished'] = '<span class="unpublished">'. t('Unpublished') .'</span>';
 		}
 }
+
 
 /**
  * Add a "Comments" heading above comments except on forum pages.
@@ -171,6 +209,7 @@ function genesis_preprocess_comment_wrapper(&$vars) {
     $vars['content'] = '<h2 id="comments-title">'. t('Comments') .'</h2>'.  $vars['content'];
   }
 }
+
 
 /**
  * Override or insert variables into block templates.
@@ -182,11 +221,25 @@ function genesis_preprocess_comment_wrapper(&$vars) {
  */
 function genesis_preprocess_block(&$vars, $hook) {
   $block = $vars['block'];
-
+		
+		// Set up variables for navigation-like blocks.
+  $n1 = array('user-1', 'statistics-0');
+		$n2 = array('menu', 'book', 'forum', 'blog', 'aggregator', 'comment');
+  $h1 = $block->module .'-'. $block->delta;
+		$h2 = $block->module;
+		
   // Special classes for blocks
   $classes = array();
-  $classes[] = 'block';
+	 $classes[] = 'block';
   $classes[] = 'block-'. $block->module;
+		// Add nav class to navigation-like blocks.
+		if (in_array($h1, $n1)) {
+		  $classes[] = 'nav';
+		}		
+		if (in_array($h2, $n2)) {
+		  $classes[] = 'nav';
+		}
+
   // Optionally use additional block classes
 		//$classes[] = $vars['block_zebra'];
   //$classes[] = 'block-'. $block->region;
@@ -239,23 +292,23 @@ function genesis_preprocess_block(&$vars, $hook) {
 		}
 }
 
+
 /**
- * Converts a string to an id.
+ * Clean a string of unwanted characters.
  *
  * @param $string
  *   The string
  * @return
  *   The converted string
- *
- * @see http://drupal.org/project/zen
  */
 function safe_string($string) {
-  $string = drupal_strtolower(preg_replace('/[^a-zA-Z0-9_-]+/', '-', $string));
-  if (!ctype_lower($string{0})) {
+		$string = strtolower(preg_replace('/[^a-zA-Z0-9-]+/', '-', $string));
+		if (!ctype_lower($string{0})) {
     $string = 'id'. $string;
   }
   return $string;
 }
+
 
 /**
  * Return a themed breadcrumb trail.
@@ -270,4 +323,3 @@ function genesis_breadcrumb($breadcrumb) {
     return implode(' » ', $breadcrumb);
   }
 }
-
