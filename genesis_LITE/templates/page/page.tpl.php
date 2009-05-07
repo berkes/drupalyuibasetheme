@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.11 2009/05/04 14:57:18 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.12 2009/05/07 18:07:44 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -85,8 +85,7 @@
  */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
-
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language ?>" lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
 <head>
   <?php print $head; ?>
 		<title><?php print $head_title; ?></title>
@@ -107,7 +106,7 @@
     </div>
 
     <?php if ($leaderboard): ?>
-      <div id="leaderboard" class="region clear-block"><?php print $leaderboard; ?></div>
+      <div id="leaderboard" class="region section"><?php print $leaderboard; ?></div>
     <?php endif; ?>
 
 				<div id="header" class="clear-block">
@@ -137,27 +136,27 @@
 						<?php if ($search_box): print $search_box; endif; ?>
 
 						<?php if ($header): ?>
-								<div id="header-blocks" class="region"><?php print $header; ?></div>
+								<div id="header-blocks" class="sectionregion"><?php print $header; ?></div>
 						<?php endif; ?>
 
 				</div>
 
 				<?php if ($primary_menu or $secondary_menu): ?>
-						<div id="nav" class="clear-block">
+						<div id="nav">
 								<?php if ($primary_menu): print $primary_menu; endif; ?>
 								<?php if ($secondary_menu): print $secondary_menu; endif; ?>
 						</div>
 				<?php endif; ?>
 
     <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+      <div id="breadcrumb" class="nav"><?php print $breadcrumb; ?></div>
     <?php endif; ?>
 
     <?php if ($secondary_content): ?>
-      <div id="secondary-content" class="region clear clear-block"><?php print $secondary_content; ?></div>
+      <div id="secondary-content" class="section region"><?php print $secondary_content; ?></div>
     <?php endif; ?>
 
-    <div id="columns" class="clear">
+    <div id="columns">
 
       <div id="content-column">
         <div class="content-inner">
@@ -167,7 +166,7 @@
           <?php endif; ?>
 
           <?php if ($content_top): ?>
-            <div id="content-top" class="region"><?php print $content_top; ?></div>
+            <div id="content-top" class="section region"><?php print $content_top; ?></div>
           <?php endif; ?>
 
           <div id="main-content">								
@@ -179,28 +178,28 @@
           </div>
 
           <?php if ($content_bottom): ?>
-            <div id="content-bottom" class="region"><?php print $content_bottom; ?></div>
+            <div id="content-bottom" class="section region"><?php print $content_bottom; ?></div>
           <?php endif; ?>
 
         </div>
       </div>
 
       <?php if ($left): ?>
-        <div id="sidebar-left" class="sidebar"><?php print $left; ?></div>
+        <div id="sidebar-left" class="section sidebar region"><?php print $left; ?></div>
       <?php endif; ?>
 
       <?php if ($right): ?>
-        <div id="sidebar-right" class="sidebar"><?php print $right; ?></div>
+        <div id="sidebar-right" class="section sidebar region"><?php print $right; ?></div>
       <?php endif; ?>
 
     </div>
 
     <?php if ($tertiary_content): ?>
-      <div id="tertiary-content" class="region clear-block"><?php print $tertiary_content; ?></div> 
+      <div id="tertiary-content" class="section region"><?php print $tertiary_content; ?></div> 
     <?php endif; ?>
 
     <?php if ($footer): ?>
-      <div id="footer" class="region clear clear-block"><?php print $footer; ?></div>
+      <div id="footer" class="section region"><?php print $footer; ?></div>
     <?php endif; ?>
 
     <?php if ($footer_message or $feed_icons): ?>
