@@ -1,4 +1,4 @@
-/* $Id: _all-subtheme.css,v 1.1.2.8 2009/05/04 10:00:59 jmburnz Exp $ */
+/* $Id: _all-subtheme.css,v 1.1.2.9 2009/05/07 18:24:10 jmburnz Exp $ */
 
 /**
   * @file _all-subtheme.css
@@ -29,7 +29,6 @@
 	* and other Drupal styles. Anything that doesn't fit logically
 	* into page.css, nodes.css, blocks.css or comments.css can go here.
  */
-
 /**********************************************************
  *                    Body
  **********************************************************/
@@ -131,12 +130,6 @@ a img {
  * @see page.css
  * This stylesheet provides the page main styles for this theme.
  */
-
-/**
- * Remove unused styles for performace.
- */
-
-
 /**********************************************************
  *                      html, Body
  **********************************************************/
@@ -176,13 +169,30 @@ body {}
 .node-type-poll  {}
 .node-type-story {}
 
-/* Warning! The sidebar body classes are integral to how genesis
-   applies the layout - do not add margin, padding, borders,
-			or positioning styles to these classes! See layout.css */
+/**
+ * Warning! 
+ * The sidebar body classes are integral to how genesis
+ * applies the layout - do not add margin, padding, borders,
+ * or positioning styles to these classes! @see layout.css. 
+ */
 .one-sidebar   {}
+.two-sidebars  {}
 .sidebar-right {}
 .sidebar-left  {}
-.two-sidebars  {}
+
+/** 
+ * Optional Region body classes
+	* When any of the following regions are active a body class can be set.
+ * To use you need to uncomment the conditional statements in 
+ * genesis_preprocess_page(), @see template.php.
+ */
+/*
+.leaderboard       {}
+.header-blocks     {}
+.secondary-content {}
+.tertiary-content  {}
+.footer            {}
+*/
 
 /** 
  * Page Path Class
@@ -576,7 +586,6 @@ h1#page-title {}
  * @see nodes.css
  * Basic styles for nodes.
  */
-
 /**********************************************************
  *                      Nodes
  **********************************************************/
@@ -691,12 +700,10 @@ h1#page-title {}
 .field-field-FIELDNAME {}
 
 
-
 /**
  * @see comments.css
  * Basic styles for comments.
  */
-
 /**********************************************************
  *                     Comments
  **********************************************************/
@@ -779,7 +786,6 @@ h1#page-title {}
  * @see blocks.css
  * Basic styles for blocks.
  */
-
 /**********************************************************
  *                       Blocks
  **********************************************************/
@@ -954,6 +960,6 @@ ul.menu li.last  {}
 .block .item-list ul {
   margin: 0;
 }
-.block .item-list ul li {}
 
+.block .item-list ul li {}
 

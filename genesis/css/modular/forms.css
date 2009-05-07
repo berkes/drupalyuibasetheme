@@ -1,4 +1,4 @@
-/* $Id: forms.css,v 1.1.2.1 2009/05/03 22:15:34 jmburnz Exp $ */
+/* $Id: forms.css,v 1.1.2.2 2009/05/07 18:24:10 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -25,11 +25,16 @@ select {
   border: 1px solid #C0C0C0;
 }
 
+input.form-text:focus,
 input.text:focus, 
-input.title:focus,
-textarea:focus, 
+input.title:focus, 
 select:focus {
-  border: 1px solid #666;
+  border: 1px solid #FFCC00;
+		background: #FFFFDF;
+}
+
+textarea:focus {
+  border: 1px solid #FFCC00;
 }
 
 input.text, 

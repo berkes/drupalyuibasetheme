@@ -1,4 +1,4 @@
-/* $Id: layout.css,v 1.1.2.6 2009/04/28 09:39:47 jmburnz Exp $ */
+/* $Id: layout.css,v 1.1.2.7 2009/05/07 18:24:10 jmburnz Exp $ */
 
 /**
  * Genesis layout methods
@@ -91,24 +91,41 @@
 /*********************************************************
 *                     Containers
 **********************************************************/
-/* Main containers*/
-html, body {margin: 0; padding: 0;}
+/* Automatic centering for widths less than 100%. */
+#container {
+  margin: 0 auto;
+} 
 
-/* Automatic centering for widths less than 100% */
-#container {margin: 0 auto;} 
+/* Trigger hasLayout. */
+#columns {
+  display: inline-block; 
+}
+/* Reset for compliant browsers. */
+#container > #columns {
+  display: block;
+}
 
-/* Trigger hasLayout */
-#columns {display: inline-block;}
-/* Reset for compliant browses */
-#container > #columns {display: block;}
-
-/* Float the columns */
+/* Float the columns. */
 #content-column,
 #sidebar-left,
-#sidebar-right {float: left;}
+#sidebar-right {
+  float: left;
+}
 
-/* Set width on main content column */
-#content-column {width: 100%;}
+/* Set a width on main content column. */
+#content-column {
+  width: 100%;
+}
 
-/* Clear both */
-.clear {clear: both;}
+/* Helper class for clearing both. */
+.clear,
+#nav,
+#columns,
+#breadcrumb,
+#secondary-content,
+#tertiary-content,
+#footer-wrapper,
+#footer,
+#footer-message {
+  clear: both;
+}

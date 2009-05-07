@@ -1,4 +1,4 @@
-/* $Id: base.css,v 1.1.2.2 2009/05/04 10:00:58 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.3 2009/05/07 18:24:10 jmburnz Exp $ */
 
 /**
  * @file base.css
@@ -22,14 +22,14 @@
 	* a subset of the modular stylesheets.
  */
 
+/*********************************************************
+*                  Typographic reset
+**********************************************************/
 /**
  * @see typography.css
  * Reset styles for typographical elements.
  */
 
-/*********************************************************
-*                  Typographic reset
-**********************************************************/
 /**
  * Global Font Size
  *
@@ -168,15 +168,14 @@ blockquote, q {
   quotes: "" "";
 }
 
-
+/**********************************************************
+ *                   Tables
+ **********************************************************/
 /**
  * @see tables.css
  * Set styles for tables.
  */
 
-/**********************************************************
- *                   Tables
- **********************************************************/
 /** 
  * The selector groupings are from Garland which offers a
  * sensible starting point for styling Drupal tables.
@@ -261,10 +260,7 @@ tr:first-child td.container {
   border-top-width: 0;
 }
 
-
-/**********************************************************
- *                     Forum tables
- **********************************************************/
+/* Forum tables */
 #forum table {
   width: 100%;
 }
@@ -284,15 +280,14 @@ tr:first-child td.container {
   margin-left: 0.5em;
 }
 
-
+/*********************************************************
+*                   Messages
+**********************************************************/
 /**
  * @see messages.css
  * Basic styles for messages.
  */
-	
-/*********************************************************
-*                   Messages
-**********************************************************/
+
 .description {
   color: #888;
 }
@@ -467,15 +462,14 @@ div.help ul:last-child {
   font-weight: bold;
 }
 
-
+/*********************************************************
+*                     Lists
+**********************************************************/
 /**
  * @see lists.css
  * Global list reset.
  */
-	
-/*********************************************************
-*                     Lists
-**********************************************************/
+
 ul, ol {
   margin: 0 0 1.5em 1.75em; /* LTR */
   padding: 0;
@@ -521,16 +515,15 @@ dd {
   margin: 0 0 0 1.75em; /* LTR */
   padding: 0;  
 }
-
-
+	
+/*********************************************************
+*                     Forms
+**********************************************************/
 /**
  * @see forms.css
  * Basic styles for forms.
  */
 	
-/*********************************************************
-*                     Forms
-**********************************************************/
 form {
   margin: 0 0 1.5em 0; 
   padding: 0;
@@ -548,11 +541,16 @@ select {
   border: 1px solid #C0C0C0;
 }
 
+input.form-text:focus,
 input.text:focus, 
-input.title:focus,
-textarea:focus, 
+input.title:focus, 
 select:focus {
-  border: 1px solid #666;
+  border: 1px solid #FFCC00;
+		background: #FFFFDF;
+}
+
+textarea:focus {
+  border: 1px solid #FFCC00;
 }
 
 input.text, 
@@ -626,10 +624,7 @@ label, legend {
   padding: 0;
 }
 
-
-/*********************************************************
-*                     Fieldsets
-**********************************************************/
+/* Fieldsets */
 fieldset {
   background: transparent;
   border: 1px solid #dadada;
@@ -682,9 +677,7 @@ html.js fieldset.collapsed legend a {
 }
 
 
-/*********************************************************
-*                     Vertical Tabs
-**********************************************************/
+/* Vertical Tabs */
 #node-form .vertical-tabs ul.vertical-tabs-list {
   margin: 0;
 }
@@ -693,10 +686,7 @@ html.js fieldset.collapsed legend a {
   list-style: none;
 }
 
-
-/*********************************************************
-*              OpenID icon fix for Drupal 6
-**********************************************************/
+/* OpenID icon fix for Drupal 6 */
 #user-login-form li.openid-link,
 #user-login-form li.user-link {
   text-align: center;
@@ -730,14 +720,14 @@ html.js #user-login li.openid-link {
   padding: 0 20px;
 }
 
+/*********************************************************
+*                        Admin
+**********************************************************/
 /**
  * @see admin.css
  * Basic styles for admin sections.
  */
 	
-/*********************************************************
-*                        Admin
-**********************************************************/
 /**
  * Admin panels.
  */
@@ -833,10 +823,7 @@ tr .block {
   border: 0; /* Blocks page table. */
 }
 
-
-/**********************************************************
- *                 Local tasks tabs
- **********************************************************/
+/* Local tasks tabs */
 .local-tasks {
   margin-bottom: 0.75em;
 }
@@ -881,14 +868,12 @@ ul.secondary a.active {
   text-decoration: underline;
 }
 
-
-/**********************************************************
- *                 Admin menu
- **********************************************************/
+/* Admin menu */
+/* Make margin elastic so it changes on font resize */
+body.admin-menu {
+  margin-top: 1.75em !important;
+}
 /* Bump the font size, I can't read 9px lucida grande */
 #admin-menu {
-  font-size: 11px;
+  font-size: 0.94em;
 }
-
-
-
