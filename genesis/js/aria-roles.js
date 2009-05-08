@@ -1,4 +1,4 @@
-// $Id: aria-roles.js,v 1.1.2.4 2009/05/07 18:09:52 jmburnz Exp $
+// $Id: aria-roles.js,v 1.1.2.5 2009/05/08 09:35:31 jmburnz Exp $
 
 /**
  * Insert WAI-ARIA Landmark Roles (Roles for Accessible Rich Internet Applications)
@@ -27,7 +27,7 @@ if (Drupal.jsEnabled) {
 				$("#main-content").attr("role","main");
 				
 				// Set role=search on search block and box.
-    $("#search, #block-search-0").attr("role","search");
+    $("#search-theme-form, #search-block-form, #search-form").attr("role","search");
 				
 				// Set role=contentinfo on the footer message.
 		  $("#footer-message").attr("role","contentinfo");
