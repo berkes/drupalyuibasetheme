@@ -1,4 +1,4 @@
-/* $Id: _all-subtheme.css,v 1.1.2.9 2009/05/07 18:24:10 jmburnz Exp $ */
+/* $Id: _all-subtheme.css,v 1.1.2.10 2009/05/08 09:36:13 jmburnz Exp $ */
 
 /**
   * @file _all-subtheme.css
@@ -307,7 +307,11 @@ body {}
  * Do not use display: none as this hides it from screen readers.
  */
 #skip-nav {
-  text-align: center;
+  text-align: right;
+}
+#skip-nav a:focus {
+  border: 1px solid #FFCC00;
+		background: #FFFFCF;
 }
 #skip-nav a:link    {}
 #skip-nav a:hover   {}
