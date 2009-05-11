@@ -1,5 +1,5 @@
 <?php
-// $Id: user-picture.tpl.php,v 1.1.2.1 2009/05/03 22:17:38 jmburnz Exp $
+// $Id: user-picture.tpl.php,v 1.1.2.2 2009/05/11 20:28:33 jmburnz Exp $
 
 /**
  * @file user-picture.tpl.php
@@ -19,4 +19,4 @@
   <div class="user-picture">
     <?php print $picture; ?>
   </div>
-<?php endif; ?>
+<?php endif; ?> <!-- /user-picture -->

@@ -1,5 +1,5 @@
 <?php
-// $Id: box.tpl.php,v 1.1.2.4 2009/05/04 14:57:18 jmburnz Exp $
+// $Id: box.tpl.php,v 1.1.2.5 2009/05/11 20:28:34 jmburnz Exp $
 
 /**
  * @file box.tpl.php
@@ -14,14 +14,11 @@
 ?>
 <div class="box">
   <div class="box-inner">
-
     <?php if ($title): ?>
       <h2 class="box-title"><?php print $title ?></h2>
     <?php endif; ?>
-
     <div class="box-content">
       <?php print $content ?>
     </div>
-
   </div>
-</div>
+</div> <!-- /box -->

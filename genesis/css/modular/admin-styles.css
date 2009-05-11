@@ -1,4 +1,4 @@
-/* $Id: admin-styles.css,v 1.1.2.1 2009/05/03 22:15:34 jmburnz Exp $ */
+/* $Id: admin-styles.css,v 1.1.2.2 2009/05/11 20:28:32 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -47,7 +47,7 @@ div.admin .right {
 }
 
 .admin-panel ul li {
-		color: #888;
+  color: #888;
 }
 
 .admin-panel dl {
@@ -62,7 +62,7 @@ div.admin .right {
 .admin-panel dd {
   color: #888; 
   font-size: 0.94em;
-		margin-left: 0;
+  margin-left: 0;
 }
 
 .admin .compact-link {
@@ -119,7 +119,7 @@ ul.primary {
 ul.primary li a {
   background-color: #EEE;
   border-color: #CCC;
-		margin-right: 0.08em;
+  margin-right: 0.08em;
   padding: 0.1em 0.75em 0.2em;
 }
 
@@ -154,5 +154,6 @@ ul.secondary a.active {
  *                 Admin menu
  **********************************************************/
 /* Bump the font size, I can't read 9px lucida grande */
-#admin-menu {font: 0.8125em Arial, Helvetica, sans-serif;}
-
+#admin-menu {
+  font: 0.8125em Arial, Helvetica, sans-serif;
+}

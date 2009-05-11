@@ -1,32 +1,32 @@
-/* $Id: _all-lite.css,v 1.1.2.10 2009/05/08 09:36:13 jmburnz Exp $ */
+/* $Id: _all-lite.css,v 1.1.2.11 2009/05/11 20:28:33 jmburnz Exp $ */
 
 /**
-  * @file _all-lite.css
-  * Genesis LITE modular stylesheets aggregated into one file.
-		*
-		* Includes an exact copy of the following stylesheets:
-
-		* style.css		
-  * page.css
-  * nodes.css		
-  * comments.css		
-  * blocks.css
-		
-		* USAGE
-		* 1) Unset the mini stylesheets in genesis_LITE.info by commenting them out.
-		* 2) Enable _all-lite.css by uncommenting it in genesis_LITE.info
-		*
-		* The file is useful for working around IE7's 30 max stylesheets issue
-		* when you cannot turn on CSS aggregation in Performance settings.
-  */
+ * @file _all-lite.css
+ * Genesis LITE modular stylesheets aggregated into one file.
+ *
+ * Includes an exact copy of the following stylesheets:
+ *
+ * style.css		
+ * page.css
+ * nodes.css		
+ * comments.css		
+ * blocks.css
+ *	
+ * USAGE
+ * 1) Unset the mini stylesheets in genesis_LITE.info by commenting them out.
+ * 2) Enable _all-lite.css by uncommenting it in genesis_LITE.info
+ *
+ * The file is useful for working around IE7's 30 max stylesheets issue
+ * when you cannot turn on CSS aggregation in Performance settings.
+ */
 
 /**
  * @see style.css
-	*
-	* Use this file to override the Genesis core modular styles 
-	* (such as the HTML elements in typography.css), module CSS 
-	* and other Drupal styles. Anything that doesn't fit logically
-	* into page.css, nodes.css, blocks.css or comments.css can go here.
+ *
+ * Use this file to override the Genesis core modular styles 
+ * (such as the HTML elements in typography.css), module CSS 
+ * and other Drupal styles. Anything that doesn't fit logically
+ * into page.css, nodes.css, blocks.css or comments.css can go here.
  */
 /**********************************************************
  *                    Body
@@ -115,8 +115,8 @@ a img {
  **********************************************************/
 /**
  * Here you can add custom stles for your theme that do not fit
-	* into one if the modular stylesheets (such as the nodes, blocks,
-	* page and comments stylesheets).
+ * into one if the modular stylesheets (such as the nodes, blocks,
+ * page and comments stylesheets).
  */
 
 
@@ -141,15 +141,15 @@ body {}
  **********************************************************/
 /**
  * Normally you will use these in combination with other
-	* selectors. I include them here for completedness.
-	*/
+ * selectors. I include them here for completedness.
+ */
 	
 /** 
  * Section Class
  * The section class takes the 2nd part of the URL and
-	* builds a section-[path-part] class from it. If you emulate
-	* site sections using the Pathauto module this can be a 
-	* powerful way to style site sections.
+ * builds a section-[path-part] class from it. If you emulate
+ * site sections using the Pathauto module this can be a 
+ * powerful way to style site sections.
  */
 /* .section-[path-part] {}  replace [path-part] */
 
@@ -182,7 +182,7 @@ body {}
 
 /** 
  * Optional Region body classes
-	* When any of the following regions are active a body class can be set.
+ * When any of the following regions are active a body class can be set.
  * To use you need to uncomment the conditional statements in 
  * genesis_preprocess_page(), @see template.php.
  */
@@ -197,21 +197,36 @@ body {}
 /** 
  * Page Path Class
  * The page path class takes the entire URL and
-	* builds a page-[path] class from it. See example
-	* below. You need to use Firebug or view source to
-	* find out what the actual class will be, and be aware
-	* that this will change if your URL alias changes!
+ * builds a page-[path] class from it. See example
+ * below. You need to use Firebug or view source to
+ * find out what the actual class will be, and be aware
+ * that this will change if your URL alias changes!
  */
 /* .page-[example-node-path] {}  replace [example-node-path] */
 
 
 /**********************************************************
- *                     The wrapper divs
+ *                  The wrapper divs
+	*    Be careful how you modify these, see layout.css
  **********************************************************/
 /**
- * Be careful how you modify these, see layout.css first.
+ * Width Setting
+ *
+ * Genesis supports Elastic, Fluid and Fixed width values.
+ * Elastic layouts are dynamic and will expand or contract when 
+ * the font size is changed. Fluid widths change when the browser 
+ * is resized and fixed width layouts stay the same width even 
+ * when the broswer is resized or the font size is changed.
+ *
+ * Elastic layouts use ems,       e.g. 80em
+ * Fluid layouts use percentages, e.g. 85%
+ * Fixed widths use pixels,       e.g. 960px
  */
-#container {}
+#container {
+  width: 90%;
+/* max-width: 1100px; set a maximum width */
+/* min-width: 960px; set a minimum width */
+}
 
 /* Column wrappers */
 #columns {}
@@ -221,29 +236,6 @@ body {}
 #content-column {}
 #main-content {}
 #content {}
-
-
-/**********************************************************
- *                     Width Setting
- **********************************************************/
-/**
- * Override the default width (80em - see layout.css).
- * 80 * 12 = 960px
- *
- * Genesis supports both Fluid and Fixed width values.
- *
- * Liquid layouts use %, e.g.
- * .width {width: 85%;}
- *
- * Fixed width layouts use em or px, e.g.
- * .width {width: 960px;}
- * .width {width: 80em;}
- */
-.width {
-  width: 85%;
-/* max-width: 1100px; set a max width */
-/* min-width: 960px; set a min width */
-}
 
 
 /**********************************************************
@@ -303,7 +295,7 @@ body {}
 }
 #skip-nav a:focus {
   border: 1px solid #FFCC00;
-		background: #FFFFCF;
+  background: #FFFFCF;
 }
 #skip-nav a:link    {}
 #skip-nav a:hover   {}
@@ -531,7 +523,9 @@ h1#page-title {}
  *                 RSS Feed Icon
  **********************************************************/
 .feed-icon {}
-.feed-icon img {}
+.feed-icon img {
+  padding:0 0.5em;
+}
 #footer-message a.feed-icon {}
 
 
@@ -638,7 +632,7 @@ h1#page-title {}
 
 
 /**
- * @see comments.css
+ * @file comments.css
  * Basic styles for comments.
  */
 /**********************************************************
@@ -682,17 +676,26 @@ h1#page-title {}
 .comment .submitted a {}
 .comment .submitted a:hover {}
 
-/* Zebra styles for comments. */
+/**
+ * Comment Classes - extra classes to help out themers.
+ */
+/* Comment author. */
+.comment-by-anonymous   {}
+.comment-by-node-author {}
+.comment-by-viewer      {}
+
+/* Comment is new. */
+.comment-new {}
+
+/* Zebra odd/even classes. */
 .comment.odd  {}
 .comment.even {}
 
-/* Style comments depending on the comment author. */
-.comment-by-author {}
-.comment-by-anon   {}
-.comment-mine      {}
+/* Comment status. */
+.comment-unpublished {}
 
-/* Theme comment status. */
-.comment .unpublished {}
+/* Themes the "Unpublished" text. */
+.comment-unpublished .unpublished {}
 
 /* Comment form on a seperate page. */
 .section-comment .box {}
@@ -757,7 +760,7 @@ h1#page-title {}
 /**
  * Module Block ID's 
  * For contributed module blocks the pattern is the same,
-	* i.e. #block-[module]-[delta]
+ * i.e. #block-[module]-[delta]
  */
 #block-book-0       {} /* Book navigation block   */
 #block-blog-0       {} /* Recent Blog posts       */
@@ -785,32 +788,6 @@ h1#page-title {}
 .block-book {} 
 .block-aggregator {}
 
-
-/**
- * Block Odd & Even Styles (Zebra)
- * Blocks can have alternating styles for odd and even.
-	*
-	* See genesis_preprocess_block to use these classes.
- */
-/*
-.sidebar .block.odd  {}
-.sidebar .block.even {}
-#sidebar-left .block.odd  {}
-#sidebar-left .block.even {}
-#sidebar-right .block.odd  {}
-#sidebar-right .block.even {}
-*/
-
-/**
- * Alternative Approach to Region Block Styling
- *
- * Blocks can be aware of what region they are in, so its
- * possible to use chained selectors such as;
- *
- * .block.odd.right {}
-	*
-	* See genesis_preprocess_block to use these classes.
- */
 
 /**********************************************************
  *                   Menu blocks
@@ -852,15 +829,15 @@ ul.menu li.leaf {
 }
 
 ul.menu li.collapsed {
-  background-position: -1px -7px; /* LTR */
+  background-position: 0 -45px; /* LTR */
 }
 
 ul.menu li.expanded {
-  background-position: -22px -27px; /* LTR */
+  background-position: -43px -84px; /* LTR */
 }
 
 ul.menu li.leaf {
-  background-position: -1px 10px; /* LTR */
+  background-position: 0 0; /* LTR */
 }
 
 ul.menu li a:link    {}
@@ -881,3 +858,6 @@ ul.menu li.last  {}
 }
 
 .block .item-list ul li {}
+
+
+

@@ -1,5 +1,5 @@
 <?php 
-// $Id: block.tpl.php,v 1.1.2.5 2009/05/04 14:57:18 jmburnz Exp $
+// $Id: block.tpl.php,v 1.1.2.6 2009/05/11 20:28:34 jmburnz Exp $
 
 /**
  * @file block.tpl.php
@@ -13,8 +13,8 @@
  * - $block->region: The block region embedding the current block.
  *
  * Helper variables:
-	* - $classes: Outputs dynamic classes for advanced themeing.
-	* - $edit_links: Outputs hover style links for block configuration and editing.
+ * - $classes: Outputs dynamic classes for advanced themeing.
+ * - $edit_links: Outputs hover style links for block configuration and editing.
  * - $block_zebra: Outputs 'odd' and 'even' dependent on each block region.
  * - $zebra: Same output as $block_zebra but independent of any block region.
  * - $block_id: Counter dependent on each block region.
@@ -25,7 +25,7 @@
  *
  * @see template_preprocess()
  * @see template_preprocess_block()
-	* @see genesis_preprocess_block()
+ * @see genesis_preprocess_block()
  */
 
 /**
@@ -46,4 +46,4 @@
     <?php print $edit_links; ?>
 
   </div>
-</div>
+</div> <!-- /block -->

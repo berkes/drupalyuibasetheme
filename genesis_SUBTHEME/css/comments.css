@@ -1,4 +1,4 @@
-/* $Id: comments.css,v 1.1.2.8 2009/05/04 10:00:59 jmburnz Exp $ */
+/* $Id: comments.css,v 1.1.2.9 2009/05/11 20:28:34 jmburnz Exp $ */
 
 /**
  * @file comments.css
@@ -56,6 +56,9 @@
   clear: both;
 }
 
+/**
+ * Comment Classes - extra classes to help out themers.
+ */
 /* Comment author. */
 .comment-by-anonymous   {}
 .comment-by-node-author {}
@@ -64,20 +67,23 @@
 /* Comment is new. */
 .comment-new {}
 
+/* Zebra odd/even classes. */
+.comment.odd  {}
+.comment.even {}
+
 /* Comment status. */
 .comment-unpublished {}
 
-/* Zebra styles for comments. See genesis_preprocess_comment.
-.comment.odd  {}
-.comment.even {}
-*/
+/* Themes the "Unpublished" text. */
+.comment-unpublished .unpublished {}
 
 /* Comment form on a seperate page. */
 .section-comment .box {}
-.section-comment .box-inner {}
-.section-comment .box-title {}
+.section-comment .box .title {}
 
 /* Comment form below content. */
 #comments .box {}
-#comments .box-inner {}
-#comments .box-title {}
+#comments .box .title {}
+
+
+

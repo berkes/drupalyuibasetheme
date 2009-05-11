@@ -1,4 +1,4 @@
-/* $Id: messages.css,v 1.1.2.1 2009/05/03 22:15:34 jmburnz Exp $ */
+/* $Id: messages.css,v 1.1.2.2 2009/05/11 20:28:32 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -54,8 +54,8 @@ div.status  {
 div.help {
   background: #EFF7FF url(../images/info.gif) no-repeat 0.5em 0.5em;
   border: 1px solid #66BEF4;
+  color: #000D2F;
   margin: 1em 0;
-		color: #000D2F;
   padding: 0.5em 0.5em 0.5em 2.4em;
 }
 
@@ -63,7 +63,7 @@ div.help {
 div.warning {
   background: #FFF6DF url(../images/warning.gif) no-repeat 0.5em 0.5em;
   border: 1px solid #FFB900;
-		color: #9F3800;
+  color: #9F3800;
   padding: 0.5em 0.5em 0.5em 2.4em;
 }
  
@@ -90,7 +90,7 @@ div.ok {}
 div.ok, tr.ok,
 table tr.ok td {
   color: #222;
-		padding: 1em 0.5em;
+  padding: 1em 0.5em;
 }
 
 .update tr.ok {
@@ -101,11 +101,14 @@ table tr.ok td {
   padding:0 0 0 1em;
 }
 
-.includes {color: #222;}
+.includes {
+  color: #222;
+}
 .includes em {}
 
 .merge-down {}
 .merge-up {}
+
 /* CSS3 */
 div.help p:last-child,
 div.help ul:last-child {
@@ -126,10 +129,10 @@ div.help ul:last-child {
 }
 
 .block-region {
-		border: 1px dotted #000;
-		color: #000;
-		font: 1em 'andale mono', 'lucida console', monospace;
-		padding: 3px 6px 1px
+  border: 1px dotted #000;
+  color: #000;
+  font: 1em 'andale mono', 'lucida console', monospace;
+  padding: 3px 6px 1px
 }
 
 /* Highlight unpublished nodes and comments*/
@@ -145,30 +148,11 @@ div.help ul:last-child {
 .node-unpublished .unpublished,
 .comment-unpublished .unpublished {
   background: transparent url(../images/warning.gif) no-repeat 0 0;
-		color: #FFB900;
-		font-size: 0.94em;
-		margin-left: 0.5em; /* LTR */
-		padding-left: 18px; /* LTR */
-		visibility: visible;
-}
-
-/* Animated saving throbber */
-#saving {
-  font-size: 1em;
-  font-weight: bold;
-  background: url(../images/loading.gif) no-repeat 1em 0.08em;
-  display: none;
-  padding-left: 3em;
-}
-
-#saving p {
-  margin: 0;
-}
-
-#saving-notice {
-  font-size: 0.9em;
-  font-style: italic;
-  background: #FFC;
+  color: #FFB900;
+  font-size: 0.94em;
+  margin-left: 0.5em; /* LTR */
+  padding-left: 18px; /* LTR */
+  visibility: visible;
 }
 
 /**

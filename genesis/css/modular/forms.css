@@ -1,4 +1,4 @@
-/* $Id: forms.css,v 1.1.2.2 2009/05/07 18:24:10 jmburnz Exp $ */
+/* $Id: forms.css,v 1.1.2.3 2009/05/11 20:28:32 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -30,7 +30,7 @@ input.text:focus,
 input.title:focus, 
 select:focus {
   border: 1px solid #FFCC00;
-		background: #FFFFDF;
+  background: #FFFFDF;
 }
 
 textarea:focus {
@@ -134,7 +134,7 @@ fieldset {
 fieldset legend {
   display: block;
   font-weight: bold;
-		padding: 0 1em 0 0;
+  padding: 0 1em 0 0;
 }
 
 *:first-child+html fieldset legend, *:first-child+html fieldset.collapsed legend {
@@ -210,7 +210,6 @@ html.js #user-login li.openid-link {
   background: transparent url("../images/openid.png") no-repeat 0 0;
   padding: 0 20px;
 }
-
 
 
 

@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.11 2009/05/08 09:36:13 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.12 2009/05/11 20:28:33 jmburnz Exp $ */
 
 /**
  * @file page.css
@@ -21,15 +21,15 @@ body {}
  **********************************************************/
 /**
  * Normally you will use these in combination with other
-	* selectors. I include them here for completedness.
-	*/
+ * selectors. I include them here for completedness.
+ */
 	
 /** 
  * Section Class
  * The section class takes the 2nd part of the URL and
-	* builds a section-[path-part] class from it. If you emulate
-	* site sections using the Pathauto module this can be a 
-	* powerful way to style site sections.
+ * builds a section-[path-part] class from it. If you emulate
+ * site sections using the Pathauto module this can be a 
+ * powerful way to style site sections.
  */
 /* .section-[path-part] {}  replace [path-part] */
 
@@ -62,7 +62,7 @@ body {}
 
 /** 
  * Optional Region body classes
-	* When any of the following regions are active a body class can be set.
+ * When any of the following regions are active a body class can be set.
  * To use you need to uncomment the conditional statements in 
  * genesis_preprocess_page(), @see template.php.
  */
@@ -77,21 +77,36 @@ body {}
 /** 
  * Page Path Class
  * The page path class takes the entire URL and
-	* builds a page-[path] class from it. See example
-	* below. You need to use Firebug or view source to
-	* find out what the actual class will be, and be aware
-	* that this will change if your URL alias changes!
+ * builds a page-[path] class from it. See example
+ * below. You need to use Firebug or view source to
+ * find out what the actual class will be, and be aware
+ * that this will change if your URL alias changes!
  */
 /* .page-[example-node-path] {}  replace [example-node-path] */
 
 
 /**********************************************************
- *                     The wrapper divs
+ *                  The wrapper divs
+ *    Be careful how you modify these, see layout.css
  **********************************************************/
 /**
- * Be careful how you modify these, see layout.css first.
+ * Width Setting
+ *
+ * Genesis supports Elastic, Fluid and Fixed width values.
+ * Elastic layouts are dynamic and will expand or contract when 
+ * the font size is changed. Fluid widths change when the browser 
+ * is resized and fixed width layouts stay the same width even 
+ * when the broswer is resized or the font size is changed.
+ *
+ * Elastic layouts use ems,       e.g. 80em
+ * Fluid layouts use percentages, e.g. 85%
+ * Fixed widths use pixels,       e.g. 960px
  */
-#container {}
+#container {
+  width: 100%;
+/* max-width: 1100px; set a maximum width */
+/* min-width: 960px; set a minimum width */
+}
 
 /* Column wrappers */
 #columns {}
@@ -101,29 +116,6 @@ body {}
 #content-column {}
 #main-content {}
 #content {}
-
-
-/**********************************************************
- *                     Width Setting
- **********************************************************/
-/**
- * Override the default width (80em - see layout.css).
- * 80 * 12 = 960px
- *
- * Genesis supports both Fluid and Fixed width values.
- *
- * Liquid layouts use %, e.g.
- * .width {width: 85%;}
- *
- * Fixed width layouts use em or px, e.g.
- * .width {width: 960px;}
- * .width {width: 80em;}
- */
-.width {
-  width: 100%;
-/* max-width: 1100px; set a maximum width */
-/* min-width: 960px; set a minimum width */
-}
 
 
 /**********************************************************
@@ -183,7 +175,7 @@ body {}
 }
 #skip-nav a:focus {
   border: 1px solid #FFCC00;
-		background: #FFFFCF;
+  background: #FFFFCF;
 }
 #skip-nav a:link    {}
 #skip-nav a:hover   {}
@@ -248,7 +240,7 @@ div#site-name  {
 #edit-search-theme-form-1:hover,
 #edit-search-theme-form-1:focus {
   border: 1px solid #BBB;
-		background: #FFF;
+  background: #FFF;
 }
 
 /* Search Results Page - see .box */
@@ -283,7 +275,7 @@ div#site-name  {
  * Example styles to get you started.
  */
 .primary-links {
-  background: #EEE; /* Default gray for dev only. */
+  background: #DDD; /* Default gray for dev only. */
   font-weight: bold;
 }
 
@@ -320,7 +312,7 @@ div#site-name  {
  * Secondary Links Style
  */
 .secondary-links {
-  background: #F8F8F8; /* Default gray for dev only. */
+  background: #EEE; /* Default gray for dev only. */
   font-weight: bold;
 }
 
@@ -424,8 +416,9 @@ h1#page-title {}
  *                 RSS Feed Icon
  **********************************************************/
 .feed-icon {}
-.feed-icon img {}
+.feed-icon img {
+  padding:0 0.5em;
+}
 #footer-message a.feed-icon {}
-
 
 

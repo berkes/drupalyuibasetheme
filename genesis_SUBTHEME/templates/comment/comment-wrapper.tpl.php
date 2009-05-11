@@ -1,5 +1,5 @@
 <?php
-// $Id: comment-wrapper.tpl.php,v 1.1.2.3 2009/05/04 14:57:18 jmburnz Exp $
+// $Id: comment-wrapper.tpl.php,v 1.1.2.4 2009/05/11 20:28:34 jmburnz Exp $
 
 /**
  * @file comment-wrapper.tpl.php
@@ -35,4 +35,4 @@
   <div id="comments">
     <?php print $content; ?>
   </div>
-<?php endif; ?> <!-- /silence coder -->
+<?php endif; ?> <!-- /comment-wrapper -->

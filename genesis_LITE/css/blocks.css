@@ -1,4 +1,4 @@
-/* $Id: blocks.css,v 1.1.2.10 2009/05/04 10:00:59 jmburnz Exp $ */
+/* $Id: blocks.css,v 1.1.2.11 2009/05/11 20:28:33 jmburnz Exp $ */
 
 /**
  * @file blocks.css
@@ -55,7 +55,7 @@
 /**
  * Module Block ID's 
  * For contributed module blocks the pattern is the same,
-	* i.e. #block-[module]-[delta]
+ * i.e. #block-[module]-[delta]
  */
 #block-book-0       {} /* Book navigation block   */
 #block-blog-0       {} /* Recent Blog posts       */
@@ -83,32 +83,6 @@
 .block-book {} 
 .block-aggregator {}
 
-
-/**
- * Block Odd & Even Styles (Zebra)
- * Blocks can have alternating styles for odd and even.
-	*
-	* See genesis_preprocess_block to use these classes.
- */
-/*
-.sidebar .block.odd  {}
-.sidebar .block.even {}
-#sidebar-left .block.odd  {}
-#sidebar-left .block.even {}
-#sidebar-right .block.odd  {}
-#sidebar-right .block.even {}
-*/
-
-/**
- * Alternative Approach to Region Block Styling
- *
- * Blocks can be aware of what region they are in, so its
- * possible to use chained selectors such as;
- *
- * .block.odd.right {}
-	*
-	* See genesis_preprocess_block to use these classes.
- */
 
 /**********************************************************
  *                   Menu blocks
@@ -150,15 +124,15 @@ ul.menu li.leaf {
 }
 
 ul.menu li.collapsed {
-  background-position: -1px -7px; /* LTR */
+  background-position: 0 -45px; /* LTR */
 }
 
 ul.menu li.expanded {
-  background-position: -22px -27px; /* LTR */
+  background-position: -43px -84px; /* LTR */
 }
 
 ul.menu li.leaf {
-  background-position: -1px 10px; /* LTR */
+  background-position: 0 0; /* LTR */
 }
 
 ul.menu li a:link    {}
@@ -178,5 +152,6 @@ ul.menu li.last  {}
   margin: 0;
 }
 .block .item-list ul li {}
+
 
 

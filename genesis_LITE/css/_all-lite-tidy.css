@@ -1,119 +1,97 @@
-/* $Id: _all-lite-tidy.css,v 1.1.2.6 2009/05/04 10:00:59 jmburnz Exp $ */
+/* $Id: _all-lite-tidy.css,v 1.1.2.7 2009/05/11 20:28:33 jmburnz Exp $ */
 
 /**
-  * @file _all-lite-tidy.css
-  * Genesis LITE modular stylesheets aggregated into one file and
-		* compressed using CSS Tidy. http://csstidy.sourceforge.net
-		* 
-		* Includes tidied and compressed versions of the following 
-		* stylesheets (LITE theme versions) in this order:
-		
-		* style.css		
-  * page.css
-  * nodes.css		
-  * comments.css		
-  * blocks.css
-
-		* USAGE
-		* 1) Unset the mini stylesheets in genesis_LITE.info by commenting them out.
-		* 2) Enable _all-lite.css by uncommenting it in genesis_LITE.info
-		*
-		* The file is useful for working around IE7's 30 max stylesheets issue
-		* when you cannot turn on CSS aggregation in Performance settings.
-  */
-
+ * @file _all-lite-tidy.css
+ * Genesis LITE modular stylesheets aggregated into one file and
+ * compressed using CSS Tidy. http://csstidy.sourceforge.net
+ * 
+ * Includes tidied and compressed versions of the following 
+ * stylesheets (LITE theme versions) in this order:
+ *		
+ * style.css		
+ * page.css
+ * nodes.css		
+ * comments.css		
+ * blocks.css
+ *
+ * USAGE
+ * 1) Unset the mini stylesheets in genesis_LITE.info by commenting them out.
+ * 2) Enable _all-lite.css by uncommenting it in genesis_LITE.info
+ *
+ * The file is useful for working around IE7's 30 max stylesheets issue
+ * when you cannot turn on CSS aggregation in Performance settings.
+ */
 body {
 font-family:Arial, Helvetica, sans-serif;
 }
-
+#container {
+width: 100%;
+}
 a {
 margin:0;
 padding:0;
 }
-
 a img {
 border:none;
 }
-
-.width {
-width:85%;
-}
-
 #skip-nav {
 text-align:center;
 }
-
 #branding {
 float:left;
 }
-
 h1#site-name,div#site-name {
 font-weight:700;
 }
-
 div#site-name {
 font-size:2em;
 line-height:1.5;
 }
-
 #search-theme-form {
 float:right;
 }
-
 #nav {
 clear:both;
 margin:.75em 0;
 }
-
 .primary-links {
 background:#EEE;
 font-weight:700;
 }
-
 .secondary-links {
 background:#F8F8F8;
 font-weight:700;
 }
-
 #breadcrumb {
 margin:0 0 .75em;
 }
-
 #mission {
 font-weight:700;
 margin:0 0 1.5em;
 }
-
 .node {
 margin:0 0 1.5em;
 }
-
 .comment {
 margin:0 0 1em;
 }
-
 .comment .indented {
 margin-left:2em;
 }
-
 .comment .title {
 margin-bottom:0;
 }
-
 .comment h3.title .new {
 color:#FF8000;
 }
-
 .block {
 clear:both;
 margin:0 0 1.5em;
 }
-
 ul.menu {
 margin:0 0 0 .5em;
 padding:0;
 }
-
 ul.menu li {
 background:none;
 display:block;
@@ -121,23 +99,18 @@ list-style:none;
 list-style-image:none;
 padding:.35em 0 0 1em;
 }
-
 ul.menu li.collapsed,ul.menu li.expanded,ul.menu li.leaf {
 background:transparent url(../images/menu-sprite.png) no-repeat;
 }
-
 ul.menu li.collapsed {
-background-position:-1px -7px;
+  background-position: 0 -45px; /* LTR */
 }
-
 ul.menu li.expanded {
-background-position:-22px -27px;
+  background-position: -43px -84px; /* LTR */
 }
-
 ul.menu li.leaf {
-background-position:-1px 10px;
+  background-position: 0 0; /* LTR */
 }
-
 .primary-links li,.secondary-links li {
 display:inline;
 line-height:2;
@@ -145,20 +118,16 @@ list-style:none;
 margin:0 1em;
 padding:0;
 }
-
 .primary-links li a,.secondary-links li a {
 text-decoration:none;
 white-space:nowrap;
 }
-
 .item-list ul.pager li,ul.menu ul,ul.menu ul ul,ul.menu ul ul ul,ul.menu li,li.expanded,li.collapsed,li.leaf,.block .item-list ul {
 margin:0;
 }
-
 .node .title a:link,.node .title a:visited,.node .title a:active,.comment .title a:link,.comment .title a:visited,.comment .title a:active {
 text-decoration:none;
 }
-
 .node .title a:hover,.comment-title a:hover {
 text-decoration:underline;
 }

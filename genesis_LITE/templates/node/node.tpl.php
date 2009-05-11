@@ -1,5 +1,5 @@
 <?php 
-// $Id: node.tpl.php,v 1.1.2.6 2009/05/04 14:57:17 jmburnz Exp $
+// $Id: node.tpl.php,v 1.1.2.7 2009/05/11 20:28:33 jmburnz Exp $
 
 /**
  * @file node.tpl.php
@@ -29,10 +29,10 @@
  * - $zebra: Outputs either "even" or "odd". Useful for zebra striping in
  *   teaser listings.
  * - $id: Position of the node. Increments each time it's output.
-	*
-	* Helper variables:
+ *
+ * Helper variables:
  * - $classes: Outputs dynamic classes for advanced themeing.
-	*
+ *
  * Node status variables:
  * - $teaser: Flag for the teaser state.
  * - $page: Flag for the full page state.
@@ -55,9 +55,9 @@
 
   <?php if (!$page): ?>
     <h2 class="title">
-						<a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a>
-						<?php print $unpublished; ?>
-		  </h2>
+      <a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a>
+      <?php print $unpublished; ?>
+    </h2>
   <?php endif; ?>
 
   <?php if ($submitted): ?>

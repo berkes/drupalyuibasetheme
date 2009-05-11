@@ -1,25 +1,26 @@
-/* $Id: base.css,v 1.1.2.3 2009/05/07 18:24:10 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.4 2009/05/11 20:28:32 jmburnz Exp $ */
 
 /**
  * @file base.css
  * Base is the master reset for browsers and Drupal.
-	* Base contains an exact copy of the modular stylsheets
-	* in css/modular:
-	
-	* typography.css
-	* tables.css
-	* messages.css
-	* lists.css
-	* forms.css
-	* admin-styles.css
-
-	* By default Genesis uses base.css, mainly because Drupal can 
-	* load a ridiculus number of stylesheets depending on what modules
-	* you have enabled; base.css is an effort to reduce http requests and 
-	* mitigate triggering IE's max 30 linked stylesheets issue.
-	
-	* To gain more control over the stylesheets you can unset this and load
-	* a subset of the modular stylesheets.
+ * 
+ * Base contains an exact copy of the modular stylsheets
+ * in css/modular:
+ *
+ * typography.css
+ * tables.css
+ * messages.css
+ * lists.css
+ * forms.css
+ * admin-styles.css
+ *
+ * By default Genesis uses base.css, mainly because Drupal can 
+ * load a ridiculus number of stylesheets depending on what modules
+ * you have enabled; base.css is an effort to reduce http requests and 
+ * mitigate triggering IE's max 30 linked stylesheets issue.
+ *
+ * To gain more control over the stylesheets you can unset this and load
+ * a subset of the modular stylesheets.
  */
 
 /*********************************************************
@@ -335,7 +336,7 @@ div.help {
   background: #EFF7FF url(../images/info.gif) no-repeat 0.5em 0.5em;
   border: 1px solid #66BEF4;
   margin: 1em 0;
-		color: #000D2F;
+  color: #000D2F;
   padding: 0.5em 0.5em 0.5em 2.4em;
 }
 
@@ -343,7 +344,7 @@ div.help {
 div.warning {
   background: #FFF6DF url(../images/warning.gif) no-repeat 0.5em 0.5em;
   border: 1px solid #FFB900;
-		color: #9F3800;
+  color: #9F3800;
   padding: 0.5em 0.5em 0.5em 2.4em;
 }
  
@@ -370,7 +371,7 @@ div.ok {}
 div.ok, tr.ok,
 table tr.ok td {
   color: #222;
-		padding: 1em 0.5em;
+  padding: 1em 0.5em;
 }
 
 .update tr.ok {
@@ -381,7 +382,9 @@ table tr.ok td {
   padding:0 0 0 1em;
 }
 
-.includes {color: #222;}
+.includes {
+  color: #222;
+}
 .includes em {}
 
 .merge-down {}
@@ -406,10 +409,10 @@ div.help ul:last-child {
 }
 
 .block-region {
-		border: 1px dotted #000;
-		color: #000;
-		font: 1em 'andale mono', 'lucida console', monospace;
-		padding: 3px 6px 1px
+  border: 1px dotted #000;
+  color: #000;
+  font: 1em 'andale mono', 'lucida console', monospace;
+  padding: 3px 6px 1px
 }
 
 /* Highlight unpublished nodes and comments*/
@@ -425,11 +428,11 @@ div.help ul:last-child {
 .node-unpublished .unpublished,
 .comment-unpublished .unpublished {
   background: transparent url(../images/warning.gif) no-repeat 0 0;
-		color: #FFB900;
-		font-size: 0.94em;
-		margin-left: 0.5em; /* LTR */
-		padding-left: 18px; /* LTR */
-		visibility: visible;
+  color: #FFB900;
+  font-size: 0.94em;
+  margin-left: 0.5em; /* LTR */
+  padding-left: 18px; /* LTR */
+  visibility: visible;
 }
 
 /* Animated saving throbber */
@@ -546,7 +549,7 @@ input.text:focus,
 input.title:focus, 
 select:focus {
   border: 1px solid #FFCC00;
-		background: #FFFFDF;
+  background: #FFFFDF;
 }
 
 textarea:focus {
@@ -648,7 +651,7 @@ fieldset {
 fieldset legend {
   display: block;
   font-weight: bold;
-		padding: 0 1em 0 0;
+  padding: 0 1em 0 0;
 }
 
 *:first-child+html fieldset legend, *:first-child+html fieldset.collapsed legend {
@@ -767,7 +770,7 @@ div.admin .right {
 }
 
 .admin-panel ul li {
-		color: #888;
+  color: #888;
 }
 
 .admin-panel dl {
@@ -782,7 +785,7 @@ div.admin .right {
 .admin-panel dd {
   color: #888; 
   font-size: 0.94em;
-		margin-left: 0;
+  margin-left: 0;
 }
 
 .admin .compact-link {
@@ -837,7 +840,7 @@ ul.primary {
 ul.primary li a {
   background-color: #EEE;
   border-color: #CCC;
-		margin-right: 0.08em;
+  margin-right: 0.08em;
   padding: 0.1em 0.75em 0.2em;
 }
 
@@ -877,3 +880,4 @@ body.admin-menu {
 #admin-menu {
   font-size: 0.94em;
 }
+

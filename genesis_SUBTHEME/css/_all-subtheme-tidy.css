@@ -1,29 +1,33 @@
-/* $Id: _all-subtheme-tidy.css,v 1.1.2.7 2009/05/04 10:00:59 jmburnz Exp $ */
+/* $Id: _all-subtheme-tidy.css,v 1.1.2.8 2009/05/11 20:28:34 jmburnz Exp $ */
 
 /**
-  * @file _all-subtheme-tidy.css
-  * Genesis SUBTHEME modular stylesheets aggregated into one file
-		* and compressed using CSS Tidy. http://csstidy.sourceforge.net
-		*
-		* Includes tidied and compressed versions of the 
-		* following stylesheets:
-
-		* style.css		
-  * page.css
-  * nodes.css		
-  * comments.css		
-  * blocks.cs
-		*
-		* USAGE
-		* 1) Unset the mini stylesheets in genesis_SUBTHEME.info by commenting them out.
-		* 2) Enable _all-subtheme.css by uncommenting it in genesis_SUBTHEME.info
-		*
-		* The file is useful for working around IE7's 30 max stylesheets issue
-		* when you cannot turn on CSS aggregation in Performance settings.
-  */
+ * @file _all-subtheme-tidy.css
+ * Genesis SUBTHEME modular stylesheets aggregated into one file
+ * and compressed using CSS Tidy. http://csstidy.sourceforge.net
+ *
+ * Includes tidied and compressed versions of the 
+ * following stylesheets:
+ *
+ * style.css		
+ * page.css
+ * nodes.css		
+ * comments.css		
+ * blocks.cs
+ *
+ * USAGE
+ * 1) Unset the mini stylesheets in genesis_SUBTHEME.info by commenting them out.
+ * 2) Enable _all-subtheme.css by uncommenting it in genesis_SUBTHEME.info
+ *
+ * The file is useful for working around IE7's 30 max stylesheets issue
+ * when you cannot turn on CSS aggregation in Performance settings.
+ */
 
 body {
 font-family:Arial, Helvetica, sans-serif;
+}
+
+#container {
+width: 100%;
 }
 
 a {
@@ -33,10 +37,6 @@ padding:0;
 
 a img {
 border:none;
-}
-
-.width {
-width:85%;
 }
 
 #skip-nav {
@@ -140,15 +140,15 @@ background:transparent url(../images/menu-sprite.png) no-repeat;
 }
 
 ul.menu li.collapsed {
-background-position:-1px -7px;
+  background-position: 0 -45px; /* LTR */
 }
 
 ul.menu li.expanded {
-background-position:-22px -27px;
+  background-position: -43px -84px; /* LTR */
 }
 
 ul.menu li.leaf {
-background-position:-1px 10px;
+  background-position: 0 0; /* LTR */
 }
 
 #search-box form,#search-box div.form-item,#primary .links,#secondary .links,.item-list ul.pager li,ul.menu ul,ul.menu ul ul,ul.menu ul ul ul,ul.menu li,li.expanded,li.collapsed,li.leaf,.block .item-list ul {
