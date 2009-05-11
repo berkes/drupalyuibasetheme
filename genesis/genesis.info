@@ -1,4 +1,4 @@
-; $Id: genesis.info,v 1.1.2.11 2009/05/04 10:00:58 jmburnz Exp $
+; $Id: genesis.info,v 1.1.2.12 2009/05/11 20:29:48 jmburnz Exp $
   
 		
 ;----------// Theme Information
@@ -28,33 +28,69 @@
   regions[footer]             = Footer
 
 
+  ; Gpanel Regions - Added here for completedness only, you should
+  ; control these via your subthemes info file.
+  ; Use in conjunction with the gpanel snippets.
+  ; See /genesis/genesis/gpanels
+  ; Uncomment the required regions in your subhtemes info file.
+		
+  ; 2 col Gpanel
+  ;regions[two_col_first]     = 2col Gpanel column 1
+  ;regions[two_col_second]    = 2col Gpanel column 2
+		
+  ; 3 col Gpanel
+  ;regions[three_col_first]   = 3col Gpanel column 1
+  ;regions[three_col_second]  = 3col Gpanel column 2
+  ;regions[three_col_third]   = 3col Gpanel column 3
+		
+  ; 4 col Gpanel
+  ;regions[four_col_first]    = 4col Gpanel column 1
+  ;regions[four_col_second]   = 4col Gpanel column 2
+  ;regions[four_col_third]    = 4col Gpanel column 3
+  ;regions[four_col_fourth]   = 4col Gpanel column 4
+
 
 ;----------// Genesis core styles
 
   stylesheets[all][] = css/base.css
-		stylesheets[all][] = css/layout.css
+  ;stylesheets[all][] = css/layout-tidy.css
 		
+  ; Use the uncompressed layout stylesheet, for example during development.
+  stylesheets[all][] = css/layout.css
 		
 		
 ;----------// Optional stylesheets
 		
-		; Add styles for the hover edit block and views links. On by default.
+  ; Add styles for the hover edit block and views links. On by default.
   stylesheets[all][] = css/edit-links.css
 								  
   ; Uncomment to show the grid, add the grid class in page.tpl.php also.
-		;stylesheets[all][] = css/grid.css
+  ;stylesheets[all][] = css/grid.css
 
 
+;----------// IE Conditional Stylesheets
 
+  ; Support for the Conditional Styles module. This module allows themes 
+  ; to specify conditional stylesheets in their .info file and the conditional 
+  ; comments will be automatically included at the end of the standard $styles variable. 
+  ; http://drupal.org/project/conditional_styles
+  ;
+  ; Install the module and then uncomment or add the required stylesheets.
+  ; There is an example IE stylesheet are in your subthemes css/ie folder.
+
+  ; Example only: see the README in the Conditional Styles module
+  conditional-stylesheets[if lt IE 7][all][] = css/ie/ie-example.css
+		
+		
 ;----------// jQuery Plugins and JavaScripts
 
-  ; Insert WAI-ARIA Landmark Roles. Uncomment to use.
-		scripts[] = js/aria-roles.js
+  ; Insert WAI ARIA Landmark Roles. Uncomment to use.
+  scripts[] = js/aria-roles.js
 
   ; Equal height columns. This will set first child divs in the #columns division
   ; to the same height (#sidebar-left, #sidebar-right, #content-column).
   ; To use uncomment and clear cache data in Performance settings.
-		;scripts[] = js/jquery.equalizeheights.minified.js
+  ;scripts[] = js/jquery.equalizeheights.minified.js
 
 
 
@@ -64,7 +100,7 @@
 ; configuration page. This is useful for suppressing check boxes for elements 
 ; not used by your theme.
  
-	 features[] = logo
+  features[] = logo
   features[] = name
   features[] = slogan
   features[] = mission
