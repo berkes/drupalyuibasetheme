@@ -1,9 +1,9 @@
 
   /genesis/images
   
-    Core theme icons, screenshot and the legend sprit.
+    Core theme icons, screenshot and the legend sprite.
     
-    The legend sprit is a CSS sprite for the collaspible fieldset arrows.
+    The legend-sprite is a CSS sprite for the collaspible fieldset arrows.
     
     The icons are for Drupal messages, you can replace with your own set:
     

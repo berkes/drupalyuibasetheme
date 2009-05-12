@@ -13,7 +13,7 @@
   
   aria-roles.js
     This adds WAI ARIA landmark roles to specific regions, blocks and other elements.
-    Its uses the jQuer attr function to insert the attribute of "role" and an associated
+    Its uses the jQuery attr function to insert the attribute of "role" and an associated
     role, such as "nav", "header" or complimentary.
     
     WAI ARIA roles are an accessibility feature for screen readers.

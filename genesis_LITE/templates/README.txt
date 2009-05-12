@@ -42,7 +42,7 @@
   node
     Contains: node.tpl.php
     Here you place all your node template suggestions, 
-    such as node-page.tpl.php, block-story.tpl.php etc.
+    such as node-page.tpl.php, node-story.tpl.php etc.
   
   page
     Contains: page.tpl.php

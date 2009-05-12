@@ -21,7 +21,7 @@
   region has an active block, alternatively you could remove the conditional
   statement around the existing region.
   
-  Tip: technicaly you can paste a Gpanel into node.tpl.php also. To get them 
+  Tip: Technically you can paste a Gpanel into node.tpl.php also. To get them 
        to work you will need to make the regions available to the node template. 
        You do this in your subthemes theme_preprocess_node() function.
   
