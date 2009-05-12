@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.14 2009/05/11 20:28:34 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.15 2009/05/12 13:51:10 jmburnz Exp $ */
 
 /**
  * @file page.css
@@ -8,6 +8,7 @@
 /**
  * Remove unused styles for performace.
  */
+
 
 
 /**********************************************************
@@ -136,7 +137,10 @@ body {}
 
 /* Header blocks region is embedded in the header, 
    usefull for displaying small banners. */
-#header-blocks {}
+#header-blocks {
+  float: left;
+  margin-left: 2em; /* LTR */
+}
 #header-blocks .region-inner {}
 
 /* Secondary content is a full width region between 
@@ -179,7 +183,7 @@ body {}
  * Do not use display: none as this hides it from screen readers.
  */
 #skip-nav {
-  text-align: right;
+  text-align: right; /* LTR */
 }
 #skip-nav a:focus {
   border: 1px solid #FFCC00;
@@ -202,7 +206,7 @@ body {}
 
 /* #branding wraps #logo, #site-name and #site-slogan. */
 #branding {
-  float: left;
+  float: left; /* LTR */
 }
 
 /* Logo. */
@@ -231,7 +235,7 @@ div#site-name  {
  **********************************************************/
 /* Float the serch box right. */
 #search-box {
-  float: right;
+  float: right; /* LTR */
   padding: 1.5em 0;
 }
 
@@ -398,7 +402,7 @@ div#site-name  {
  * content column if you need to.
  */
 #breadcrumb {
-  padding: 0 0 0.75em;
+  padding: 0 0 0.75em; /* LTR */
 }
 
 

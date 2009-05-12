@@ -1,4 +1,4 @@
-; $Id: genesis_LITE.info,v 1.1.2.7 2009/05/11 20:30:26 jmburnz Exp $
+; $Id: genesis_LITE.info,v 1.1.2.8 2009/05/12 13:51:10 jmburnz Exp $
 
 
 ;----------// Theme Information
@@ -84,7 +84,11 @@
   ; 2 col Gpanel
   ;regions[two_col_first]     = 2col Gpanel column 1
   ;regions[two_col_second]    = 2col Gpanel column 2
-		
+
+  ; 2 col, 2 col Nested Gpanel
+  ;regions[two_col_nested_first]  = 2col Nested Gpanel col 1
+  ;regions[two_col_nested_second] = 2col Nested Gpanel col 2
+  
   ; 3 col Gpanel
   ;regions[three_col_first]   = 3col Gpanel column 1
   ;regions[three_col_second]  = 3col Gpanel column 2

@@ -1,4 +1,4 @@
-<?php // $Id: 3col-33-34-33.php,v 1.1.2.1 2009/05/11 20:29:48 jmburnz Exp $
+<?php // $Id: 3col-33-34-33.php,v 1.1.2.2 2009/05/12 13:51:09 jmburnz Exp $
 
 /**
  * @file 3col-33-34-33.php
@@ -26,7 +26,7 @@
 
 <!--//   Three column Gpanel   //-->
 <?php if ($three_col_first or $three_col_second or $three_col_third): ?>
-  <div id="three-col-33" class="gpanel clear-block">
+  <div class="three-col-33 gpanel clear-block">
     <div class="section region col-1 first"><div class="inner">
       <?php if ($three_col_first): print $three_col_first; endif; ?>
     </div></div>

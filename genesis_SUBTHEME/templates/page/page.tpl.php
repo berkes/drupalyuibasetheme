@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.13 2009/05/11 20:28:35 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.14 2009/05/12 13:51:10 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -148,7 +148,7 @@
     </div> <!-- /header -->
 
     <?php if ($primary_menu or $secondary_menu): ?>
-      <div id="nav">
+      <div id="nav" class="clear-block">
 
         <?php if ($primary_menu): ?>
           <div id="primary"><?php print $primary_menu; ?></div>

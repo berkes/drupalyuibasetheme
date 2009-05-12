@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.4 2009/05/11 20:28:33 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.5 2009/05/12 13:51:09 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -98,7 +98,7 @@
  * @see layout.css.
  */
 ?>
-<body id="genesis-3a" <?php print $section_class; ?>>
+<body id="genesis-1a" <?php print $section_class; ?>>
   <div id="container" class="<?php print $classes; ?>">
 
     <div id="skip-nav" class="clear-block">
@@ -142,7 +142,7 @@
     </div> <!-- /header -->
 
     <?php if ($primary_menu or $secondary_menu): ?>
-      <div id="nav">
+      <div id="nav" class="clear-block">
         <?php if ($primary_menu): print $primary_menu; endif; ?>
         <?php if ($secondary_menu): print $secondary_menu; endif; ?>
       </div> <!-- /nav -->
@@ -195,7 +195,7 @@
     </div> <!-- /columns -->
 
     <?php if ($tertiary_content): ?>
-      <div id="tertiary-content" class="section region"><?php print $tertiary_content; ?></div>  <!-- /tertiary-content -->
+      <div id="tertiary-content" class="section region clear-block"><?php print $tertiary_content; ?></div>  <!-- /tertiary-content -->
     <?php endif; ?>
 
     <?php if ($footer): ?>

@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.12 2009/05/11 20:28:33 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.13 2009/05/12 13:51:10 jmburnz Exp $ */
 
 /**
  * @file page.css
@@ -135,7 +135,10 @@ body {}
 
 /* Header blocks region is embedded in the header, 
    usefull for displaying small banners. */
-#header-blocks {}
+#header-blocks {
+  float: left;
+  margin-left: 2em; /* LTR */
+}
 
 /* Secondary content is a full width region between 
    the header and the main columns. */
@@ -171,7 +174,7 @@ body {}
  * Do not use display: none as this hides it from screen readers.
  */
 #skip-nav {
-  text-align: right;
+  text-align: right; /* LTR */
 }
 #skip-nav a:focus {
   border: 1px solid #FFCC00;
@@ -195,7 +198,7 @@ body {}
 
 /* #branding wraps #logo, #site-name and #site-slogan. */
 #branding {
-  float: left;
+  float: left; /* LTR */
 }
 
 /* Logo. */
@@ -223,7 +226,7 @@ div#site-name  {
  *                        Search
  **********************************************************/
 #search-theme-form {
-  float:right;
+  float: right; /* LTR */
 }
 
 /* Target the first child div which has no selector */
@@ -352,7 +355,7 @@ div#site-name  {
  * content column if you need to.
  */
 #breadcrumb {
-  margin: 0 0 0.75em;
+  margin: 0 0 0.75em; /* LTR */
 }
 
 

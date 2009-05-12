@@ -1,4 +1,4 @@
-/* $Id: blocks.css,v 1.1.2.11 2009/05/11 20:28:33 jmburnz Exp $ */
+/* $Id: blocks.css,v 1.1.2.12 2009/05/12 13:51:10 jmburnz Exp $ */
 
 /**
  * @file blocks.css
@@ -120,7 +120,7 @@ ul.menu li {
 ul.menu li.collapsed,
 ul.menu li.expanded,
 ul.menu li.leaf {
-  background: transparent url(../images/menu-sprite.png) no-repeat;
+  background: transparent url(../images/menu-sprite.gif) no-repeat;
 }
 
 ul.menu li.collapsed {

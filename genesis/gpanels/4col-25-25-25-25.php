@@ -1,4 +1,4 @@
-<?php // $Id: 4col-25-25-25-25.php,v 1.1.2.1 2009/05/11 20:29:48 jmburnz Exp $
+<?php // $Id: 4col-25-25-25-25.php,v 1.1.2.2 2009/05/12 13:51:09 jmburnz Exp $
 
 /**
  * @file 4col-25-25-25-25.php
@@ -27,7 +27,7 @@
 
 <!--//   Four column Gpanel   //-->
 <?php if ($four_col_first or $four_col_second or $four_col_third or $four_col_fourth): ?>
-  <div id="four-col-25" class="gpanel clear-block">
+  <div class="four-col-25 gpanel clear-block">
     <div class="section-1">
       <div class="section region col-1 first"><div class="inner">
         <?php if ($four_col_first): print $four_col_first; endif; ?>
