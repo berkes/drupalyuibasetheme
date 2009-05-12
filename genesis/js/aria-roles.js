@@ -1,4 +1,4 @@
-// $Id: aria-roles.js,v 1.1.2.6 2009/05/11 20:28:32 jmburnz Exp $
+// $Id: aria-roles.js,v 1.1.2.7 2009/05/12 17:04:51 jmburnz Exp $
 
 /**
  * Insert WAI-ARIA Landmark Roles (Roles for Accessible Rich Internet Applications)
@@ -21,7 +21,7 @@ if (Drupal.jsEnabled) {
     $(".block, .sidebar, .region").attr("role","complementary");
 
     // Remove role=complementary from system blocks.
-    $(".block-system").removeAttr("role","complementary");
+    $(".block-system, td.block, tr.region, td.region").removeAttr("role","complementary");
 
     // Set role=main on #main-content div.
     $("#main-content").attr("role","main");
@@ -36,7 +36,7 @@ if (Drupal.jsEnabled) {
     $(".node").attr("role","article");
 
     // Set role=nav on navigation-like blocks.
-    $("#nav, #breadcrumb, .block-menu, #block-user-1, .block-book, .block-forum, .block-blog, .block-comment, .block-statistics-0, .block-aggregator, .node ul.links, ul.pager").attr("role","navigation");
+    $("#nav, #breadcrumb, .block-menu, #block-user-1, #block-user-3, .block-book, .block-forum, .block-blog, .block-comment, .block-statistics-0, .block-aggregator, .links, ul.pager, .local-tasks").attr("role","navigation");
   
   });
 }
