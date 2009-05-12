@@ -1,4 +1,4 @@
-; $Id: genesis_SUBTHEME.info,v 1.7.2.7 2009/05/12 13:51:10 jmburnz Exp $
+; $Id: genesis_SUBTHEME.info,v 1.7.2.8 2009/05/12 17:39:43 jmburnz Exp $
 
 
 ;----------// Theme Information
@@ -82,23 +82,23 @@
   ; Uncomment the required regions.
 		
   ; 2 col Gpanel
-  regions[two_col_first]     = 2col Gpanel col 1
-  regions[two_col_second]    = 2col Gpanel col 2
+  ;regions[two_col_first]     = 2col Gpanel col 1
+  ;regions[two_col_second]    = 2col Gpanel col 2
   
   ; 2 col, 2 col Nested Gpanel
-  regions[two_col_nested_first]  = 2col Nested Gpanel col 1
-  regions[two_col_nested_second] = 2col Nested Gpanel col 2
+  ;regions[two_col_nested_first]  = 2col Nested Gpanel col 1
+  ;regions[two_col_nested_second] = 2col Nested Gpanel col 2
   
   ; 3 col Gpanel
-  regions[three_col_first]   = 3col Gpanel col 1
-  regions[three_col_second]  = 3col Gpanel col 2
-  regions[three_col_third]   = 3col Gpanel col 3
+  ;regions[three_col_first]   = 3col Gpanel col 1
+  ;regions[three_col_second]  = 3col Gpanel col 2
+  ;regions[three_col_third]   = 3col Gpanel col 3
 		
   ; 4 col Gpanel
-  regions[four_col_first]    = 4col Gpanel col 1
-  regions[four_col_second]   = 4col Gpanel col 2
-  regions[four_col_third]    = 4col Gpanel col 3
-  regions[four_col_fourth]   = 4col Gpanel col 4
+  ;regions[four_col_first]    = 4col Gpanel col 1
+  ;regions[four_col_second]   = 4col Gpanel col 2
+  ;regions[four_col_third]    = 4col Gpanel col 3
+  ;regions[four_col_fourth]   = 4col Gpanel col 4
 		
 		
 
