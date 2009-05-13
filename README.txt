@@ -1,17 +1,21 @@
 
   Genesis README.txt
 		
-  Genesis is a kick-ass starter theme Drupal 6. Genesis allows
-  you to quickly build any theme using its preconfigured directory structure, 
-  template files and modular stylesheets.
+  Genesis is a kick-ass starter theme Drupal 6. Genesis allows you to quickly 
+  build any theme using its preconfigured directory structure, template files 
+  and modular stylesheets.
 
   Online Genesis documentation: http://drupal.org/node/323404
+  
+  There are additional README files in most directories, they contain helpful
+  instructions, tips and comments. Look out for them in each directory.
 
   This is a basic guide for getting started with your own subtheme.
 
 
 
   CREATE A NEW SUBTHEME
+  
   Online docs: http://drupal.org/node/439698
   
   1. First copy/paste one of the subthemes: 
@@ -44,12 +48,13 @@
        
      WAI ARIA Roles: 
      By default these are enabled. If for some reason you do not want them
-     simply comment out the jQuery script in genesis.info (the core info file, not your
-     subthemes).
+     simply comment out the jQuery script in genesis.info (the core info file, 
+     not your subthemes).
   
        
 
   SETTING UP THE LAYOUT
+  
   Online docs: http://drupal.org/node/439670
   
   First open these two files:
@@ -60,41 +65,46 @@
    
   There are 3 main layouts, please see the documentation in layout.css.
 				
-  To change the layout select the ID selector that matches your preferred layout and 
-  change the <body id="...."> in page.tpl.php
+  To change the layout select the ID selector that matches your preferred layout 
+  and change the <body id="...."> in page.tpl.php
 				
   By default this is <body id="genesis_1a">.
 
 
 
   OVERRIDING THE LAYOUT
+  
   Online docs: http://drupal.org/node/439670
   
-  If you want to change the sidebar widths or otherwise modify the layout, simply copy
-  the relevant layout CSS to your page.css file in your subtheme and modify it there.
+  If you want to change the sidebar widths or otherwise modify the layout, 
+  simply copy the relevant layout CSS to your page.css file in your subtheme and 
+  modify it there.
+  
+  Do look at genesis/genesis/css/layout-overrides for 3 example layout overrides 
+  and full instructions.
+  
   
 
-
   GPANELS: What are Gpanels? 
+  
   Gpanels are drop in snippets that emulate the layout of normal mini-panels. 
   See the docs http://drupal.org/node/460800 for instructions and screenshots.
   
   You can also see the README file in genesis/genesis/gpanels for full instructions.
 
+
 		
   SUBTHEME PREPROCESS FUNCTIONS
 				
-  If you need to use a preprocess funtion open the template.php file
-  in your new subtheme (one is included by default) and rename the function
-  using your theme name e.g. mytheme_preprocess_page. This follows the standard
-  Drupal convention of themeName_preprocess_hook.
+  If you need to use a preprocess funtion open the template.php file in your new 
+  subtheme (one is included by default) and rename the function using your theme 
+  name e.g. mytheme_preprocess_page. This follows the standard Drupal convention 
+  of themeName_preprocess_hook.
 
    
    
    
-   
-   
-   
 
-   
+  
+
    
