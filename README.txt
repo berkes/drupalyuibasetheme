@@ -29,6 +29,10 @@
   4. Inside the genesis_foo.info file change:
       - the theme name
       - the description
+      
+     Gpanels: 
+     If you want to use the Gpanels uncomment the additional regions 
+     for Gpanels. http://drupal.org/node/460800
        
      Internet Explorer CSS: 
      If you want to use an IE stylesheet follow the instructions in the info 
@@ -69,7 +73,14 @@
   If you want to change the sidebar widths or otherwise modify the layout, simply copy
   the relevant layout CSS to your page.css file in your subtheme and modify it there.
   
-		
+
+
+  GPANELS: What are Gpanels? 
+  Gpanels are drop in snippets that emulate the layout of normal mini-panels. 
+  See the docs http://drupal.org/node/460800 for instructions and screenshots.
+  
+  You can also see the README file in genesis/genesis/gpanels for full instructions.
+
 		
   SUBTHEME PREPROCESS FUNCTIONS
 				
@@ -85,4 +96,5 @@
    
    
 
+   
    
