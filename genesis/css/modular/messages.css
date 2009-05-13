@@ -1,4 +1,4 @@
-/* $Id: messages.css,v 1.1.2.2 2009/05/11 20:28:32 jmburnz Exp $ */
+/* $Id: messages.css,v 1.1.2.3 2009/05/13 12:12:01 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -8,6 +8,11 @@
 /*********************************************************
 *                   Messages
 **********************************************************/
+/**
+ * @see messages.css
+ * Basic styles for messages.
+ */
+
 .description {
   color: #888;
 }
@@ -15,7 +20,6 @@
 div.messages {
   font-weight: normal; 
   margin: 1em 0; 
-  padding: 0.5em;
 }
 
 div.messages ul {
@@ -23,10 +27,9 @@ div.messages ul {
 }
 
 div.error {
-  background: #FFEFF1 url(../images/error.gif) no-repeat 0.5em 0.5em;
+  background: #FFEFF1 url(../images/error.png) no-repeat 0.5em 0.45em;
   border: 1px solid #E41F0B;
   color: #E41F0B;
-  padding-left: 2.4em;
 }
 
 tr.error {
@@ -45,26 +48,31 @@ div.notice  {
 }
 
 div.status  {
-  background: #ECEFE0 url(../images/status.gif) no-repeat 0.5em 0.5em;
+  background: #ECEFE0 url(../images/ok.png) no-repeat 0.75em 0.6em;
   border: 1px solid #4DA449;
   color: #2A6827;
-  padding-left: 2.4em;
 }
 
 div.help {
-  background: #EFF7FF url(../images/info.gif) no-repeat 0.5em 0.5em;
+  background: #EFF7FF url(../images/info.png) no-repeat 0.5em 0.45em;
   border: 1px solid #66BEF4;
-  color: #000D2F;
   margin: 1em 0;
-  padding: 0.5em 0.5em 0.5em 2.4em;
+  color: #000D2F;
 }
 
 /* Warnings and OK messages */
 div.warning {
-  background: #FFF6DF url(../images/warning.gif) no-repeat 0.5em 0.5em;
+  background: #FFF6DF url(../images/warning.png) no-repeat 0.5em 0.45em;
   border: 1px solid #FFB900;
   color: #9F3800;
-  padding: 0.5em 0.5em 0.5em 2.4em;
+}
+
+div.messages, 
+div.warning,
+div.help,
+div.status,
+div.error {
+  padding: 0.6em 1em 0.6em 3em;
 }
  
 table tr.warning {
@@ -108,7 +116,6 @@ table tr.ok td {
 
 .merge-down {}
 .merge-up {}
-
 /* CSS3 */
 div.help p:last-child,
 div.help ul:last-child {
@@ -147,12 +154,31 @@ div.help ul:last-child {
 
 .node-unpublished .unpublished,
 .comment-unpublished .unpublished {
-  background: transparent url(../images/warning.gif) no-repeat 0 0;
+  background: transparent url(../images/warning-small.png) no-repeat 0 0.1em;
   color: #FFB900;
   font-size: 0.94em;
   margin-left: 0.5em; /* LTR */
   padding-left: 18px; /* LTR */
   visibility: visible;
+}
+
+/* Animated saving throbber */
+#saving {
+  font-size: 1em;
+  font-weight: bold;
+  background: url(../images/loading.gif) no-repeat 1em 0.08em;
+  display: none;
+  padding-left: 3em;
+}
+
+#saving p {
+  margin: 0;
+}
+
+#saving-notice {
+  font-size: 0.9em;
+  font-style: italic;
+  background: #FFC;
 }
 
 /**
