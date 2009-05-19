@@ -1,4 +1,4 @@
-/* $Id: edit-links.css,v 1.1.2.3 2009/05/19 00:04:59 jmburnz Exp $ */
+/* $Id: edit-links.css,v 1.1.2.4 2009/05/19 19:23:54 jmburnz Exp $ */
 
 /**
  * @file edit-links.css
@@ -6,7 +6,7 @@
  */
 div.block{position:relative;}
 div.block div.block-edit{font-size:.9em;position:absolute;right:0;top:0;visibility:hidden;z-index:40;}
-div.block:hover div.block-edit{display:block;visibility:visible;}
+div.block:hover div.block-edit{display:block;font-family:Arial,Helvetica,"Nimbus Sans",sans-serif;visibility:visible;}
 div.block div.block-edit a{text-decoration:none;color:#ccc;}
 div.block div.block-edit a:before{content:"[";}
 div.block div.block-edit a:after{content:"]";}

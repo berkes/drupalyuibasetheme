@@ -1,4 +1,4 @@
-/* $Id: admin-styles.css,v 1.1.2.4 2009/05/19 01:58:24 jmburnz Exp $ */
+/* $Id: admin-styles.css,v 1.1.2.5 2009/05/19 19:23:54 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -134,15 +134,18 @@ ul.primary li a {
 }
 
 ul.secondary {
-  border-bottom: 1px solid #BBB;
-  margin: 0 0 1em;
-  padding: 1em 0;
+  border-bottom: 0;
+  margin: 1em 0 0 0;
+  padding: 0;
 }
 
 ul.secondary li {
   border-right: none;
-  padding: 0 1.5em 0 0;
-  white-space: pre;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 215px; 
 }
 
 ul.secondary a:hover,

@@ -1,4 +1,4 @@
-/* $Id: base.css,v 1.1.2.10 2009/05/19 04:07:36 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.11 2009/05/19 19:23:54 jmburnz Exp $ */
 
 /**
  * @file base.css
@@ -163,10 +163,10 @@ div.admin .left,div.admin .right{margin-left:0;margin-right:0;width:49%;}
 tr .block{border:0;}
 .local-tasks{margin-bottom:.75em;}
 ul.primary{border-bottom-color:#CCC;margin:1.5em 0 0;padding:0 0 .2em .3em;}
-ul.primary li a{background-color:#EEE;margin-right:.08em;border-color:#CCC;padding:.1em .75em .2em;}
+ul.primary li a{background-color:#EEE;border-color:#CCC;margin-right:.08em;padding:.1em .75em .2em;}
 .local-tasks ul.primary li a:hover{background-color:#F5F5F5;border-color:#DDD;}
 .local-tasks ul.primary li.active a{background-color:#FFF;border-bottom-color:#FFF;}
-ul.secondary{border-bottom:1px solid #BBB;margin:0 0 1em;padding:1em 0;}
-ul.secondary li{border-right:none;padding:0 1.5em 0 0;}
+ul.secondary{border-bottom:0;margin:1em 0 0 0;padding:0;}
+ul.secondary li{border-right:none;float:left;list-style:none;margin:0;padding:0;width:215px;}
 ul.secondary a:hover,ul.secondary a.active{border-bottom:none;text-decoration:underline;}
 #admin-menu{font:.9em Arial,Helvetica,sans-serif;}

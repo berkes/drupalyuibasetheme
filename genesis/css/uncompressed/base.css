@@ -1,4 +1,4 @@
-/* $Id: base.css,v 1.1.2.3 2009/05/19 04:07:36 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.4 2009/05/19 19:23:54 jmburnz Exp $ */
 
 /**
  * @file typography.css
@@ -104,11 +104,7 @@ pre, code {
 }
 
 pre, code, tt {
-  font: 1em 'andale mono', 'lucida console', monospace;
-}
-
-p code {
-  font: 1em "Courier New", Courier, monospace;
+  font: 1em "Lucida Console", Monaco, "DejaVu Sans Mono", monospace;
 }
 
 /* Preserve line-height and selector appearance */
@@ -142,7 +138,7 @@ blockquote, q {
   quotes: "" "";
 }
 
-/* $Id: base.css,v 1.1.2.3 2009/05/19 04:07:36 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.4 2009/05/19 19:23:54 jmburnz Exp $ */
 
 /**
  * @file tables.css
@@ -259,7 +255,7 @@ tr:first-child td.container {
 #forum div.indent  {
   margin-left: 0.5em;
 }
-/* $Id: base.css,v 1.1.2.3 2009/05/19 04:07:36 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.4 2009/05/19 19:23:54 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -444,7 +440,7 @@ div.help ul:last-child {
 .admin-missing {
   font-weight: bold;
 }
-/* $Id: base.css,v 1.1.2.3 2009/05/19 04:07:36 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.4 2009/05/19 19:23:54 jmburnz Exp $ */
 
 /**
  * @file lists.css
@@ -501,7 +497,7 @@ dd {
 }
 
 
-/* $Id: base.css,v 1.1.2.3 2009/05/19 04:07:36 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.4 2009/05/19 19:23:54 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -716,7 +712,7 @@ html.js #user-login li.openid-link {
 
 
 
-/* $Id: base.css,v 1.1.2.3 2009/05/19 04:07:36 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.4 2009/05/19 19:23:54 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -852,14 +848,18 @@ ul.primary li a {
 }
 
 ul.secondary {
-  border-bottom: 1px solid #BBB;
-  margin: 0 0 1em;
-  padding: 1em 0;
+  border-bottom: 0;
+  margin: 1em 0 0 0;
+  padding: 0;
 }
 
 ul.secondary li {
   border-right: none;
-  padding:0 0.75em;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 215px; 
 }
 
 ul.secondary a:hover,
