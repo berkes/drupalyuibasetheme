@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.15 2009/05/19 00:05:00 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.16 2009/05/19 19:23:18 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -188,7 +188,11 @@
 
           <div id="main-content">
             <?php if ($title): ?><h1 id="page-title"><?php print $title; ?></h1><?php endif; ?>
-            <?php if ($tabs): ?><div class="local-tasks"><?php print $tabs; ?></div><?php endif; ?>
+            <?php if ($tabs): ?>
+              <div class="local-tasks"><div class="clear-block">
+                <?php print $tabs; ?>
+              </div></div>
+            <?php endif; ?>
             <?php if ($messages): print $messages; endif; ?>
             <?php if ($help): print $help; endif; ?>
             <div id="content" class="section region">
