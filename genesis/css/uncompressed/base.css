@@ -1,4 +1,4 @@
-/* $Id: base.css,v 1.1.2.2 2009/05/19 03:42:33 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.3 2009/05/19 04:07:36 jmburnz Exp $ */
 
 /**
  * @file typography.css
@@ -100,8 +100,7 @@ ins {
 
 pre, code {
   margin: 1.5em 0; 
-  padding: 0; 
-  white-space: pre;
+  padding: 0;
 }
 
 pre, code, tt {
@@ -143,7 +142,7 @@ blockquote, q {
   quotes: "" "";
 }
 
-/* $Id: base.css,v 1.1.2.2 2009/05/19 03:42:33 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.3 2009/05/19 04:07:36 jmburnz Exp $ */
 
 /**
  * @file tables.css
@@ -260,7 +259,7 @@ tr:first-child td.container {
 #forum div.indent  {
   margin-left: 0.5em;
 }
-/* $Id: base.css,v 1.1.2.2 2009/05/19 03:42:33 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.3 2009/05/19 04:07:36 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -445,7 +444,7 @@ div.help ul:last-child {
 .admin-missing {
   font-weight: bold;
 }
-/* $Id: base.css,v 1.1.2.2 2009/05/19 03:42:33 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.3 2009/05/19 04:07:36 jmburnz Exp $ */
 
 /**
  * @file lists.css
@@ -502,7 +501,7 @@ dd {
 }
 
 
-/* $Id: base.css,v 1.1.2.2 2009/05/19 03:42:33 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.3 2009/05/19 04:07:36 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -717,7 +716,7 @@ html.js #user-login li.openid-link {
 
 
 
-/* $Id: base.css,v 1.1.2.2 2009/05/19 03:42:33 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.3 2009/05/19 04:07:36 jmburnz Exp $ */
 
 /**
  * @file admin.css
