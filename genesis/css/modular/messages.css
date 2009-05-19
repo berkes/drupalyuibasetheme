@@ -1,4 +1,4 @@
-/* $Id: messages.css,v 1.1.2.5 2009/05/19 01:58:24 jmburnz Exp $ */
+/* $Id: messages.css,v 1.1.2.6 2009/05/19 03:42:33 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -103,11 +103,6 @@ div.ok, tr.ok,
 table tr.ok td {
   color: #222;
   padding: 1em 0.5em;
-}
-
-.update tr td {
-  border-bottom: 1px solid #FFF;
-  border-top: 1px solid #FFF;
 }
 
 .update tr.ok {

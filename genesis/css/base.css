@@ -1,4 +1,4 @@
-/* $Id: base.css,v 1.1.2.8 2009/05/19 01:58:24 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.9 2009/05/19 03:42:33 jmburnz Exp $ */
 
 /**
  * @file base.css
@@ -78,7 +78,6 @@ table tr.warning{background-color:#F7E8C5;}
 table tr.warning td{color:#9F3800;}
 table tr.warning.merge-up td{color:#514721;}
 div.ok,tr.ok,table tr.ok td{color:#222;padding:1em .5em;}
-.update tr td{border-bottom:1px solid #FFF;border-top:1px solid #FFF;}
 .update tr.ok{background:#E8F7C5;}
 .update tr.error{background:#FFDFE8;}
 .update tr.warning{background:#F7E8C5;}

@@ -1,4 +1,4 @@
-/* $Id: comments.css,v 1.1.2.8 2009/05/11 20:28:33 jmburnz Exp $ */
+/* $Id: comments.css,v 1.1.2.9 2009/05/19 03:42:33 jmburnz Exp $ */
 
 /**
  * @file comments.css
@@ -45,6 +45,13 @@
 .comment .submitted {}
 .comment .submitted a {}
 .comment .submitted a:hover {}
+
+.comment ul.links {
+  display: block; 
+  text-align: right; /* LTR */
+}
+
+.comment ul.links li {}
 
 /**
  * Comment Classes - extra classes to help out themers.

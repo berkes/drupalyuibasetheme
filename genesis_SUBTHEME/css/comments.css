@@ -1,4 +1,4 @@
-/* $Id: comments.css,v 1.1.2.9 2009/05/11 20:28:34 jmburnz Exp $ */
+/* $Id: comments.css,v 1.1.2.10 2009/05/19 03:42:33 jmburnz Exp $ */
 
 /**
  * @file comments.css
@@ -51,10 +51,12 @@
 /* Comment content wrapper. */
 .comment-content {}
 
-.comment .links {
+.comment ul.links {
+  display: block; 
   text-align: right; /* LTR */
-  clear: both;
 }
+
+.comment ul.links li {}
 
 /**
  * Comment Classes - extra classes to help out themers.
