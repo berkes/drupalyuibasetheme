@@ -1,4 +1,4 @@
-; $Id: genesis_SUBTHEME.info,v 1.7.2.8 2009/05/12 17:39:43 jmburnz Exp $
+; $Id: genesis_SUBTHEME.info,v 1.7.2.9 2009/05/19 03:03:53 jmburnz Exp $
 
 
 ;----------// Theme Information
@@ -57,7 +57,7 @@
   ; There is an example IE stylesheet are in your subthemes css/ie folder.
 
   ; Example only: see the README in the Conditional Styles module
-  conditional-stylesheets[if lt IE 7][all][] = css/ie/ie-example.css
+  ;conditional-stylesheets[if lt IE 7][all][] = css/ie/ie-example.css
 
 
 

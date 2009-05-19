@@ -1,4 +1,4 @@
-; $Id: genesis.info,v 1.1.2.14 2009/05/19 00:04:59 jmburnz Exp $
+; $Id: genesis.info,v 1.1.2.15 2009/05/19 03:03:52 jmburnz Exp $
   
 		
 ;----------// Theme Information
@@ -60,8 +60,8 @@
   stylesheets[all][] = css/layout.css
 		
   ; Use the uncompressed stylesheets; useful during development.
-  ;stylesheets[all][] = css/uncompressed/base.css
-  ;stylesheets[all][] = css/uncompressed/layout.css
+  ;stylesheets[all][] = css/uncompressed/base-uncompressed.css
+  ;stylesheets[all][] = css/uncompressed/layout-uncompressed.css
   
   ; Alternatively use the modular stylesheets.
   ;stylesheets[all][] = css/modular/admin-styles.css
@@ -92,7 +92,7 @@
   ; There is an example IE stylesheet are in your subthemes css/ie folder.
 
   ; Example only: see the README in the Conditional Styles module
-  conditional-stylesheets[if lt IE 7][all][] = css/ie/ie-example.css
+  ;conditional-stylesheets[if lt IE 7][all][] = css/ie/ie-example.css
 		
 		
 ;----------// jQuery Plugins and JavaScripts
