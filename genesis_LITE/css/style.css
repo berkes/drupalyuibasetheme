@@ -1,4 +1,4 @@
-/* $Id: style.css,v 1.1.2.3 2009/05/11 20:28:33 jmburnz Exp $ */
+/* $Id: style.css,v 1.1.2.4 2009/05/19 00:04:59 jmburnz Exp $ */
 
 /**
  * @file style.css
@@ -13,7 +13,7 @@
  *                    Body
  **********************************************************/
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Tahoma, "Trebuchet MS", Helvetica, Arial, sans-serif;
 }
 
 

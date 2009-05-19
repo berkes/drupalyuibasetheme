@@ -1,4 +1,4 @@
-/* $Id: admin-styles.css,v 1.1.2.2 2009/05/11 20:28:32 jmburnz Exp $ */
+/* $Id: admin-styles.css,v 1.1.2.3 2009/05/19 00:04:59 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -155,5 +155,5 @@ ul.secondary a.active {
  **********************************************************/
 /* Bump the font size, I can't read 9px lucida grande */
 #admin-menu {
-  font: 0.8125em Arial, Helvetica, sans-serif;
+  font: 0.9em Arial, Helvetica, sans-serif;
 }

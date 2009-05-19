@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.14 2009/05/12 13:51:10 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.15 2009/05/19 00:05:00 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -116,15 +116,17 @@
       <?php if ($site_logo or $site_name or $site_slogan): ?>
         <div id="branding">
 
-          <?php if ($site_logo): ?>
-            <div id="logo"><?php print $site_logo; ?></div>
-          <?php endif; ?>
-
-          <?php if ($site_name): ?>
+          <?php if ($site_logo or $site_name): ?>
             <?php if ($title): ?>
-              <div id="site-name"><strong><?php print $site_name; ?></strong></div>
-            <?php else: /* Use h1 when the page title is empty */ ?>
-              <h1 id="site-name"><?php print $site_name; ?></h1>
+              <div><strong>
+                <?php if ($site_logo): ?><span id="logo"><?php print $site_logo; ?></span><?php endif; ?>
+                <?php if ($site_name): ?><span id="site-name"><?php print $site_name; ?></span><?php endif; ?>
+              </strong></div>           
+            <?php else: /* Use h1 when the content title is empty */ ?>     
+              <h1>
+                <?php if ($site_logo): ?><span id="logo"><?php print $site_logo; ?></span><?php endif; ?>
+                <?php if ($site_name): ?><span id="site-name"><?php print $site_name; ?></span><?php endif; ?>
+             </h1>
             <?php endif; ?>
           <?php endif; ?>
 
@@ -164,7 +166,7 @@
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb" class="nav"><?php print $breadcrumb; ?></div> <!-- /breadcrumb -->
     <?php endif; ?>
-
+    
     <?php if ($secondary_content): ?>
       <div id="secondary-content" class="section region"><div class="region-inner">
         <?php print $secondary_content; ?>
@@ -184,12 +186,12 @@
             <div id="content-top" class="section region"><?php print $content_top; ?></div> <!-- /content-top -->
           <?php endif; ?>
 
-          <div id="main-content" class="section region">								
+          <div id="main-content">
             <?php if ($title): ?><h1 id="page-title"><?php print $title; ?></h1><?php endif; ?>
             <?php if ($tabs): ?><div class="local-tasks"><?php print $tabs; ?></div><?php endif; ?>
             <?php if ($messages): print $messages; endif; ?>
             <?php if ($help): print $help; endif; ?>
-            <div id="content">
+            <div id="content" class="section region">
               <?php print $content; ?>
             </div>								
           </div> <!-- /main-content -->

@@ -1,5 +1,5 @@
 <?php 
-// $Id: node.tpl.php,v 1.1.2.3 2009/05/11 20:28:33 jmburnz Exp $
+// $Id: node.tpl.php,v 1.1.2.4 2009/05/19 00:04:59 jmburnz Exp $
 
 /**
  * @file node.tpl.php
@@ -31,6 +31,7 @@
  * - $id: Position of the node. Increments each time it's output.
  *
  * Helper variables:
+ * - $node_id: Outputs a unique id for each node.
  * - $classes: Outputs dynamic classes for advanced themeing.
  *
  * Node status variables:
@@ -51,7 +52,7 @@
  * @see genesis_preprocess_node()
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>">
+<div id="<?php print $node_id; ?>" class="<?php print $classes; ?>">
 
   <?php if (!$page): ?>
     <h2 class="title">

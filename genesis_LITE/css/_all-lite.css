@@ -1,4 +1,4 @@
-/* $Id: _all-lite.css,v 1.1.2.12 2009/05/12 13:51:10 jmburnz Exp $ */
+/* $Id: _all-lite.css,v 1.1.2.13 2009/05/19 00:04:59 jmburnz Exp $ */
 
 /**
  * @file _all-lite.css
@@ -32,7 +32,7 @@
  *                    Body
  **********************************************************/
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Tahoma, "Trebuchet MS", Helvetica, Arial, sans-serif;
 }
 
 
@@ -321,15 +321,19 @@ body {}
   float: left;
 }
 
+/* h1 is for the front page only, all others use the div. */
+#branding h1 {font-size: 1em;} /* reset h1, do not change! */
+
+/* Remove display:block if you want the site name inline with the logo. */
+#branding span {
+  display: block;
+}
+
 /* Logo. */
 #logo {}
 
-/* h1 is for the front page only, all others use the div. */
-h1#site-name,
-div#site-name {
+#site-name {
   font-weight: bold; /* Bold or else the line heights vary. */
-}
-div#site-name  {
   font-size: 2em;
   line-height: 1.5;
 }

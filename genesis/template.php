@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.14 2009/05/11 20:28:32 jmburnz Exp $
+// $Id: template.php,v 1.1.2.15 2009/05/19 00:04:59 jmburnz Exp $
 
 /**
  * @file template.php
@@ -28,10 +28,12 @@ function genesis_preprocess_page(&$vars, $hook) {
   if ($vars['help'] == "<div class=\"help\"> \n</div>") {
     $vars['help'] = '';
   }
-
+  
   // Set variables for the logo and site_name.
   if (!empty($vars['logo'])) {
-    $vars['site_logo'] = '<a href="'. $vars['front_page'] .'" title="'. t('Home page') .'" rel="home"><img src="'. $vars['logo'] .'" alt="'. $vars['site_name'] .' '. t('logo') .'" /></a>';
+    // Return the site_name even when site_name is disabled in theme settings.
+    $vars['logo_alt_text'] = variable_get('site_name', '');
+    $vars['site_logo'] = '<a href="'. $vars['front_page'] .'" title="'. t('Home page') .'" rel="home"><img src="'. $vars['logo'] .'" alt="'. $vars['logo_alt_text'] .' '. t('logo') .'" /></a>';
   }
   if (!empty($vars['site_name'])) {
     $vars['site_name'] = '<a href="'. $vars['front_page'] .'" title="'. t('Home page') .'" rel="home">'. $vars['site_name'] .'</a>';
@@ -115,6 +117,9 @@ function genesis_preprocess_page(&$vars, $hook) {
  */
 function genesis_preprocess_node(&$vars, $hook) {
   global $user;
+  
+  // Set the node id.
+  $vars['node_id'] = 'node-'. $vars['node']->nid;
 
   // Special classes for nodes, emulate Drupal 7.
   $classes = array();
@@ -220,6 +225,9 @@ function genesis_preprocess_comment_wrapper(&$vars) {
  */
 function genesis_preprocess_block(&$vars, $hook) {
   $block = $vars['block'];
+  
+  // Set the block id.
+  $vars['block_id'] = 'block-'. $block->module .'-'. $block->delta;
 
   // Special classes for blocks, emulate Drupal 7.
   // Set up variables for navigation-like blocks.
@@ -247,7 +255,10 @@ function genesis_preprocess_block(&$vars, $hook) {
   $vars['classes'] = implode(' ', $classes);
   
   /**
-   * Add block edit links (credit to the Zen theme for this implimentation).
+   * Add block edit links. Credit to the Zen theme for this implimentation. The only
+   * real difference is that the Zen theme wraps each link in span, whereas Genesis 
+   * outputs the links in an item-list. Also I have omitted the Views links as these 
+   * seem redundant because Views has its own set of hover links.
    */
   if (user_access('administer blocks')) {
     // Display a 'Edit Block' link for blocks.

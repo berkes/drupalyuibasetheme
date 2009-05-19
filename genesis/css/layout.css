@@ -1,4 +1,4 @@
-/* $Id: layout.css,v 1.1.2.9 2009/05/12 13:51:09 jmburnz Exp $ */
+/* $Id: layout.css,v 1.1.2.10 2009/05/19 00:04:59 jmburnz Exp $ */
 
 /**
  * Genesis layout methods
@@ -369,6 +369,11 @@
 #footer,
 #footer-message {
   clear: both;
+}
+
+.hide {
+  height: 0; 
+		overflow: hidden;
 }
 
 /* sidebar dev background colors 

@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.15 2009/05/12 13:51:10 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.16 2009/05/19 00:05:00 jmburnz Exp $ */
 
 /**
  * @file page.css
@@ -209,15 +209,19 @@ body {}
   float: left; /* LTR */
 }
 
+/* h1 is for the front page only, all others use the div. */
+#branding h1 {font-size: 1em;} /* reset h1, do not change! */
+
+/* Remove display:block if you want the site name inline with the logo. */
+#branding span {
+  display: block;
+}
+
 /* Logo. */
 #logo {}
 
-/* h1 is for the front page only, all others use the div. */
-h1#site-name,
-div#site-name {
+#site-name {
   font-weight: bold; /* Bold or else the line heights vary. */
-}
-div#site-name  {
   font-size: 2em;
   line-height: 1.5;
 }
@@ -228,7 +232,6 @@ div#site-name  {
 
 /* Site slogan. */
 #site-slogan {}
-
 
 /**********************************************************
  *                        Search
@@ -402,7 +405,7 @@ div#site-name  {
  * content column if you need to.
  */
 #breadcrumb {
-  padding: 0 0 0.75em; /* LTR */
+  padding: 0 0 0.75em;
 }
 
 

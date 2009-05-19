@@ -1,4 +1,4 @@
-/* $Id: base.css,v 1.1.2.6 2009/05/13 12:11:27 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.7 2009/05/19 00:04:59 jmburnz Exp $ */
 
 /**
  * @file base.css
@@ -67,19 +67,23 @@ tr:first-child td.region,tr:first-child td.module,tr:first-child td.container{bo
 .description{color:#888;}
 div.messages{font-weight:normal;margin:1em 0;}
 div.messages ul{margin:0 0 0 1.25em;}
-div.error{background:#FFEFF1 url(../images/error.png) no-repeat .5em .45em;border:1px solid #E41F0B;color:#E41F0B;}
-tr.error{background:#FFEFF1;color:#E41F0B;}
+div.error{background:#FFEFF3 url(../images/error.png) no-repeat .5em .45em;border:1px solid #E41F0B;color:#E41F0B;}
+tr.error{background:#FFEFF3;color:#E41F0B;}
 div.notice{background:#FFF6BF;color:#514721;border-color:#FFD324;}
 .error a,.notice a,.success a{text-decoration:underline;}
-div.status{background:#ECEFE0 url(../images/ok.png) no-repeat .75em .6em;border:1px solid #4DA449;color:#2A6827;}
-div.help{background:#EFF7FF url(../images/info.png) no-repeat .5em .45em;border:1px solid #66BEF4;color:#000D2F;margin:1em 0;}
+div.status{background:#F1FFCF url(../images/ok.png) no-repeat .75em .6em;border:1px solid #4DA449;color:#2A6827;}
+div.help{background:#EFF0FF url(../images/info.png) no-repeat .5em .45em;border:1px solid #66BEF4;color:#000D2F;margin:1em 0;}
 div.warning{background:#FFF6DF url(../images/warning.png) no-repeat .5em .45em;border:1px solid #FFB900;color:#9F3800;}
 div.messages,div.warning,div.help,div.status,div.error{padding:.6em 1em .6em 3em;}
-table tr.warning{background-color:#FFF6DF;}
+table tr.warning{background-color:#F7E8C5;}
 table tr.warning td{color:#9F3800;}
 table tr.warning.merge-up td{color:#514721;}
 div.ok,tr.ok,table tr.ok td{color:#222;padding:1em .5em;}
-.update tr.ok{background:#EFFFEF;}
+.update tr td{border-bottom:1px solid #FFF;border-top:1px solid #FFF;}
+.update tr.ok{background:#E8F7C5;}
+.update tr.error{background:#FFDFE8;}
+.update tr.warning{background:#F7E8C5;}
+.update tr.error .version-recommended {background:#FFEFF4;}
 .update .info{padding:0 0 0 1em;}
 .includes{color:#222;}
 div.help p:last-child,div.help ul:last-child{margin-bottom:0;}
@@ -88,7 +92,7 @@ div.help p:last-child,div.help ul:last-child{margin-bottom:0;}
 .block-region{border:1px dotted #000;color:#000;font:1em 'andale mono', 'lucida console', monospace;padding:3px 6px 1px;}
 .node-unpublished,.comment-unpublished{background-color:#FFF6DF;}
 .unpublished{visibility:hidden;}
-.node-unpublished .unpublished,.comment-unpublished .unpublished{background:transparent url(../images/warning-small.png) no-repeat 0 0.1em;color:#FFB900;font-size:.94em;margin-left:.5em;padding-left:18px;visibility:visible;}
+.node-unpublished .unpublished,.comment-unpublished .unpublished{background:transparent url(../images/warning-small.png) no-repeat 0 .1em;color:#FFB900;font-size:.94em;margin-left:.5em;padding-left:18px;visibility:visible;}
 .admin-dependencies,.admin-required,.admin-enabled,.admin-disabled,.admin-missing{font-weight:bold;}
 ul,ol{margin:0 0 1.5em 1.75em;padding:0;}
 li{margin:0;padding:0;}
@@ -130,7 +134,7 @@ fieldset legend{display:block;font-weight:bold;padding:0 1em 0 0;}
 *:first-child+html fieldset legend,*:first-child+html fieldset.collapsed legend{display:inline;}
 html.js fieldset.collapsed{background:transparent;padding-bottom:.75em;padding-top:0;}
 html.js fieldset.collapsible legend a,html.js fieldset.collapsed legend a{background:transparent url(../images/legend-sprite.gif) no-repeat;}
-html.js fieldset.collapsible legend a{background-position:0 5px;padding-left:1em;}
+html.js fieldset.collapsible legend a{background-position:0 6px;padding-left:1em;}
 html.js fieldset.collapsed legend a{background-position:0 -15px;}
 #node-form .vertical-tabs ul.vertical-tabs-list{margin:0;}
 #node-form .vertical-tabs ul.vertical-tabs-list li{list-style:none;}
@@ -140,7 +144,7 @@ html.js #user-login-form li.openid-link,html.js #user-login li.openid-link{list-
 #user-login ul{margin:0 0 5px;}
 #user-login ul li{margin:0;}
 #user-login-form li.openid-link,#user-login li.openid-link{background:none;}
-#user-login-form li.openid-link a,#user-login li.openid-link a{background:transparent url("../images/openid.png") no-repeat 0 0;padding:0 20px;}
+#user-login-form li.openid-link a,#user-login li.openid-link a{background:transparent url(../images/openid.png) no-repeat 0 0;padding:0 20px;}
 div.admin-panel{border:1px solid #DDD;margin:0 0 .75em;padding:0;}
 div.admin .left,div.admin .right{margin-left:0;margin-right:0;width:49%;}
 .admin-panel h3{background:#EEE;color:#222;padding:0 0 0 .5em;}
@@ -167,5 +171,4 @@ ul.primary li a{background-color:#EEE;margin-right:.08em;border-color:#CCC;paddi
 ul.secondary{border-bottom:1px solid #BBB;margin:0 0 1em;padding:1em 0;}
 ul.secondary li{border-right:none;padding:0 .75em;}
 ul.secondary a:hover,ul.secondary a.active{border-bottom:none;text-decoration:underline;}
-body.admin-menu{margin-top:1.75em!important;}
-#admin-menu{font-size:.94em;}
+#admin-menu{font:.9em Arial, Helvetica, sans-serif;}

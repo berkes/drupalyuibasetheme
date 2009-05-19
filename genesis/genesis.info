@@ -1,4 +1,4 @@
-; $Id: genesis.info,v 1.1.2.13 2009/05/12 13:51:09 jmburnz Exp $
+; $Id: genesis.info,v 1.1.2.14 2009/05/19 00:04:59 jmburnz Exp $
   
 		
 ;----------// Theme Information
@@ -57,11 +57,20 @@
 ;----------// Genesis core styles
 
   stylesheets[all][] = css/base.css
-  stylesheets[all][] = css/layout-tidy.css
+  stylesheets[all][] = css/layout.css
 		
-  ; Use the uncompressed layout stylesheet, for example during development.
-  ;stylesheets[all][] = css/layout.css
-		
+  ; Use the uncompressed stylesheets; useful during development.
+  ;stylesheets[all][] = css/uncompressed/base.css
+  ;stylesheets[all][] = css/uncompressed/layout.css
+  
+  ; Alternatively use the modular stylesheets.
+  ;stylesheets[all][] = css/modular/admin-styles.css
+  ;stylesheets[all][] = css/modular/forms.css
+  ;stylesheets[all][] = css/modular/lists.css
+  ;stylesheets[all][] = css/modular/messages.css
+  ;stylesheets[all][] = css/modular/tables.css
+  ;stylesheets[all][] = css/modular/typography.css
+  
 		
 ;----------// Optional stylesheets
 		
@@ -69,7 +78,7 @@
   stylesheets[all][] = css/edit-links.css
 								  
   ; Uncomment to show the grid, add the grid class in page.tpl.php also.
-  ;stylesheets[all][] = css/grid.css
+  ;stylesheets[all][] = css/dev/grid.css
 
 
 ;----------// IE Conditional Stylesheets
@@ -95,8 +104,6 @@
   ; to the same height (#sidebar-left, #sidebar-right, #content-column).
   ; To use uncomment and clear cache data in Performance settings.
   ;scripts[] = js/jquery.equalizeheights.minified.js
-
-
 
 ;---------- Theme Congiruation features ----------;
 

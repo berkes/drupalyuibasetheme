@@ -1,5 +1,5 @@
 <?php 
-// $Id: block.tpl.php,v 1.1.2.3 2009/05/11 20:28:32 jmburnz Exp $
+// $Id: block.tpl.php,v 1.1.2.4 2009/05/19 00:04:59 jmburnz Exp $
 
 /**
  * @file block.tpl.php
@@ -13,6 +13,7 @@
  * - $block->region: The block region embedding the current block.
  *
  * Helper variables:
+ * - $block_id: Outputs a unique id for each block.
  * - $classes: Outputs dynamic classes for advanced themeing.
  * - $edit_links: Outputs hover style links for block configuration and editing.
  * - $block_zebra: Outputs 'odd' and 'even' dependent on each block region.
@@ -34,7 +35,7 @@
  * then unset the block-edit.css in your subhtemes .info file.
  */
 ?>
-<div id="block-<?php print $block->module .'-'. $block->delta; ?>" class="<?php print $classes; ?>">
+<div id="<?php print $block_id; ?>" class="<?php print $classes; ?>">
 
   <?php if ($block->subject): ?>
     <h2 class="title"><?php print $block->subject; ?></h2>
