@@ -1,4 +1,4 @@
-/* $Id: _all-subtheme-tidy.css,v 1.1.2.10 2009/05/19 00:05:00 jmburnz Exp $ */
+/* $Id: _all-subtheme-tidy.css,v 1.1.2.11 2009/05/19 01:58:25 jmburnz Exp $ */
 
 /**
  * @file _all-subtheme-tidy.css
@@ -21,7 +21,7 @@
  * The file is useful for working around IE7's 30 max stylesheets issue
  * when you cannot turn on CSS aggregation in Performance settings.
  */
-body{font-family:Verdana,Tahoma,"Trebuchet MS",Helvetica,Arial,sans-serif;}
+body{font-family:Verdana,Geneva,"DejaVu Sans",sans-serif;}
 a{margin:0;padding:0;}
 a img{border:none;}
 #container{width:90%;}

@@ -1,11 +1,11 @@
-/* $Id: layout.css,v 1.1.2.11 2009/05/19 00:10:47 jmburnz Exp $ */
+/* $Id: layout.css,v 1.1.2.12 2009/05/19 01:58:24 jmburnz Exp $ */
 
 /**
  * @file layout.css
  * 
- * See /uncompressed/layout.css For a more human readable version of this 
+ * See layout-uncompressed.css For a more human readable version of this 
  * file with instructions and comments.
- * @see /uncompressed/layout.css
+ * @see layout-uncompressed.css
  */
 #genesis-1a .two-sidebars .content-inner{margin:0 22em;}
 #genesis-1a .sidebar-left .content-inner{margin-left:22em;}

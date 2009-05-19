@@ -1,4 +1,4 @@
-/* $Id: admin-styles.css,v 1.1.2.3 2009/05/19 00:04:59 jmburnz Exp $ */
+/* $Id: admin-styles.css,v 1.1.2.4 2009/05/19 01:58:24 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -141,7 +141,8 @@ ul.secondary {
 
 ul.secondary li {
   border-right: none;
-  padding:0 0.75em;
+  padding: 0 1.5em 0 0;
+  white-space: pre;
 }
 
 ul.secondary a:hover,

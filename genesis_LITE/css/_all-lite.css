@@ -1,4 +1,4 @@
-/* $Id: _all-lite.css,v 1.1.2.13 2009/05/19 00:04:59 jmburnz Exp $ */
+/* $Id: _all-lite.css,v 1.1.2.14 2009/05/19 01:58:24 jmburnz Exp $ */
 
 /**
  * @file _all-lite.css
@@ -32,7 +32,7 @@
  *                    Body
  **********************************************************/
 body {
-  font-family: Verdana, Tahoma, "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
 }
 
 

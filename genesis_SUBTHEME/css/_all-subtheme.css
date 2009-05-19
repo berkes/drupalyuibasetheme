@@ -1,4 +1,4 @@
-/* $Id: _all-subtheme.css,v 1.1.2.13 2009/05/19 00:05:00 jmburnz Exp $ */
+/* $Id: _all-subtheme.css,v 1.1.2.14 2009/05/19 01:58:25 jmburnz Exp $ */
 
 /**
  * @file _all-subtheme.css
@@ -33,7 +33,7 @@
  *                    Body
  **********************************************************/
 body {
-  font-family: Verdana, Tahoma, "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
 }
 
 
