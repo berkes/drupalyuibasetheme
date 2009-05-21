@@ -1,5 +1,5 @@
 <?php 
-// $Id: node.tpl.php,v 1.1.2.4 2009/05/19 00:04:59 jmburnz Exp $
+// $Id: node.tpl.php,v 1.1.2.5 2009/05/21 17:48:36 jmburnz Exp $
 
 /**
  * @file node.tpl.php
@@ -29,7 +29,6 @@
  * - $zebra: Outputs either "even" or "odd". Useful for zebra striping in
  *   teaser listings.
  * - $id: Position of the node. Increments each time it's output.
- *
  *
  * Helper variables:
  * - $node_id: Outputs a unique id for each node.

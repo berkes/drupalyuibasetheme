@@ -1,5 +1,5 @@
 <?php 
-// $Id: node.tpl.php,v 1.1.2.8 2009/05/19 00:04:59 jmburnz Exp $
+// $Id: node.tpl.php,v 1.1.2.9 2009/05/21 17:48:36 jmburnz Exp $
 
 /**
  * @file node.tpl.php
@@ -69,12 +69,7 @@
 
   <?php print $content; ?>
 
-  <?php if ($terms): ?>
-    <?php print $terms; ?>
-  <?php endif; ?>
-
-  <?php if ($links): ?>
-    <?php print $links; ?>
-  <?php endif; ?>
+  <?php if ($terms): print $terms; endif; ?>
+  <?php if ($links): print $links; endif; ?>
 
 </div> <!-- /node -->

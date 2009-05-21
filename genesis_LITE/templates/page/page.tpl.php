@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.16 2009/05/19 19:23:17 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.17 2009/05/21 17:48:36 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -94,14 +94,14 @@
 </head>
 <?php
 /**
- * Change the body id selector to your preferred layout e.g. body id="genesis-1b". 
+ * Change the body id selector to your preferred layout e.g. body id="genesis-1a". 
  * @see layout.css.
  */
 ?>
-<body id="genesis-1a" <?php print $section_class; ?>>
+<body id="genesis-1b" <?php print $section_class; ?>>
   <div id="container" class="<?php print $classes; ?>">
 
-    <div id="skip-nav" class="clear-block">
+    <div id="skip-nav">
       <a href="#main-content"><?php print t('Skip to main content'); ?></a>
     </div>
 
@@ -158,37 +158,35 @@
       <div id="secondary-content" class="section region"><?php print $secondary_content; ?></div> <!-- /secondary-content -->
     <?php endif; ?>
 
-    <div id="columns">
+    <div id="columns"><div class="columns-inner clear-block">
 
-      <div id="content-column">
-        <div class="content-inner">
+      <div id="content-column"><div class="content-inner">
 
-          <?php if ($mission): ?>
-            <div id="mission"><?php print $mission; ?></div> <!-- /mission -->
+        <?php if ($mission): ?>
+          <div id="mission"><?php print $mission; ?></div> <!-- /mission -->
+        <?php endif; ?>
+
+        <?php if ($content_top): ?>
+          <div id="content-top" class="section region"><?php print $content_top; ?></div> <!-- /content-top -->
+        <?php endif; ?>
+
+        <div id="main-content" class="section region">
+          <?php if ($title): ?><h1 id="page-title"><?php print $title; ?></h1><?php endif; ?>
+          <?php if ($tabs): ?>
+            <div class="local-tasks"><div class="clear-block">
+              <?php print $tabs; ?>
+            </div></div>
           <?php endif; ?>
+          <?php if ($messages): print $messages; endif; ?>
+          <?php if ($help): print $help; endif; ?>
+          <?php print $content; ?>
+        </div> <!-- /main-content -->
 
-          <?php if ($content_top): ?>
-            <div id="content-top" class="section region"><?php print $content_top; ?></div> <!-- /content-top -->
-          <?php endif; ?>
-
-          <div id="main-content" class="section region">
-            <?php if ($title): ?><h1 id="page-title"><?php print $title; ?></h1><?php endif; ?>
-            <?php if ($tabs): ?>
-              <div class="local-tasks"><div class="clear-block">
-                <?php print $tabs; ?>
-              </div></div>
-            <?php endif; ?>
-            <?php if ($messages): print $messages; endif; ?>
-            <?php if ($help): print $help; endif; ?>
-            <?php print $content; ?>
-          </div> <!-- /main-content -->
-
-          <?php if ($content_bottom): ?>
-            <div id="content-bottom" class="section region"><?php print $content_bottom; ?></div> <!-- /content-bottom -->
-          <?php endif; ?>
-
-        </div>
-      </div> <!-- /content-column -->
+        <?php if ($content_bottom): ?>
+          <div id="content-bottom" class="section region"><?php print $content_bottom; ?></div> <!-- /content-bottom -->
+        <?php endif; ?>
+        
+      </div></div> <!-- /content-column -->
 
       <?php if ($left): ?>
         <div id="sidebar-left" class="section sidebar region"><?php print $left; ?></div> <!-- /sidebar-left -->
@@ -198,7 +196,7 @@
         <div id="sidebar-right" class="section sidebar region"><?php print $right; ?></div> <!-- /sidebar-right -->
       <?php endif; ?>
 
-    </div> <!-- /columns -->
+    </div></div> <!-- /columns -->
 
     <?php if ($tertiary_content): ?>
       <div id="tertiary-content" class="section region clear-block"><?php print $tertiary_content; ?></div>  <!-- /tertiary-content -->
