@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.15 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.16 2009/05/21 17:49:14 jmburnz Exp $ */
 
 /**
  * @file page.css
@@ -96,7 +96,10 @@
  * Fixed widths use pixels,       e.g. 960px
  */
 #container {
-  width: 100%;
+  width: 980px;     /* Width for IE6 */
+}
+body > #container {
+  width: 100%;      /* Width for all other browsers */
   max-width: 980px; /* set a maximum width */
   min-width: 760px; /* set a minimum width */
 }
@@ -179,10 +182,10 @@
 
 
 /**********************************************************
- *                 Masthead Elements
+ *                 Header Elements
  **********************************************************/
-/* #masthead wraps #branding, #search-box-top and #header-blocks. */
-#masthead {}
+/* #header wraps #branding, #search-box-top and #header-blocks. */
+#header {}
 
 /* #branding wraps #logo, #site-name and #site-slogan. */
 #branding {
@@ -292,21 +295,20 @@
   white-space: nowrap;
 }
 
-#nav .primary-links li.active {}
+/* Set pseudo class styles. */
+#nav .primary-links li a:hover {}
+#nav .primary-links li a:focus {}
+#nav .primary-links li a:active {}
+#nav .primary-links li a:visited {}
 
-#nav .primary-links li a:hover,
-#nav .primary-links li a.active {}
-#nav .primary-links li a.visited {}
+/* Primary first and last classes. */
+#nav .primary-links li.first {}
+#nav .primary-links li.last {}
 
 /* Active trail classes. */
 #nav .primary-links li.active {}
 #nav .primary-links li.active-trail {}
 #nav .primary-links li.active-trail a {}
-#nav .primary-links li.active-trail a.active {}
-
-/* Primary first and last classes */
-#nav .primary-links li.first {}
-#nav .primary-links li.last {}
 
 
 /**
@@ -334,23 +336,20 @@
   white-space: nowrap;
 }
 
-#nav .secondary-links li a:hover  {}
-#nav .secondary-links li a:focus  {}
+/* Set pseudo class styles. */
+#nav .secondary-links li a:hover {}
+#nav .secondary-links li a:focus {}
+#nav .secondary-links li a:active {}
 #nav .secondary-links li a:visited {}
-#nav .secondary-links li a.active {}
+
+/* Secondary first and last classes. */
+#nav .secondary-links li.first {}
+#nav .secondary-links li.last {}
 
 /* Active trail classes. */
 #nav .secondary-links li.active {}
 #nav .secondary-links li.active-trail {}
 #nav .secondary-links li.active-trail a {}
-#nav .secondary-links li.active-trail a.active {}
-
-/* Secondary first and last classes */
-#nav .secondary-links li.first {}
-#nav .secondary-links li.last {}
-
-/* Set unique active-trail active styles */
-
 
 
 /**********************************************************

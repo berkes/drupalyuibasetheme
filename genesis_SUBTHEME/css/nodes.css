@@ -1,4 +1,4 @@
-/* $Id: nodes.css,v 1.1.2.11 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: nodes.css,v 1.1.2.12 2009/05/21 17:49:14 jmburnz Exp $ */
 
 /**
  * @file nodes.css
@@ -31,17 +31,12 @@
 /* Node content wrapper. */
 .node-content {}
 
-/* Node meta - wrapper div for submitted and taxonomy terms. */
-.node-meta {}
-
 /* User Picture. */
 .node .user-picture {}
 .node .user-picture img {}
 
 /* Submitted */
-p.node-submitted  {
-  margin: 0;
-}
+.node-submitted {}
 .node-submitted a {}
 .node-submitted a:hover {}
 

@@ -1,4 +1,4 @@
-/* $Id: _all-lite.css,v 1.1.2.15 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: _all-lite.css,v 1.1.2.16 2009/05/21 17:49:14 jmburnz Exp $ */
 
 /**
  * @file _all-lite.css
@@ -21,13 +21,14 @@
  */
 
 /**
- * @see style.css
+ * @file style.css
  *
  * Use this file to override the Genesis core modular styles 
  * (such as the HTML elements in typography.css), module CSS 
  * and other Drupal styles. Anything that doesn't fit logically
  * into page.css, nodes.css, blocks.css or comments.css can go here.
  */
+
 /**********************************************************
  *                    Body
  **********************************************************/
@@ -96,7 +97,12 @@ a:visited {}
 a:hover   {}
 a:active  {}
 a.active  {}
-a.active-trail {}
+
+/* Set global a:focus styles. */ 
+a:focus {
+  color: #C00000;
+  border: 0;
+}
 
 /* Drupal sets this to black. */
 li a.active {}
@@ -104,6 +110,34 @@ li a.active {}
 /* Remove borders on linked images. */
 a img {
   border: none;
+}
+
+
+/**********************************************************
+ *                 Accessibility Classes
+ **********************************************************/
+
+/* Hide content without positioning issues. */
+.invisible {
+  height: 0;
+  overflow: hidden;
+}
+
+/* Move content off screen where appropriate. */
+.offscreen {
+  position: absolute;
+  left: -999em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Completely remove content for all users.
+   DO NOT use this for Skip links, display:none 
+   hides content from screen readers! */
+.remove {
+  display: none;
 }
 
 
@@ -124,8 +158,12 @@ a img {
 
 
 /**
- * @see page.css
+ * @file page.css
  * This stylesheet provides the main page styles for this theme.
+ */
+
+/**
+ * Remove unused styles for performace.
  */
 
 /**********************************************************
@@ -184,7 +222,7 @@ a img {
 .secondary-content {}
 .tertiary-content  {}
 .footer            {}
-*/          {}
+*/
 
 /** 
  * Page Path Class
@@ -215,9 +253,12 @@ a img {
  * Fixed widths use pixels,       e.g. 960px
  */
 #container {
-  width: 90%;
-/* max-width: 1100px; set a maximum width */
-/* min-width: 960px; set a minimum width */
+  width: 980px;     /* Width for IE6 */
+}
+body > #container {
+  width: 100%;      /* Width for all other browsers */
+  max-width: 980px; /* set a maximum width */
+  min-width: 760px; /* set a minimum width */
 }
 
 /* Column wrappers */
@@ -286,31 +327,26 @@ a img {
  * Do not use display: none as this hides it from screen readers.
  */
 #skip-nav {
-  text-align: right;
+  text-align: right; /* LTR */
 }
-#skip-nav a:focus {
-  border: 1px solid #FFCC00;
-  background: #FFFFCF;
-}
+
+/* Override default pseudo class styles */
 #skip-nav a:link    {}
-#skip-nav a:hover   {}
 #skip-nav a:visited {}
+#skip-nav a:hover   {}
+#skip-nav a:focus   {}
+#skip-nav a:active  {}
 
 
 /**********************************************************
- *                       Header 
+ *                 Header Elements
  **********************************************************/
-/**
- * #header-nav wraps #header and #nav.
- */
-#header-nav {}
-
 /* #header wraps #branding, #search-box-top and #header-blocks. */
 #header {}
 
 /* #branding wraps #logo, #site-name and #site-slogan. */
 #branding {
-  float: left;
+  float: left; /* LTR */
 }
 
 /* h1 is for the front page only, all others use the div. */
@@ -330,9 +366,12 @@ a img {
   line-height: 1.5;
 }
 
-#site-name a:link,
+/* Override default pseudo class styles. */
+#site-name a:link    {}
 #site-name a:visited {}
 #site-name a:hover   {}
+#site-name a:focus   {}
+#site-name a:active  {}
 
 /* Site slogan. */
 #site-slogan {}
@@ -342,15 +381,21 @@ a img {
  *                        Search
  **********************************************************/
 #search-theme-form {
-  float:right;
+  float: right;    /* LTR */
+  margin: 1.5em 0; /* Reset form element margins. */
 }
+
+/* Use the child selector because the inner div has no class. */
 #search-theme-form > div {}
+
 #search-theme-form label {}
 #search-theme-form input {}
 #search-theme-form .form-item {}
 #search-theme-form .form-submit {}
 
 #edit-search-theme-form-1 {}
+
+/* Override forms.css focus style */
 #edit-search-theme-form-1:hover,
 #edit-search-theme-form-1:focus {}
 
@@ -385,72 +430,83 @@ a img {
  * Primary Links Style
  * Example styles to get you started.
  */
-.primary-links {
-  background: #EEE; /* Default gray for dev only. */
+#nav .primary-links {
+  background: #DDD; /* Default gray for dev only. */
   font-weight: bold;
-}
-
-/* Modify the margin to set tab spacings. */
-.primary-links li {
-  display: inline;
-  line-height: 2;
-  list-style: none;
-  margin: 0 1em;
+  margin: 0;
   padding: 0;
 }
 
-.primary-links li a {
+/* Modify the margin to set tab spacings. */
+#nav .primary-links li {
+  display: inline;
+  line-height: 2;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav .primary-links li a {
+  padding: 0 1em;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.primary-links .links li.active {}
+/* Set pseudo class styles. */
+#nav .primary-links li a:hover {}
+#nav .primary-links li a:focus {}
+#nav .primary-links li a:active {}
+#nav .primary-links li a:visited {}
 
-.primary-links .links li a:hover {}
-.primary-links .links li a.active {}
-.primary-links .links li a.visited {}
-.primary-links li a.active-trail {}
+/* Primary first and last classes. */
+#nav .primary-links li.first {}
+#nav .primary-links li.last {}
 
-/* Primary first and last classes */
-.primary-links li.first {}
-.primary-links li.last {}
-
-/* Set unique active-trail styles */
-/* #primary ul.links li a.active-trail {} */
+/* Active trail classes. */
+#nav .primary-links li.active {}
+#nav .primary-links li.active-trail {}
+#nav .primary-links li.active-trail a {}
 
 
 /**
  * Secondary Links Style
  */
-.secondary-links {
-  background: #F8F8F8; /* Default gray for dev only. */
+#nav .secondary-links {
+  background: #EEE; /* Default gray for dev only. */
   font-weight: bold;
-}
-
-/* Modify the margin to set tab spacings. */
-.secondary-links li {
-  display: inline;
-  line-height: 2;
-  list-style: none;
-  margin: 0 1em;
+  margin: 0;
   padding: 0;
 }
 
-.secondary-links li a {
+/* Modify the margin to set tab spacings. */
+#nav .secondary-links li {
+  display: inline;
+  line-height: 2;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav .secondary-links li a {
+  padding: 0 1em;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.secondary-links li.active {}
+/* Set pseudo class styles. */
+#nav .secondary-links li a:hover {}
+#nav .secondary-links li a:focus {}
+#nav .secondary-links li a:active {}
+#nav .secondary-links li a:visited {}
 
-.secondary-links li a:hover  {}
-.secondary-links li a.active {}
-.secondary-links li a.visited {}
-.secondary-links li a.active-trail {}
+/* Secondary first and last classes. */
+#nav .secondary-links li.first {}
+#nav .secondary-links li.last {}
 
-/* Secondary first and last classes */
-.secondary-links li.first {}
-.secondary-links li.last {}
+/* Active trail classes. */
+#nav .secondary-links li.active {}
+#nav .secondary-links li.active-trail {}
+#nav .secondary-links li.active-trail a {}
 
 
 /**********************************************************
@@ -463,7 +519,7 @@ a img {
  * content column if you need to.
  */
 #breadcrumb {
-  margin: 0 0 0.75em;
+  margin: 0 0 0.75em; /* LTR */
 }
 
 
@@ -511,6 +567,11 @@ h1#page-title {}
 /**********************************************************
  *               Footer, Footer Message
  **********************************************************/
+#footer,
+#footer-message {
+  clear: both;
+}
+
 #footer {}
 #footer-message {}
 
@@ -529,9 +590,10 @@ h1#page-title {}
 
 
 /**
- * @see nodes.css
+ * @file nodes.css
  * Basic styles for nodes.
  */
+
 /**********************************************************
  *                      Nodes
  **********************************************************/
@@ -552,11 +614,41 @@ h1#page-title {}
   text-decoration: underline;
 }
 
-.node .user-picture {}
+/* Node meta - wrapper div for submitted and taxonomy terms. */
+.node .meta {}
 
-.node .submitted {}
+/* User Picture. */
+.node .user-picture {}
+.node .user-picture img {}
+
+/* Submitted. */
+.node p.submitted {
+  margin: 0;
+}
 .node .submitted a {}
 .node .submitted a:hover {}
+
+/* Links and Terms. */
+.node ul.links {}
+.node ul.links li {
+  padding: 0 1em 0 0;
+}
+.node ul.links li a {}
+
+.node ul.tags {}
+.node ul.tags li {}
+.node ul.tags li a {}
+
+/* Style module links. */
+ul.links li.node_read_more a {}
+ul.links li.comment_add a {}
+ul.links li.comment_comments a {}
+ul.links li.comment_new_comments a {}
+ul.links li.blog_usernames_blog a {}
+
+/* Node ul link first and last classes. */
+.node ul.links li.first {}
+.node ul.links li.last  {}
 
 /* Node classes for node workflow states. */
 .node-add    {}
@@ -630,10 +722,12 @@ h1#page-title {}
 .field-field-FIELDNAME {}
 
 
+
 /**
  * @file comments.css
  * Basic styles for comments.
  */
+
 /**********************************************************
  *                     Comments
  **********************************************************/
@@ -664,7 +758,7 @@ h1#page-title {}
   text-decoration: none;
 }
 
-.comment-title a:hover {
+.comment .title a:hover {
   text-decoration: underline;
 }
 
@@ -674,6 +768,23 @@ h1#page-title {}
 .comment .submitted {}
 .comment .submitted a {}
 .comment .submitted a:hover {}
+
+.comment ul.links {
+  display: block;
+  padding: 0 1em 0 0;
+  text-align: right; /* LTR */
+}
+.comment ul.links li {}
+.comment ul.links li a {}
+
+/* Core comment link classes. */
+ul.links li.comment_reply a {}
+ul.links li.comment_edit a {}
+ul.links li.comment_delete a {}
+
+/* Comment ul link first and last classes. */
+.comment ul.links li.first {}
+.comment ul.links li.last  {}
 
 /**
  * Comment Classes - extra classes to help out themers.
@@ -705,10 +816,12 @@ h1#page-title {}
 #comments .box .title {}
 
 
+
 /**
- * @see blocks.css
+ * @file blocks.css
  * Basic styles for blocks.
  */
+
 /**********************************************************
  *                       Blocks
  **********************************************************/
@@ -794,50 +907,22 @@ h1#page-title {}
 /**
  * Prefix these with the block id to style one menu only.
  */
-ul.menu {
-  margin: 0 0 0 0.5em;
-  padding: 0;
-}
-
+ul.menu,
 ul.menu ul, 
 ul.menu ul ul, 
 ul.menu ul ul ul {
-  margin: 0;
+  margin: 0 0 0 0.75em; /* LTR */
+  padding: 0;
 }
 
-ul.menu li,
-li.expanded,
-li.collapsed,
-li.leaf {
-  margin: 0;
-}
-
-/* Override Drupal default bullet gifs with a CSS Sprite */
+/* Menu li styles */
 ul.menu li {
-  background: none;
-  display: block;
-  list-style: none;
-  list-style-image: none;
-  padding: 0.35em 0 0 1em; /* LTR */
+  padding: 0.35em 0 0 0; /* LTR */
 }
 
-ul.menu li.collapsed,
-ul.menu li.expanded,
-ul.menu li.leaf {
-  background: transparent url(../images/menu-sprite.gif) no-repeat;
-}
-
-ul.menu li.collapsed {
-  background-position: 0 -45px; /* LTR */
-}
-
-ul.menu li.expanded {
-  background-position: -43px -84px; /* LTR */
-}
-
-ul.menu li.leaf {
-  background-position: 0 0; /* LTR */
-}
+ul.menu li.collapsed {}
+ul.menu li.expanded  {}
+ul.menu li.leaf      {}
 
 ul.menu li a:link    {}
 ul.menu li a:hover   {}
@@ -850,12 +935,11 @@ ul.menu li.last  {}
 
 
 /**********************************************************
- *                   Block lists
+ *                  Block item-list
  **********************************************************/
 .block .item-list ul {
   margin: 0;
 }
-
 .block .item-list ul li {}
 
 
