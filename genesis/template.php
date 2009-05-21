@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.15 2009/05/19 00:04:59 jmburnz Exp $
+// $Id: template.php,v 1.1.2.16 2009/05/21 17:49:38 jmburnz Exp $
 
 /**
  * @file template.php
@@ -41,10 +41,10 @@ function genesis_preprocess_page(&$vars, $hook) {
 
   // Set variables for the primary and secondary links.
   if (!empty($vars['primary_links'])) {
-    $vars['primary_menu'] = theme('links', $vars['primary_links'], array('class' => 'links primary-links clear-block'));
+    $vars['primary_menu'] = theme('links', $vars['primary_links'], array('class' => 'primary-links clear-block'));
   }
   if (!empty($vars['secondary_links'])) {
-    $vars['secondary_menu'] = theme('links', $vars['secondary_links'], array('class' => 'links secondary-links clear-block'));
+    $vars['secondary_menu'] = theme('links', $vars['secondary_links'], array('class' => 'secondary-links clear-block'));
   }
 
   // Section class. The section class is printed on the body element and allows you theme site sections.
@@ -143,7 +143,11 @@ function genesis_preprocess_node(&$vars, $hook) {
   // Class for node type: "node-type-page", "node-type-story", "node-type-my-custom-type", etc.
   $classes[] = 'node-'. $vars['node']->type;
   $vars['classes'] = implode(' ', $classes); // Concatenate with spaces.
-
+  
+  // Modify classes for $terms to help out themers.
+  $vars['terms'] = theme('links', $vars['taxonomy'], array('class' => 'links tags'));
+  $vars['links'] = theme('links', $vars['node']->links, array('class' => 'links'));
+  
   // Set messages if node is unpublished.
   if (!$vars['node']->status) {
     if ($vars['page']) {
