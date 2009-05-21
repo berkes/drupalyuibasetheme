@@ -1,4 +1,4 @@
-// $Id: aria-roles.js,v 1.1.2.8 2009/05/13 12:28:21 jmburnz Exp $
+// $Id: aria-roles.js,v 1.1.2.9 2009/05/21 17:50:07 jmburnz Exp $
 
 /**
  * Insert WAI-ARIA Landmark Roles (Roles for Accessible Rich Internet Applications)
@@ -36,7 +36,7 @@ if (Drupal.jsEnabled) {
     $(".node").attr("role","article");
 
     // Set role=nav on navigation-like blocks.
-    $(".admin-panel, #breadcrumb, .block-menu, #block-user-1, #block-user-3, .block-book, .block-forum, .block-blog, .block-comment, .block-statistics-0, .block-aggregator, ul.links, ul.pager, .local-tasks").attr("role","navigation");
+    $("#nav, ul.links, ul.tags, .admin-panel, #breadcrumb, .block-menu, #block-user-1, #block-user-3, .block-book, .block-forum, .block-blog, .block-comment, .block-statistics-0, .block-aggregator, ul.pager, .local-tasks").attr("role","navigation");
   
   });
 }
