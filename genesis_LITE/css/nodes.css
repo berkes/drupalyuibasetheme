@@ -1,4 +1,4 @@
-/* $Id: nodes.css,v 1.1.2.9 2009/05/19 03:42:33 jmburnz Exp $ */
+/* $Id: nodes.css,v 1.1.2.10 2009/05/21 16:23:51 jmburnz Exp $ */
 
 /**
  * @file nodes.css
@@ -25,24 +25,41 @@
   text-decoration: underline;
 }
 
-.node .user-picture {}
+/* Node meta - wrapper div for submitted and taxonomy terms. */
+.node .meta {}
 
-.node .submitted {}
+/* User Picture. */
+.node .user-picture {}
+.node .user-picture img {}
+
+/* Submitted. */
+.node p.submitted {
+  margin: 0;
+}
 .node .submitted a {}
 .node .submitted a:hover {}
 
-/* Node links. */
-.node ul.links {
-  display: block; 
-  text-align: right; /* LTR */
+/* Links and Terms. */
+.node ul.links {}
+.node ul.links li {
+  padding: 0 1em 0 0;
 }
+.node ul.links li a {}
 
-/* Common node links classes. 
-   Good for adding icons to node links. */
-ul.links .node_read_more {}
-ul.links .comment_comments {}
-ul.links .comment_new_comments {}
-ul.links .blog_usernames_blog {}
+.node ul.tags {}
+.node ul.tags li {}
+.node ul.tags li a {}
+
+/* Style module links. */
+ul.links li.node_read_more a {}
+ul.links li.comment_add a {}
+ul.links li.comment_comments a {}
+ul.links li.comment_new_comments a {}
+ul.links li.blog_usernames_blog a {}
+
+/* Node ul link first and last classes. */
+.node ul.links li.first {}
+.node ul.links li.last  {}
 
 /* Node classes for node workflow states. */
 .node-add    {}
@@ -114,7 +131,6 @@ ul.links .blog_usernames_blog {}
  */
 /* Underscores in field name are replaced with dashes. */
 .field-field-FIELDNAME {}
-
 
 
 

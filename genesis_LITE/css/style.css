@@ -1,4 +1,4 @@
-/* $Id: style.css,v 1.1.2.5 2009/05/19 01:58:24 jmburnz Exp $ */
+/* $Id: style.css,v 1.1.2.6 2009/05/21 16:23:51 jmburnz Exp $ */
 
 /**
  * @file style.css
@@ -27,9 +27,6 @@ h3 {}
 h4 {}
 h5 {}
 h6 {}
-
-/* The main title on each page. */
-h1#page-title {}
 
 p {}
 
@@ -80,7 +77,12 @@ a:visited {}
 a:hover   {}
 a:active  {}
 a.active  {}
-a.active-trail {}
+
+/* Set global a:focus styles. */ 
+a:focus {
+  color: #C00000;
+  border: 0;
+}
 
 /* Drupal sets this to black. */
 li a.active {}
@@ -88,6 +90,34 @@ li a.active {}
 /* Remove borders on linked images. */
 a img {
   border: none;
+}
+
+
+/**********************************************************
+ *                 Accessibility Classes
+ **********************************************************/
+
+/* Hide content without positioning issues. */
+.invisible {
+  height: 0;
+  overflow: hidden;
+}
+
+/* Move content off screen where appropriate. */
+.offscreen {
+  position: absolute;
+  left: -999em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Completely remove content for all users.
+   DO NOT use this for Skip links, display:none 
+   hides content from screen readers! */
+.remove {
+  display: none;
 }
 
 

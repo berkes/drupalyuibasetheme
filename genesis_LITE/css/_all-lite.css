@@ -1,4 +1,4 @@
-/* $Id: _all-lite.css,v 1.1.2.14 2009/05/19 01:58:24 jmburnz Exp $ */
+/* $Id: _all-lite.css,v 1.1.2.15 2009/05/21 16:23:51 jmburnz Exp $ */
 
 /**
  * @file _all-lite.css
@@ -46,9 +46,6 @@ h3 {}
 h4 {}
 h5 {}
 h6 {}
-
-/* The main title on each page. */
-h1#page-title {}
 
 p {}
 
@@ -130,11 +127,6 @@ a img {
  * @see page.css
  * This stylesheet provides the main page styles for this theme.
  */
-/**********************************************************
- *                       Body
- **********************************************************/
-body {}
-
 
 /**********************************************************
  *              Section, Page and Body Classes
@@ -207,7 +199,7 @@ body {}
 
 /**********************************************************
  *                  The wrapper divs
-	*    Be careful how you modify these, see layout.css
+ *    Be careful how you modify these, see layout.css
  **********************************************************/
 /**
  * Width Setting

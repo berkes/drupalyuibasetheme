@@ -1,4 +1,4 @@
-/* $Id: blocks.css,v 1.1.2.12 2009/05/12 13:51:10 jmburnz Exp $ */
+/* $Id: blocks.css,v 1.1.2.13 2009/05/21 16:23:51 jmburnz Exp $ */
 
 /**
  * @file blocks.css
@@ -90,50 +90,22 @@
 /**
  * Prefix these with the block id to style one menu only.
  */
-ul.menu {
-  margin: 0 0 0 0.5em;
-  padding: 0;
-}
-
+ul.menu,
 ul.menu ul, 
 ul.menu ul ul, 
 ul.menu ul ul ul {
-  margin: 0;
+  margin: 0 0 0 0.75em; /* LTR */
+  padding: 0;
 }
 
-ul.menu li,
-li.expanded,
-li.collapsed,
-li.leaf {
-  margin: 0;
-}
-
-/* Override Drupal default bullet gifs with a CSS Sprite */
+/* Menu li styles */
 ul.menu li {
-  background: none;
-  display: block;
-  list-style: none;
-  list-style-image: none;
-  padding: 0.35em 0 0 1em; /* LTR */
+  padding: 0.35em 0 0 0; /* LTR */
 }
 
-ul.menu li.collapsed,
-ul.menu li.expanded,
-ul.menu li.leaf {
-  background: transparent url(../images/menu-sprite.gif) no-repeat;
-}
-
-ul.menu li.collapsed {
-  background-position: 0 -45px; /* LTR */
-}
-
-ul.menu li.expanded {
-  background-position: -43px -84px; /* LTR */
-}
-
-ul.menu li.leaf {
-  background-position: 0 0; /* LTR */
-}
+ul.menu li.collapsed {}
+ul.menu li.expanded  {}
+ul.menu li.leaf      {}
 
 ul.menu li a:link    {}
 ul.menu li a:hover   {}
@@ -146,7 +118,7 @@ ul.menu li.last  {}
 
 
 /**********************************************************
- *                   Block lists
+ *                  Block item-list
  **********************************************************/
 .block .item-list ul {
   margin: 0;

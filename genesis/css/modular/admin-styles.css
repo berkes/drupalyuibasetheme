@@ -1,4 +1,4 @@
-/* $Id: admin-styles.css,v 1.1.2.5 2009/05/19 19:23:54 jmburnz Exp $ */
+/* $Id: admin-styles.css,v 1.1.2.6 2009/05/21 16:23:51 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -41,13 +41,16 @@ div.admin .right {
 
 .admin-panel ul,
 .admin-panel ul.menu,
-.admin-panel .item-list ul {
-  margin: 0; 
+.admin-panel .item-list ul { 
   padding: 0 0 1em 0;
 }
 
+.admin-panel .item-list ul { 
+  margin: 0;
+}
+
 .admin-panel ul li {
-  color: #888;
+  color: #666;
 }
 
 .admin-panel dl {
@@ -60,7 +63,7 @@ div.admin .right {
 }
 
 .admin-panel dd {
-  color: #888; 
+  color: #666; 
   font-size: 0.94em;
   margin-left: 0;
 }
@@ -74,7 +77,7 @@ div.admin .right {
 }
 
 .page-admin-by-module .admin-panel .body p {  
-  color: #888; 
+  color: #666; 
   font-size: 0.94em; 
 }
 
@@ -128,35 +131,42 @@ ul.primary li a {
   border-color: #DDD;
 }
 
+.local-tasks ul.primary li a:focus  {
+  background-color: #FFF2CF;;
+  border-color: #FFCC00;
+}
+
 .local-tasks ul.primary li.active a {
   background-color: #FFF;		
   border-bottom-color: #FFF;
 }
 
 ul.secondary {
-  border-bottom: 0;
+  border-bottom: 1px solid #CCC;
   margin: 1em 0 0 0;
-  padding: 0;
+  padding: 0 0.3em 1em;
 }
 
 ul.secondary li {
-  border-right: none;
-  float: left;
+  border-right: 0;
   list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 215px; 
+  padding: 0 2em 0 0;
 }
 
-ul.secondary a:hover,
-ul.secondary a.active {
-  border-bottom: none;
+ul.secondary li a:hover,
+ul.secondary li a.active {
+  border-bottom: 0;
   text-decoration: underline;
 }
 
 /**********************************************************
  *                 Admin menu
  **********************************************************/
+/* Make the margin relative so it resizes */
+body.admin-menu {
+  margin-top: 2em !important;
+}
+
 /* Bump the font size, I can't read 9px lucida grande */
 #admin-menu {
   font: 0.9em Arial, Helvetica, sans-serif;

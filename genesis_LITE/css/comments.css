@@ -1,4 +1,4 @@
-/* $Id: comments.css,v 1.1.2.9 2009/05/19 03:42:33 jmburnz Exp $ */
+/* $Id: comments.css,v 1.1.2.10 2009/05/21 16:23:51 jmburnz Exp $ */
 
 /**
  * @file comments.css
@@ -35,7 +35,7 @@
   text-decoration: none;
 }
 
-.comment-title a:hover {
+.comment .title a:hover {
   text-decoration: underline;
 }
 
@@ -47,11 +47,21 @@
 .comment .submitted a:hover {}
 
 .comment ul.links {
-  display: block; 
+  display: block;
+  padding: 0 1em 0 0;
   text-align: right; /* LTR */
 }
-
 .comment ul.links li {}
+.comment ul.links li a {}
+
+/* Core comment link classes. */
+ul.links li.comment_reply a {}
+ul.links li.comment_edit a {}
+ul.links li.comment_delete a {}
+
+/* Comment ul link first and last classes. */
+.comment ul.links li.first {}
+.comment ul.links li.last  {}
 
 /**
  * Comment Classes - extra classes to help out themers.

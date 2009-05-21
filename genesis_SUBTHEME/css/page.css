@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.16 2009/05/19 00:05:00 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.17 2009/05/21 16:23:51 jmburnz Exp $ */
 
 /**
  * @file page.css
@@ -8,14 +8,6 @@
 /**
  * Remove unused styles for performace.
  */
-
-
-
-/**********************************************************
- *                      html, Body
- **********************************************************/
-body {}
-
 
 /**********************************************************
  *              Section, Page and Body Classes
@@ -105,8 +97,8 @@ body {}
  */
 #container {
   width: 100%;
-/* max-width: 1100px; set a maximum width */
-/* min-width: 960px; set a minimum width */
+  max-width: 980px; /* set a maximum width */
+  min-width: 760px; /* set a minimum width */
 }
 
 /* Column wrappers */
@@ -185,24 +177,20 @@ body {}
 #skip-nav {
   text-align: right; /* LTR */
 }
-#skip-nav a:focus {
-  border: 1px solid #FFCC00;
-  background: #FFFFCF;
-}
+
+/* Override default pseudo class styles */
 #skip-nav a:link    {}
-#skip-nav a:hover   {}
 #skip-nav a:visited {}
+#skip-nav a:hover   {}
+#skip-nav a:focus   {}
+#skip-nav a:active  {}
 
 
 /**********************************************************
- *                       Header 
+ *                 Masthead Elements
  **********************************************************/
-
-/* #header wraps #branding, #search-box-top and #header-blocks. */
-#header {}
-
-/* Over-ride default .inner styles. */
-#header .header-inner {}
+/* #masthead wraps #branding, #search-box-top and #header-blocks. */
+#masthead {}
 
 /* #branding wraps #logo, #site-name and #site-slogan. */
 #branding {
@@ -226,12 +214,16 @@ body {}
   line-height: 1.5;
 }
 
-#site-name a:link,
+/* Override default pseudo class styles. */
+#site-name a:link    {}
 #site-name a:visited {}
 #site-name a:hover   {}
+#site-name a:focus   {}
+#site-name a:active  {}
 
 /* Site slogan. */
 #site-slogan {}
+
 
 /**********************************************************
  *                        Search
@@ -239,18 +231,14 @@ body {}
 /* Float the serch box right. */
 #search-box {
   float: right; /* LTR */
-  padding: 1.5em 0;
 }
 
-/* Reset form element margins to allow more precise positioning. */
-#search-box form,
-#search-box div.form-item {
-  margin: 0;
+/* Reset form element margins. */
+#search-theme-form {
+  margin: 1.5em 0;
 }
 
-#search-theme-form {}
-
-/* Target the first child div which has no selector */
+/* Use the child selector because the inner div has no class. */
 #search-theme-form > div {}
 
 #search-theme-form label {}
@@ -262,10 +250,7 @@ body {}
 
 /* Override forms.css focus style */
 #edit-search-theme-form-1:hover,
-#edit-search-theme-form-1:focus {
-  border: 1px solid #BBB;
-  background: #FFF;
-}
+#edit-search-theme-form-1:focus {}
 
 /* Search Results Page - see .box */
 .section-search #search-form {}
@@ -306,20 +291,15 @@ body {}
  * Primary Links Style
  * Example styles to get you started.
  */
-#primary {
+#nav .primary-links {
   background: #DDD; /* Default gray for dev only. */
   font-weight: bold;
+  margin: 0;
   padding: 0;
 }
 
-/* Modify the margin to position the menu. */
-#primary .links {
-  margin: 0;
-}
-
-/* Modify the margin to set tab spacings. We use display: inline only
-   to make it easier to center the menu. */
-#primary .links li {
+/* Modify the margin to set tab spacings. */
+#nav .primary-links li {
   display: inline;
   line-height: 2;
   list-style: none;
@@ -327,24 +307,24 @@ body {}
   padding: 0;
 }
 
-#primary .links li a {
+#nav .primary-links li a {
   text-decoration: none;
   white-space: nowrap;
 }
 
-#primary .links li.active {}
+#nav .primary-links li.active {}
 
-#primary .links li a:hover {}
-#primary .links li a.active {}
-#primary .links li a.visited {}
-#primary .links li a.active-trail {}
+#nav .primary-links li a:hover {}
+#nav .primary-links li a.active {}
+#nav .primary-links li a.visited {}
+#nav .primary-links li a.active-trail {}
 
 /* Primary first and last classes */
-#primary .links li.first {}
-#primary .links li.last {}
+#nav .primary-links li.first {}
+#nav .primary-links li.last {}
 
-/* Set unique active-trail styles */
-/* #primary ul.links li a.active-trail {} */
+/* Set unique active-trail active styles */
+#nav .primary-links li a.active-trail .active {}
 
 /**
  * Secondary Links Positioning
@@ -357,20 +337,15 @@ body {}
 /**
  * Secondary Links Style
  */
-#secondary {
-  background: #EEE; /* Default silver for dev only. */
+#nav .secondary-links {
+  background: #EEE; /* Default gray for dev only. */
   font-weight: bold;
+  margin: 0;
   padding: 0;
 }
 
-/* Modify the margin to position the menu. */
-#secondary .links {
-  margin: 0;
-}
-
-/* Modify the margin to set tab spacings. We use display: inline only
-   to make it easier to center the menu. */
-#secondary .links li {
+/* Modify the margin to set tab spacings. */
+#nav .secondary-links li {
   display: inline;
   line-height: 2;
   list-style: none;
@@ -378,21 +353,24 @@ body {}
   padding: 0;
 }
 
-#secondary .links li a {
+#nav .secondary-links li a {
   text-decoration: none;
   white-space: nowrap;
 }
 
-#secondary .links li.active {}
+#nav .secondary-links li.active {}
 
-#secondary .links li a:hover  {}
-#secondary .links li a.active {}
-#secondary .links li a.visited {}
-#secondary .links li a.active-trail {}
+#nav .secondary-links li a:hover  {}
+#nav .secondary-links li a.active {}
+#nav .secondary-links li a.visited {}
+#nav .secondary-links li a.active-trail {}
 
 /* Secondary first and last classes */
-#secondary .links li.first {}
-#secondary .links li.last {}
+#nav .secondary-links li.first {}
+#nav .secondary-links li.last {}
+
+/* Set unique active-trail active styles */
+#nav .secondary-links li a.active-trail .active {}
 
 
 /**********************************************************

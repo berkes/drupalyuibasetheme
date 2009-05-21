@@ -1,4 +1,4 @@
-/* $Id: layout.css,v 1.1.2.12 2009/05/19 01:58:24 jmburnz Exp $ */
+/* $Id: layout.css,v 1.1.2.13 2009/05/21 16:23:51 jmburnz Exp $ */
 
 /**
  * @file layout.css
@@ -87,4 +87,3 @@
 #content-column,#sidebar-left,#sidebar-right{float:left;}
 #content-column{width:100%;margin-bottom:1em;}
 .clear,#nav,#columns,#breadcrumb,#content-bottom,#secondary-content,#tertiary-content,#footer-wrapper,#footer,#footer-message{clear:both;}
-.hide {height:0;overflow:hidden;}

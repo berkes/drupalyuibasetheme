@@ -1,4 +1,4 @@
-/* $Id: tables.css,v 1.1.2.1 2009/05/03 22:15:34 jmburnz Exp $ */
+/* $Id: tables.css,v 1.1.2.2 2009/05/21 16:23:51 jmburnz Exp $ */
 
 /**
  * @file tables.css
@@ -15,14 +15,18 @@
  */
  
 table {
+  border-color: #C0C0C0;
   border-spacing: 0;
   margin: 1em 0; 
   padding: 0;
 }
 
 caption, th, td {
-  font-weight: normal;
   text-align: left; /* LTR */
+}
+
+caption, th {
+  font-weight: bold;
 }
 
 table, td, th {
@@ -115,3 +119,10 @@ tr:first-child td.container {
 #forum div.indent  {
   margin-left: 0.5em;
 }
+
+/**********************************************************
+ *                     Admin tables
+ **********************************************************/
+.section-admin table {width: 100%;}
+
+
