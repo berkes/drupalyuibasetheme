@@ -20,12 +20,12 @@
   
   1. First copy/paste one of the subthemes: 
    
-     genesis_LITE (less html, same features)
-     genesis_SUBTHEME (more html, easier to theme)
+     - genesis_LITE (less html, same features)
+     - genesis_SUBTHEME (more html, easier to theme)
 
      Save your new sub-theme in the sites/all/themes directory.
 
-  2. Rename the new subtheme folder with your theme name. For example if you 
+  2. Rename the new subtheme with your theme name. For example if you 
      want to name your theme "foo" name the folder "genesis_foo".
 
   3. Rename genesis_SUBTHEME.info file. For example "genesis_foo.info".
@@ -36,7 +36,7 @@
       
      Gpanels: 
      If you want to use the Gpanels uncomment the additional regions 
-     for Gpanels. http://drupal.org/node/460800
+     for Gpanels in genesis_foo.info - http://drupal.org/node/460800
        
      Internet Explorer CSS: 
      If you want to use an IE stylesheet follow the instructions in the info 
@@ -58,12 +58,13 @@
   Online docs: http://drupal.org/node/439670
   
   First open these two files:
-  /genesis/genesis/css/layout.css
-  /genesis_foo/templates/page/page.tpl.php (your subthemes page.tpl.php file)
+  
+    /genesis/genesis/css/uncompressed/layout.css
+    /genesis_foo/templates/page/page.tpl.php (your subthemes page.tpl.php file)
 		  
   In layout.css you will find the preconfigured layout methods to choose from.
    
-  There are 3 main layouts, please see the documentation in layout.css.
+  There are 3 main layouts, please see the documentation in layout.css
 				
   To change the layout select the ID selector that matches your preferred layout 
   and change the <body id="...."> in page.tpl.php
@@ -80,8 +81,8 @@
   simply copy the relevant layout CSS to your page.css file in your subtheme and 
   modify it there.
   
-  Do look at genesis/genesis/css/layout-overrides for 3 example layout overrides 
-  and full instructions.
+  TIP: Do look at genesis/genesis/css/layout-overrides for 3 example layout 
+  overrides and full instructions.
   
   
 
