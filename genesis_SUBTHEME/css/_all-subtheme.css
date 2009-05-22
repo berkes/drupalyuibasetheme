@@ -1,4 +1,4 @@
-/* $Id: _all-subtheme.css,v 1.1.2.16 2009/05/21 17:49:14 jmburnz Exp $ */
+/* $Id: _all-subtheme.css,v 1.1.2.17 2009/05/22 08:46:11 jmburnz Exp $ */
 
 /**
  * @file _all-subtheme.css
@@ -331,12 +331,15 @@ body > #container {
  *                   Skip navigation
  **********************************************************/
 /**
- * To hide the skip-nav you can use:
- * height: 0; overflow: hidden;
- * Do not use display: none as this hides it from screen readers.
+ * To hide the skip-nav you can use: 
+ * 
+ * height: 0; 
+ * overflow: hidden;
+ * 
+ * Do not use display:none as this hides it from screen readers!
  */
 #skip-nav {
-  text-align: right; /* LTR */
+   text-align: right; /* LTR */
 }
 
 /* Override default pseudo class styles */
@@ -345,6 +348,40 @@ body > #container {
 #skip-nav a:hover   {}
 #skip-nav a:focus   {}
 #skip-nav a:active  {}
+
+/**
+ * An alternative method is to position the skip-nav link offscreen
+ * until the user tabs the link into focus. Uncomment the following to use.
+ * 
+ * Adjust the style of the active/focused link to suit.
+ */
+/*
+#skip-nav {
+   text-align: left;
+}
+#skip-nav a:link, 
+#skip-nav a:hover, 
+#skip-nav a:visited {
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: -999em;
+}
+#skip-nav a:active,
+#skip-nav a:focus {
+  background: #FFF;
+  border: 1px solid #C00000;
+  color: #C00000;
+  height: 2em;
+  overflow: visible;
+  padding: 2em 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 978px;
+  z-index: 1000;
+}
+*/
 
 
 /**********************************************************

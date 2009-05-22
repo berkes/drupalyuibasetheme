@@ -1,4 +1,4 @@
-/* $Id: layout.css,v 1.1.2.1 2009/05/19 00:08:09 jmburnz Exp $ */
+/* $Id: layout.css,v 1.1.2.2 2009/05/22 08:46:11 jmburnz Exp $ */
 
 /**
  * Genesis layout methods
@@ -12,7 +12,7 @@
 
 * Setting up the Sidebar Layout:
   
-  In your subthemes page.tpl.php replace the body id="genesis-1a" 
+  In your subthemes page.tpl.php replace the body id="genesis-1b" 
   with your chosen layout:
   
   e.g. id="genesis-2c" (see below for all layout options).

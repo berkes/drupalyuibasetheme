@@ -1,4 +1,4 @@
-/* $Id: forms.css,v 1.1.2.6 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: forms.css,v 1.1.2.7 2009/05/22 08:46:10 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -149,18 +149,6 @@ html.js fieldset.collapsed {
 
 fieldset.collapsible legend a:focus {
  color: red;
-}
-
-
-/*********************************************************
-*                     Vertical Tabs
-**********************************************************/
-#node-form .vertical-tabs ul.vertical-tabs-list {
-  margin: 0;
-}
-
-#node-form .vertical-tabs ul.vertical-tabs-list li {
-  list-style: none;
 }
 
 

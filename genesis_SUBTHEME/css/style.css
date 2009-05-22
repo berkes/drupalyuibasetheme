@@ -1,4 +1,4 @@
-/* $Id: style.css,v 1.1.2.8 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: style.css,v 1.1.2.9 2009/05/22 08:46:11 jmburnz Exp $ */
 
 /**
  * @file style.css
@@ -78,7 +78,8 @@ a:hover   {}
 a:active  {}
 a.active  {}
 
-/* Set global a:focus styles. */ 
+/* Set global a:active and a:focus styles. */
+a:active,
 a:focus {
   color: #C00000;
   border: 0;

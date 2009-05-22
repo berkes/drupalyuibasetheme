@@ -1,4 +1,4 @@
-/* $Id: base.css,v 1.1.2.5 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.6 2009/05/22 08:46:11 jmburnz Exp $ */
 
 /**
  * @file typography.css
@@ -121,7 +121,7 @@ blockquote, q {
   quotes: "" "";
 }
 
-/* $Id: base.css,v 1.1.2.5 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.6 2009/05/22 08:46:11 jmburnz Exp $ */
 
 /**
  * @file tables.css
@@ -249,7 +249,7 @@ tr:first-child td.container {
 .section-admin table {width: 100%;}
 
 
-/* $Id: base.css,v 1.1.2.5 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.6 2009/05/22 08:46:11 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -434,7 +434,7 @@ div.help ul:last-child {
 .admin-missing {
   font-weight: bold;
 }
-/* $Id: base.css,v 1.1.2.5 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.6 2009/05/22 08:46:11 jmburnz Exp $ */
 
 /**
  * @file lists.css
@@ -491,7 +491,7 @@ dd {
 }
 
 
-/* $Id: base.css,v 1.1.2.5 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.6 2009/05/22 08:46:11 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -642,18 +642,6 @@ html.js fieldset.collapsed {
 
 
 /*********************************************************
-*                     Vertical Tabs
-**********************************************************/
-#node-form .vertical-tabs ul.vertical-tabs-list {
-  margin: 0;
-}
-
-#node-form .vertical-tabs ul.vertical-tabs-list li {
-  list-style: none;
-}
-
-
-/*********************************************************
 *              OpenID icon fix for Drupal 6
 **********************************************************/
 #user-login-form li.openid-link,
@@ -691,7 +679,7 @@ html.js #user-login li.openid-link {
 
 
 
-/* $Id: base.css,v 1.1.2.5 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.6 2009/05/22 08:46:11 jmburnz Exp $ */
 
 /**
  * @file admin.css
