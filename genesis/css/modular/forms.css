@@ -1,4 +1,4 @@
-/* $Id: forms.css,v 1.1.2.8 2009/05/22 20:25:23 jmburnz Exp $ */
+/* $Id: forms.css,v 1.1.2.9 2009/05/22 20:35:35 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -136,10 +136,6 @@ html.js fieldset.collapsed {
   background: transparent;
   padding-bottom: .75em;
   padding-top: 0;
-}
-
-fieldset.collapsible legend a:focus {
- color: red;
 }
 
 
