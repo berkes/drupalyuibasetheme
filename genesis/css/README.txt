@@ -36,9 +36,8 @@
  
     
     layout.css
-      Genesis layout methods - layout.css has full instructions and comments
-      included. layout-tidy.css is a compressed verions of layout.css and is
-      the one Genesis uses by default.
+      Genesis layout methods. See /css/uncompressed/layout.css for full 
+      instructions and comments.
 
 
 
