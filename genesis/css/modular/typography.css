@@ -1,4 +1,4 @@
-/* $Id: typography.css,v 1.1.2.4 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: typography.css,v 1.1.2.5 2009/05/22 20:25:23 jmburnz Exp $ */
 
 /**
  * @file typography.css
@@ -86,7 +86,7 @@ dfn {
 }
 
 del {
-  color: #666; 
+  color: #555; 
 }
 
 ins {

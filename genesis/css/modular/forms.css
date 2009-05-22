@@ -1,4 +1,4 @@
-/* $Id: forms.css,v 1.1.2.7 2009/05/22 08:46:10 jmburnz Exp $ */
+/* $Id: forms.css,v 1.1.2.8 2009/05/22 20:25:23 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -53,18 +53,9 @@ textarea {
   padding: 0.1875em;
 }
 
-textarea, 
-input {
-  font: 1em normal Arial, Helvetica, sans-serif;
-}
-
 div.form-item {
   margin-bottom: 1em; 
   margin-top: 1em;
-}
-
-.form-item strong.error {
-  display: block;
 }
 
 .form-item textarea.error {

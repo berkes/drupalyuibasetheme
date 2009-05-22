@@ -1,5 +1,5 @@
 <?php
-// $Id: page-gpanel_examples.tpl.php,v 1.1.2.1 2009/05/11 20:29:48 jmburnz Exp $
+// $Id: page-gpanel_examples.tpl.php,v 1.1.2.2 2009/05/22 20:25:23 jmburnz Exp $
 
 /**
  * @file page-gpanel_examples.tpl.php
@@ -27,11 +27,11 @@
 </head>
 <?php
 /**
- * Change the body id selector to your preferred layout, e.g body id="genesis-1b".
+ * Change the body id selector to your preferred layout, e.g body id="genesis-1a".
  * @see layout.css
  */
 ?>        
-<body id="genesis-1a" <?php print $section_class; ?>>
+<body id="genesis-1b" <?php print $section_class; ?>>
   <div id="container" class="<?php print $classes; ?>">
 
     <div id="skip-nav">
@@ -44,20 +44,22 @@
       </div></div> <!-- /leaderboard -->
     <?php endif; ?>
 
-    <div id="header" class="header clear-block">
+    <div id="header" class="clear-block">
 
       <?php if ($site_logo or $site_name or $site_slogan): ?>
         <div id="branding">
 
-          <?php if ($site_logo): ?>
-            <div id="logo"><?php print $site_logo; ?></div>
-          <?php endif; ?>
-
-          <?php if ($site_name): ?>
+          <?php if ($site_logo or $site_name): ?>
             <?php if ($title): ?>
-              <div id="site-name"><strong><?php print $site_name; ?></strong></div>
-            <?php else: /* Use h1 when the page title is empty */ ?>
-              <h1 id="site-name"><?php print $site_name; ?></h1>
+              <div><strong>
+                <?php if ($site_logo): ?><span id="logo"><?php print $site_logo; ?></span><?php endif; ?>
+                <?php if ($site_name): ?><span id="site-name"><?php print $site_name; ?></span><?php endif; ?>
+              </strong></div>           
+            <?php else: /* Use h1 when the content title is empty */ ?>     
+              <h1>
+                <?php if ($site_logo): ?><span id="logo"><?php print $site_logo; ?></span><?php endif; ?>
+                <?php if ($site_name): ?><span id="site-name"><?php print $site_name; ?></span><?php endif; ?>
+             </h1>
             <?php endif; ?>
           <?php endif; ?>
 
@@ -81,7 +83,7 @@
     </div> <!-- /header -->
 
     <?php if ($primary_menu or $secondary_menu): ?>
-      <div id="nav">
+      <div id="nav" class="clear-block">
 
         <?php if ($primary_menu): ?>
           <div id="primary"><?php print $primary_menu; ?></div>
@@ -93,8 +95,7 @@
 
       </div> <!-- /nav -->
     <?php endif; ?>
-    
-    
+
     <?php
     /**
      * Three column Gpanel
@@ -118,67 +119,67 @@
     <?php endif; ?>
     <!--/end Gpanel-->
 
-
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb" class="nav"><?php print $breadcrumb; ?></div> <!-- /breadcrumb -->
     <?php endif; ?>
-
+    
     <?php if ($secondary_content): ?>
       <div id="secondary-content" class="section region"><div class="region-inner">
         <?php print $secondary_content; ?>
       </div></div> <!-- /secondary-content -->
     <?php endif; ?>
 
-    <div id="columns">
-     
-      <div id="content-column">
-        <div class="content-inner">
+    <div id="columns"><div class="columns-inner clear-block">
+    
+      <div id="content-column"><div class="content-inner">
 
-          <?php if ($mission): ?>
-            <div id="mission"><?php print $mission; ?></div> <!-- /mission -->
+        <?php if ($mission): ?>
+          <div id="mission"><?php print $mission; ?></div> <!-- /mission -->
+        <?php endif; ?>
+
+        <?php if ($content_top): ?>
+          <div id="content-top" class="section region"><?php print $content_top; ?></div> <!-- /content-top -->
+        <?php endif; ?>
+
+        <div id="main-content">
+          <?php if ($title): ?><h1 id="page-title"><?php print $title; ?></h1><?php endif; ?>
+          <?php if ($tabs): ?>
+            <div class="local-tasks"><div class="clear-block">
+              <?php print $tabs; ?>
+            </div></div>
           <?php endif; ?>
+          <?php if ($messages): print $messages; endif; ?>
+          <?php if ($help): print $help; endif; ?>
+          <div id="content" class="section region">
+            <?php print $content; ?>
+          </div>								
+        </div> <!-- /main-content -->
 
-          <?php if ($content_top): ?>
-            <div id="content-top" class="section region"><?php print $content_top; ?></div> <!-- /content-top -->
-          <?php endif; ?>
+        <?php if ($content_bottom): ?>
+          <div id="content-bottom" class="section region"><?php print $content_bottom; ?></div> <!-- /content-bottom -->
+        <?php endif; ?>
+        
+        <?php
+        /**
+         * Two column Gpanel
+         * Here the 2col 50 50 Gpanel is nested inside the content-column, and 
+         * below the main content. It will only span the width of the content-column.
+         */
+        ?> 
+        <!--//   Two column Gpanel   //-->
+        <?php if ($two_col_first or $two_col_second): ?>
+          <div id="two-col-50" class="gpanel clear-block">
+            <div class="section region col-1 first"><div class="inner">
+              <?php if ($two_col_first): print $two_col_first; endif; ?>
+            </div></div>
+            <div class="section region col-2 last"><div class="inner">
+              <?php if ($two_col_second): print $two_col_second; endif; ?>
+            </div></div>
+          </div>
+        <?php endif; ?>
+        <!--/end Gpanel-->
 
-          <div id="main-content" class="section region">								
-            <?php if ($title): ?><h1 id="page-title"><?php print $title; ?></h1><?php endif; ?>
-            <?php if ($tabs): ?><div class="local-tasks"><?php print $tabs; ?></div><?php endif; ?>
-            <?php if ($messages): print $messages; endif; ?>
-            <?php if ($help): print $help; endif; ?>
-            <div id="content">
-              <?php print $content; ?>
-            </div>								
-          </div> <!-- /main-content -->
-
-          <?php if ($content_bottom): ?>
-            <div id="content-bottom" class="section region"><?php print $content_bottom; ?></div> <!-- /content-bottom -->
-          <?php endif; ?>
-          
-          
-          <?php
-          /**
-           * Two column Gpanel
-           * Here the 2col 50 50 Gpanel is nested inside the content-column, and 
-           * below the main content. It will only span the width of the content-column.
-           */
-          ?> 
-          <!--//   Two column Gpanel   //-->
-          <?php if ($two_col_first or $two_col_second): ?>
-            <div id="two-col-50" class="gpanel clear-block">
-              <div class="section region col-1 first"><div class="inner">
-                <?php if ($two_col_first): print $two_col_first; endif; ?>
-              </div></div>
-              <div class="section region col-2 last"><div class="inner">
-                <?php if ($two_col_second): print $two_col_second; endif; ?>
-              </div></div>
-            </div>
-          <?php endif; ?>
-          <!--/end Gpanel-->
-
-        </div>
-      </div> <!-- /content-column -->
+      </div></div> <!-- /content-column -->
 
       <?php if ($left): ?>
         <div id="sidebar-left" class="section sidebar region"><div class="sidebar-inner">
@@ -191,9 +192,8 @@
           <?php print $right; ?>
         </div></div> <!-- /sidebar-right -->
       <?php endif; ?>
-
-    </div> <!-- /columns -->
-
+    
+    </div></div> <!-- /columns -->
 
     <?php
     /**
@@ -225,8 +225,7 @@
       </div>
     <?php endif; ?>
     <!--/end Gpanel-->
-
-
+  
     <?php if ($tertiary_content): ?>
       <div id="tertiary-content" class="section region clear-block"><div class="region-inner">
         <?php print $tertiary_content; ?>

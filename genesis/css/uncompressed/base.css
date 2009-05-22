@@ -1,4 +1,4 @@
-/* $Id: base.css,v 1.1.2.6 2009/05/22 08:46:11 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.7 2009/05/22 20:25:23 jmburnz Exp $ */
 
 /**
  * @file typography.css
@@ -86,7 +86,7 @@ dfn {
 }
 
 del {
-  color: #666; 
+  color: #555; 
 }
 
 ins {
@@ -121,7 +121,7 @@ blockquote, q {
   quotes: "" "";
 }
 
-/* $Id: base.css,v 1.1.2.6 2009/05/22 08:46:11 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.7 2009/05/22 20:25:23 jmburnz Exp $ */
 
 /**
  * @file tables.css
@@ -249,7 +249,7 @@ tr:first-child td.container {
 .section-admin table {width: 100%;}
 
 
-/* $Id: base.css,v 1.1.2.6 2009/05/22 08:46:11 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.7 2009/05/22 20:25:23 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -265,7 +265,7 @@ tr:first-child td.container {
  */
 
 .description {
-  color: #666;
+  color: #555;
 }
 
 div.messages {
@@ -434,7 +434,7 @@ div.help ul:last-child {
 .admin-missing {
   font-weight: bold;
 }
-/* $Id: base.css,v 1.1.2.6 2009/05/22 08:46:11 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.7 2009/05/22 20:25:23 jmburnz Exp $ */
 
 /**
  * @file lists.css
@@ -491,7 +491,7 @@ dd {
 }
 
 
-/* $Id: base.css,v 1.1.2.6 2009/05/22 08:46:11 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.7 2009/05/22 20:25:23 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -679,7 +679,7 @@ html.js #user-login li.openid-link {
 
 
 
-/* $Id: base.css,v 1.1.2.6 2009/05/22 08:46:11 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.7 2009/05/22 20:25:23 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -731,7 +731,7 @@ div.admin .right {
 }
 
 .admin-panel ul li {
-  color: #666;
+  color: #555;
 }
 
 .admin-panel dl {
@@ -744,7 +744,7 @@ div.admin .right {
 }
 
 .admin-panel dd {
-  color: #666; 
+  color: #555; 
   font-size: 0.94em;
   margin-left: 0;
 }
@@ -758,7 +758,7 @@ div.admin .right {
 }
 
 .page-admin-by-module .admin-panel .body p {  
-  color: #666; 
+  color: #555; 
   font-size: 0.94em; 
 }
 
@@ -811,8 +811,6 @@ ul.primary li a {
   background-color: #F5F5F5;
   border-color: #DDD;
 }
-
-
 
 .local-tasks ul.primary li.active a {
   background-color: #FFF;		

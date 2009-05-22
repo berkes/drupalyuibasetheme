@@ -1,4 +1,4 @@
-/* $Id: blocks.css,v 1.1.2.14 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: blocks.css,v 1.1.2.15 2009/05/22 20:25:24 jmburnz Exp $ */
 
 /**
  * @file blocks.css
@@ -10,7 +10,7 @@
  **********************************************************/
 /**
  * Styles set for .block, .block-inner, block-title and 
- * .block-contentwill be inherited by all blocks.
+ * .block-content will be inherited by all blocks.
  */
 .block {
   clear: both;

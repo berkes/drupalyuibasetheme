@@ -1,4 +1,4 @@
-/* $Id: grid.css,v 1.1.2.1 2009/05/19 00:08:09 jmburnz Exp $ */
+/* $Id: grid.css,v 1.1.2.2 2009/05/22 20:25:23 jmburnz Exp $ */
 
 /**
  * @file grid.css
@@ -9,12 +9,13 @@
 *                        Grid
 **********************************************************/
 /**
- * Uncomment the grid class on the body element in page.tpl.php
- * to show the grid when adjusting the vertical flow.
+ * This will display horizontal lines at 18px (1.5em) spacing 
+ * for aligning the vertical flow of text. In Genesis 1em = 12px
+ * (16px x 75%), and line-height is 1.5em (18px).
+ *
+ * Usage:
+ * 1. Enable this stylesheet by uncommenting it in genesis.info
+ * 2. Clear cache data in Performance settings.
  */
-.grid {background: url(../images/gridtile.gif) repeat left top;}
-
-/* force the admin menu down 2 line heights */
-body.admin-menu {
-  margin-top:24px !important;
-}
+body {background: url(../../images/gridtile.gif) repeat left top;}
+body.admin-menu {background: url(../../images/gridtile.gif) repeat left 24px;}

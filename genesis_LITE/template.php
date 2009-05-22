@@ -1,13 +1,17 @@
 <?php
-// $Id: template.php,v 1.1.2.6 2009/05/11 20:28:33 jmburnz Exp $
+// $Id: template.php,v 1.1.2.7 2009/05/22 20:25:24 jmburnz Exp $
 
 /**
  * @file template.php
- *
+ */
+
+/**
  * USAGE
  * 1. Rename each function to match your subthemes name, 
- *    i.e replace genesis_LITE with your subthemes name.
- * 2. Uncomment the required fucntion to use.
+ *    e.g. if you name your theme genesis_foo then the function 
+ *    name will be "genesis_foo_preprocess".
+ * 2. Uncomment the required fucntion to use. You can delete the
+ *    "sample_variable".
  */
 
 /**

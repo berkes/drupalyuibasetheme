@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.16 2009/05/21 17:49:38 jmburnz Exp $
+// $Id: template.php,v 1.1.2.17 2009/05/22 20:25:24 jmburnz Exp $
 
 /**
  * @file template.php
@@ -47,7 +47,7 @@ function genesis_preprocess_page(&$vars, $hook) {
     $vars['secondary_menu'] = theme('links', $vars['secondary_links'], array('class' => 'secondary-links clear-block'));
   }
 
-  // Section class. The section class is printed on the body element and allows you theme site sections.
+  // Section class. The section class is printed on the body element and allows you to theme site sections.
   // We use the path alias otherwise all nodes will be in "section-node".
   $path_alias = drupal_get_path_alias($_GET['q']);
   if (!$vars['is_front']) {
@@ -58,7 +58,7 @@ function genesis_preprocess_page(&$vars, $hook) {
   // Body Classes. In Genesis these are printed on the #container wrapper div, not on the body.
   $classes = explode(' ', $vars['body_classes']);
 
-  // Remove the useless page-arg(0) class. In Drupal 7 this become more useful but for now section-class is better.
+  // Remove the useless page-arg(0) class.
   if ($class = array_search(preg_replace('![^abcdefghijklmnopqrstuvwxyz0-9-]+!s', '', 'page-'. drupal_strtolower(arg(0))), $classes)) {
     unset($classes[$class]);
   }
@@ -66,7 +66,7 @@ function genesis_preprocess_page(&$vars, $hook) {
  /** 
   * Optional Region body classes
   * Uncomment the following if you need to set
-  * body classes for each active region.
+  * a body class for each active region.
   */
   /*		
   if (!empty($vars['leaderboard'])) {
@@ -253,15 +253,15 @@ function genesis_preprocess_block(&$vars, $hook) {
   }
 
   // Optionally use additional block classes
-  //$classes[] = $vars['block_zebra'];
-  //$classes[] = 'block-'. $block->region;
-  //$classes[] = 'block-count-'. $vars['id'];
+  //$classes[] = $vars['block_zebra'];        // odd, even zebra class
+  //$classes[] = 'block-'. $block->region;    // block-[region] class
+  //$classes[] = 'block-count-'. $vars['id']; // block-count-[count] class
   $vars['classes'] = implode(' ', $classes);
   
   /**
    * Add block edit links. Credit to the Zen theme for this implimentation. The only
    * real difference is that the Zen theme wraps each link in span, whereas Genesis 
-   * outputs the links in an item-list. Also I have omitted the Views links as these 
+   * outputs the links as an item-list. Also I have omitted the Views links as these 
    * seem redundant because Views has its own set of hover links.
    */
   if (user_access('administer blocks')) {

@@ -1,4 +1,4 @@
-/* $Id: _all-subtheme.css,v 1.1.2.17 2009/05/22 08:46:11 jmburnz Exp $ */
+/* $Id: _all-subtheme.css,v 1.1.2.18 2009/05/22 20:25:24 jmburnz Exp $ */
 
 /**
  * @file _all-subtheme.css
@@ -178,11 +178,14 @@ a img {
 /** 
  * Section Class
  * The section class takes the 2nd part of the URL and
- * builds a section-[path-part] class from it. If you emulate
+ * builds a section-[arg] class from it. If you emulate
  * site sections using the Pathauto module this can be a 
  * powerful way to style site sections.
+ *
+ * Look in body element for the section you want to style
+ * to find the class to replace section-[arg]:
  */
-/* .section-[path-part] {}  replace [path-part] */
+/* .section-arg {} */
 
 /* Front or not front. */
 .front {}
@@ -227,13 +230,15 @@ a img {
 
 /** 
  * Page Path Class
- * The page path class takes the entire URL and
- * builds a page-[path] class from it. See example
- * below. You need to use Firebug or view source to
- * find out what the actual class will be, and be aware
+ * The page path class takes the entire URL and builds a page-[path] 
+ * class from it. See examplebelow. You need to use Firebug or view 
+ * source to find out what the actual class will be, and be aware
  * that this will change if your URL alias changes!
+ *
+ * Replace [example-node-path] with the path you want
+ * to style.
  */
-/* .page-[example-node-path] {}  replace [example-node-path] */
+/* .page-example-node-path {} */
 
 	
 /**********************************************************
@@ -288,8 +293,8 @@ body > #container {
    ideal for displaying banners. */
 #leaderboard {}
 
-/* Header blocks region is embedded in the header, 
-   usefull for displaying small banners. */
+/* Header blocks region is embedded in the header, floated
+   between the logo/site_name and the search box. */
 #header-blocks {
   float: left;
   margin-left: 2em; /* LTR */

@@ -1,4 +1,4 @@
-/* $Id: admin-styles.css,v 1.1.2.6 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: admin-styles.css,v 1.1.2.7 2009/05/22 20:25:23 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -50,7 +50,7 @@ div.admin .right {
 }
 
 .admin-panel ul li {
-  color: #666;
+  color: #555;
 }
 
 .admin-panel dl {
@@ -63,7 +63,7 @@ div.admin .right {
 }
 
 .admin-panel dd {
-  color: #666; 
+  color: #555; 
   font-size: 0.94em;
   margin-left: 0;
 }
@@ -77,7 +77,7 @@ div.admin .right {
 }
 
 .page-admin-by-module .admin-panel .body p {  
-  color: #666; 
+  color: #555; 
   font-size: 0.94em; 
 }
 

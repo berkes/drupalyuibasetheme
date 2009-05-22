@@ -1,4 +1,4 @@
-/* $Id: base.css,v 1.1.2.13 2009/05/22 08:46:10 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.14 2009/05/22 20:25:23 jmburnz Exp $ */
 
 /**
  * @file base.css
@@ -60,7 +60,7 @@ tr:first-child td.region,tr:first-child td.module,tr:first-child td.container{bo
 #forum tr td.forum .name{padding-left:.375em;}
 #forum div.indent{margin-left:.5em;}
 .section-admin table {width:100%;}
-.description{color:#666;}
+.description{color:#555;}
 div.messages{font-weight:normal;margin:1em 0;}
 div.messages ul{margin:0 0 0 1.25em;}
 div.error{background:#FFF3F6 url(../images/error.png) no-repeat .5em .45em;border:1px solid #C00000;color:#C00000;}
@@ -84,7 +84,7 @@ div.ok,tr.ok,table tr.ok td{color:#222;padding:1em .5em;}
 .includes{color:#222;}
 div.help p:last-child,div.help ul:last-child{margin-bottom:0;}
 .form-item input.error,.form-item textarea.error,.form-item select.error{border:2px solid #C00000;}
-.form-item strong.error em{display:block;font-weight:bold;color:#E41F0B;font-size:1.2em;}
+.form-item strong.error em{font-weight:bold;color:#E41F0B;font-size:1.2em;}
 .block-region{border:1px dotted #000;color:#000;font: 1.25em "Lucida Console",Monaco,"DejaVu Sans Mono",monospace;padding:3px 6px 1px;}
 .node-unpublished,.comment-unpublished{background-color:#FFF6DF;}
 .unpublished{visibility:hidden;}
@@ -113,7 +113,6 @@ input.title{font-size:1.5em;}
 input.form-text,textarea{border:1px solid #CCC;height:auto;padding:.1875em;}
 textarea,input{font:1em normal Arial, Helvetica, sans-serif;}
 div.form-item{margin-bottom:1em;margin-top:1em;}
-.form-item strong.error{display:block;}
 .form-item textarea.error{padding:.1875em;}
 .form-item .description{font-size:.9em;line-height:1.667em;}
 span.form-required,span.marker{color:#8A1F11;}
@@ -143,13 +142,13 @@ div.admin .left,div.admin .right{margin-left:0;margin-right:0;width:49%;}
 .admin-panel p{margin:0;padding:1em 0 0;}
 .admin-panel ul,.admin-panel ul.menu,.admin-panel .item-list ul{padding:0 0 1em;}
 .admin-panel .item-list ul{margin:0;}
-.admin-panel ul li{color:#666;}
+.admin-panel ul li{color:#555;}
 .admin-panel dl{margin:0;padding:1em 0;}
 .admin-panel dt{font-weight:normal;}
-.admin-panel dd{color:#666;font-size:.94em;margin-left:0;}
+.admin-panel dd{color:#555;font-size:.94em;margin-left:0;}
 .admin .compact-link{margin:0 0 1em;}
 .page-admin-by-module .admin-panel .body{margin:0;}
-.page-admin-by-module .admin-panel .body p{color:#666;font-size:.94em;}
+.page-admin-by-module .admin-panel .body p{color:#555;font-size:.94em;}
 #user-admin-filter ul li,#node-admin-filter ul li{list-style:none;}
 .more-help-link{font-size:.94em;line-height:1.667em;}
 #permissions td.permission{padding-left:.5em;}

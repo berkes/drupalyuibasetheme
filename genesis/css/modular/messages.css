@@ -1,4 +1,4 @@
-/* $Id: messages.css,v 1.1.2.7 2009/05/21 16:23:51 jmburnz Exp $ */
+/* $Id: messages.css,v 1.1.2.8 2009/05/22 20:25:23 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -14,7 +14,7 @@
  */
 
 .description {
-  color: #666;
+  color: #555;
 }
 
 div.messages {
@@ -132,6 +132,7 @@ background: #E8F7C5;
 
 .merge-down {}
 .merge-up {}
+
 /* CSS3 */
 div.help p:last-child,
 div.help ul:last-child {
@@ -144,8 +145,7 @@ div.help ul:last-child {
   border: 2px solid #E41F0B;
 }
 
-.form-item strong.error em {
-  display: block; 
+.form-item strong.error em { 
   font-weight: bold; 
   color: #E41F0B; 
   font-size: 1.2em;
