@@ -1,5 +1,6 @@
-; $Id: genesis.info,v 1.1.2.15 2009/05/19 03:03:52 jmburnz Exp $
+; $Id: genesis.info,v 1.1.2.16 2009/05/23 11:28:25 jmburnz Exp $
   
+		
 		
 ;----------// Theme Information
 
@@ -8,6 +9,7 @@
   core         = 6.x
   engine       = phptemplate
   screenshot   = images/screenshot_base.png
+
 
 
 ;----------// Regions
@@ -54,14 +56,15 @@
   ;regions[four_col_fourth]   = 4col Gpanel column 4
 
 
+
 ;----------// Genesis core styles
 
   stylesheets[all][] = css/base.css
   stylesheets[all][] = css/layout.css
 		
   ; Use the uncompressed stylesheets; useful during development.
-  ;stylesheets[all][] = css/uncompressed/base-uncompressed.css
-  ;stylesheets[all][] = css/uncompressed/layout-uncompressed.css
+  ;stylesheets[all][] = css/uncompressed/base.css
+  ;stylesheets[all][] = css/uncompressed/layout.css
   
   ; Alternatively use the modular stylesheets.
   ;stylesheets[all][] = css/modular/admin-styles.css
@@ -71,6 +74,7 @@
   ;stylesheets[all][] = css/modular/tables.css
   ;stylesheets[all][] = css/modular/typography.css
   
+	
 		
 ;----------// Optional stylesheets
 		
@@ -79,6 +83,7 @@
 								  
   ; Uncomment to show the grid, add the grid class in page.tpl.php also.
   ;stylesheets[all][] = css/dev/grid.css
+
 
 
 ;----------// IE Conditional Stylesheets
@@ -94,6 +99,7 @@
   ; Example only: see the README in the Conditional Styles module
   ;conditional-stylesheets[if lt IE 7][all][] = css/ie/ie-example.css
 		
+
 		
 ;----------// jQuery Plugins and JavaScripts
 
@@ -105,7 +111,9 @@
   ; To use uncomment and clear cache data in Performance settings.
   ;scripts[] = js/jquery.equalizeheights.minified.js
 
-;---------- Theme Congiruation features ----------;
+
+
+;----------// Theme Congiruation features
 
 ; The "features" control which check boxes display on the admin/build/themes 
 ; configuration page. This is useful for suppressing check boxes for elements 
