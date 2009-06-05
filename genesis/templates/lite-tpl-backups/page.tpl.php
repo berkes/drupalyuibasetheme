@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.8 2009/05/21 17:48:35 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.9 2009/06/05 17:44:35 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -116,12 +116,12 @@
 	
           <?php if ($site_logo or $site_name): ?>
             <?php if ($title): ?>
-              <div><strong>
+              <div class="logo-site-name"><strong>
                 <?php if ($site_logo): ?><span id="logo"><?php print $site_logo; ?></span><?php endif; ?>
                 <?php if ($site_name): ?><span id="site-name"><?php print $site_name; ?></span><?php endif; ?>
               </strong></div>           
             <?php else: /* Use h1 when the content title is empty */ ?>     
-              <h1>
+              <h1 class="logo-site-name">
                 <?php if ($site_logo): ?><span id="logo"><?php print $site_logo; ?></span><?php endif; ?>
                 <?php if ($site_name): ?><span id="site-name"><?php print $site_name; ?></span><?php endif; ?>
              </h1>

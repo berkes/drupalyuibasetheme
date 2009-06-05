@@ -1,4 +1,4 @@
-/* $Id: admin-styles.css,v 1.1.2.7 2009/05/22 20:25:23 jmburnz Exp $ */
+/* $Id: admin-styles.css,v 1.1.2.8 2009/06/05 17:44:35 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -132,7 +132,7 @@ ul.primary li a {
 }
 
 .local-tasks ul.primary li a:focus  {
-  background-color: #FFF2CF;;
+  background-color: #FFF2CF;
   border-color: #FFCC00;
 }
 

@@ -1,4 +1,4 @@
-; $Id: genesis.info,v 1.1.2.16 2009/05/23 11:28:25 jmburnz Exp $
+; $Id: genesis.info,v 1.1.2.17 2009/06/05 17:44:35 jmburnz Exp $
   
 		
 		
@@ -90,11 +90,10 @@
 
   ; Support for the Conditional Styles module. This module allows themes 
   ; to specify conditional stylesheets in their .info file and the conditional 
-  ; comments will be automatically included at the end of the standard $styles variable. 
-  ; http://drupal.org/project/conditional_styles
+  ; comments will be automatically included at the end of the standard $styles 
+  ; variable. http://drupal.org/project/conditional_styles
   ;
-  ; Install the module and then uncomment or add the required stylesheets.
-  ; There is an example IE stylesheet are in your subthemes css/ie folder.
+  ; Note: You do not need to install the module, it is now included in Genesis.
 
   ; Example only: see the README in the Conditional Styles module
   ;conditional-stylesheets[if lt IE 7][all][] = css/ie/ie-example.css
@@ -106,10 +105,16 @@
   ; Insert WAI ARIA Landmark Roles. Uncomment to use.
   scripts[] = js/aria-roles.js
 
-  ; Equal height columns. This will set first child divs in the #columns division
+  ; Equal Height Columns
+  ; This will set first child divs in the #columns division
   ; to the same height (#sidebar-left, #sidebar-right, #content-column).
   ; To use uncomment and clear cache data in Performance settings.
   ;scripts[] = js/jquery.equalizeheights.minified.js
+
+  : Preload CSS Images
+  ; jQuery plugin that automatically preloads all images referenced in CSS files.
+  ; http://www.filamentgroup.com
+  ;scripts[] = js/preloadCssImages.jQuery_v5_minfied.js
 
 
 
@@ -130,4 +135,11 @@
   features[] = primary_links
   features[] = secondary_links
 
+
+
+; Information added by drupal.org packaging script on 2009-05-23
+version = "6.x-2.1"
+core = "6.x"
+project = "genesis"
+datestamp = "1243078554"
 

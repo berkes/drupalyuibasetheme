@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.17 2009/05/22 20:25:24 jmburnz Exp $
+// $Id: template.php,v 1.1.2.18 2009/06/05 17:44:35 jmburnz Exp $
 
 /**
  * @file template.php
@@ -11,6 +11,26 @@
  * Uncomment to use during development.
  */
 //drupal_rebuild_theme_registry();
+
+/**
+ * Implement HOOK_theme
+ * - Add conditional stylesheets:
+ *   For more information: http://msdn.microsoft.com/en-us/library/ms537512.aspx
+ */
+function genesis_theme(&$existing, $type, $theme, $path){
+  
+  // Compute the conditional stylesheets.
+  if (!module_exists('conditional_styles')) {
+    include_once $base_path . drupal_get_path('theme', 'genesis') . '/template.conditional-styles.inc';
+    // _conditional_styles_theme() only needs to be run once.
+    if ($theme == 'genesis') {
+      _conditional_styles_theme($existing, $type, $theme, $path);
+    }
+  }  
+  $templates = drupal_find_theme_functions($existing, array('phptemplate', $theme));
+  $templates += drupal_find_theme_templates($existing, '.tpl.php', $path);
+  return $templates;
+}
 
 
 /**
@@ -28,7 +48,12 @@ function genesis_preprocess_page(&$vars, $hook) {
   if ($vars['help'] == "<div class=\"help\"> \n</div>") {
     $vars['help'] = '';
   }
-  
+
+  // Add conditional stylesheets.
+  if (!module_exists('conditional_styles')) {
+    $vars['styles'] .= $vars['conditional_styles'] = variable_get('conditional_styles_' . $GLOBALS['theme'], '');
+  }
+
   // Set variables for the logo and site_name.
   if (!empty($vars['logo'])) {
     // Return the site_name even when site_name is disabled in theme settings.

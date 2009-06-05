@@ -33,8 +33,13 @@
     the file Genesis is configured to use by default.
     
   
+  preloadCssImages.jQuery_v5.js
+    A jQuery plugin that automatically preloads all images referenced in CSS files.
+    http://www.filamentgroup.com/lab/update_automatically_preload_images_from_css_with_jquery/
   
- 
+  preloadCssImages.jQuery_v5_minfied.js
+   A minified version of preloadCssImages.jQuery_v5.js (not human readable) and is
+    the file Genesis is configured to use by default.
   
   
   
