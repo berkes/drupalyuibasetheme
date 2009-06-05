@@ -9,10 +9,9 @@
     their info file and the conditional comments will be automatically 
     included at the end of the standard $styles variable. 
     
-    http://drupal.org/project/conditional_styles
+    Note: You do not need to install the module, it is included inGenesis.
  
-    Install the module and then uncomment or add the required 
-    stylesheets in your subthemes .info file.
+    Uncomment or add the required stylesheets in your subthemes .info file.
     
     
   _all-subtheme-tidy.css

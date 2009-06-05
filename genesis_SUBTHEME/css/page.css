@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.20 2009/05/22 20:25:24 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.21 2009/06/05 17:49:59 jmburnz Exp $ */
 
 /**
  * @file page.css
@@ -9,6 +9,16 @@
  * Remove unused styles for performace.
  */
 
+/**/#genesis-2c .two-sidebars .content-inner{margin-right:440px;}
+#genesis-2c .sidebar-left .content-inner{margin-right:220px;}
+#genesis-2c .sidebar-right .content-inner{margin-right:220px;}
+#genesis-2c #sidebar-left{width:200px;margin-left:-420px;}
+#genesis-2c #sidebar-right{width:200px;margin-left:-200px;}
+#genesis-2c .sidebar-left #sidebar-left{width:200px;margin-left:-200px;}
+
+#sidebar-left {background: #eee;}
+#sidebar-right {background: #eee;}
+.content-inner {background: #ccc}
 /**********************************************************
  *              Section, Page and Body Classes
  **********************************************************/
@@ -174,6 +184,32 @@ body > #container {
 #sidebar-right .sidebar-inner {}
 
 
+/*********************************************************
+*                     GPanel Regions
+**********************************************************/
+.two-col-50 {}
+.two-col-50 .col-1 {}
+.two-col-50 .col-2 {}
+
+.two-col-50.with-nested {}
+#two-col-50-nested {}
+.two-col-50.with-nested .col-1 {}
+.two-col-50.with-nested .col-2 {}
+.two-col-50.with-nested #two-col-50-nested .col-1 {}
+.two-col-50.with-nested #two-col-50-nested .col-2 {}
+
+.three-col-33 {}
+.three-col-33 .col-1 {}
+.three-col-33 .col-2 {}
+.three-col-33 .col-3 {}
+
+.four-col-25 {}
+.four-col-25 .col-1 {}
+.four-col-25 .col-2 {}
+.four-col-25 .col-3 {}
+.four-col-25 .col-4 {}
+
+
 /**********************************************************
  *                   Skip navigation
  **********************************************************/
@@ -245,8 +281,16 @@ body > #container {
 /* h1 is for the front page only, all others use the div. */
 #branding h1 {font-size: 1em;} /* reset h1, do not change! */
 
+/* Logo and site_name wrapper. */
+.logo-site-name {}
+div.logo-site-name {}
+h1.logo-site-name  {}
+
+/* DIV/strong combo when when title is set. */
+div.logo-site-name strong {}
+
 /* Remove display:block if you want the site name inline with the logo. */
-#branding span {
+.logo-site-name span {
   display: block;
 }
 

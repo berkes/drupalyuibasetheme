@@ -1,4 +1,4 @@
-/* $Id: blocks.css,v 1.1.2.15 2009/05/22 20:25:24 jmburnz Exp $ */
+/* $Id: blocks.css,v 1.1.2.16 2009/06/05 17:49:59 jmburnz Exp $ */
 
 /**
  * @file blocks.css
@@ -21,9 +21,11 @@
 .block-title   {} /* h2 block title */
 .block-content {} /* Block content wrapper */
 
+
+/**********************************************************
+ *                   Sidebar blocks
+ **********************************************************/
 /**
- * Sidebar and Region Specific Block Styles
- *
  * You can target blocks in one or more regions and 
  * style them differently. 
  */
@@ -44,6 +46,10 @@
 #sidebar-right .block-inner {}
 #sidebar-right .block .block-content {}
 
+
+/**********************************************************
+ *                  Region blocks
+ **********************************************************/
 /* High specifity selectors to style blocks in one region. */
 #leaderboard       .block {}
 #header-blocks     .block {}
@@ -54,6 +60,10 @@
 #content-bottom    .block {}
 #footer            .block {}
 
+
+/**********************************************************
+ *                   Module blocks
+ **********************************************************/
 /**
  * Module Block ID's 
  * For contributed module blocks the pattern is the same,
@@ -126,5 +136,4 @@ ul.menu li.last  {}
   margin: 0;
 }
 .block .item-list ul li {}
-
 

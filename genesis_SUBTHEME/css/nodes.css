@@ -1,4 +1,4 @@
-/* $Id: nodes.css,v 1.1.2.12 2009/05/21 17:49:14 jmburnz Exp $ */
+/* $Id: nodes.css,v 1.1.2.13 2009/06/05 17:49:59 jmburnz Exp $ */
 
 /**
  * @file nodes.css
@@ -45,6 +45,7 @@
 .node ul.links li {
   padding: 0 1em 0 0;
 }
+.node ul.links li a {}
 
 /* Links. */
 .node-links {}
