@@ -18,10 +18,11 @@
   
   Online docs: http://drupal.org/node/439698
   
-  1. First copy/paste one of the subthemes: 
-   
-     - genesis_LITE (less html, same features)
-     - genesis_SUBTHEME (more html, easier to theme)
+  1. First copy/paste one of the subthemes:
+
+     - genesis_SUBTHEME - the standard subtheme
+     - genesis_DARK - support for dark style themes
+     - genesis_ULTRALITE - a subtheme with much less HTML
 
      Save your new sub-theme in the sites/all/themes directory.
 
