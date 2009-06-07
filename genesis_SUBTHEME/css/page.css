@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.21 2009/06/05 17:49:59 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.22 2009/06/07 08:33:33 jmburnz Exp $ */
 
 /**
  * @file page.css
@@ -9,16 +9,6 @@
  * Remove unused styles for performace.
  */
 
-/**/#genesis-2c .two-sidebars .content-inner{margin-right:440px;}
-#genesis-2c .sidebar-left .content-inner{margin-right:220px;}
-#genesis-2c .sidebar-right .content-inner{margin-right:220px;}
-#genesis-2c #sidebar-left{width:200px;margin-left:-420px;}
-#genesis-2c #sidebar-right{width:200px;margin-left:-200px;}
-#genesis-2c .sidebar-left #sidebar-left{width:200px;margin-left:-200px;}
-
-#sidebar-left {background: #eee;}
-#sidebar-right {background: #eee;}
-.content-inner {background: #ccc}
 /**********************************************************
  *              Section, Page and Body Classes
  **********************************************************/
