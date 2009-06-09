@@ -1,4 +1,4 @@
-/* $Id: style_dark.css,v 1.1.2.3 2009/06/06 22:51:05 jmburnz Exp $ */
+/* $Id: style_dark.css,v 1.1.2.4 2009/06/09 16:03:05 jmburnz Exp $ */
 
 /**
  * @file style_dark.css
@@ -609,9 +609,16 @@ html.js div.ctools-dropdown div.ctools-dropdown-container ul li a {
 /**********************************************************
  *                     Misc
  **********************************************************/
+/* Welcom page */
 #first-time {
   background: #242424;
 		border: 5px solid #303030;
 		padding: 1em;
+}
+
+/* Preview node and comments */
+.preview .node,
+.preview .comment {
+  background-color: #111;
 }
 

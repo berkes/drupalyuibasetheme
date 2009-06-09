@@ -1,4 +1,4 @@
-/* $Id: base.css,v 1.1.2.14 2009/05/22 20:25:23 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.15 2009/06/09 16:03:05 jmburnz Exp $ */
 
 /**
  * @file base.css
@@ -135,6 +135,7 @@ html.js #user-login-form li.openid-link,html.js #user-login li.openid-link{list-
 #user-login ul li{margin:0;}
 #user-login-form li.openid-link,#user-login li.openid-link{background:none;}
 #user-login-form li.openid-link a,#user-login li.openid-link a{background:transparent url(../images/openid.png) no-repeat 0 0;padding:0 20px;}
+#user-login-form .item-list li{list-style:none;}
 div.admin-panel{border:1px solid #DDD;margin:0 0 .75em;padding:0;}
 div.admin .left,div.admin .right{margin-left:0;margin-right:0;width:49%;}
 .admin-panel h3{background:#EEE;color:#222;padding:0 0 0 .5em;}

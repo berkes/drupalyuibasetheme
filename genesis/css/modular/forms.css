@@ -1,4 +1,4 @@
-/* $Id: forms.css,v 1.1.2.9 2009/05/22 20:35:35 jmburnz Exp $ */
+/* $Id: forms.css,v 1.1.2.10 2009/06/09 16:03:05 jmburnz Exp $ */
 
 /**
  * @file forms.css
@@ -175,5 +175,8 @@ html.js #user-login li.openid-link {
   padding: 0 20px;
 }
 
-
+/* Remove bullets from other user login list items. */
+#user-login-form .item-list li {
+  list-style:none;
+}
 

@@ -1,4 +1,4 @@
-/* $Id: _all-lite.css,v 1.1.2.1 2009/06/05 17:54:53 jmburnz Exp $ */
+/* $Id: _all-lite.css,v 1.1.2.2 2009/06/09 16:03:06 jmburnz Exp $ */
 
 /**
  * @file _all-lite.css
@@ -881,9 +881,11 @@ ul.links li.comment_delete a {}
  */
 /* Low specifity selector to style blocks in both sidebars. */
 .sidebar .block {}
+.sidebar .block h2 {}
 
 /* Low specifity selector to style blocks in all regions. */
 .region .block {}
+.region .block h2 {}
 
 /* High specifity selectors to style blocks in one sidebar. */
 #sidebar-left .block {}

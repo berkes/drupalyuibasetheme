@@ -1,4 +1,4 @@
-/* $Id: _all-subtheme.css,v 1.1.2.1 2009/06/05 17:48:58 jmburnz Exp $ */
+/* $Id: _all-subtheme.css,v 1.1.2.2 2009/06/09 16:03:05 jmburnz Exp $ */
 
 /**
  * @file _all-subtheme.css
@@ -930,9 +930,15 @@ ul.links li.comment_delete a {}
  */
 /* Low specifity selector to style blocks in both sidebars. */
 .sidebar .block {}
+.sidebar .block h2 {}
+.sidebar .block-inner {}
+.sidebar .block .block-content {}
 
 /* Low specifity selector to style blocks in all regions. */
 .region .block {}
+.region .block h2 {}
+.region .block-inner {}
+.region .block .block-content {}
 
 /* High specifity selectors to style blocks in one sidebar. */
 #sidebar-left .block {}
