@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.23 2009/06/09 16:03:05 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.24 2009/06/09 16:17:27 jmburnz Exp $ */
 
 /**
  * @file page.css
@@ -245,13 +245,11 @@ body > #container {
   background: #FFF;
   border: 1px solid #C00000;
   color: #C00000;
-  height: 2em;
+  height: 1.5em;
   overflow: visible;
-  padding: 2em 0;
   position: fixed;
-  text-align: center;
   top: 0;
-  width: 978px;
+  width: auto;
   z-index: 1000;
 }
 */

@@ -1,4 +1,4 @@
-/* $Id: blocks.css,v 1.1.2.2 2009/06/09 16:03:06 jmburnz Exp $ */
+/* $Id: blocks.css,v 1.1.2.3 2009/06/09 16:17:27 jmburnz Exp $ */
 
 /**
  * @file blocks.css
@@ -132,6 +132,18 @@ ul.menu li.last  {}
   margin: 0;
 }
 .block .item-list ul li {}
+
+
+/**********************************************************
+ *                  Gpanel blocks
+ **********************************************************/
+/* Examples to get started. Add col specific selectors to style
+   blocks in different Gpanel columns, or element selectors to
+   style specific elements */
+.two-col-50 .block {}
+.two-col-50.with-nested .block {}
+.three-col-33 .block {}
+.four-col-25 .block {}
 
 
 
