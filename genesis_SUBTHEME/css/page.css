@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.24 2009/06/09 16:17:27 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.25 2009/06/10 01:25:25 jmburnz Exp $ */
 
 /**
  * @file page.css
@@ -111,10 +111,13 @@ body > #container {
 
 /* Column wrappers */
 #columns {}
-#columns-inner {}
+.columns-inner {}
 
 /* Content wrappers */
 #content-column {}
+.content-inner {}
+
+/* Main content wrappers*/
 #main-content {}
 #content {}
 

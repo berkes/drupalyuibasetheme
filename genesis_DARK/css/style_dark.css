@@ -1,4 +1,4 @@
-/* $Id: style_dark.css,v 1.1.2.5 2009/06/09 16:17:27 jmburnz Exp $ */
+/* $Id: style_dark.css,v 1.1.2.6 2009/06/10 01:25:25 jmburnz Exp $ */
 
 /**
  * @file style_dark.css
@@ -11,7 +11,7 @@
  **********************************************************/
 thead th     {
   border-color: #444;
-  color: #CCC;
+		color: #CCC;
 }
 
 td, th {
@@ -56,10 +56,10 @@ tr.selected td {
 
 td.region, td.module, 
 td.container td.category {
-  background-color: transparent;
-  border-bottom: none;
-  border-top: none;
-  color:  #FFF;
+		background-color: transparent;
+		border-bottom: none;
+		border-top: none;
+		color:  #FFF;
 }
 
 #blocks td.region {
@@ -84,29 +84,32 @@ table.system-status-report th {
 }
 
 
+
 /**********************************************************
  *                      Admin
  **********************************************************/
 div.admin-panel {
-  background: #303030;
-  border: 1px solid #242424;
+background:#303030;
+border:1px solid #242424;
 }
 
 .admin-panel h3 {
-  background: #242424;
-  color: #EEEEEE;
+background:#242424;
+color:#EEEEEE;
 }
 
 .admin-panel dd {
-  color: #999999;
+color:#999999;
 }
 
 .page-admin-by-module .admin-panel .body p {
-  color: #999999;
+color:#999999;
 }
 
+
+
 span.form-required, span.marker {
-  color: #FF0000;
+color:#FF0000;
 }
 
 
@@ -121,9 +124,9 @@ div.status {
 }
 
 div.help {
-  background-color: #027AC6;
-  border: 2px solid #66BEF4;
-  color: #F7F8F8;
+		background-color: #027AC6;
+		border: 2px solid #66BEF4;
+		color: #F7F8F8;
 }
 
 table tr.warning,
@@ -135,18 +138,18 @@ div.warning {
 
 div.status a:link, div.status a:visited {
   color: yellow;
-  font-weight: bold;
+		font-weight: bold;
 }
 
 div.help a:link, div.help a:visited {
-  color: yellow;
-  font-weight: bold;
+  color:  yellow;
+		font-weight: bold;
 }
 
 div.warning a:link, div.warning a:visited,
 tr.warning a:link, tr.warning a:visited {
-  color: yellow;
-  font-weight: bold;
+  color:  yellow;
+		font-weight: bold;
 }
 
 div.status a:hover, div.status a:focus,
@@ -166,7 +169,7 @@ div.admin-required {
 
 div.ok, tr.ok,
 table tr.ok td {
-  color: #EEE;
+  color:#EEE;
 }
 
 .includes {
@@ -174,7 +177,7 @@ table tr.ok td {
 }
 
 .update tr.ok {
-  background: #2A6827;
+  background:#2A6827;
 }
 
 table.update a:link,
@@ -188,8 +191,8 @@ table.update a:focus {
 }
 
 .update tr td {
-  border-bottom: 1px solid #4DA449;
-  border-top: 1px solid #4DA449;
+  border-bottom:1px solid #4DA449;
+  border-top:1px solid #4DA449;
 }
 
 .update tr.warning td,
@@ -203,13 +206,12 @@ table.update a:focus {
 }
 
 table tr.warning td {
-  color: #000;
+  color:#000;
 }
 
 table tr.warning.merge-up td {
-  color: #FFF;
+  color:#FFF;
 }
-
 
 /**********************************************************
  *                   Local tasks
@@ -221,7 +223,7 @@ ul.primary {
 ul.primary li a {
   background-color: #111;
   border: 3px solid #242424;
-  font-weight: bold;
+		font-weight: bold;
   padding: 0.35em 1.4em 0.5em;
 }
 
@@ -254,8 +256,8 @@ input.text,
 input.form-text, 
 input.title {
   background: #1A1A1A;
-  border: 1px solid #6D6D6D;
-  color: #EEE;
+		border: 1px solid #6D6D6D;
+		color: #EEE;
 }
 
 input.form-text:focus,
@@ -264,8 +266,8 @@ input.title:focus,
 textarea:focus, 
 .form-select:focus {
   border: 1px solid #777;
-  background: #1F1F1F;
-  color: #EEE;
+		background: #1F1F1F;
+		color: #EEE;
 }
 
 fieldset legend {
@@ -294,14 +296,14 @@ li.leaf,
 li.collapsed,
 li.expanded {
   list-style-image:  none;
-  color: #777;
+		color: #777;
 }
 
 
 /**********************************************************
  *                     Poll
  **********************************************************/
-.poll .bar {
+	.poll .bar {
   background-color: #BBB;
 }
 
@@ -342,7 +344,7 @@ table.view-enabled td.view-ops {
 }
 
 /* Views admin. */
-/**
+/*
  * Summary pad
  */
 /* set up some defaults so weird themes don't override us too badly. */
@@ -357,12 +359,12 @@ table.view-enabled td.view-ops {
   color: #027AC6;
 }
 
-/**
+/*
  * First column: display drawers
  */
 .views-tabset .views-tabs {
-  background-color: #303030;
-  border-color: #000;
+		background-color: #303030;
+		border-color: #000;
 }
 
 .views-tabset .views-tabs ul li {
@@ -372,7 +374,7 @@ table.view-enabled td.view-ops {
 
 .views-tabset .views-tabs ul li.active {
   background-color: #444;
-  background-image: none;
+		background-image: none;
 }
 
 .views-tabset .views-tabs ul li a {
@@ -381,21 +383,21 @@ table.view-enabled td.view-ops {
 
 .views-tabset .views-tabs ul li a:hover {
   background-color: #000;
-  background-image: none;
+		background-image: none;
 }
 
 .views-tabset .views-tabs ul li.active a {
   color: #FFF;
-  background-image: none;
+		background-image: none;
 }
 
 .views-tabset .views-tabs ul li.active a:hover {
   color: yellow;
   background-color: #000;
-  background-image: none;
+		background-image: none;
 }
 
-/**
+/*
  * Three columns with setting-summaries
  */
 .views-tabset .views-display {
@@ -426,9 +428,10 @@ div.views-display-deleted div.tab-section {
   border-color: #777;
 }
 
-/**
+/*
  * AJAX pad, the bottom part where settings are edited.
  */
+
 #views-ajax-title {
   background-color: #242424;
   border-color: #000;
@@ -452,7 +455,7 @@ div.views-display-deleted div.tab-section {
   background-color: #303030;
 }
 
-/**
+/*
  * Add, Rearrange and Configure buttons using sprites
  */
 a.views-button-configure,
@@ -518,9 +521,7 @@ form#views-ui-preview-form,
 /**********************************************************
  *                     CTools & Panels
  **********************************************************/
-.ctools-modal-content a:hover {
-  color: #000;
-}
+.ctools-modal-content a:hover {color: black;}
 
 .ctools-modal-content input.form-text, 
 .ctools-modal-content input.text,
@@ -537,7 +538,7 @@ form#views-ui-preview-form,
 .ctools-modal-content textarea:focus,
 .ctools-modal-content select:focus {
   background-color: #FFFFDF;
-  border-color: #FC0;
+  border-color: #FFCC00;
 }
 
 .ctools-modal-content .description {
@@ -548,10 +549,10 @@ html.js div.ctools-dropdown div.ctools-dropdown-container ul li a {
   width:160px;
 }
 
+
 #panels-dnd-main div.changed {
   background-color: #666;
 }
-
 #panels-dnd-main div.panels-display {
   background: #444;
   border-color: #777;
@@ -611,8 +612,8 @@ html.js div.ctools-dropdown div.ctools-dropdown-container ul li a {
 /* Welcom page */
 #first-time {
   background: #242424;
-  border: 5px solid #303030;
-  padding: 1em;
+		border: 5px solid #303030;
+		padding: 1em;
 }
 
 /* Preview node and comments */
@@ -621,5 +622,7 @@ html.js div.ctools-dropdown div.ctools-dropdown-container ul li a {
   background-color: #111;
 }
 
-
-
+.node-unpublished, 
+.comment-unpublished {
+  background-color:#444;
+}
