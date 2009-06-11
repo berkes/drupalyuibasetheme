@@ -1,4 +1,4 @@
-/* $Id: base.css,v 1.1.2.15 2009/06/09 16:03:05 jmburnz Exp $ */
+/* $Id: base.css,v 1.1.2.16 2009/06/11 08:52:07 jmburnz Exp $ */
 
 /**
  * @file base.css
@@ -161,7 +161,7 @@ ul.primary li a{background-color:#F5F5F5;border-color:#CCC;margin-right:.08em;pa
 .local-tasks ul.primary li a:hover{background-color:#F7F7F7;border-color:#DDD;}
 .local-tasks ul.primary li.active a{background-color:#FFF;border-bottom-color:#FFF;}
 ul.secondary{border-bottom:1px solid #CCC;margin:1em 0 0 0;padding:0 .3em 1em;}
-ul.secondary li{border-right:0;list-style:0;padding:0 2em 0 0;}
+ul.secondary li{border-right:0;list-style:none;padding:0 2em 0 0;}
 ul.secondary li a:hover,ul.secondary li a.active{border-bottom:none;text-decoration:underline;}
 body.admin-menu{margin-top: 2em !important;}
 #admin-menu{font: 0.9em Arial, Helvetica, sans-serif;}
