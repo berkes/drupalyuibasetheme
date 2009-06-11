@@ -1,4 +1,4 @@
-/* $Id: style.css,v 1.1.2.1 2009/06/05 17:48:58 jmburnz Exp $ */
+/* $Id: style.css,v 1.1.2.2 2009/06/11 22:23:41 jmburnz Exp $ */
 
 /**
  * @file style.css
@@ -77,11 +77,10 @@ a {
 a:link    {color: #027AC6;}
 a:visited {color: #027AC6;}
 a:hover   {color: yellow;}
-a:active  {color: yellow;}
-a.active  {color: yellow;}
+a:active  {}
+a.active  {}
 
-/* Set global a:active and a:focus styles. */
-a:active,
+/* Set global a:focus styles. */
 a:focus {
   color: yellow;
   border: 0;
