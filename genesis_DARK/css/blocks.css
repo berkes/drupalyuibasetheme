@@ -1,4 +1,4 @@
-/* $Id: blocks.css,v 1.1.2.3 2009/06/09 16:17:27 jmburnz Exp $ */
+/* $Id: blocks.css,v 1.1.2.4 2009/06/12 12:27:35 jmburnz Exp $ */
 
 /**
  * @file blocks.css
@@ -103,6 +103,26 @@
 
 
 /**********************************************************
+ *                 Search block form
+ **********************************************************/
+#search-block-form {}
+
+/* Wrapper divs. */
+#search-block-form > div {}
+#search-block-form .container-inline{}
+
+#search-block-form label {}
+#search-block-form input {}
+#search-block-form .form-item {}
+#search-block-form .form-submit {}
+#search-block-form #edit-search-block-form-1 {}
+
+/* Override forms.css focus style */
+#edit-search-block-form-1:hover,
+#edit-search-block-form-1:focus {}
+
+
+/**********************************************************
  *                   Menu blocks
  **********************************************************/
 /**
@@ -149,7 +169,7 @@ ul.menu li.last  {}
  **********************************************************/
 /* Examples to get started. Add col specific selectors to style
    blocks in different Gpanel columns, or element selectors to
-   style specific elements */
+		 style specific elements */
 .two-col-50 .block {}
 .two-col-50.with-nested .block {}
 .three-col-33 .block {}

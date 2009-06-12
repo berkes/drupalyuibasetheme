@@ -1,7 +1,7 @@
   
-  /genesis_LITE/CSS
+  /genesis_ULTRALITE/CSS
   
-  This directory contains the genesis_LITE CSS files.
+  This directory contains the genesis_ULTRALITE CSS files.
   
   /ie/ie-example.css
     An empty IE stylesheet to support the Conditional Styles module. 
@@ -15,13 +15,13 @@
     
     
   _all-lite-tidy.css
-    The is a copy of _all-subtheme.css but with all the empty selectors
+    The is a copy of _all-iite.css but with all the empty selectors
     and comments removed. Use this if you only want a very basic
     starter CSS file. See your subthemes .info file for instructions
     on how to enable the use of this stylesheet.
   
   _all-lite.css
-    The all-subtheme stylesheet is all the modular stylesheets aggreated
+    The all-lite stylesheet is all the modular stylesheets aggreated
     into one. Use this if you run into Internet Explorer's max 30
     stylesheet issue or if you need to reduce http requests and cannot
     use the CSS aggregation and compression feature of Drupal 6.

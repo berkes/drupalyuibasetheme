@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.25 2009/06/10 01:25:25 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.26 2009/06/12 12:27:36 jmburnz Exp $ */
 
 /**
  * @file page.css
@@ -246,12 +246,12 @@ body > #container {
 #skip-nav a:active,
 #skip-nav a:focus {
   background: #FFF;
-  border: 1px solid #C00000;
   color: #C00000;
   height: 1.5em;
   overflow: visible;
   position: fixed;
   top: 0;
+		right: 0;
   width: auto;
   z-index: 1000;
 }
@@ -306,8 +306,12 @@ div.logo-site-name strong {}
 
 
 /**********************************************************
- *                        Search
+ *    Search box, Advanced search form, Search results
+	*          For the search block see blocks.css
  **********************************************************/
+/**
+ * Search box
+ */
 /* Float the serch box right. */
 #search-box {
   float: right; /* LTR */
@@ -321,6 +325,10 @@ div.logo-site-name strong {}
 /* Use the child selector because the inner div has no class. */
 #search-theme-form > div {}
 
+/* #search and .container-inline apply to the same div. */
+#search-theme-form #search {}
+#search-theme-form .container-inline {}
+
 #search-theme-form label {}
 #search-theme-form input {}
 #search-theme-form .form-item {}
@@ -332,14 +340,49 @@ div.logo-site-name strong {}
 #edit-search-theme-form-1:hover,
 #edit-search-theme-form-1:focus {}
 
-/* Search Results Page - see .box */
-.section-search #search-form {}
-.section-search #search-form {}
 
-/* Search form on the results page, includes advanced search. */
+/**
+ * Advanced search form
+ */
+/* Advanced search-form id. */
+#search-form {}
+
+/* Use the child selector because the inner div has no class. */
+#search-form > div {}
+#search-form .container-inline {}
+#search-form #edit-keys-wrapper {}
+
+#search-form label {}
+#search-form input {}
+#search-form .form-item {}
+#search-form .form-submit {}
+
+/* Override forms.css text field focus style. */
+#search-form #edit-keys-wrapper input:hover,
+#search-form #edit-keys-wrapper input:focus {}
+
+/* Advanced search fieldset. */
+fieldset #search-advanced {}
+
+/**
+ * Search results
+ */
+/* Box styles for the results page. */
 .section-search .box {}
 .section-search .box-inner {}
 .section-search .box-title {}
+
+/* Style the no results messages. */
+.section-search .box ul {}
+.section-search .box ul li {}
+
+/* Search results document list. */
+dl.search-results {}
+dl.search-results dt {}
+dl.search-results dd {}
+dl.search-results dd p {}
+dl.search-results dd .search-snippet {}
+dl.search-results dd .search-info {}
 
 
 /**********************************************************
@@ -371,6 +414,8 @@ div.logo-site-name strong {}
  * Primary Links Style
  * Example styles to get you started.
  */
+#primary {}
+
 #nav .primary-links {
   background: #DDD; /* Default gray for dev only. */
   font-weight: bold;
@@ -419,6 +464,8 @@ div.logo-site-name strong {}
 /**
  * Secondary Links Style
  */
+#secondary {}
+
 #nav .secondary-links {
   background: #EEE; /* Default gray for dev only. */
   font-weight: bold;

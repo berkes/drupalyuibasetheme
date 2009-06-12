@@ -1,4 +1,4 @@
-/* $Id: style.css,v 1.1.2.3 2009/06/12 04:56:06 jmburnz Exp $ */
+/* $Id: style.css,v 1.1.2.4 2009/06/12 12:27:35 jmburnz Exp $ */
 
 /**
  * @file style.css
@@ -97,12 +97,14 @@ a img {
   border: none;
 }
 
-/* Protect admin section link readability. */
-.section-admin #content a:link    {color: #027AC6;}
-.section-admin #content a:visited {color: #027AC6;}
+/* Protect admin section link readability. 
+   Warning: this will override many other admin message
+   link styles, use with caution. */
+.section-admin #content a:link,
+.section-admin #content a:visited {}
 .section-admin #content a:hover,
 .section-admin #content a:active,
-.section-admin #content a.active  {color: yellow;}
+.section-admin #content a.active  {}
 
 
 /**********************************************************

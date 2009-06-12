@@ -1,7 +1,7 @@
   
-  /genesis_SUBTHEME/CSS
+  /genesis_DARK/CSS
   
-  This directory contains the genesis_SUBTHEME CSS files.
+  This directory contains the genesis_DARK CSS files.
   
   /ie/ie-example.css
     An empty IE stylesheet to support the Conditional Styles module. 
@@ -14,14 +14,14 @@
     Uncomment or add the required stylesheets in your subthemes .info file.
     
     
-  _all-subtheme-tidy.css
-    The is a copy of _all-subtheme.css but with all the empty selectors
+  _all-dark-tidy.css
+    The is a copy of _all-dark.css but with all the empty selectors
     and comments removed. Use this if you only want a very basic
     starter CSS file. See your subthemes .info file for instructions
     on how to enable the use of this stylesheet.
   
-  _all-subtheme.css
-    The all-subtheme stylesheet is all the modular stylesheets aggreated
+  _all-dark.css
+    The all-dark stylesheet is all the modular stylesheets aggreated
     into one. Use this if you run into Internet Explorer's max 30
     stylesheet issue or if you need to reduce http requests and cannot
     use the CSS aggregation and compression feature of Drupal 6.

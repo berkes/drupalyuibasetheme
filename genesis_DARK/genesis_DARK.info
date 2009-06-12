@@ -1,4 +1,4 @@
-; $Id: genesis_DARK.info,v 1.1.2.3 2009/06/12 02:55:31 jmburnz Exp $
+; $Id: genesis_DARK.info,v 1.1.2.4 2009/06/12 12:27:35 jmburnz Exp $
 
 
 ;----------// Theme Information
@@ -39,11 +39,11 @@
   ; To work-around IE's max 30 linked stylesheets issue comment out
   ; the Modular Stylesheets (above) and uncomment the following.
 
-  ;stylesheets[all][] = css/_all-subtheme.css
+  ;stylesheets[all][] = css/_all-dark.css
 
   ; Optionally use the CSSTidy compressed version.
 
-  ;stylesheets[all][] = css/_all-subtheme-tidy.css
+  ;stylesheets[all][] = css/_all-dark-tidy.css
 
 
 

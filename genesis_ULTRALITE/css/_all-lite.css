@@ -1,4 +1,4 @@
-/* $Id: _all-lite.css,v 1.1.2.2 2009/06/09 16:03:06 jmburnz Exp $ */
+/* $Id: _all-lite.css,v 1.1.2.3 2009/06/12 12:27:36 jmburnz Exp $ */
 
 /**
  * @file _all-lite.css
@@ -6,11 +6,11 @@
  *
  * Includes an exact copy of the following stylesheets:
  *
- * style.css		
- * page.css
- * nodes.css		
- * comments.css		
  * blocks.css
+ * comments.css
+ * nodes.css
+ * page.css
+ * style.css
  *	
  * USAGE
  * 1) Unset the mini stylesheets in genesis_LITE.info by commenting them out.
@@ -21,138 +21,397 @@
  */
 
 /**
- * @file style.css
- *
- * Use this file to override the Genesis core modular styles 
- * (such as the HTML elements in typography.css), module CSS 
- * and other Drupal styles. Anything that doesn't fit logically
- * into page.css, nodes.css, blocks.css or comments.css can go here.
+ * @file blocks.css
+ * Basic styles for blocks.
  */
 
 /**********************************************************
- *                    Body
+ *                       Blocks
  **********************************************************/
-body {
-  font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
+/**
+ * Styles set here will be inherited by all blocks.
+ */
+.block {
+  clear: both;
+  margin: 0 0 1.5em;
 }
 
-
-/**********************************************************
- *                 HTML Elements
- **********************************************************/
-
-h1 {}
-h2 {}
-h3 {}
-h4 {}
-h5 {}
-h6 {}
-
-p {}
-
-strong {}
-em, dfn {}
-dfn {}
-
-sup, sub {}
-
-del {}
-ins {}
-
-blockquote {}
-cite {}
-q {}
-
-address {}
-
-ul {}
-ol {}
-li {}
-
-dl {}
-dd {}
-dt {}
-
-
-abbr {}
-acronym {}
-
-pre, code, tt {}
-p code {}
-samp {}
-kbd {}
-var {}
+/* Default node title. */
+.block .title {}
 
 
 /**********************************************************
- *                 Global Link Styles
+ *                   Sidebar blocks
  **********************************************************/
-a {
-  margin: 0; 
+/**
+ * You can target blocks in one or more regions and 
+ * style them differently. 
+ */
+/* Low specifity selector to style blocks in both sidebars. */
+.sidebar .block {}
+.sidebar .block h2 {}
+
+/* Low specifity selector to style blocks in all regions. */
+.region .block {}
+.region .block h2 {}
+
+/* High specifity selectors to style blocks in one sidebar. */
+#sidebar-left .block {}
+#sidebar-left .block h2 {}
+
+#sidebar-right .block {}
+#sidebar-right .block h2 {}
+
+
+/**********************************************************
+ *                  Region blocks
+ **********************************************************/
+/* High specifity selectors to style blocks in one region. */
+#leaderboard       .block {}
+#header-blocks     .block {}
+#secondary-content .block {}
+#tertiary-content  .block {}
+#content-top       .block {}
+#content           .block {}
+#content-bottom    .block {}
+#footer            .block {}
+
+
+/**********************************************************
+ *                   Module blocks
+ **********************************************************/
+/**
+ * Module Block ID's 
+ * For contributed module blocks the pattern is the same,
+ * i.e. #block-[module]-[delta]
+ */
+#block-book-0       {} /* Book navigation block   */
+#block-blog-0       {} /* Recent Blog posts       */
+#block-comment-0    {} /* Recent Comments block   */
+#block-forum-0      {} /* Active Forum topics     */
+#block-forum-1      {} /* New Forum topics        */
+#block-locale-0     {} /* Language Switcher block */
+#block-node-0       {} /* Syndicate block         */
+#block-poll-0       {} /* Most recent poll        */
+#block-profile-0    {} /* Author information      */
+#block-search-0     {} /* Search form block       */
+#block-statistics-0 {} /* Popular content         */
+#block-system-0     {} /* Powered by Drupal       */
+#block-user-0       {} /* Login block             */
+#block-user-1       {} /* Navigation Menu block   */
+#block-user-2       {} /* Who's New block         */
+#block-user-3       {} /* Who's Online block      */
+
+/* Primary and Secondary links blocks */
+#block-menu-primary-links   {}
+#block-menu-secondary-links {}
+
+/* The class selector applies to all blocks of these types. */
+.block-user {} 
+.block-book {} 
+.block-aggregator {}
+
+
+/**********************************************************
+ *                 Search block form
+ **********************************************************/
+#search-block-form {}
+
+/* Wrapper divs. */
+#search-block-form > div {}
+#search-block-form .container-inline{}
+
+#search-block-form label {}
+#search-block-form input {}
+#search-block-form .form-item {}
+#search-block-form .form-submit {}
+#search-block-form #edit-search-block-form-1 {}
+
+/* Override forms.css focus style */
+#edit-search-block-form-1:hover,
+#edit-search-block-form-1:focus {}
+
+
+/**********************************************************
+ *                   Menu blocks
+ **********************************************************/
+/**
+ * Prefix these with the block id to style one menu only.
+ */
+ul.menu,
+ul.menu ul, 
+ul.menu ul ul, 
+ul.menu ul ul ul {
+  margin: 0 0 0 0.75em; /* LTR */
   padding: 0;
 }
 
-a:link    {}
-a:visited {}
-a:hover   {}
-a:active  {}
-a.active  {}
-
-/* Set global a:focus styles. */ 
-a:focus {
-  color: #C00000;
-  border: 0;
+/* Menu li styles */
+ul.menu li {
+  padding: 0.35em 0 0 0; /* LTR */
 }
 
-/* Drupal sets this to black. */
-li a.active {}
+ul.menu li.collapsed {}
+ul.menu li.expanded  {}
+ul.menu li.leaf      {}
 
-/* Remove borders on linked images. */
-a img {
-  border: none;
-}
+ul.menu li a:link    {}
+ul.menu li a:hover   {}
+ul.menu li a:visited {}
+ul.menu li.active a  {}
+ul.menu li.active-trail {}
+
+ul.menu li.first {}
+ul.menu li.last  {}
 
 
 /**********************************************************
- *                 Accessibility Classes
+ *                  Block item-list
  **********************************************************/
-
-/* Hide content without positioning issues. */
-.invisible {
-  height: 0;
-  overflow: hidden;
+.block .item-list ul {
+  margin: 0;
 }
-
-/* Move content off screen where appropriate. */
-.offscreen {
-  position: absolute;
-  left: -999em;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-/* Completely remove content for all users.
-   DO NOT use this for Skip links, display:none 
-   hides content from screen readers! */
-.remove {
-  display: none;
-}
+.block .item-list ul li {}
 
 
 /**********************************************************
- *                 Custom Styles
+ *                  Gpanel blocks
  **********************************************************/
+/* Examples to get started. Add col specific selectors to style
+   blocks in different Gpanel columns, or element selectors to
+		 style specific elements */
+.two-col-50 .block {}
+.two-col-50.with-nested .block {}
+.three-col-33 .block {}
+.four-col-25 .block {}
+
+
+
 /**
- * Here you can add custom stles for your theme that do not fit
- * into one if the modular stylesheets (such as the nodes, blocks,
- * page and comments stylesheets).
+ * @file comments.css
+ * Basic styles for comments.
  */
 
+/**********************************************************
+ *                     Comments
+ **********************************************************/
+/* Comment wrapper */
+#comments {}
+#comments-title {}
+	
+.comment {
+  margin: 0 0 1em; 
+}
+
+.comment .indented {
+  margin-left: 2em; /* LTR */
+}
+
+/* The title of each comment. */
+.comment .title {
+  margin-bottom: 0;
+}
+.comment-id {}
+.comment h3.title .new {
+  color: #FF8000;
+}
+
+.comment .title a:link,
+.comment .title a:visited,
+.comment .title a:active {
+  text-decoration: none;
+}
+
+.comment .title a:hover {
+  text-decoration: underline;
+}
+
+.comment .user-picture {}
+.comment .user-picture img {}
+
+.comment .submitted {}
+.comment .submitted a {}
+.comment .submitted a:hover {}
+
+.comment ul.links {
+  display: block;
+  padding: 0 1em 0 0;
+  text-align: right; /* LTR */
+}
+.comment ul.links li {}
+.comment ul.links li a {}
+
+/* Core comment link classes. */
+ul.links li.comment_reply a {}
+ul.links li.comment_edit a {}
+ul.links li.comment_delete a {}
+
+/* Comment ul link first and last classes. */
+.comment ul.links li.first {}
+.comment ul.links li.last  {}
+
+/**
+ * Comment Classes - extra classes to help out themers.
+ */
+/* Comment author. */
+.comment-by-anonymous   {}
+.comment-by-node-author {}
+.comment-by-viewer      {}
+
+/* Comment is new. */
+.comment-new {}
+
+/* Zebra odd/even classes. */
+.comment.odd  {}
+.comment.even {}
+
+/* Comment status. */
+.comment-unpublished {}
+
+/* Themes the "Unpublished" text. */
+.comment-unpublished .unpublished {}
+
+/* Comment form on a seperate page. */
+.section-comment .box {}
+.section-comment .box .title {}
+
+/* Comment form below content. */
+#comments .box {}
+#comments .box .title {}
 
 
 
+/**
+ * @file nodes.css
+ * Basic styles for nodes.
+ */
+
+/**********************************************************
+ *                      Nodes
+ **********************************************************/
+.node {
+  margin: 0 0 1.5em;
+}
+
+/* Node title on teasers and other lists. */
+.node .title {}
+
+.node .title a:link,
+.node .title a:visited,
+.node .title a:active {
+  text-decoration: none;
+}
+
+.node .title a:hover {
+  text-decoration: underline;
+}
+
+/* Node meta - wrapper div for submitted and taxonomy terms. */
+.node .meta {}
+
+/* User Picture. */
+.node .user-picture {}
+.node .user-picture img {}
+
+/* Submitted. */
+.node p.submitted {
+  margin: 0;
+}
+.node .submitted a {}
+.node .submitted a:hover {}
+
+/* Links and Terms. */
+.node ul.links {}
+.node ul.links li {
+  padding: 0 1em 0 0;
+}
+.node ul.links li a {}
+
+.node ul.tags {}
+.node ul.tags li {}
+.node ul.tags li a {}
+
+/* Style module links. */
+ul.links li.node_read_more a {}
+ul.links li.comment_add a {}
+ul.links li.comment_comments a {}
+ul.links li.comment_new_comments a {}
+ul.links li.blog_usernames_blog a {}
+
+/* Node ul link first and last classes. */
+.node ul.links li.first {}
+.node ul.links li.last  {}
+
+/* Node classes for node workflow states. */
+.node-add    {}
+.node-edit   {}
+.node-delete {}
+.node-preview  {}
+.node-sticky   {}
+.node-promoted {}
+
+/* Node status. */
+.node-unpublished {}
+
+/* Theme the node teaser seperatly. */
+.node-teaser {}
+
+
+/**********************************************************
+ *                   Core node types
+ **********************************************************/
+.node-blog  {}
+.node-page  {}
+.node-story {}
+.node-forum {}
+.node-book  {}
+.node-poll  {}
+
+
+/**********************************************************
+ *                 Custom node types
+ **********************************************************/
+/** 
+ * Replace CONTENT_TYPE with the content type 
+ * machine-readable name. 
+ */
+.node-type-CONTENT_TYPE {}
+
+
+/**********************************************************
+ *                    CCK Fields
+ **********************************************************/
+/* Wrapper for any CCK field. */
+.field {}
+
+/* Use "datetime" when creating new CCK date fields. */
+.field-type-datetime {}
+
+/* Filefield field. */
+.field-type-filefield {}
+
+/* Imagefield field. */
+.field-type-image {}
+
+/* Node reference field. */
+.field-type-nodereference {}
+
+/* User reference field. */
+.field-type-userreference {}
+
+/* Number fields. */
+.field-type-number-decimal {}
+.field-type-number-float {}
+.field-type-number-integer {}
+
+/* Text field. */
+.field-type-text {}
+
+/**
+ * Specific field names.
+ */
+/* Underscores in field name are replaced with dashes. */
+.field-field-FIELDNAME {}
 
 
 
@@ -263,12 +522,14 @@ body > #container {
 
 /* Column wrappers */
 #columns {}
-#columns-inner {}
+.columns-inner {}
 
 /* Content wrappers */
 #content-column {}
+.content-inner {}
+
+/* Main content wrappers*/
 #main-content {}
-#content {}
 
 
 /**********************************************************
@@ -318,6 +579,32 @@ body > #container {
 #sidebar-right {}
 
 
+/*********************************************************
+*                     GPanel Regions
+**********************************************************/
+.two-col-50 {}
+.two-col-50 .col-1 {}
+.two-col-50 .col-2 {}
+
+.two-col-50.with-nested {}
+#two-col-50-nested {}
+.two-col-50.with-nested .col-1 {}
+.two-col-50.with-nested .col-2 {}
+.two-col-50.with-nested #two-col-50-nested .col-1 {}
+.two-col-50.with-nested #two-col-50-nested .col-2 {}
+
+.three-col-33 {}
+.three-col-33 .col-1 {}
+.three-col-33 .col-2 {}
+.three-col-33 .col-3 {}
+
+.four-col-25 {}
+.four-col-25 .col-1 {}
+.four-col-25 .col-2 {}
+.four-col-25 .col-3 {}
+.four-col-25 .col-4 {}
+
+
 /**********************************************************
  *                   Skip navigation
  **********************************************************/
@@ -361,15 +648,13 @@ body > #container {
 #skip-nav a:active,
 #skip-nav a:focus {
   background: #FFF;
-  border: 1px solid #C00000;
   color: #C00000;
-  height: 2em;
+  height: 1.5em;
   overflow: visible;
-  padding: 2em 0;
   position: fixed;
-  text-align: center;
   top: 0;
-  width: 978px;
+		right: 0;
+  width: auto;
   z-index: 1000;
 }
 */
@@ -389,8 +674,16 @@ body > #container {
 /* h1 is for the front page only, all others use the div. */
 #branding h1 {font-size: 1em;} /* reset h1, do not change! */
 
+/* Logo and site_name wrapper. */
+.logo-site-name {}
+div.logo-site-name {}
+h1.logo-site-name  {}
+
+/* DIV/strong combo when when title is set. */
+div.logo-site-name strong {}
+
 /* Remove display:block if you want the site name inline with the logo. */
-#branding span {
+.logo-site-name span {
   display: block;
 }
 
@@ -415,15 +708,28 @@ body > #container {
 
 
 /**********************************************************
- *                        Search
+ *    Search box, Advanced search form, Search results
+	*          For the search block see blocks.css
  **********************************************************/
+/**
+ * Search box
+ */
+/* Float the serch box right. */
+#search-box {
+  float: right; /* LTR */
+}
+
+/* Reset form element margins. */
 #search-theme-form {
-  float: right;    /* LTR */
-  margin: 1.5em 0; /* Reset form element margins. */
+  margin: 1.5em 0;
 }
 
 /* Use the child selector because the inner div has no class. */
 #search-theme-form > div {}
+
+/* #search and .container-inline apply to the same div. */
+#search-theme-form #search {}
+#search-theme-form .container-inline {}
 
 #search-theme-form label {}
 #search-theme-form input {}
@@ -436,13 +742,48 @@ body > #container {
 #edit-search-theme-form-1:hover,
 #edit-search-theme-form-1:focus {}
 
-/* Search Results Page - see .box */
-.section-search #search-form {}
-.section-search #search-form {}
 
-/* Search form on the results page, includes advanced search. */
+/**
+ * Advanced search form
+ */
+/* Advanced search-form id. */
+#search-form {}
+
+/* Use the child selector because the inner div has no class. */
+#search-form > div {}
+#search-form .container-inline {}
+#search-form #edit-keys-wrapper {}
+
+#search-form label {}
+#search-form input {}
+#search-form .form-item {}
+#search-form .form-submit {}
+
+/* Override forms.css text field focus style. */
+#search-form #edit-keys-wrapper input:hover,
+#search-form #edit-keys-wrapper input:focus {}
+
+/* Advanced search fieldset. */
+fieldset #search-advanced {}
+
+/**
+ * Search results
+ */
+/* Box styles for the results page. */
 .section-search .box {}
-.section-search .box .title {}
+.section-search .box-title {}
+
+/* Style the no results messages. */
+.section-search .box ul {}
+.section-search .box ul li {}
+
+/* Search results document list. */
+dl.search-results {}
+dl.search-results dt {}
+dl.search-results dd {}
+dl.search-results dd p {}
+dl.search-results dd .search-snippet {}
+dl.search-results dd .search-info {}
 
 
 /**********************************************************
@@ -626,360 +967,144 @@ h1#page-title {}
 #footer-message a.feed-icon {}
 
 
-/**
- * @file nodes.css
- * Basic styles for nodes.
- */
-
-/**********************************************************
- *                      Nodes
- **********************************************************/
-.node {
-  margin: 0 0 1.5em;
-}
-
-/* Node title on teasers and other lists. */
-.node .title {}
-
-.node .title a:link,
-.node .title a:visited,
-.node .title a:active {
-  text-decoration: none;
-}
-
-.node .title a:hover {
-  text-decoration: underline;
-}
-
-/* Node meta - wrapper div for submitted and taxonomy terms. */
-.node .meta {}
-
-/* User Picture. */
-.node .user-picture {}
-.node .user-picture img {}
-
-/* Submitted. */
-.node p.submitted {
-  margin: 0;
-}
-.node .submitted a {}
-.node .submitted a:hover {}
-
-/* Links and Terms. */
-.node ul.links {}
-.node ul.links li {
-  padding: 0 1em 0 0;
-}
-.node ul.links li a {}
-
-.node ul.tags {}
-.node ul.tags li {}
-.node ul.tags li a {}
-
-/* Style module links. */
-ul.links li.node_read_more a {}
-ul.links li.comment_add a {}
-ul.links li.comment_comments a {}
-ul.links li.comment_new_comments a {}
-ul.links li.blog_usernames_blog a {}
-
-/* Node ul link first and last classes. */
-.node ul.links li.first {}
-.node ul.links li.last  {}
-
-/* Node classes for node workflow states. */
-.node-add    {}
-.node-edit   {}
-.node-delete {}
-.node-preview  {}
-.node-sticky   {}
-.node-promoted {}
-
-/* Node status. */
-.node-unpublished {}
-
-/* Theme the node teaser seperatly. */
-.node-teaser {}
-
-
-/**********************************************************
- *                   Core node types
- **********************************************************/
-.node-blog  {}
-.node-page  {}
-.node-story {}
-.node-forum {}
-.node-book  {}
-.node-poll  {}
-
-
-/**********************************************************
- *                 Custom node types
- **********************************************************/
-/** 
- * Replace CONTENT_TYPE with the content type 
- * machine-readable name. 
- */
-.node-type-CONTENT_TYPE {}
-
-
-/**********************************************************
- *                    CCK Fields
- **********************************************************/
-/* Wrapper for any CCK field. */
-.field {}
-
-/* Use "datetime" when creating new CCK date fields. */
-.field-type-datetime {}
-
-/* Filefield field. */
-.field-type-filefield {}
-
-/* Imagefield field. */
-.field-type-image {}
-
-/* Node reference field. */
-.field-type-nodereference {}
-
-/* User reference field. */
-.field-type-userreference {}
-
-/* Number fields. */
-.field-type-number-decimal {}
-.field-type-number-float {}
-.field-type-number-integer {}
-
-/* Text field. */
-.field-type-text {}
-
-/**
- * Specific field names.
- */
-/* Underscores in field name are replaced with dashes. */
-.field-field-FIELDNAME {}
 
 
 
 /**
- * @file comments.css
- * Basic styles for comments.
- */
-
-/**********************************************************
- *                     Comments
- **********************************************************/
-/* Comment wrapper */
-#comments {}
-#comments-title {}
-	
-.comment {
-  margin: 0 0 1em; 
-}
-
-.comment .indented {
-  margin-left: 2em; /* LTR */
-}
-
-/* The title of each comment. */
-.comment .title {
-  margin-bottom: 0;
-}
-.comment-id {}
-.comment h3.title .new {
-  color: #FF8000;
-}
-
-.comment .title a:link,
-.comment .title a:visited,
-.comment .title a:active {
-  text-decoration: none;
-}
-
-.comment .title a:hover {
-  text-decoration: underline;
-}
-
-.comment .user-picture {}
-.comment .user-picture img {}
-
-.comment .submitted {}
-.comment .submitted a {}
-.comment .submitted a:hover {}
-
-.comment ul.links {
-  display: block;
-  padding: 0 1em 0 0;
-  text-align: right; /* LTR */
-}
-.comment ul.links li {}
-.comment ul.links li a {}
-
-/* Core comment link classes. */
-ul.links li.comment_reply a {}
-ul.links li.comment_edit a {}
-ul.links li.comment_delete a {}
-
-/* Comment ul link first and last classes. */
-.comment ul.links li.first {}
-.comment ul.links li.last  {}
-
-/**
- * Comment Classes - extra classes to help out themers.
- */
-/* Comment author. */
-.comment-by-anonymous   {}
-.comment-by-node-author {}
-.comment-by-viewer      {}
-
-/* Comment is new. */
-.comment-new {}
-
-/* Zebra odd/even classes. */
-.comment.odd  {}
-.comment.even {}
-
-/* Comment status. */
-.comment-unpublished {}
-
-/* Themes the "Unpublished" text. */
-.comment-unpublished .unpublished {}
-
-/* Comment form on a seperate page. */
-.section-comment .box {}
-.section-comment .box .title {}
-
-/* Comment form below content. */
-#comments .box {}
-#comments .box .title {}
-
-
-
-/**
- * @file blocks.css
- * Basic styles for blocks.
- */
-
-/**********************************************************
- *                       Blocks
- **********************************************************/
-/**
- * Styles set here will be inherited by all blocks.
- */
-.block {
-  clear: both;
-  margin: 0 0 1.5em;
-}
-
-/* Default node title. */
-.block .title {}
-
-/**
- * Sidebar and Region Specific Block Styles
+ * @file style.css
  *
- * You can target blocks in one or more regions and 
- * style them differently. 
+ * Use this file to override the Genesis core modular styles 
+ * (such as the HTML elements in typography.css), module CSS 
+ * and other Drupal styles. Anything that doesn't fit logically
+ * into page.css, nodes.css, blocks.css or comments.css can go here.
  */
-/* Low specifity selector to style blocks in both sidebars. */
-.sidebar .block {}
-.sidebar .block h2 {}
 
-/* Low specifity selector to style blocks in all regions. */
-.region .block {}
-.region .block h2 {}
-
-/* High specifity selectors to style blocks in one sidebar. */
-#sidebar-left .block {}
-#sidebar-left .block h2 {}
-#sidebar-left .block-inner {}
-#sidebar-left .block .block-content {}
-
-#sidebar-right .block {}
-#sidebar-right .block h2 {}
-#sidebar-right .block-inner {}
-#sidebar-right .block .block-content {}
-
-/* High specifity selectors to style blocks in one region. */
-#leaderboard       .block {}
-#header-blocks     .block {}
-#secondary-content .block {}
-#tertiary-content  .block {}
-#content-top       .block {}
-#content           .block {}
-#content-bottom    .block {}
-#footer            .block {}
-
-/**
- * Module Block ID's 
- * For contributed module blocks the pattern is the same,
- * i.e. #block-[module]-[delta]
- */
-#block-book-0       {} /* Book navigation block   */
-#block-blog-0       {} /* Recent Blog posts       */
-#block-comment-0    {} /* Recent Comments block   */
-#block-forum-0      {} /* Active Forum topics     */
-#block-forum-1      {} /* New Forum topics        */
-#block-locale-0     {} /* Language Switcher block */
-#block-node-0       {} /* Syndicate block         */
-#block-poll-0       {} /* Most recent poll        */
-#block-profile-0    {} /* Author information      */
-#block-search-0     {} /* Search form block       */
-#block-statistics-0 {} /* Popular content         */
-#block-system-0     {} /* Powered by Drupal       */
-#block-user-0       {} /* Login block             */
-#block-user-1       {} /* Navigation Menu block   */
-#block-user-2       {} /* Who's New block         */
-#block-user-3       {} /* Who's Online block      */
-
-/* Primary and Secondary links blocks */
-#block-menu-primary-links   {}
-#block-menu-secondary-links {}
-
-/* The class selector applies to all blocks of these types. */
-.block-user {} 
-.block-book {} 
-.block-aggregator {}
+/**********************************************************
+ *                    Body
+ **********************************************************/
+body {
+  font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
+}
 
 
 /**********************************************************
- *                   Menu blocks
+ *                 HTML Elements
  **********************************************************/
-/**
- * Prefix these with the block id to style one menu only.
- */
-ul.menu,
-ul.menu ul, 
-ul.menu ul ul, 
-ul.menu ul ul ul {
-  margin: 0 0 0 0.75em; /* LTR */
+
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+p {}
+
+strong {}
+em, dfn {}
+dfn {}
+
+sup, sub {}
+
+del {}
+ins {}
+
+blockquote {}
+cite {}
+q {}
+
+address {}
+
+ul {}
+ol {}
+li {}
+
+dl {}
+dd {}
+dt {}
+
+
+abbr {}
+acronym {}
+
+pre, code, tt {}
+p code {}
+samp {}
+kbd {}
+var {}
+
+
+/**********************************************************
+ *                 Global Link Styles
+ **********************************************************/
+a {
+  margin: 0; 
   padding: 0;
 }
 
-/* Menu li styles */
-ul.menu li {
-  padding: 0.35em 0 0 0; /* LTR */
+a:link    {}
+a:visited {}
+a:hover   {}
+a:active  {}
+a.active  {}
+
+/* Set global a:active and a:focus styles. */
+a:active,
+a:focus {
+  color: #C00000;
+  border: 0;
 }
 
-ul.menu li.collapsed {}
-ul.menu li.expanded  {}
-ul.menu li.leaf      {}
+/* Drupal sets this to black. */
+li a.active {}
 
-ul.menu li a:link    {}
-ul.menu li a:hover   {}
-ul.menu li a:visited {}
-ul.menu li.active a  {}
-ul.menu li.active-trail {}
-
-ul.menu li.first {}
-ul.menu li.last  {}
+/* Remove borders on linked images. */
+a img {
+  border: none;
+}
 
 
 /**********************************************************
- *                  Block item-list
+ *                 Accessibility Classes
  **********************************************************/
-.block .item-list ul {
-  margin: 0;
+
+/* Hide content without positioning issues. */
+.invisible {
+  height: 0;
+  overflow: hidden;
 }
-.block .item-list ul li {}
+
+/* Move content off screen where appropriate. */
+.offscreen {
+  position: absolute;
+  left: -999em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Completely remove content for all users.
+   DO NOT use this for Skip links, display:none 
+   hides content from screen readers! */
+.remove {
+  display: none;
+}
+
+
+/**********************************************************
+ *                 Custom Styles
+ **********************************************************/
+/**
+ * Here you can add custom stles for your theme that do not fit
+ * into one if the modular stylesheets (such as the nodes, blocks,
+ * page and comments stylesheets).
+ */
+
+
+
+
+
 
 
 

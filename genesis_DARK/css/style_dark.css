@@ -1,4 +1,4 @@
-/* $Id: style_dark.css,v 1.1.2.10 2009/06/12 04:56:06 jmburnz Exp $ */
+/* $Id: style_dark.css,v 1.1.2.11 2009/06/12 12:27:35 jmburnz Exp $ */
 
 /**
  * @file style_dark.css
@@ -197,12 +197,14 @@ table tr.ok td {
 
 table.update a:link,
 table.update a:visited {
-  color: #F1FFCF;
+  color: yellow;
+		text-decoration: none;
 }
 
 table.update a:hover,
 table.update a:focus {
   color: yellow;
+		text-decoration: underline;
 }
 
 .update tr td {
