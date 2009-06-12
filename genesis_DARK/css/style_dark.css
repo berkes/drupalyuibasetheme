@@ -1,4 +1,4 @@
-/* $Id: style_dark.css,v 1.1.2.7 2009/06/11 22:23:41 jmburnz Exp $ */
+/* $Id: style_dark.css,v 1.1.2.8 2009/06/12 00:24:27 jmburnz Exp $ */
 
 /**
  * @file style_dark.css
@@ -6,7 +6,7 @@
 	* support dark themes for Drupal.
  */
 
-/**********************************************************
+/***********************************************************
  *                    Tables
  **********************************************************/
 thead th     {
@@ -39,7 +39,7 @@ tr.even {
 
 tr.drag,
 tr.drag-previous {
-  background-color: #530000;
+  background-color: #666;
 }
 
 tr.odd td.active {
@@ -51,7 +51,7 @@ tr.even td.active {
 }
 
 tr.selected td {
-  background-color: #530000;
+  background-color: #666;
 }
 
 td.region, td.module, 
@@ -84,39 +84,30 @@ table.system-status-report th {
 }
 
 
-
-/**********************************************************
- *                      Admin
- **********************************************************/
-div.admin-panel {
-background:#303030;
-border:1px solid #242424;
-}
-
-.admin-panel h3 {
-background:#242424;
-color:#EEEEEE;
-}
-
-.admin-panel dd {
-color:#999999;
-}
-
-.page-admin-by-module .admin-panel .body p {
-color:#999999;
-}
-
-
-
-span.form-required, span.marker {
-color:#FF0000;
-}
-
-
-
-/**********************************************************
+/***********************************************************
  *                     Messages
  **********************************************************/
+.description {
+  color: #EEE;
+}
+
+div.error {
+  background-color: #C00000;
+  border: 2px solid #FF3F3F;
+  color: #FFF3F6;
+}
+
+tr.error {
+  background: #FFEFF3;
+  color: #E41F0B;
+}
+
+div.notice  {
+  background: #FFF6BF; 
+  border-color: #FFD324;
+  color: #514721;
+}
+
 div.status {
   background-color: #2A6827;
   border: 2px solid #4DA449;
@@ -129,37 +120,39 @@ div.help {
 		color: #F7F8F8;
 }
 
-table tr.warning,
 div.warning {
   background-color: #9F3800;
   border: 2px solid #FFB900;
   color: #FFF6DF;
 }
 
-div.status a:link, div.status a:visited {
-  color: yellow;
-		font-weight: bold;
-}
-
-div.help a:link, div.help a:visited {
-  color:  yellow;
-		font-weight: bold;
-}
-
+div.error a:link, div.error a:visited,
+div.status a:link, div.status a:visited,
+div.help a:link, div.help a:visited,
 div.warning a:link, div.warning a:visited,
 tr.warning a:link, tr.warning a:visited {
   color:  yellow;
 		font-weight: bold;
 }
 
+div.error a:hover, div.error a:focus,
 div.status a:hover, div.status a:focus,
 div.help a:hover, div.help a:focus,
-div.warning a:hover, div.warning a:focus {
+div.warning a:hover, div.warning a:focus,
+tr.warning a:hover, tr.warning a:focus {
   color: yellow;
 }
 
-.description {
-  color: #EEE;
+table tr.warning {
+  background-color: #9F3800;
+}
+
+table tr.warning td {
+  color: #9F3800;
+}
+
+table tr.warning.merge-up td {
+  color: yellow;
 }
 
 div.admin-dependencies, 
@@ -174,10 +167,6 @@ table tr.ok td {
 
 .includes {
   color: #FFF;
-}
-
-.update tr.ok {
-  background:#2A6827;
 }
 
 table.update a:link,
@@ -201,19 +190,44 @@ table.update a:focus {
   color: #FFF6DF;
 }
 
+.update tr.ok {
+  background: #2A6827;
+}
+
+.update tr.error {
+  background-color: #C00000;
+  color: #FFF3F6;
+}
+
 .update tr.warning table.version-recommended td {
   background: #DF601B;
 }
 
-table tr.warning td {
-  color:#000;
+.update tr.error table.version-recommended td {
+  background: #000;
 }
 
-table tr.warning.merge-up td {
-  color:#FFF;
+.update .security-error {
+  color: #000;
 }
 
-/**********************************************************
+.form-item strong.error em { 
+  color: #E41F0B; 
+}
+
+.node-unpublished, 
+.comment-unpublished {
+  background-color: transparent;
+}
+
+/* Preview node and comments */
+.preview .node,
+.preview .comment {
+  background-color: #111;
+}
+
+
+/***********************************************************
  *                   Local tasks
  **********************************************************/
 ul.primary {
@@ -242,7 +256,7 @@ ul.secondary {
 }
 
 
-/**********************************************************
+/***********************************************************
  *                        Forms
  **********************************************************/
 fieldset {
@@ -289,7 +303,7 @@ html.js fieldset.collapsible legend a {
 }
 
 
-/**********************************************************
+/***********************************************************
  *                     Menus
  **********************************************************/
 li.leaf,
@@ -300,7 +314,7 @@ li.expanded {
 }
 
 
-/**********************************************************
+/***********************************************************
  *                     Poll
  **********************************************************/
 	.poll .bar {
@@ -312,7 +326,7 @@ li.expanded {
 }
 
 
-/**********************************************************
+/***********************************************************
  *                     Views
  **********************************************************/
 /* Views tables. */
@@ -518,7 +532,7 @@ form#views-ui-preview-form,
 }
 
 
-/**********************************************************
+/***********************************************************
  *                     CTools & Panels
  **********************************************************/
 .ctools-modal-content a:hover {color: black;}
@@ -572,7 +586,7 @@ html.js div.ctools-dropdown div.ctools-dropdown-container ul li a {
 }
 
 
-/**********************************************************
+/***********************************************************
  *                    Vertical tabs
  **********************************************************/
 .vertical-tabs {
@@ -598,32 +612,10 @@ html.js div.ctools-dropdown div.ctools-dropdown-container ul li a {
 }
 
 
-/**********************************************************
+/***********************************************************
  *                     Devel
  **********************************************************/
 .krumo-root {
   color: #303030;
 }
 
-
-/**********************************************************
- *                     Misc
- **********************************************************/
-/* Welcom page */
-#first-time {
-  background: #242424;
-		border: 5px solid #303030;
-		padding: 1em;
-}
-
-/* Preview node and comments */
-.preview .node,
-.preview .comment {
-  background-color: #111;
-}
-
-.node-unpublished, 
-.comment-unpublished {
-  background-color:#444;
-		border: 2px solid #333;
-}

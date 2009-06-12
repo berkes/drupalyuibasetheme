@@ -1,4 +1,4 @@
-/* $Id: messages.css,v 1.1.2.8 2009/05/22 20:25:23 jmburnz Exp $ */
+/* $Id: messages.css,v 1.1.2.9 2009/06/12 00:24:27 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -122,7 +122,7 @@ background: #E8F7C5;
 }
 
 .update tr.error .version-recommended {
-  background:#FFEFF4;
+  background: #FFEFF4;
 }
 
 .includes {
