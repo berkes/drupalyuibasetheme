@@ -1,4 +1,4 @@
-/* $Id: style_dark.css,v 1.1.2.9 2009/06/12 01:01:42 jmburnz Exp $ */
+/* $Id: style_dark.css,v 1.1.2.10 2009/06/12 04:56:06 jmburnz Exp $ */
 
 /**
  * @file style_dark.css
@@ -81,6 +81,32 @@ table.system-status-report th {
 
 #permissions td.permission {
   padding-left: 1.5em;
+}
+
+
+/**********************************************************
+ *                      Admin
+ **********************************************************/
+div.admin-panel {
+		background: #303030;
+		border: 1px solid #242424;
+}
+
+.admin-panel h3 {
+		background: #242424;
+		color: #EEEEEE;
+}
+
+.admin-panel dd {
+		color: #999999;
+}
+
+.page-admin-by-module .admin-panel .body p {
+  color: #999999;
+}
+
+span.form-required, span.marker {
+  color: #FF0000;
 }
 
 
