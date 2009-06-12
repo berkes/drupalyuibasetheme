@@ -1,4 +1,4 @@
-/* $Id: _all-subtheme.css,v 1.1.2.21 2009/06/12 12:41:06 jmburnz Exp $ */
+/* $Id: _all-subtheme.css,v 1.1.2.22 2009/06/12 15:44:26 jmburnz Exp $ */
 
 /**
  * @file _all-subtheme.css
@@ -189,7 +189,7 @@ ul.menu li.last  {}
  **********************************************************/
 /* Examples to get started. Add col specific selectors to style
    blocks in different Gpanel columns, or element selectors to
-		 style specific elements */
+   style specific elements */
 .two-col-50 .block {}
 .two-col-50.with-nested .block {}
 .three-col-33 .block {}
@@ -691,7 +691,7 @@ body > #container {
   overflow: visible;
   position: fixed;
   top: 0;
-		right: 0;
+  right: 0;
   width: auto;
   z-index: 1000;
 }
@@ -747,7 +747,7 @@ div.logo-site-name strong {}
 
 /**********************************************************
  *    Search box, Advanced search form, Search results
-	*          For the search block see blocks.css
+ *          For the search block see blocks.css
  **********************************************************/
 /**
  * Search box

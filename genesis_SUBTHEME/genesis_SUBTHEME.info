@@ -1,4 +1,4 @@
-; $Id: genesis_SUBTHEME.info,v 1.7.2.12 2009/06/12 12:41:06 jmburnz Exp $
+; $Id: genesis_SUBTHEME.info,v 1.7.2.13 2009/06/12 15:44:26 jmburnz Exp $
 
 
 ;----------// Theme Information
@@ -56,7 +56,7 @@
   ; Note: You do not need to install the module, it is now included in Genesis.
 
   ; Example only: see the README in the Conditional Styles module
-  ;conditional-stylesheets[if lt IE 7][all][] = css/ie/ie-example.css
+  ;conditional-stylesheets[if lte IE 7][all][] = css/ie/ie-example.css
 
 
 

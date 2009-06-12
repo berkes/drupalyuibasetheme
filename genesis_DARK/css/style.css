@@ -1,4 +1,4 @@
-/* $Id: style.css,v 1.1.2.5 2009/06/12 12:41:06 jmburnz Exp $ */
+/* $Id: style.css,v 1.1.2.6 2009/06/12 15:44:25 jmburnz Exp $ */
 
 /**
  * @file style.css
@@ -14,7 +14,7 @@
  **********************************************************/
 body {
   background: #292929;
-		color: #FFF;
+  color: #FFF;
   font-family: Verdana, Geneva, "DejaVu Sans", sans-serif;
 }
 
@@ -89,7 +89,7 @@ a:focus {
 /* Drupal sets this to black. */
 li a.active {
   color: yellow;
-		text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Remove borders on linked images. */

@@ -1,4 +1,4 @@
-/* $Id: admin-styles.css,v 1.1.2.8 2009/06/05 17:44:35 jmburnz Exp $ */
+/* $Id: admin-styles.css,v 1.1.2.9 2009/06/12 15:44:25 jmburnz Exp $ */
 
 /**
  * @file admin.css
@@ -171,3 +171,4 @@ body.admin-menu {
 #admin-menu {
   font: 0.9em Arial, Helvetica, sans-serif;
 }
+

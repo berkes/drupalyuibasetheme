@@ -1,4 +1,4 @@
-/* $Id: blocks.css,v 1.1.2.5 2009/06/12 12:41:06 jmburnz Exp $ */
+/* $Id: blocks.css,v 1.1.2.6 2009/06/12 15:44:26 jmburnz Exp $ */
 
 /**
  * @file blocks.css
@@ -159,7 +159,7 @@ ul.menu li.last  {}
  **********************************************************/
 /* Examples to get started. Add col specific selectors to style
    blocks in different Gpanel columns, or element selectors to
-		 style specific elements */
+   style specific elements */
 .two-col-50 .block {}
 .two-col-50.with-nested .block {}
 .three-col-33 .block {}

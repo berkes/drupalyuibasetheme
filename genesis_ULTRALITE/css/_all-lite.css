@@ -1,4 +1,4 @@
-/* $Id: _all-lite.css,v 1.1.2.5 2009/06/12 15:17:03 jmburnz Exp $ */
+/* $Id: _all-lite.css,v 1.1.2.6 2009/06/12 15:44:26 jmburnz Exp $ */
 
 /**
  * @file _all-lite.css
@@ -179,7 +179,7 @@ ul.menu li.last  {}
  **********************************************************/
 /* Examples to get started. Add col specific selectors to style
    blocks in different Gpanel columns, or element selectors to
-		 style specific elements */
+   style specific elements */
 .two-col-50 .block {}
 .two-col-50.with-nested .block {}
 .three-col-33 .block {}
@@ -653,7 +653,7 @@ body > #container {
   overflow: visible;
   position: fixed;
   top: 0;
-		right: 0;
+  right: 0;
   width: auto;
   z-index: 1000;
 }
@@ -709,7 +709,7 @@ div.logo-site-name strong {}
 
 /**********************************************************
  *    Search box, Advanced search form, Search results
-	*          For the search block see blocks.css
+ *          For the search block see blocks.css
  **********************************************************/
 /* Reset form element margins. */
 #search-theme-form {

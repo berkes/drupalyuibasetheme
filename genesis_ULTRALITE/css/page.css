@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.6 2009/06/12 15:17:03 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.7 2009/06/12 15:44:26 jmburnz Exp $ */
 
 /**
  * @file page.css
@@ -237,7 +237,7 @@ body > #container {
   overflow: visible;
   position: fixed;
   top: 0;
-		right: 0;
+  right: 0;
   width: auto;
   z-index: 1000;
 }
@@ -293,7 +293,7 @@ div.logo-site-name strong {}
 
 /**********************************************************
  *    Search box, Advanced search form, Search results
-	*          For the search block see blocks.css
+ *          For the search block see blocks.css
  **********************************************************/
 /* Reset form element margins and float the search form. */
 #search-theme-form {

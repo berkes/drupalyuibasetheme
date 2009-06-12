@@ -1,4 +1,4 @@
-/* $Id: ie-example.css,v 1.1.2.1 2009/05/11 20:33:32 jmburnz Exp $ */
+/* $Id: ie-example.css,v 1.1.2.2 2009/06/12 15:44:26 jmburnz Exp $ */
 
 /**
  * @file ie-example.css
@@ -9,8 +9,7 @@
  * 
  * http://drupal.org/project/conditional_styles
  *
- * Install the module and then uncomment or add the required stylesheets in your 
- * subthemes .info file.
+ * The module is included in Genesis, you do not need to download and install it.
  */
 
 

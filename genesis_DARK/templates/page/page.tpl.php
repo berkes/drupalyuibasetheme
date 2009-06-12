@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.1 2009/06/05 17:48:59 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.2 2009/06/12 15:44:26 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -243,8 +243,7 @@
 
   </div> <!-- /container -->
 
-  <?php if ($closure): ?>
-    <div id="closure" class="region region-closure"><?php print $closure; ?></div>
-  <?php endif; ?>
+  <?php print $closure; ?>
+
 </body>
 </html>

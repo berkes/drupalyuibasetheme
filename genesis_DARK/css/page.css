@@ -1,4 +1,4 @@
-/* $Id: page.css,v 1.1.2.5 2009/06/12 12:41:06 jmburnz Exp $ */
+/* $Id: page.css,v 1.1.2.6 2009/06/12 15:44:25 jmburnz Exp $ */
 
 /**
  * @file page.css
@@ -251,7 +251,7 @@ body > #container {
   overflow: visible;
   position: fixed;
   top: 0;
-		right: 0;
+  right: 0;
   width: auto;
   z-index: 1000;
 }
@@ -307,7 +307,7 @@ div.logo-site-name strong {}
 
 /**********************************************************
  *    Search box, Advanced search form, Search results
-	*          For the search block see blocks.css
+ *          For the search block see blocks.css
  **********************************************************/
 /**
  * Search box
@@ -514,7 +514,7 @@ dl.search-results dd .search-info {}
  */
 #breadcrumb {
   padding: 0 0 0.75em;
-		color: #777;
+  color: #777;
 }
 
 

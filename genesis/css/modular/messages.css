@@ -1,4 +1,4 @@
-/* $Id: messages.css,v 1.1.2.10 2009/06/12 12:41:05 jmburnz Exp $ */
+/* $Id: messages.css,v 1.1.2.11 2009/06/12 15:44:25 jmburnz Exp $ */
 
 /**
  * @file messages.css
@@ -188,3 +188,5 @@ div.help ul:last-child {
 .admin-missing {
   font-weight: bold;
 }
+
+

@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.18 2009/06/05 17:49:59 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.19 2009/06/12 15:44:26 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -244,5 +244,6 @@
   </div> <!-- /container -->
 
   <?php print $closure ?>
+
 </body>
 </html>
