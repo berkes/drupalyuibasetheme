@@ -1,4 +1,4 @@
-/* $Id: _all-lite.css,v 1.1.2.4 2009/06/12 12:41:06 jmburnz Exp $ */
+/* $Id: _all-lite.css,v 1.1.2.5 2009/06/12 15:17:03 jmburnz Exp $ */
 
 /**
  * @file _all-lite.css
@@ -711,16 +711,9 @@ div.logo-site-name strong {}
  *    Search box, Advanced search form, Search results
 	*          For the search block see blocks.css
  **********************************************************/
-/**
- * Search box
- */
-/* Float the serch box right. */
-#search-box {
-  float: right; /* LTR */
-}
-
 /* Reset form element margins. */
 #search-theme-form {
+  float:right;
   margin: 1.5em 0;
 }
 

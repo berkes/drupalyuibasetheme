@@ -1,4 +1,4 @@
-/* $Id: _all-lite-tidy.css,v 1.1.2.3 2009/06/12 12:41:06 jmburnz Exp $ */
+/* $Id: _all-lite-tidy.css,v 1.1.2.4 2009/06/12 15:17:03 jmburnz Exp $ */
 
 /**
  * @file _all-lite-tidy.css
@@ -45,8 +45,7 @@ body > #container{max-width:980px;min-width:760px;width:100%;}
 #branding h1{font-size:1em;}
 .logo-site-name span{display:block;}
 #site-name{font-size:2em;font-weight:bold;line-height:1.5;}
-#search-box{float:right;}
-#search-theme-form{margin:1.5em 0;}
+#search-theme-form{float:right;margin:1.5em 0;}
 #nav{clear:both;margin:.75em 0;}
 #nav .primary-links{background:#DDD;font-weight:bold;margin:0;padding:0;}
 #nav .primary-links li{display:inline;line-height:2;list-style:none;margin:0;padding:0;}
