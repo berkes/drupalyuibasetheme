@@ -1,7 +1,6 @@
-; $Id: genesis.info,v 1.1.2.17 2009/06/05 17:44:35 jmburnz Exp $
-  
-		
-		
+; $Id: genesis.info,v 1.1.2.18 2009/06/12 02:55:31 jmburnz Exp $
+
+
 ;----------// Theme Information
 
   name         = Genesis
@@ -35,7 +34,7 @@
   ; Use in conjunction with the gpanel snippets.
   ; See /genesis/genesis/gpanels
   ; Uncomment the required regions in your subhtemes info file.
-		
+
   ; 2 col Gpanel
   ;regions[two_col_first]     = 2col Gpanel column 1
   ;regions[two_col_second]    = 2col Gpanel column 2
@@ -43,12 +42,12 @@
   ; 2 col, 2 col Nested Gpanel
   ;regions[two_col_nested_first]  = 2col Nested Gpanel col 1
   ;regions[two_col_nested_second] = 2col Nested Gpanel col 2
-  
+
   ; 3 col Gpanel
   ;regions[three_col_first]   = 3col Gpanel column 1
   ;regions[three_col_second]  = 3col Gpanel column 2
   ;regions[three_col_third]   = 3col Gpanel column 3
-		
+
   ; 4 col Gpanel
   ;regions[four_col_first]    = 4col Gpanel column 1
   ;regions[four_col_second]   = 4col Gpanel column 2
@@ -61,11 +60,11 @@
 
   stylesheets[all][] = css/base.css
   stylesheets[all][] = css/layout.css
-		
+
   ; Use the uncompressed stylesheets; useful during development.
   ;stylesheets[all][] = css/uncompressed/base.css
   ;stylesheets[all][] = css/uncompressed/layout.css
-  
+
   ; Alternatively use the modular stylesheets.
   ;stylesheets[all][] = css/modular/admin-styles.css
   ;stylesheets[all][] = css/modular/forms.css
@@ -73,14 +72,14 @@
   ;stylesheets[all][] = css/modular/messages.css
   ;stylesheets[all][] = css/modular/tables.css
   ;stylesheets[all][] = css/modular/typography.css
-  
+
 	
 		
 ;----------// Optional stylesheets
-		
+
   ; Add styles for the hover edit block and views links. On by default.
   stylesheets[all][] = css/edit-links.css
-								  
+
   ; Uncomment to show the grid, add the grid class in page.tpl.php also.
   ;stylesheets[all][] = css/dev/grid.css
 
@@ -120,9 +119,9 @@
 
 ;----------// Theme Congiruation features
 
-; The "features" control which check boxes display on the admin/build/themes 
-; configuration page. This is useful for suppressing check boxes for elements 
-; not used by your theme.
+  ; The "features" control which check boxes display on the admin/build/themes 
+  ; configuration page. This is useful for suppressing check boxes for elements 
+  ; not used by your theme.
  
   features[] = logo
   features[] = name
@@ -137,9 +136,4 @@
 
 
 
-; Information added by drupal.org packaging script on 2009-05-23
-version = "6.x-2.1"
-core = "6.x"
-project = "genesis"
-datestamp = "1243078554"
 
