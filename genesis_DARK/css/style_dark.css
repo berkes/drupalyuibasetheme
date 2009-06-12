@@ -1,4 +1,4 @@
-/* $Id: style_dark.css,v 1.1.2.8 2009/06/12 00:24:27 jmburnz Exp $ */
+/* $Id: style_dark.css,v 1.1.2.9 2009/06/12 01:01:42 jmburnz Exp $ */
 
 /**
  * @file style_dark.css
@@ -98,8 +98,8 @@ div.error {
 }
 
 tr.error {
-  background: #FFEFF3;
-  color: #E41F0B;
+  background: #C00000;
+  color: #FFF3F6;
 }
 
 div.notice  {
