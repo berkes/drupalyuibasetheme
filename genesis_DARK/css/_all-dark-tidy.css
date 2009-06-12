@@ -1,4 +1,4 @@
-/* $Id: _all-dark-tidy.css,v 1.1.2.1 2009/06/12 12:27:35 jmburnz Exp $ */
+/* $Id: _all-dark-tidy.css,v 1.1.2.2 2009/06/12 12:35:30 jmburnz Exp $ */
 
 /**
  * @file _all-dark-tidy.css
@@ -58,8 +58,8 @@ table tr.warning.merge-up td{color:yellow;}
 div.admin-dependencies,div.admin-required{color:#777;}
 div.ok,tr.ok,table tr.ok td{color:#EEE;}
 .includes{color:#FFF;}
-table.update a:link,table.update a:visited{color:yellow;text-decoration:none;}
-table.update a:hover,table.update a:focus{color:yellow;text-decoration:underline;}
+table.system-status-report a:link,table.system-status-report a:visited,table.update a:link,table.update a:visited{color:yellow;text-decoration:none;}
+table.system-status-report a:hover,table.system-status-report a:focus,table.update a:hover,table.update a:focus{color:yellow;text-decoration:underline;}
 .update tr td{border-bottom:1px solid #4DA449;border-top:1px solid #4DA449;}
 .update tr.warning td,.update tr.warning{background-color:#9F3800;color:#FFF6DF;}
 .update tr.ok{background:#2A6827;}

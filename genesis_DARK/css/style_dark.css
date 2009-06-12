@@ -1,4 +1,4 @@
-/* $Id: style_dark.css,v 1.1.2.11 2009/06/12 12:27:35 jmburnz Exp $ */
+/* $Id: style_dark.css,v 1.1.2.12 2009/06/12 12:35:30 jmburnz Exp $ */
 
 /**
  * @file style_dark.css
@@ -195,12 +195,16 @@ table tr.ok td {
   color: #FFF;
 }
 
+table.system-status-report a:link,
+table.system-status-report a:visited,
 table.update a:link,
 table.update a:visited {
   color: yellow;
 		text-decoration: none;
 }
 
+table.system-status-report a:hover,
+table.system-status-report a:focus,
 table.update a:hover,
 table.update a:focus {
   color: yellow;

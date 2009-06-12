@@ -216,12 +216,16 @@ table tr.ok td {
   color: #FFF;
 }
 
+table.system-status-report a:link,
+table.system-status-report a:visited,
 table.update a:link,
 table.update a:visited {
   color: yellow;
 		text-decoration: none;
 }
 
+table.system-status-report a:hover,
+table.system-status-report a:focus,
 table.update a:hover,
 table.update a:focus {
   color: yellow;
