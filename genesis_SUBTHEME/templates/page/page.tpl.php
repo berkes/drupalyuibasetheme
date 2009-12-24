@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.1.2.19 2009/06/12 15:44:26 jmburnz Exp $
+// $Id: page.tpl.php,v 1.1.2.20 2009/12/24 00:23:36 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -29,16 +29,16 @@
  *     for the page.
  * - $section_class: A CSS class that uses .section + the 1st URL argument, allows for
  *     themeing site sections based on path.
- * - $classes: A set of CSS classes (preprocess $body_classes + Genesis custom classes). 
- *     This contains flags indicating the current layout (multiple columns, single column), 
+ * - $classes: A set of CSS classes (preprocess $body_classes + Genesis custom classes).
+ *     This contains flags indicating the current layout (multiple columns, single column),
  *     the current path, whether the user is logged in, and so on.
  *
  * Site identity:
  * - $front_page: The URL of the front page. Use this instead of $base_path,
  *     when linking to the front page. This includes the language domain or prefix.
- * - $site_logo: The preprocessed $logo varaible. Includes the path to the logo image, 
+ * - $site_logo: The preprocessed $logo varaible. Includes the path to the logo image,
  *     as defined in theme configuration and wrapped in an anchor linking to the homepage.
- * - $site_name: The name of the site (preprocessed) wrapped in an anchor linking to the homepage. 
+ * - $site_name: The name of the site (preprocessed) wrapped in an anchor linking to the homepage.
  *     Empty when display has been disabled in theme settings.
  * - $site_slogan: The slogan of the site, empty when display has been disabled
  *     in theme settings.
@@ -46,9 +46,9 @@
  *     in theme settings.
  *
  * Navigation:
- * - $primary_menu: The preprocessed $primary_links (array), an array containing primary 
+ * - $primary_menu: The preprocessed $primary_links (array), an array containing primary
  *     navigation links for the site, if they have been configured.
- * - $secondary_menu: The preprocessed $secondary_links (array), an array containing secondary 
+ * - $secondary_menu: The preprocessed $secondary_links (array), an array containing secondary
  *     navigation links for the site, if they have been configured.
  * - $search_box: HTML to display the search box, empty if search has been disabled.
  *
@@ -69,7 +69,7 @@
  * - $content_bottom: A custom region for displaying content above the main content.
  * - $left: Region for the left sidebar.
  * - $right: Region for the right sidebar.
- * - $tertiary_content: Full width custom region for displaying content between main content 
+ * - $tertiary_content: Full width custom region for displaying content between main content
  *   columns and the footer.
  *
  * Footer/closing data:
@@ -87,8 +87,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language ?>" lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
 <head>
-  <?php print $head; ?>
   <title><?php print $head_title; ?></title>
+  <?php print $head; ?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
@@ -97,7 +97,7 @@
  * Change the body id selector to your preferred layout, e.g body id="genesis-1a".
  * @see layout.css
  */
-?>        
+?>
 <body id="genesis-1b" <?php print $section_class; ?>>
   <div id="container" class="<?php print $classes; ?>">
 
@@ -121,8 +121,8 @@
               <div class="logo-site-name"><strong>
                 <?php if ($site_logo): ?><span id="logo"><?php print $site_logo; ?></span><?php endif; ?>
                 <?php if ($site_name): ?><span id="site-name"><?php print $site_name; ?></span><?php endif; ?>
-              </strong></div>           
-            <?php else: /* Use h1 when the content title is empty */ ?>     
+              </strong></div>
+            <?php else: /* Use h1 when the content title is empty */ ?>
               <h1 class="logo-site-name">
                 <?php if ($site_logo): ?><span id="logo"><?php print $site_logo; ?></span><?php endif; ?>
                 <?php if ($site_name): ?><span id="site-name"><?php print $site_name; ?></span><?php endif; ?>
@@ -166,7 +166,7 @@
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb" class="nav"><?php print $breadcrumb; ?></div> <!-- /breadcrumb -->
     <?php endif; ?>
-    
+
     <?php if ($secondary_content): ?>
       <div id="secondary-content" class="section region"><div class="region-inner">
         <?php print $secondary_content; ?>
@@ -174,7 +174,7 @@
     <?php endif; ?>
 
     <div id="columns"><div class="columns-inner clear-block">
-    
+
       <div id="content-column"><div class="content-inner">
 
         <?php if ($mission): ?>
@@ -196,7 +196,7 @@
           <?php if ($help): print $help; endif; ?>
           <div id="content" class="section region">
             <?php print $content; ?>
-          </div>								
+          </div>
         </div> <!-- /main-content -->
 
         <?php if ($content_bottom): ?>
@@ -216,7 +216,7 @@
           <?php print $right; ?>
         </div></div> <!-- /sidebar-right -->
       <?php endif; ?>
-    
+
   </div></div> <!-- /columns -->
 
     <?php if ($tertiary_content): ?>

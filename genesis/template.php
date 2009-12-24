@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1.2.18 2009/06/05 17:44:35 jmburnz Exp $
+// $Id: template.php,v 1.1.2.19 2009/12/24 00:23:36 jmburnz Exp $
 
 /**
  * @file template.php
@@ -18,15 +18,17 @@
  *   For more information: http://msdn.microsoft.com/en-us/library/ms537512.aspx
  */
 function genesis_theme(&$existing, $type, $theme, $path){
-  
+
   // Compute the conditional stylesheets.
-  if (!module_exists('conditional_styles')) {
-    include_once $base_path . drupal_get_path('theme', 'genesis') . '/template.conditional-styles.inc';
-    // _conditional_styles_theme() only needs to be run once.
-    if ($theme == 'genesis') {
-      _conditional_styles_theme($existing, $type, $theme, $path);
+  if (db_is_active()) {
+    if (!module_exists('conditional_styles')) {
+      include_once $base_path . drupal_get_path('theme', 'genesis') . '/template.conditional-styles.inc';
+      // _conditional_styles_theme() only needs to be run once.
+      if ($theme == 'genesis') {
+        _conditional_styles_theme($existing, $type, $theme, $path);
+      }
     }
-  }  
+  }
   $templates = drupal_find_theme_functions($existing, array('phptemplate', $theme));
   $templates += drupal_find_theme_templates($existing, '.tpl.php', $path);
   return $templates;
@@ -88,12 +90,12 @@ function genesis_preprocess_page(&$vars, $hook) {
     unset($classes[$class]);
   }
 
- /** 
+ /**
   * Optional Region body classes
   * Uncomment the following if you need to set
   * a body class for each active region.
   */
-  /*		
+  /*
   if (!empty($vars['leaderboard'])) {
     $classes[] = 'leaderboard';
   }
@@ -116,7 +118,7 @@ function genesis_preprocess_page(&$vars, $hook) {
    */
   if (!$vars['is_front']) {
     $normal_path = drupal_get_normal_path($_GET['q']);
-    // Set a class based on Drupals internal path, e.g. page-node-1. 
+    // Set a class based on Drupals internal path, e.g. page-node-1.
     // Using the alias is fragile because path alias's can change, $normal_path is more reliable.
     $classes[] = safe_string('page-'. $normal_path);
     if (arg(0) == 'node') {
@@ -142,7 +144,7 @@ function genesis_preprocess_page(&$vars, $hook) {
  */
 function genesis_preprocess_node(&$vars, $hook) {
   global $user;
-  
+
   // Set the node id.
   $vars['node_id'] = 'node-'. $vars['node']->nid;
 
@@ -168,15 +170,15 @@ function genesis_preprocess_node(&$vars, $hook) {
   // Class for node type: "node-type-page", "node-type-story", "node-type-my-custom-type", etc.
   $classes[] = 'node-'. $vars['node']->type;
   $vars['classes'] = implode(' ', $classes); // Concatenate with spaces.
-  
+
   // Modify classes for $terms to help out themers.
   $vars['terms'] = theme('links', $vars['taxonomy'], array('class' => 'links tags'));
   $vars['links'] = theme('links', $vars['node']->links, array('class' => 'links'));
-  
+
   // Set messages if node is unpublished.
   if (!$vars['node']->status) {
     if ($vars['page']) {
-      drupal_set_message(t('%title is currently unpublished', array('%title' => $vars['node']->title)), 'warning'); 
+      drupal_set_message(t('%title is currently unpublished', array('%title' => $vars['node']->title)), 'warning');
     }
     else {
       $vars['unpublished'] = '<span class="unpublished">'. t('Unpublished') .'</span>';
@@ -254,7 +256,7 @@ function genesis_preprocess_comment_wrapper(&$vars) {
  */
 function genesis_preprocess_block(&$vars, $hook) {
   $block = $vars['block'];
-  
+
   // Set the block id.
   $vars['block_id'] = 'block-'. $block->module .'-'. $block->delta;
 
@@ -282,17 +284,17 @@ function genesis_preprocess_block(&$vars, $hook) {
   //$classes[] = 'block-'. $block->region;    // block-[region] class
   //$classes[] = 'block-count-'. $vars['id']; // block-count-[count] class
   $vars['classes'] = implode(' ', $classes);
-  
+
   /**
    * Add block edit links. Credit to the Zen theme for this implimentation. The only
-   * real difference is that the Zen theme wraps each link in span, whereas Genesis 
-   * outputs the links as an item-list. Also I have omitted the Views links as these 
+   * real difference is that the Zen theme wraps each link in span, whereas Genesis
+   * outputs the links as an item-list. Also I have omitted the Views links as these
    * seem redundant because Views has its own set of hover links.
    */
   if (user_access('administer blocks')) {
     // Display a 'Edit Block' link for blocks.
     if ($block->module == 'block') {
-      $edit_links[] = l(t('Edit Block'), 'admin/build/block/configure/'. $block->module .'/'. $block->delta, 
+      $edit_links[] = l(t('Edit Block'), 'admin/build/block/configure/'. $block->module .'/'. $block->delta,
         array(
           'attributes' => array(
             'class' => 'block-edit',
@@ -317,7 +319,7 @@ function genesis_preprocess_block(&$vars, $hook) {
     // Display 'Edit Menu' for menu blocks.
     if (($block->module == 'menu' || ($block->module == 'user' && $block->delta == 1)) && user_access('administer menu')) {
       $menu_name = ($block->module == 'user') ? 'navigation' : $block->delta;
-      $edit_links[] = l( t('Edit Menu'), 'admin/build/menu-customize/'. $menu_name, 
+      $edit_links[] = l( t('Edit Menu'), 'admin/build/menu-customize/'. $menu_name,
         array(
           'attributes' => array(
             'class' => 'block-edit',
