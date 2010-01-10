@@ -1,13 +1,13 @@
 <?php
-// $Id: user-picture.tpl.php,v 1.2 2009/04/26 23:39:04 jmburnz Exp $
+// $Id: user-picture.tpl.php,v 1.3 2010/01/10 03:54:48 jmburnz Exp $
 
 /**
- * @file user-picture.tpl.php
+ * @file
  * Default theme implementation to present an picture configured for the
  * user's account.
  *
  * Available variables:
- * - $picture: Image set by the user or the site's default. Will be linked
+ * - $user_picture: Image set by the user or the site's default. Will be linked
  *   depending on the viewer's permission to view the users profile page.
  * - $account: Array of account information. Potentially unsafe. Be sure to
  *   check_plain() before use.
@@ -15,8 +15,8 @@
  * @see template_preprocess_user_picture()
  */
 ?>
-<?php if (!empty($picture)): ?>
+<?php if ($user_picture): ?>
   <div class="user-picture">
-    <?php print $picture; ?>
+    <?php print $user_picture; ?>
   </div>
 <?php endif; ?>
