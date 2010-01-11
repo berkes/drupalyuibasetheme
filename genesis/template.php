@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.6 2010/01/11 03:34:18 jmburnz Exp $
+// $Id: template.php,v 1.7 2010/01/11 07:33:45 jmburnz Exp $
 
 /**
  * @file template.php
@@ -20,7 +20,7 @@
  *   The name of the template being rendered ("html" in this case.)
  */
 function genesis_preprocess_html(&$vars) {
-  $vars['classes_array'][] = 'width';
+
   // Additional body classes to help out themers.
   if (!$vars['is_front']) {
     // Add unique class for each page.
