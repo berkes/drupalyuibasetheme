@@ -1,5 +1,5 @@
 <?php
-// $Id: comment.tpl.php,v 1.6 2010/01/11 03:34:18 jmburnz Exp $
+// $Id: comment.tpl.php,v 1.7 2010/01/11 04:29:15 jmburnz Exp $
 
 /**
  * @file
@@ -61,7 +61,6 @@
 
   <?php print render($title_prefix); ?>
     <h3 class="comment-title"<?php print $title_attributes; ?>>
-      <span class="comment-id"><?php print '#'. $id; ?></span> 
       <?php print $title ?>
       <?php if ($new): ?>
         <span class="new"><?php print $new ?></span>
@@ -70,7 +69,7 @@
   <?php print render($title_suffix); ?>
 
   <div class="comment-submitted">
-    <?php print $permalink; ?>
+    <span class="comment-id"><?php print $permalink; ?></span> 
     <?php
       print t('Submitted by !username on !datetime.',
         array('!username' => $author, '!datetime' => $created));

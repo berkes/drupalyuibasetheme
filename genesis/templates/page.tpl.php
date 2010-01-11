@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.6 2010/01/11 03:34:18 jmburnz Exp $
+// $Id: page.tpl.php,v 1.7 2010/01/11 04:29:15 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -98,11 +98,11 @@
       </div>
 
       <?php if ($page['sidebar_first']): ?>
-        <div id="sidebar-first"><?php print render($page['sidebar_first']); ?></div>
+        <div id="sidebar-first" class="sidebar"><?php print render($page['sidebar_first']); ?></div>
       <?php endif; ?>
 
       <?php if ($page['sidebar_second']): ?>
-        <div id="sidebar-second"><?php print render($page['sidebar_second']); ?></div>
+        <div id="sidebar-second" class="sidebar"><?php print render($page['sidebar_second']); ?></div>
       <?php endif; ?>
 
     </div> <!-- /columns -->
