@@ -1,4 +1,4 @@
-; $Id: genesis_SUBTHEME.info,v 1.18 2010/01/11 08:07:03 jmburnz Exp $
+; $Id: genesis_SUBTHEME.info,v 1.19 2010/01/11 09:25:55 jmburnz Exp $
 
 ; Change the name to match your new subthemes name and modify the description.	
   name         = Genesis SUBTHEME
@@ -7,7 +7,7 @@
 ; Dont touch these.
   core         = 7.x
   engine       = phptemplate
-  screenshot   = screenshot_subtheme.png
+  screenshot   = genesis-subtheme.png
   base theme   = genesis
 
 ; Uncomment for a Dark style theme.
