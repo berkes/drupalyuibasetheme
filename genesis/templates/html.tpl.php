@@ -1,5 +1,5 @@
 <?php
-// $Id: html.tpl.php,v 1.2 2010/01/11 04:29:15 jmburnz Exp $
+// $Id: html.tpl.php,v 1.3 2010/01/11 06:25:49 jmburnz Exp $
 
 /**
  * @file
@@ -45,7 +45,7 @@
   <?php print $scripts; ?>
 </head>
 <!-- need some thinking around this -->
-<body id="genesis_1" <?php print $attributes;?>>
+<body id="genesis-1a" <?php print $attributes;?>>
   <div id="container" class="<?php print $classes; ?>">
   <div id="skip-nav">
     <a href="#main-content"><?php print t('Skip to main content'); ?></a>
