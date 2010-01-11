@@ -1,0 +1,10 @@
+@charset "utf-8";
+/**
+ * $Id: gpanels-960-fixed-rtl.css,v 1.1 2010/01/11 06:10:18 jmburnz Exp $
+ * adaptivethemes.com
+ *
+ * @file gpanels-960-fixed-rtl.css
+ */
+.gpanel .region {
+float:right;
+}
