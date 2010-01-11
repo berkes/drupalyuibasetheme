@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.5 2010/01/11 02:28:50 jmburnz Exp $
+// $Id: template.php,v 1.6 2010/01/11 03:01:25 jmburnz Exp $
 
 /**
  * @file template.php
@@ -32,11 +32,11 @@ function genesis_SUBTHEME_preprocess(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered.
  */
-/**/
+/*
 function genesis_SUBTHEME_preprocess_page(&$vars) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
+  //$vars['sample_variable'] = t('Lorem ipsum.');
 }
-
+*/
 
 /**
  * Override or insert variables into the node templates.
