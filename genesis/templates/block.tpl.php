@@ -1,5 +1,5 @@
 <?php
-// $Id: block.tpl.php,v 1.3 2010/01/10 03:54:48 jmburnz Exp $
+// $Id: block.tpl.php,v 1.4 2010/01/11 02:28:50 jmburnz Exp $
 
 /**
  * @file
@@ -42,14 +42,17 @@
  */
 ?>
 <div id="block-<?php print $block->module . '-' . $block->delta; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
- 
-  <?php print render($title_prefix); ?>
-  <?php if ($block->subject): ?>
-    <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
-  <?php endif;?>
-  <?php print render($title_suffix); ?>
+  <div class="block-inner">
 
-  <div class="content"<?php print $content_attributes; ?>>
-    <?php print $content ?>
+    <?php print render($title_prefix); ?>
+      <?php if ($block->subject): ?>
+        <h2 class="block-title"<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
+      <?php endif;?>
+    <?php print render($title_suffix); ?>
+
+    <div class="content block-content"<?php print $content_attributes; ?>>
+      <?php print $content ?>
+    </div>
+
   </div>
 </div>

@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.4 2009/04/26 23:39:05 jmburnz Exp $
+// $Id: template.php,v 1.5 2010/01/11 02:28:50 jmburnz Exp $
 
 /**
  * @file template.php
@@ -9,18 +9,6 @@
 	*    i.e replace genesis_SUBTHEME with your subthemes name.
 	* 2. Uncomment the required fucntion to use.
  */
-
-/**
- * Implementation of HOOK_theme().
- */
-function genesis_SUBTHEME_theme(&$existing, $type, $theme, $path) {
-  $hooks = genesis_theme($existing, $type, $theme, $path);
-  // Add your theme hooks like this:
-  /*
-  $hooks['hook_name_here'] = array( // Details go here );
-  */
-  return $hooks;
-}
 
 /**
  * Override or insert variables into all templates.
@@ -44,11 +32,11 @@ function genesis_SUBTHEME_preprocess(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered.
  */
-/*
-function genesis_SUBTHEME_preprocess_page(&$vars, $hook) {
+/**/
+function genesis_SUBTHEME_preprocess_page(&$vars) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
-*/
+
 
 /**
  * Override or insert variables into the node templates.
