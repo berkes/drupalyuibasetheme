@@ -1,4 +1,4 @@
-  ; $Id: genesis_SUBTHEME.info,v 1.15 2010/01/11 06:41:57 jmburnz Exp $
+  ; $Id: genesis_SUBTHEME.info,v 1.16 2010/01/11 06:52:07 jmburnz Exp $
 
 
   ; Change the name to match your new subthemes name. Modify the optional description.
@@ -20,7 +20,7 @@ base theme   = genesis
   ; Subtheme modular stylsheets
 stylesheets[all][] = css/html-elements.css
 stylesheets[all][] = css/fields.css
-stylesheets[all][] = css/views.css
+stylesheets[all][] = css/views-styles.css
 stylesheets[all][] = css/nodes.css
 stylesheets[all][] = css/blocks.css
 stylesheets[all][] = css/comments.css
