@@ -1,4 +1,4 @@
-  ; $Id: genesis_SUBTHEME.info,v 1.13 2010/01/11 06:23:31 jmburnz Exp $
+  ; $Id: genesis_SUBTHEME.info,v 1.14 2010/01/11 06:24:18 jmburnz Exp $
 
 
   ; Change the name to match your new subthemes name. Modify the optional description.
@@ -7,7 +7,7 @@ name         = Genesis SUBTHEME
 description  = My Kickn' Sub-theme
 core         = 7.x
 engine       = phptemplate
-screenshot   = images/screenshot_subtheme.png
+screenshot   = screenshot_subtheme.png
 base theme   = genesis
 
   ; Genesis subtheme modular-stylesheets.
