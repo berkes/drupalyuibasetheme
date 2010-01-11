@@ -1,5 +1,5 @@
 <?php
-// $Id: page.tpl.php,v 1.5 2010/01/11 02:28:50 jmburnz Exp $
+// $Id: page.tpl.php,v 1.6 2010/01/11 03:34:18 jmburnz Exp $
 
 /**
  * @file page.tpl.php
@@ -69,10 +69,6 @@
     <div id="columns" class="clear clearfix">
       <div id="content-column">
         <div class="content-inner">
-
-          <?php if ($page['content_top']): ?>
-            <div id="content-top"><?php print render($page['content_top']); ?></div>
-          <?php endif; ?>
           
           <?php if ($page['highlight']): ?>
             <div id="highlight"><?php print render($page['highlight']); ?></div>
@@ -97,10 +93,6 @@
               <?php print render($page['content']); ?>
             </div>								
           </div>
-
-          <?php if ($page['content_bottom']): ?>
-            <div id="content-bottom"><?php print render($page['content_bottom']); ?></div>
-          <?php endif; ?>
 
         </div>
       </div>

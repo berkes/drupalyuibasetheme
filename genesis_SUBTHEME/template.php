@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.6 2010/01/11 03:01:25 jmburnz Exp $
+// $Id: template.php,v 1.7 2010/01/11 03:34:18 jmburnz Exp $
 
 /**
  * @file template.php
@@ -34,7 +34,7 @@ function genesis_SUBTHEME_preprocess(&$vars, $hook) {
  */
 /*
 function genesis_SUBTHEME_preprocess_page(&$vars) {
-  //$vars['sample_variable'] = t('Lorem ipsum.');
+  $vars['sample_variable'] = t('Lorem ipsum.');
 }
 */
 

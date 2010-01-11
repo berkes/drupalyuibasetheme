@@ -1,5 +1,5 @@
 <?php
-// $Id: node.tpl.php,v 1.4 2010/01/11 02:28:50 jmburnz Exp $
+// $Id: node.tpl.php,v 1.5 2010/01/11 03:34:18 jmburnz Exp $
 
 /**
  * @file
@@ -80,9 +80,9 @@
   <div class="node-inner">
     
     <?php print render($title_prefix); ?>
-      <?php if (!$page): ?>
+      <?php if ($teaser): ?>
         <h2 class="node-title"<?php print $title_attributes; ?>>
-          <a href="<?php print $node_url; ?>"><?php print $node_title; ?></a>
+          <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
           <?php if ($unpublished) : print '<span class="unpublished">'. t('Unpublished') .'</span>'; endif; ?>
         </h2>
       <?php endif; ?>
