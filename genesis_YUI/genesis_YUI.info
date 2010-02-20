@@ -19,6 +19,16 @@
 
 
 
+;----------// YUI Stylesheets
+
+  ; reset, fonts and base and grids css. compressed (-min) versions included
+
+  stylesheets[all][] = css/reset-min.css
+  stylesheets[all][] = css/fonts-min.css
+  stylesheets[all][] = css/base-min.css
+  stylesheets[all][] = css/grids-min.css
+
+
 ;----------// Modular Stylesheets
 
   ; block, comment, node, page and style CSS.
@@ -35,6 +45,7 @@
 
   ; To work-around IE's max 30 linked stylesheets issue comment out
   ; the Modular Stylesheets (above) and uncomment the following.
+  ; @TODO: not yet implemented in the YUI-version.
 
   ;stylesheets[all][] = css/_all-lite.css
 
