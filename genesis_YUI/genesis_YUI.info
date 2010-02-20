@@ -74,31 +74,6 @@
   regions[footer]             = Footer
 
 
-  ; Gpanel Regions - use in conjunction with the Gpanel snippets.
-  ; See /genesis/genesis/gpanels and the README in that folder.
-  ; Uncomment the required regions.
-
-  ; 2 col Gpanel
-  ;regions[two_col_first]     = 2col Gpanel column 1
-  ;regions[two_col_second]    = 2col Gpanel column 2
-
-  ; 2 col, 2 col Nested Gpanel
-  ;regions[two_col_nested_first]  = 2col Nested Gpanel col 1
-  ;regions[two_col_nested_second] = 2col Nested Gpanel col 2
-
-  ; 3 col Gpanel
-  ;regions[three_col_first]   = 3col Gpanel column 1
-  ;regions[three_col_second]  = 3col Gpanel column 2
-  ;regions[three_col_third]   = 3col Gpanel column 3
-
-  ; 4 col Gpanel
-  ;regions[four_col_first]    = 4col Gpanel column 1
-  ;regions[four_col_second]   = 4col Gpanel column 2
-  ;regions[four_col_third]    = 4col Gpanel column 3
-  ;regions[four_col_fourth]   = 4col Gpanel column 4
-
-		
-
 ;----------// Features
 
   ; The "features" control which of these check boxes display on the
